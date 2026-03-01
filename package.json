@@ -1,0 +1,17 @@
+{
+  "name": "elateve",
+  "version": "1.0.0",
+  "description": "ELATEVE — Elevate Your Everyday. Curated affordable luxury.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["elateve", "luxury", "affiliate", "lifestyle"],
+  "author": "ELATEVE",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

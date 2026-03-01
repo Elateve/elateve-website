@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELATEVE — Elevate Your Everyday</title>
+  <meta name="description" content="ELATEVE curates affordable luxury products to upgrade and elevate your everyday life. Discover wellness, love, home, and wealth essentials.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" data-page="home">ELATEVE</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="/" data-page="home">Home</a>
+        <a href="/shop" data-page="shop">Shop</a>
+        <a href="/blog" data-page="blog">Journal</a>
+        <a href="/about" data-page="about">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTAINER -->
+  <main id="app">
+
+    <!-- ==================== HOME PAGE ==================== -->
+    <section class="page page--home active" id="page-home">
+      <div class="hero">
+        <div class="hero-content">
+          <p class="hero-eyebrow">An anagram for elevate</p>
+          <h1 class="hero-title">Elevate Your<br>Everyday</h1>
+          <p class="hero-sub">Curated essentials for a life well-lived.<br>Affordable luxury, intentionally chosen.</p>
+          <a href="/shop" class="btn btn--gold" data-page="shop">Explore the Edit</a>
+        </div>
+        <div class="hero-scroll-hint">
+          <span>Scroll</span>
+          <div class="hero-scroll-line"></div>
+        </div>
+      </div>
+
+      <div class="section section--categories">
+        <div class="section-header">
+          <p class="section-eyebrow">The Pillars</p>
+          <h2 class="section-title">Four Dimensions of Elevation</h2>
+        </div>
+        <div class="categories-grid">
+          <a href="/shop?category=wellness" class="category-card" data-page="shop" data-category="wellness">
+            <div class="category-card-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="20" r="8"/><path d="M24 28v12M18 34h12"/><path d="M12 40c0-6.627 5.373-12 12-12s12 5.373 12 12"/></svg>
+            </div>
+            <h3>Wellness</h3>
+            <p>Rituals for body & mind</p>
+            <span class="category-card-arrow">&rarr;</span>
+          </a>
+          <a href="/shop?category=love" class="category-card" data-page="shop" data-category="love">
+            <div class="category-card-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 42S6 28 6 18c0-5.523 4.477-10 10-10 3.527 0 6.632 1.828 8 4.586C25.368 9.828 28.473 8 32 8c5.523 0 10 4.477 10 10 0 10-18 24-18 24z"/></svg>
+            </div>
+            <h3>Love</h3>
+            <p>Tokens of connection</p>
+            <span class="category-card-arrow">&rarr;</span>
+          </a>
+          <a href="/shop?category=home" class="category-card" data-page="shop" data-category="home">
+            <div class="category-card-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 24l18-16 18 16"/><rect x="12" y="24" width="24" height="18" rx="1"/><rect x="20" y="32" width="8" height="10"/></svg>
+            </div>
+            <h3>Home</h3>
+            <p>Sanctuary essentials</p>
+            <span class="category-card-arrow">&rarr;</span>
+          </a>
+          <a href="/shop?category=wealth" class="category-card" data-page="shop" data-category="wealth">
+            <div class="category-card-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="16"/><path d="M24 14v20M18 20h12c2.2 0 4 1.8 4 4s-1.8 4-4 4H16"/></svg>
+            </div>
+            <h3>Wealth</h3>
+            <p>Attract abundance</p>
+            <span class="category-card-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="section section--featured">
+        <div class="section-header">
+          <p class="section-eyebrow">The Edit</p>
+          <h2 class="section-title">Curated Picks</h2>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+        <div class="section-cta">
+          <a href="/shop" class="btn btn--outline" data-page="shop">View All Products</a>
+        </div>
+      </div>
+
+      <div class="section section--philosophy">
+        <div class="philosophy-inner">
+          <p class="philosophy-quote">&ldquo;Luxury is not about price.<br>It&rsquo;s about the intention behind every choice.&rdquo;</p>
+          <span class="philosophy-attr">&mdash; The ELATEVE Philosophy</span>
+        </div>
+      </div>
+
+      <div class="section section--newsletter">
+        <div class="newsletter-inner">
+          <h2>Join the Elevation</h2>
+          <p>Curated finds, exclusive content, and rituals for elevated living. Delivered weekly.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit" class="btn btn--gold">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SHOP PAGE ==================== -->
+    <section class="page page--shop" id="page-shop">
+      <div class="shop-hero">
+        <p class="section-eyebrow">The Edit</p>
+        <h1 class="page-title">Shop the Elevation</h1>
+        <p class="page-sub">Every product is intentionally chosen to upgrade your everyday.</p>
+      </div>
+      <div class="shop-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="wellness">Wellness</button>
+        <button class="filter-btn" data-filter="love">Love</button>
+        <button class="filter-btn" data-filter="home">Home</button>
+        <button class="filter-btn" data-filter="wealth">Wealth</button>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- ==================== BLOG PAGE ==================== -->
+    <section class="page page--blog" id="page-blog">
+      <div class="blog-hero">
+        <p class="section-eyebrow">The Journal</p>
+        <h1 class="page-title">Thoughts on Elevation</h1>
+        <p class="page-sub">Insights, rituals, and ideas for a life intentionally lived.</p>
+      </div>
+      <div class="blog-grid" id="blogGrid"></div>
+    </section>
+
+    <!-- ==================== ABOUT PAGE ==================== -->
+    <section class="page page--about" id="page-about">
+      <div class="about-hero">
+        <p class="section-eyebrow">Our Story</p>
+        <h1 class="page-title">About ELATEVE</h1>
+      </div>
+      <div class="about-content">
+        <div class="about-block">
+          <div class="about-text">
+            <h2>An Anagram for Elevate</h2>
+            <p>ELATEVE was born from a simple belief: you don't need a massive budget to live beautifully. You just need better taste and the right guidance.</p>
+            <p>We curate products across four pillars of elevated living &mdash; <strong>Wellness</strong>, <strong>Love</strong>, <strong>Home</strong>, and <strong>Wealth</strong> &mdash; selecting only items that genuinely upgrade your daily rituals without breaking the bank.</p>
+          </div>
+        </div>
+        <div class="about-values">
+          <div class="about-value">
+            <span class="about-value-num">01</span>
+            <h3>Intentional Curation</h3>
+            <p>Every product is hand-selected. We test, research, and evaluate before anything makes our edit. If it doesn't elevate, it doesn't make the cut.</p>
+          </div>
+          <div class="about-value">
+            <span class="about-value-num">02</span>
+            <h3>Accessible Luxury</h3>
+            <p>Luxury isn't a price tag &mdash; it's a feeling. We find products that deliver that premium experience at prices that respect your budget.</p>
+          </div>
+          <div class="about-value">
+            <span class="about-value-num">03</span>
+            <h3>Elevated Basics</h3>
+            <p>The smallest upgrades create the biggest impact. A better pillow. A more intentional gift. A ritual that nourishes. These are the details that matter.</p>
+          </div>
+        </div>
+        <div class="about-block about-block--mission">
+          <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>To help you build a life that feels luxurious &mdash; one intentional choice at a time. We believe the art of the everyday deserves attention, and that small, curated upgrades compound into a fundamentally elevated existence.</p>
+            <p>Welcome to ELATEVE. Welcome to your elevation.</p>
+          </div>
+        </div>
+        <div class="about-disclosure">
+          <p><strong>Affiliate Disclosure:</strong> ELATEVE participates in affiliate marketing programs. When you purchase through our links, we may earn a small commission at no extra cost to you. This supports our ability to continue curating the best products for your elevated life.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">ELATEVE</span>
+        <p>Elevate Your Everyday</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="/shop?category=wellness" data-page="shop" data-category="wellness">Wellness</a>
+          <a href="/shop?category=love" data-page="shop" data-category="love">Love</a>
+          <a href="/shop?category=home" data-page="shop" data-category="home">Home</a>
+          <a href="/shop?category=wealth" data-page="shop" data-category="wealth">Wealth</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about" data-page="about">About Us</a>
+          <a href="/blog" data-page="blog">Journal</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ELATEVE. All rights reserved.</p>
+        <p class="footer-disclosure">Affiliate Disclosure: We earn commissions from qualifying purchases.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
