@@ -47,6 +47,7 @@ function navigateTo(page, category = null) {
       }
 
       if (page === 'blog') {
+        resetBlogView();
         loadBlog();
       }
 
@@ -196,10 +197,21 @@ function closeArticle() {
   const hero = document.querySelector('.blog-hero');
   const article = document.getElementById('blogArticle');
 
-  article.style.display = 'none';
-  hero.style.display = '';
-  grid.style.display = '';
+  if (article) article.style.display = 'none';
+  if (hero) hero.style.display = 'block';
+  if (grid) grid.style.display = 'flex';
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Also reset blog article state when navigating to blog page
+function resetBlogView() {
+  const grid = document.getElementById('blogGrid');
+  const hero = document.querySelector('.blog-hero');
+  const article = document.getElementById('blogArticle');
+
+  if (article) article.style.display = 'none';
+  if (hero) hero.style.display = 'block';
+  if (grid) grid.style.display = 'flex';
 }
 
 // ==================== EVENT LISTENERS ====================
@@ -233,7 +245,11 @@ function initNavigation() {
 
   const blogBack = document.getElementById('blogBack');
   if (blogBack) {
-    blogBack.addEventListener('click', closeArticle);
+    blogBack.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeArticle();
+    });
   }
 
   const form = document.getElementById('newsletterForm');
@@ -324,4 +340,62 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Push initial state
   history.replaceState({ page: initialPage, category: params.get('category') }, '', window.location.href);
+
+  // ==================== EMAIL POPUP ====================
+  initPopup();
 });
+
+function initPopup() {
+  const overlay = document.getElementById('popupOverlay');
+  const closeBtn = document.getElementById('popupClose');
+  const form = document.getElementById('popupForm');
+
+  if (!overlay) return;
+
+  // Check if user has already dismissed the popup
+  const dismissed = localStorage.getItem('elateve_popup_dismissed');
+  if (dismissed) return;
+
+  // Show popup after 3 seconds
+  setTimeout(() => {
+    overlay.classList.add('active');
+  }, 3000);
+
+  // Close popup
+  function closePopup() {
+    overlay.classList.remove('active');
+    localStorage.setItem('elateve_popup_dismissed', 'true');
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closePopup();
+    });
+  }
+
+  // Close on overlay click (outside popup)
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      closePopup();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      closePopup();
+    }
+  });
+
+  // Handle popup form submit
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      closePopup();
+      showToast('You\u2019re in! Watch your inbox for curated picks.');
+      form.reset();
+    });
+  }
+}

@@ -50,7 +50,7 @@ const blogPosts = [
   },
   {
     id: 4,
-    tag: "Love",
+    tag: "Experience",
     title: "Tokens of Connection in a Digital Age",
     excerpt: "The return of tangible gifts and handwritten notes. Why physical tokens of love are more powerful than ever.",
     date: "Jan 2026",
@@ -115,7 +115,7 @@ const blogPosts = [
   },
   {
     id: 8,
-    tag: "Love",
+    tag: "Experience",
     title: "The Language of Intentional Gifting",
     excerpt: "A curated gift speaks louder than an expensive one. Mastering the art of choosing presents that truly resonate.",
     date: "Nov 2025",
