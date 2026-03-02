@@ -143,6 +143,7 @@ async function loadBlog() {
   posts.forEach(post => {
     const card = document.createElement('div');
     card.className = 'blog-card';
+    card.dataset.postId = post.id;
     card.innerHTML = `
       <span class="blog-card-date">${post.date}</span>
       <div class="blog-card-content">
@@ -152,8 +153,53 @@ async function loadBlog() {
       </div>
       <span class="blog-card-arrow">&rarr;</span>
     `;
+    card.addEventListener('click', () => openArticle(post.id));
     grid.appendChild(card);
   });
+}
+
+async function openArticle(postId) {
+  const res = await fetch(`/api/blog/${postId}`);
+  const post = await res.json();
+
+  const grid = document.getElementById('blogGrid');
+  const hero = document.querySelector('.blog-hero');
+  const article = document.getElementById('blogArticle');
+
+  document.getElementById('articleTag').textContent = post.tag;
+  document.getElementById('articleDate').textContent = post.date;
+  document.getElementById('articleRead').textContent = post.readTime || '';
+  document.getElementById('articleTitle').textContent = post.title;
+
+  const body = document.getElementById('articleBody');
+  body.innerHTML = '';
+  if (post.content) {
+    post.content.forEach(paragraph => {
+      const p = document.createElement('p');
+      p.textContent = paragraph;
+      body.appendChild(p);
+    });
+  }
+
+  grid.style.display = 'none';
+  hero.style.display = 'none';
+  article.style.display = 'block';
+  article.querySelector('.blog-article-inner').style.animation = 'none';
+  requestAnimationFrame(() => {
+    article.querySelector('.blog-article-inner').style.animation = 'fadeUp 0.6s var(--ease-out) forwards';
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeArticle() {
+  const grid = document.getElementById('blogGrid');
+  const hero = document.querySelector('.blog-hero');
+  const article = document.getElementById('blogArticle');
+
+  article.style.display = 'none';
+  hero.style.display = '';
+  grid.style.display = '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ==================== EVENT LISTENERS ====================
@@ -183,6 +229,11 @@ function initNavigation() {
       toggle.classList.toggle('active');
       document.getElementById('navLinks')?.classList.toggle('open');
     });
+  }
+
+  const blogBack = document.getElementById('blogBack');
+  if (blogBack) {
+    blogBack.addEventListener('click', closeArticle);
   }
 
   const form = document.getElementById('newsletterForm');

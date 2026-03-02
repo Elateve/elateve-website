@@ -38,9 +38,17 @@ router.get('/featured', (req, res) => {
   res.json(featured);
 });
 
-// GET /api/blog — all blog posts
+// GET /api/blog — all blog posts (without full content for list view)
 router.get('/blog', (req, res) => {
-  res.json({ count: blogPosts.length, posts: blogPosts });
+  const summaries = blogPosts.map(({ content, ...rest }) => rest);
+  res.json({ count: summaries.length, posts: summaries });
+});
+
+// GET /api/blog/:id — single blog post with full content
+router.get('/blog/:id', (req, res) => {
+  const post = blogPosts.find(p => p.id === parseInt(req.params.id));
+  if (!post) return res.status(404).json({ error: 'Post not found' });
+  res.json(post);
 });
 
 module.exports = router;
