@@ -15,6 +15,10 @@ const products = [
   { id: 13, category: "wellness", name: "Brooklyn Botany Peppermint Essential Oil", price: "$9.99", image: "https://m.media-amazon.com/images/I/71izvJqwD1L._AC_SY879_.jpg", link: "https://amzn.to/3MOxiUn" },
   { id: 14, category: "wellness", name: "SU JUABA Peppermint Oil for Aromatherapy", price: "$7.99", image: "https://m.media-amazon.com/images/I/81IxhW70C9L._AC_SX679_.jpg", link: "https://amzn.to/4aLt3C4" },
   { id: 15, category: "wellness", name: "Lagunamoon Essential Oils Set — 6 Pack", price: "$9.95", image: "https://m.media-amazon.com/images/I/81du3QTXZfL._SX679_.jpg", link: "https://amzn.to/4u7IgoM" },
+  { id: 62, category: "wellness", name: "Viva Maison Unisex Hooded Waffle Robe — Turkish Cotton", price: "$89.00", image: "https://m.media-amazon.com/images/I/814fP1aVB+L._AC_SX522_.jpg", link: "https://amzn.to/3NdT1VR" },
+  { id: 63, category: "wellness", name: "Hello Klean Rain Shower Head — Filters Metals & Chlorine", price: "$165.00", image: "https://m.media-amazon.com/images/I/61VaOp-znvL._AC_SX425_.jpg", link: "https://amzn.to/3MY2Vuw" },
+  { id: 64, category: "wellness", name: "Hello Klean Anti-Breakage Shampoo for Hard Water Damage", price: "$28.00", image: "https://m.media-amazon.com/images/I/61uNs+3faUL._SY355_.jpg", link: "https://amzn.to/4b8KjQS" },
+  { id: 65, category: "wellness", name: "Hello Klean Break Down Anti-Flake Scalp Soak", price: "$38.00", image: "https://m.media-amazon.com/images/I/519-frEZnNL._SY450_.jpg", link: "https://amzn.to/3MEJgjr" },
 
   // ─── EXPERIENCE ───
   { id: 16, category: "experience", name: "Luna Bean Hand Casting Kit for Couples", price: "$29.32", image: "https://m.media-amazon.com/images/I/81dkBxdlmOL._AC_SX679_.jpg", link: "https://amzn.to/4l2gOV2" },
@@ -67,6 +71,10 @@ const products = [
   { id: 58, category: "home", name: "Etekcity Digital Food Kitchen Scale", price: "$8.49", image: "https://m.media-amazon.com/images/I/91YrLTBnMcL._SX522_.jpg", link: "https://amzn.to/4kY5Tf6" },
   { id: 59, category: "home", name: "STANLEY Quencher H2.0 Tumbler 30oz — Rose Quartz", price: "$35.00", image: "https://m.media-amazon.com/images/I/51-U5dEbEBL._AC_SY879_.jpg", link: "https://amzn.to/4cmu3xU" },
   { id: 60, category: "home", name: "BISSELL Little Green Portable Carpet Cleaner", price: "$99.99", image: "https://m.media-amazon.com/images/I/717X5secGjL._AC_SX679_.jpg", link: "https://amzn.to/3N8EB9u" },
+  { id: 66, category: "home", name: "Caraway Nonstick Ceramic Frying Pan 10.5\" — Cream", price: "$59.99", image: "https://m.media-amazon.com/images/I/61Pq9puQ+IL._AC_SY450_.jpg", link: "https://amzn.to/3Pc98DR" },
+  { id: 67, category: "home", name: "Caraway Ceramic Cookware Set 12 Piece — Cream", price: "$70.69", image: "https://m.media-amazon.com/images/I/71+tC3QLigL._AC_SY450_.jpg", link: "https://amzn.to/4aNLS7S" },
+  { id: 68, category: "home", name: "CAROTE 14-Piece Ceramic Non-Stick Cookware Set", price: "$72.99", image: "https://m.media-amazon.com/images/I/71E9N30pgZL._AC_SY450_.jpg", link: "https://amzn.to/4b23Faf" },
+  { id: 69, category: "home", name: "GreenPan 12-Piece Nonstick Ceramic Cookware Set — Cream", price: "$199.99", image: "https://m.media-amazon.com/images/I/716McT6cy6L._AC_SY450_.jpg", link: "https://amzn.to/4r9u37Y" },
 ];
 
 module.exports = products;
