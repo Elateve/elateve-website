@@ -32,6 +32,7 @@ const products = [
   { id: 28, category: "experience", name: "Sterling Silver Infinity Heart Pendant", price: "$19.36", image: "https://m.media-amazon.com/images/I/712JrwKBVNL._AC_SY535_.jpg", link: "https://amzn.to/4kY3Bg0" },
   { id: 29, category: "experience", name: "SWCANDY Shower Steamers Aromatherapy Set", price: "$8.99", image: "https://m.media-amazon.com/images/I/810MBwVTSaL._SX679_.jpg", link: "https://amzn.to/3ZZpUZj" },
   { id: 30, category: "experience", name: "Wood Music Box — Can't Help Falling in Love", price: "$12.88", image: "https://m.media-amazon.com/images/I/71PTk2u-LzL._AC_SX679_.jpg", link: "https://amzn.to/4r1Z0Le" },
+  { id: 61, category: "experience", name: "WONDERBOX Getaway for 2 — 1 Hotel Night Experience Gift", price: "$199.00", image: "https://m.media-amazon.com/images/I/61WQbae3dtL._SX342_.jpg", link: "https://amzn.to/4aKuXCX" },
 
   // ─── WEALTH ───
   { id: 31, category: "wealth", name: "The 5 Types of Wealth by Sahil Bloom", price: "$12.00", image: "https://m.media-amazon.com/images/I/716UbH66VqL._SX342_.jpg", link: "https://amzn.to/3OzutqR" },
