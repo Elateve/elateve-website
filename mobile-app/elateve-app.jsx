@@ -1,583 +1,429 @@
 import { useState, useEffect, useRef } from "react";
+import {
+  View, Text, ScrollView, TouchableOpacity, TextInput,
+  StyleSheet, Linking, Animated, StatusBar,
+} from "react-native";
 
-// ── Exact tokens from elateve.com CSS variables ──────────────────────────────
 const C = {
-  cream:     "#F7F5F0",   // --cream
-  creamDark: "#EDE9E0",   // --cream-dark
-  gold:      "#C5973E",   // --gold
-  goldLight: "#E8C872",   // --gold-light
-  goldDark:  "#8B6914",   // --gold-dark
-  charcoal:  "#1A1A1A",   // --charcoal
-  charcoalL: "#3A3A3A",   // --charcoal-light
-  grey:      "#8A8A8A",   // --grey
-  greyLight: "#C4C4C4",   // --grey-light
-  white:     "#FFFFFF",
-  border:    "#DDD9D0",
+  cream:"#F7F5F0", dark:"#EDE9E0", gold:"#C5973E",
+  charcoal:"#1A1A1A", grey:"#8A8A8A", light:"#C4C4C4",
+  white:"#FFFFFF", border:"#DDD9D0",
 };
 
-// Fonts exactly as on elateve.com
-// --font-display: 'Sora'  → headings, logo, nav
-// --font-body:    'Inter' → body copy, labels, buttons
-const DISPLAY = "'Sora', -apple-system, sans-serif";
-const BODY    = "'Inter', -apple-system, sans-serif";
-
 const PRODUCTS = [
-  { id:1,  cat:"Wellness",    name:"Majestic Pure Lavender Essential Oil",  desc:"100% natural premium grade. Aromatherapy & skin care.",   price:"$15",  tag:"Bestseller",   link:"https://www.amazon.com/s?k=Majestic+Pure+Lavender+Essential+Oil" },
-  { id:2,  cat:"Wellness",    name:"Vital Proteins Collagen Peptides",       desc:"Grass-fed collagen for skin, hair & cell renewal.",        price:"$43",  tag:"Top Rated",    link:"https://www.amazon.com/s?k=Vital+Proteins+Collagen+Peptides" },
-  { id:3,  cat:"Wellness",    name:"Tru Niagen NAD+ Supplement",             desc:"Boost cellular energy. Science-backed longevity.",         price:"$49",  tag:"Biohack",      link:"https://www.amazon.com/s?k=Tru+Niagen+NAD+Cell+Regeneration" },
-  { id:4,  cat:"Wellness",    name:"Rose Quartz Gua Sha & Jade Roller Set",  desc:"Authentic stone facial ritual tools for daily self-care.", price:"$34",  tag:"Self-Care",    link:"https://www.amazon.com/s?k=rose+quartz+gua+sha+jade+roller+set" },
-  { id:5,  cat:"Experience",  name:"Playlearn 6ft Sensory Bubble Lamp",      desc:"App-controlled LED bubble floor lamp. Spa-like ambiance.", price:"$189", tag:"Statement",    link:"https://www.amazon.com/dp/B00J24THFY" },
-  { id:6,  cat:"Experience",  name:"NEST New York Bamboo Candle",             desc:"Luxury home fragrance. Iconic clean-burn scent.",         price:"$52",  tag:"Luxury",       link:"https://www.amazon.com/s?k=NEST+New+York+Bamboo+candle" },
-  { id:7,  cat:"Experience",  name:"Voluspa Japonica Glass Jar Candle",       desc:"Artisan-crafted luxury candle. Beautiful gifting piece.",  price:"$38",  tag:"Gift Pick",    link:"https://www.amazon.com/s?k=Voluspa+Japonica+candle" },
-  { id:8,  cat:"Experience",  name:"Mulberry Silk Pillowcase 22 Momme",       desc:"Sleep in luxury. Skin & hair beauty every night.",        price:"$55",  tag:"Sleep",        link:"https://www.amazon.com/s?k=mulberry+silk+pillowcase+22+momme" },
-  { id:9,  cat:"Home",        name:"ELIZO Real Leather Desk Mat Set",         desc:"Premium leather mat, tray & coaster. USA-made luxury.",   price:"$79",  tag:"Editors Pick", link:"https://www.amazon.com/dp/B09HRCCNCD" },
-  { id:10, cat:"Home",        name:"Gallaway Leather Desk Pad 36in",          desc:"Gift-boxed, stitched edges, felt base. Executive style.",  price:"$45",  tag:"Office",       link:"https://www.amazon.com/dp/B083JP5QY4" },
-  { id:11, cat:"Home",        name:"Caraway Ceramic Cookware Set",            desc:"Non-toxic, beautiful cookware. Clean living essential.",  price:"$395", tag:"Premium",      link:"https://www.amazon.com/s?k=Caraway+Cookware+Set" },
-  { id:12, cat:"Home",        name:"GreenPan Ceramic Non-Toxic Fry Pan Set",  desc:"Healthy cooking, toxin-free. European-quality feel.",     price:"$89",  tag:"Clean Living", link:"https://www.amazon.com/s?k=GreenPan+ceramic+frying+pan+set" },
-  { id:13, cat:"Wealth",      name:"Red Phoenix Feng Shui Wealth Wallet",     desc:"Wealth mantras inside. Attract abundance every day.",     price:"$28",  tag:"Trending",     link:"https://www.amazon.com/dp/B0CP8WMDZP" },
-  { id:14, cat:"Wealth",      name:"Money Magnet Feng Shui Wallet",           desc:"Crystals, coins & mirror. Handmade in USA.",              price:"$35",  tag:"Manifest",     link:"https://www.amazon.com/dp/B07CJYG3RD" },
-  { id:15, cat:"Wealth",      name:"Citrine Crystal Cluster",                 desc:"Wealth stone. Amplifies prosperity & positive energy.",   price:"$22",  tag:"Crystal",      link:"https://www.amazon.com/s?k=citrine+crystal+cluster+large+abundance" },
-  { id:16, cat:"Wealth",      name:"Golden Dragon Wealth Bracelet",           desc:"Wealth, strength & protection. Stunning craftsmanship.",  price:"$29",  tag:"Protection",   link:"https://www.amazon.com/s?k=Buddha+Karma+Golden+Dragon+Bracelet" },
+  { id:1,  cat:"Wellness",   name:"Majestic Pure Lavender Oil",       price:"$15",  tag:"Bestseller",   link:"https://www.amazon.com/s?k=Majestic+Pure+Lavender+Essential+Oil" },
+  { id:2,  cat:"Wellness",   name:"Vital Proteins Collagen Peptides", price:"$43",  tag:"Top Rated",    link:"https://www.amazon.com/s?k=Vital+Proteins+Collagen+Peptides" },
+  { id:3,  cat:"Wellness",   name:"Tru Niagen NAD+ Supplement",       price:"$49",  tag:"Biohack",      link:"https://www.amazon.com/s?k=Tru+Niagen+NAD+Cell+Regeneration" },
+  { id:4,  cat:"Wellness",   name:"Rose Quartz Gua Sha Set",          price:"$34",  tag:"Self-Care",    link:"https://www.amazon.com/s?k=rose+quartz+gua+sha+jade+roller+set" },
+  { id:5,  cat:"Experience", name:"Playlearn 6ft Bubble Lamp",        price:"$189", tag:"Statement",    link:"https://www.amazon.com/dp/B00J24THFY" },
+  { id:6,  cat:"Experience", name:"NEST New York Bamboo Candle",       price:"$52",  tag:"Luxury",       link:"https://www.amazon.com/s?k=NEST+New+York+Bamboo+candle" },
+  { id:7,  cat:"Experience", name:"Voluspa Japonica Glass Candle",     price:"$38",  tag:"Gift Pick",    link:"https://www.amazon.com/s?k=Voluspa+Japonica+candle" },
+  { id:8,  cat:"Experience", name:"Mulberry Silk Pillowcase",          price:"$55",  tag:"Sleep",        link:"https://www.amazon.com/s?k=mulberry+silk+pillowcase+22+momme" },
+  { id:9,  cat:"Home",       name:"ELIZO Leather Desk Mat Set",        price:"$79",  tag:"Editors Pick", link:"https://www.amazon.com/dp/B09HRCCNCD" },
+  { id:10, cat:"Home",       name:"Gallaway Leather Desk Pad",         price:"$45",  tag:"Office",       link:"https://www.amazon.com/dp/B083JP5QY4" },
+  { id:11, cat:"Home",       name:"Caraway Ceramic Cookware Set",      price:"$395", tag:"Premium",      link:"https://www.amazon.com/s?k=Caraway+Cookware+Set" },
+  { id:12, cat:"Home",       name:"GreenPan Ceramic Fry Pan Set",      price:"$89",  tag:"Clean Living", link:"https://www.amazon.com/s?k=GreenPan+ceramic+frying+pan+set" },
+  { id:13, cat:"Wealth",     name:"Red Phoenix Feng Shui Wallet",      price:"$28",  tag:"Trending",     link:"https://www.amazon.com/dp/B0CP8WMDZP" },
+  { id:14, cat:"Wealth",     name:"Money Magnet Feng Shui Wallet",     price:"$35",  tag:"Manifest",     link:"https://www.amazon.com/dp/B07CJYG3RD" },
+  { id:15, cat:"Wealth",     name:"Citrine Crystal Cluster",           price:"$22",  tag:"Crystal",      link:"https://www.amazon.com/s?k=citrine+crystal+cluster+large+abundance" },
+  { id:16, cat:"Wealth",     name:"Golden Dragon Wealth Bracelet",     price:"$29",  tag:"Protection",   link:"https://www.amazon.com/s?k=Buddha+Karma+Golden+Dragon+Bracelet" },
+];
+
+const JOURNAL = [
+  { id:1, tag:"Wellness",  read:"4 min", title:"5 European Morning Rituals That Actually Work",      body:"The continent's best-kept secrets for energy, skin, and mental clarity. From dry brushing to cold-finish showers and adaptogen teas — the rituals European women swear by." },
+  { id:2, tag:"Home",      read:"6 min", title:"How to Create a Luxury Home on a Real Budget",       body:"Affordable luxury is not a contradiction. It is a skill. The Elateve guide to curating your space with intention — leather, ceramics, and one statement lamp." },
+  { id:3, tag:"Wealth",    read:"5 min", title:"The Feng Shui Principles Behind Our Wealth Picks",   body:"Why red wallets, citrine crystals, and intentional placement can shift the energy around money. The ancient practice through a modern European lens." },
+  { id:4, tag:"Wellness",  read:"7 min", title:"Collagen, NAD+ and Cell Renewal: What Science Says", body:"We break down the supplements worth your money and why cellular health is the new frontier of anti-aging. Collagen and NAD+ are the two you actually need." },
 ];
 
 const CATS = ["All","Wellness","Experience","Home","Wealth"];
-
-const JOURNAL = [
-  { id:1, tag:"Wellness",  read:"4 min", title:"5 European Morning Rituals That Actually Work",       body:"The continent's best-kept secrets for energy, skin, and mental clarity. None require a gym membership. From dry brushing to cold-finish showers and adaptogen teas, we break down the rituals that European women swear by." },
-  { id:2, tag:"Home",      read:"6 min", title:"How to Create a Luxury Home on a Real Budget",        body:"Affordable luxury is not a contradiction. It is a skill. The Elateve guide to curating your space with intention. Start with leather desk accessories, ceramic cookware, and one statement lamp." },
-  { id:3, tag:"Wealth",    read:"5 min", title:"The Feng Shui Principles Behind Our Wealth Picks",    body:"Why red wallets, citrine crystals, and intentional placement can shift the energy around money. We explore the ancient practice through a modern European lens." },
-  { id:4, tag:"Wellness",  read:"7 min", title:"Collagen, NAD+ and Cell Renewal: What Science Says",  body:"We break down the supplements worth your money and why cellular health is the new frontier of anti-aging. Spoiler: collagen and NAD+ are the two you actually need." },
+const NAV = [
+  { id:"home",    icon:"⌂", label:"Home" },
+  { id:"shop",    icon:"◈", label:"Shop" },
+  { id:"journal", icon:"✦", label:"Journal" },
+  { id:"about",   icon:"◎", label:"About" },
+  { id:"saved",   icon:"♡", label:"Saved" },
 ];
 
-// ── Reusable tiny components ─────────────────────────────────────────────────
-
-// Small uppercase label — Inter, wide tracking (matches site eyebrow text)
-const Eyebrow = ({children, col}) => (
-  <span style={{
-    fontFamily: BODY,
-    fontSize:"10px", letterSpacing:"3px",
-    textTransform:"uppercase", color: col||C.grey,
-    fontWeight:"400",
-  }}>{children}</span>
+const Label = ({ children, color }) => (
+  <Text style={[s.label, color && { color }]}>{children}</Text>
 );
 
-// Gold CTA button — Inter, wide tracking (matches site buttons)
-const GoldBtn = ({children, onClick, sm, out}) => (
-  <button onClick={onClick} style={{
-    fontFamily: BODY,
-    background: out ? "transparent" : C.gold,
-    color: out ? C.gold : C.white,
-    border:`1px solid ${C.gold}`,
-    borderRadius:"2px",
-    padding: sm ? "9px 20px" : "13px 32px",
-    fontSize: sm ? "11px" : "11px",
-    letterSpacing:"2.5px", textTransform:"uppercase",
-    cursor:"pointer", fontWeight:"500",
-  }}>{children}</button>
+const GoldBtn = ({ children, onPress, outline }) => (
+  <TouchableOpacity onPress={onPress} style={[s.btn, outline && s.btnOut]}>
+    <Text style={[s.btnTxt, outline && { color: C.gold }]}>{children}</Text>
+  </TouchableOpacity>
 );
 
-const Stars = () => (
-  <span style={{color:C.gold, fontSize:"11px", letterSpacing:"2px", fontFamily:BODY}}>★★★★★</span>
-);
-
-const Hr = () => (
-  <div style={{display:"flex",alignItems:"center",gap:"16px",margin:"28px 0"}}>
-    <div style={{flex:1,height:"1px",background:C.border}}/>
-    <span style={{color:C.gold,fontSize:"12px",fontFamily:BODY}}>✦</span>
-    <div style={{flex:1,height:"1px",background:C.border}}/>
-  </div>
-);
-
-// ── Tag badge ────────────────────────────────────────────────────────────────
-const Badge = ({label}) => (
-  <div style={{
-    position:"absolute", top:"10px", left:"10px",
-    background:C.charcoal, padding:"3px 8px", borderRadius:"1px",
-  }}>
-    <span style={{color:C.gold, fontSize:"8px", letterSpacing:"1.5px", textTransform:"uppercase", fontFamily:BODY}}>{label}</span>
-  </div>
-);
-
-// ── Product card ─────────────────────────────────────────────────────────────
-const ProductCard = ({p, saved, onSave}) => (
-  <div style={{background:C.white,border:`1px solid ${C.border}`,borderRadius:"3px",overflow:"hidden",position:"relative"}}>
-    <Badge label={p.tag}/>
-    <button onClick={()=>onSave(p.id)} style={{
-      position:"absolute",top:"8px",right:"8px",
-      background:C.white,border:`1px solid ${C.border}`,
-      width:"28px",height:"28px",borderRadius:"50%",
-      display:"flex",alignItems:"center",justifyContent:"center",
-      cursor:"pointer",fontSize:"13px",
-      color:saved?"#c0392b":C.greyLight,
-      fontFamily:BODY,
-    }}>{saved?"♥":"♡"}</button>
-    <div style={{padding:"46px 14px 16px"}}>
-      <Eyebrow col={C.gold}>{p.cat}</Eyebrow>
-      <p style={{fontFamily:DISPLAY,color:C.charcoal,fontSize:"13px",fontWeight:"400",margin:"7px 0 5px",lineHeight:"1.35"}}>{p.name}</p>
-      <p style={{fontFamily:BODY,color:C.grey,fontSize:"11px",lineHeight:"1.55",margin:"0 0 14px",fontWeight:"300"}}>{p.desc}</p>
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-        <span style={{fontFamily:DISPLAY,color:C.charcoal,fontSize:"15px",fontWeight:"400"}}>{p.price}</span>
-        <a href={p.link} target="_blank" rel="noopener noreferrer" style={{
-          fontFamily:BODY,background:C.gold,color:C.white,
-          padding:"7px 14px",borderRadius:"2px",
-          fontSize:"10px",letterSpacing:"2px",textTransform:"uppercase",
-          textDecoration:"none",fontWeight:"500",
-        }}>Shop</a>
-      </div>
-    </div>
-  </div>
-);
-
-// ── Main App ─────────────────────────────────────────────────────────────────
 export default function App() {
-  const [tab,setTab]       = useState("home");
-  const [cat,setCat]       = useState("All");
-  const [saved,setSaved]   = useState([]);
-  const [notifDone,setND]  = useState(false);
-  const [showNotif,setSN]  = useState(false);
-  const [jOpen,setJOpen]   = useState(null);
-  const [toast,setToast]   = useState("");
-  const [email,setEmail]   = useState("");
-  const [subbed,setSubbed] = useState(false);
+  const [tab, setTab]           = useState("home");
+  const [cat, setCat]           = useState("All");
+  const [saved, setSaved]       = useState([]);
+  const [jOpen, setJOpen]       = useState(null);
+  const [email, setEmail]       = useState("");
+  const [subbed, setSubbed]     = useState(false);
+  const [showNotif, setShowNotif] = useState(false);
+  const [toast, setToast]       = useState("");
+  const toastOp = useRef(new Animated.Value(0)).current;
   const scrollRef = useRef(null);
 
-  useEffect(()=>{
-    const t = setTimeout(()=>setSN(true), 3500);
-    return ()=>clearTimeout(t);
-  },[]);
+  useEffect(() => {
+    const t = setTimeout(() => setShowNotif(true), 3000);
+    return () => clearTimeout(t);
+  }, []);
 
-  const fire = msg => { setToast(msg); setTimeout(()=>setToast(""),2600); };
+  const fire = (msg) => {
+    setToast(msg);
+    Animated.sequence([
+      Animated.timing(toastOp, { toValue:1, duration:250, useNativeDriver:true }),
+      Animated.delay(1800),
+      Animated.timing(toastOp, { toValue:0, duration:250, useNativeDriver:true }),
+    ]).start(() => setToast(""));
+  };
 
-  const toggleSave = id => {
-    const isSaved = saved.includes(id);
-    setSaved(p => isSaved ? p.filter(x=>x!==id) : [...p,id]);
-    fire(isSaved ? "Removed from saved" : "Saved to your edit  ✦");
+  const toggleSave = (id) => {
+    const was = saved.includes(id);
+    setSaved(p => was ? p.filter(x => x!==id) : [...p, id]);
+    fire(was ? "Removed" : "Saved  ✦");
   };
 
   const go = (t, c) => {
     setTab(t);
     if (c) setCat(c);
-    scrollRef.current?.scrollTo(0,0);
+    scrollRef.current?.scrollTo({ y:0, animated:false });
   };
 
-  const filtered = cat==="All" ? PRODUCTS : PRODUCTS.filter(p=>p.cat===cat);
-
-  const NAV = [
-    {id:"home",    icon:"⌂", label:"Home"},
-    {id:"shop",    icon:"◈", label:"Shop"},
-    {id:"journal", icon:"✦", label:"Journal"},
-    {id:"about",   icon:"◎", label:"About"},
-    {id:"saved",   icon:"♡", label:"Saved"},
-  ];
+  const filtered = cat === "All" ? PRODUCTS : PRODUCTS.filter(p => p.cat === cat);
 
   return (
-    <>
-      {/* Load exact fonts from Google Fonts — same as elateve.com */}
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&family=Inter:wght@300;400;500&display=swap');
-        * { box-sizing: border-box; margin:0; padding:0; }
-        ::-webkit-scrollbar { display:none; }
-        input::placeholder { font-family: ${BODY}; color:${C.grey}; }
-        input:focus { outline:1px solid ${C.gold}; }
-        a { -webkit-tap-highlight-color: transparent; }
-        button { -webkit-tap-highlight-color: transparent; }
-      `}</style>
+    <View style={s.root}>
+      <StatusBar barStyle="dark-content" backgroundColor={C.cream}/>
 
-      <div style={{
-        fontFamily: BODY,
-        background: C.cream,
-        height:"100vh",
-        maxWidth:"430px",
-        margin:"0 auto",
-        display:"flex",
-        flexDirection:"column",
-        overflow:"hidden",
-        position:"relative",
-      }}>
+      {!!toast && (
+        <Animated.View style={[s.toast, { opacity: toastOp }]}>
+          <Text style={s.toastTxt}>{toast}</Text>
+        </Animated.View>
+      )}
 
-        {/* TOAST */}
-        {toast && (
-          <div style={{
-            position:"absolute",top:"18px",left:"50%",transform:"translateX(-50%)",
-            background:C.charcoal,color:C.white,
-            padding:"10px 22px",borderRadius:"2px",
-            fontFamily:BODY,fontSize:"11px",letterSpacing:"1.5px",textTransform:"uppercase",
-            zIndex:9999,whiteSpace:"nowrap",
-            boxShadow:"0 4px 24px rgba(0,0,0,0.2)",
-          }}>{toast}</div>
+      {showNotif && (
+        <View style={s.notif}>
+          <View style={{ flex:1 }}>
+            <Text style={s.notifEyebrow}>ELATEVE</Text>
+            <Text style={s.notifTitle}>Stay Elevated</Text>
+            <Text style={s.notifBody}>New drops, rituals and curated finds delivered first.</Text>
+          </View>
+          <View style={s.notifActions}>
+            <TouchableOpacity onPress={() => { setShowNotif(false); fire("Enabled  ✦"); }} style={s.notifYes}>
+              <Text style={s.notifYesTxt}>Enable</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setShowNotif(false)}>
+              <Text style={s.notifNo}>Later</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      )}
+
+      <View style={s.header}>
+        <Text style={s.logo}>ELATEVE</Text>
+      </View>
+
+      <ScrollView ref={scrollRef} style={{ flex:1 }} showsVerticalScrollIndicator={false}>
+
+        {tab === "home" && (
+          <View>
+            <View style={s.hero}>
+              <Label color={C.gold}>CURATED LUXURY</Label>
+              <Text style={s.heroTitle}>{"Elevate\nYour\nEveryday."}</Text>
+              <Text style={s.heroSub}>{"European essentials.\nIntentionally chosen."}</Text>
+              <GoldBtn onPress={() => go("shop")}>SHOP THE EDIT</GoldBtn>
+            </View>
+
+            <View style={s.pillarsWrap}>
+              <Label>THE FOUR PILLARS</Label>
+              <View style={s.pillars}>
+                {["Wellness","Experience","Home","Wealth"].map((p, i) => (
+                  <TouchableOpacity key={p} onPress={() => go("shop", p)} style={[s.pillarTile, i%2===0 && { marginRight:8 }]}>
+                    <Text style={s.pillarNum}>0{i+1}</Text>
+                    <Text style={s.pillarName}>{p.toUpperCase()}</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
+
+            <View style={s.featuredWrap}>
+              <View style={s.rowBetween}>
+                <Label>FEATURED</Label>
+                <TouchableOpacity onPress={() => go("shop")}>
+                  <Text style={s.seeAll}>See all</Text>
+                </TouchableOpacity>
+              </View>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={s.featScroll}>
+                {PRODUCTS.slice(0,5).map(p => (
+                  <TouchableOpacity key={p.id} onPress={() => Linking.openURL(p.link)} style={s.featCard}>
+                    <Text style={s.featCat}>{p.cat.toUpperCase()}</Text>
+                    <Text style={s.featName}>{p.name}</Text>
+                    <Text style={s.featPrice}>{p.price}</Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            </View>
+
+            <View style={s.quoteBlock}>
+              <Text style={s.quoteMark}>"</Text>
+              <Text style={s.quoteText}>You do not need a massive budget to live beautifully. You just need better taste.</Text>
+              <Text style={s.quoteSource}>— The Elateve Philosophy</Text>
+            </View>
+
+            <View style={s.nlWrap}>
+              <Label>JOIN THE EDIT</Label>
+              <Text style={s.nlTitle}>{"Weekly drops.\nZero noise."}</Text>
+              {subbed ? (
+                <Text style={s.nlConfirm}>✦  You are in.</Text>
+              ) : (
+                <View style={s.nlForm}>
+                  <TextInput value={email} onChangeText={setEmail} placeholder="your@email.com" placeholderTextColor={C.light} style={s.nlInput} keyboardType="email-address" autoCapitalize="none"/>
+                  <TouchableOpacity onPress={() => { if(email){ setSubbed(true); fire("Welcome  ✦"); }}} style={s.nlBtn}>
+                    <Text style={s.nlBtnTxt}>→</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
+            </View>
+
+            <View style={s.footer}>
+              <Text style={s.footerLogo}>ELATEVE</Text>
+              <Text style={s.footerSub}>A European Company</Text>
+            </View>
+          </View>
         )}
 
-        {/* PUSH NOTIFICATION BANNER */}
-        {showNotif && !notifDone && (
-          <div style={{
-            position:"absolute",bottom:"74px",left:"12px",right:"12px",
-            background:C.charcoal,borderRadius:"3px",padding:"20px",
-            zIndex:500,boxShadow:"0 16px 48px rgba(0,0,0,0.4)",
-            border:`1px solid ${C.gold}33`,
-          }}>
-            <div style={{display:"flex",gap:"14px",alignItems:"flex-start"}}>
-              <div style={{
-                width:"40px",height:"40px",background:C.gold,borderRadius:"2px",
-                display:"flex",alignItems:"center",justifyContent:"center",
-                flexShrink:0,color:C.white,fontSize:"16px",fontFamily:BODY,
-              }}>✦</div>
-              <div style={{flex:1}}>
-                <p style={{fontFamily:DISPLAY,color:C.white,fontSize:"15px",fontWeight:"300",margin:"0 0 5px",letterSpacing:"-0.2px"}}>Stay Elevated</p>
-                <p style={{fontFamily:BODY,color:C.greyLight,fontSize:"12px",margin:"0 0 16px",lineHeight:"1.6",fontWeight:"300"}}>New curated finds, rituals & exclusive drops delivered to you first.</p>
-                <div style={{display:"flex",gap:"8px"}}>
-                  <button onClick={()=>{setND(true);setSN(false);fire("Notifications enabled  ✦");}}
-                    style={{flex:1,background:C.gold,color:C.white,border:"none",borderRadius:"2px",padding:"9px",fontFamily:BODY,fontSize:"10px",letterSpacing:"2px",textTransform:"uppercase",cursor:"pointer",fontWeight:"500"}}>Enable</button>
-                  <button onClick={()=>setSN(false)}
-                    style={{flex:1,background:"transparent",color:C.grey,border:`1px solid ${C.grey}55`,borderRadius:"2px",padding:"9px",fontFamily:BODY,fontSize:"10px",letterSpacing:"1.5px",textTransform:"uppercase",cursor:"pointer"}}>Later</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        {tab === "shop" && (
+          <View style={{ paddingBottom:40 }}>
+            <View style={s.pageTop}>
+              <Label color={C.gold}>THE EDIT</Label>
+              <Text style={s.pageTitle}>Shop</Text>
+            </View>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={s.catScroll}>
+              {CATS.map(c => (
+                <TouchableOpacity key={c} onPress={() => setCat(c)} style={[s.catPill, cat===c && s.catPillActive]}>
+                  <Text style={[s.catPillTxt, cat===c && s.catPillTxtActive]}>{c.toUpperCase()}</Text>
+                </TouchableOpacity>
+              ))}
+            </ScrollView>
+            {filtered.map((p, i) => (
+              <View key={p.id} style={[s.productRow, i===0 && { borderTopWidth:1, borderTopColor:C.border }]}>
+                <View style={s.productLeft}>
+                  <Text style={s.productCat}>{p.cat.toUpperCase()}</Text>
+                  <Text style={s.productName}>{p.name}</Text>
+                  <Text style={s.productPrice}>{p.price}</Text>
+                </View>
+                <View style={s.productRight}>
+                  <TouchableOpacity onPress={() => toggleSave(p.id)} style={s.productHeart}>
+                    <Text style={{ color: saved.includes(p.id) ? "#c0392b" : C.light, fontSize:18 }}>
+                      {saved.includes(p.id) ? "♥" : "♡"}
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => Linking.openURL(p.link)} style={s.productShop}>
+                    <Text style={s.productShopTxt}>SHOP</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            ))}
+          </View>
         )}
 
-        {/* ── HEADER — exact replica of elateve.com nav ── */}
-        <div style={{
-          background:C.cream,
-          borderBottom:`1px solid ${C.border}`,
-          padding:"15px 24px",
-          display:"flex",
-          alignItems:"center",
-          justifyContent:"center",
-          flexShrink:0,
-        }}>
-          {/* Logo: Sora 600, letter-spacing 0.35em, gold gradient clipped to text — exact match to elateve.com */}
-          <span style={{
-            fontFamily: DISPLAY,
-            fontSize:"15px",
-            fontWeight:"600",
-            letterSpacing:"0.35em",
-            textTransform:"uppercase",
-            userSelect:"none",
-            backgroundImage:"linear-gradient(135deg, #8B6914, #C5973E, #E8C872)",
-            WebkitBackgroundClip:"text",
-            backgroundClip:"text",
-            WebkitTextFillColor:"transparent",
-            color:"transparent",
-            display:"inline-block",
-          }}>ELATEVE</span>
-        </div>
+        {tab === "journal" && (
+          <View style={{ paddingBottom:40 }}>
+            <View style={s.pageTop}>
+              <Label color={C.gold}>JOURNAL</Label>
+              <Text style={s.pageTitle}>The Edit</Text>
+            </View>
+            {JOURNAL.map((a, i) => (
+              <TouchableOpacity key={a.id} onPress={() => setJOpen(jOpen===i ? null : i)} style={[s.articleRow, i===0 && { borderTopWidth:1, borderTopColor:C.border }]}>
+                <View style={s.articleMeta}>
+                  <Text style={s.articleTag}>{a.tag.toUpperCase()}</Text>
+                  <Text style={s.articleRead}>{a.read}</Text>
+                </View>
+                <Text style={s.articleTitle}>{a.title}</Text>
+                {jOpen === i && <Text style={s.articleBody}>{a.body}</Text>}
+                <Text style={s.articleToggle}>{jOpen===i ? "−" : "+"}</Text>
+              </TouchableOpacity>
+            ))}
+            <View style={s.journalCta}>
+              <Label color={C.gold}>WEALTH EDIT</Label>
+              <Text style={s.journalCtaTitle}>{"Abundance.\nIntentionally curated."}</Text>
+              <GoldBtn onPress={() => go("shop","Wealth")}>EXPLORE NOW</GoldBtn>
+            </View>
+          </View>
+        )}
 
-        {/* ── SCROLL CONTENT ── */}
-        <div ref={scrollRef} style={{flex:1,overflowY:"auto",overflowX:"hidden"}}>
+        {tab === "about" && (
+          <View style={{ paddingBottom:40 }}>
+            <View style={s.pageTop}>
+              <Label color={C.gold}>OUR STORY</Label>
+              <Text style={s.pageTitle}>About</Text>
+            </View>
+            <View style={s.aboutBlock}>
+              <Text style={s.aboutBig}>Born in Europe.</Text>
+              <Text style={s.aboutBody}>ELATEVE was founded on a simple belief — you do not need a massive budget to live beautifully. You just need better taste and the right guidance.</Text>
+              <Text style={s.aboutBody}>We curate across four pillars of elevated living: Wellness, Experience, Home, and Wealth. Every product chosen with the discerning eye of European craftsmanship.</Text>
+            </View>
+            {[
+              { t:"Wellness",   d:"Body and mind rituals." },
+              { t:"Experience", d:"Sensory elevation." },
+              { t:"Home",       d:"Beautiful, functional spaces." },
+              { t:"Wealth",     d:"Abundance and prosperity." },
+            ].map((p, i, arr) => (
+              <TouchableOpacity key={p.t} onPress={() => go("shop", p.t)} style={[s.aboutPillarRow, i===0 && { borderTopWidth:1, borderTopColor:C.border }, i<arr.length-1 && { borderBottomWidth:1, borderBottomColor:C.border }]}>
+                <View>
+                  <Text style={s.aboutPillarName}>{p.t.toUpperCase()}</Text>
+                  <Text style={s.aboutPillarDesc}>{p.d}</Text>
+                </View>
+                <Text style={{ color:C.gold, fontSize:18 }}>→</Text>
+              </TouchableOpacity>
+            ))}
+            <View style={{ padding:40, alignItems:"center" }}>
+              <Text style={s.europeanBadge}>A EUROPEAN COMPANY</Text>
+            </View>
+          </View>
+        )}
 
-          {/* ════════ HOME ════════ */}
-          {tab==="home" && (
-            <div>
-              {/* Hero */}
-              <div style={{padding:"56px 28px 52px",textAlign:"center",borderBottom:`1px solid ${C.border}`}}>
-                <Eyebrow>Curated for the Elevated Life</Eyebrow>
-                <h1 style={{
-                  fontFamily:DISPLAY, fontSize:"40px", fontWeight:"300",
-                  color:C.charcoal, margin:"18px 0 16px",
-                  letterSpacing:"-0.01em", lineHeight:"1.15",
-                }}>
-                  Elevate Your<br/>Everyday
-                </h1>
-                <p style={{
-                  fontFamily:BODY, color:C.grey, fontSize:"14px",
-                  lineHeight:"1.75", margin:"0 auto 36px", maxWidth:"280px", fontWeight:"300",
-                }}>
-                  European-curated essentials for a life well-lived.<br/>Affordable luxury, intentionally chosen.
-                </p>
-                <GoldBtn onClick={()=>go("shop")}>Explore the Edit</GoldBtn>
-              </div>
+        {tab === "saved" && (
+          <View style={{ paddingBottom:40 }}>
+            <View style={s.pageTop}>
+              <Label color={C.gold}>YOUR COLLECTION</Label>
+              <Text style={s.pageTitle}>Saved</Text>
+            </View>
+            {saved.length === 0 ? (
+              <View style={s.emptyState}>
+                <Text style={s.emptyIcon}>♡</Text>
+                <Text style={s.emptyTitle}>Nothing saved yet.</Text>
+                <Text style={s.emptySub}>Browse the edit and save your favourites.</Text>
+                <GoldBtn onPress={() => go("shop")}>BROWSE THE EDIT</GoldBtn>
+              </View>
+            ) : (
+              PRODUCTS.filter(p => saved.includes(p.id)).map((p, i) => (
+                <View key={p.id} style={[s.productRow, i===0 && { borderTopWidth:1, borderTopColor:C.border }]}>
+                  <View style={s.productLeft}>
+                    <Text style={s.productCat}>{p.cat.toUpperCase()}</Text>
+                    <Text style={s.productName}>{p.name}</Text>
+                    <Text style={s.productPrice}>{p.price}</Text>
+                  </View>
+                  <View style={s.productRight}>
+                    <TouchableOpacity onPress={() => toggleSave(p.id)} style={s.productHeart}>
+                      <Text style={{ color:"#c0392b", fontSize:18 }}>♥</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => Linking.openURL(p.link)} style={s.productShop}>
+                      <Text style={s.productShopTxt}>SHOP</Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              ))
+            )}
+          </View>
+        )}
 
-              {/* Four Pillars */}
-              <div style={{padding:"36px 20px 0"}}>
-                <div style={{textAlign:"center",marginBottom:"22px"}}>
-                  <Eyebrow>Our Four Pillars</Eyebrow>
-                </div>
-                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"12px"}}>
-                  {[
-                    {l:"Wellness",   s:"Body & mind rituals",    c:"Wellness"},
-                    {l:"Experience", s:"Sensory elevation",       c:"Experience"},
-                    {l:"Home",       s:"Beautiful spaces",        c:"Home"},
-                    {l:"Wealth",     s:"Abundance & prosperity",  c:"Wealth"},
-                  ].map(p=>(
-                    <button key={p.l} onClick={()=>go("shop",p.c)} style={{
-                      background:C.creamDark,border:`1px solid ${C.border}`,
-                      borderRadius:"3px",padding:"22px 16px",textAlign:"left",cursor:"pointer",
-                    }}>
-                      <p style={{fontFamily:BODY,color:C.gold,fontSize:"10px",letterSpacing:"2.5px",margin:"0 0 7px",textTransform:"uppercase",fontWeight:"500"}}>{p.l}</p>
-                      <p style={{fontFamily:BODY,color:C.grey,fontSize:"12px",margin:0,lineHeight:"1.5",fontWeight:"300"}}>{p.s}</p>
-                    </button>
-                  ))}
-                </div>
-              </div>
+      </ScrollView>
 
-              <div style={{padding:"0 20px"}}><Hr/></div>
-
-              {/* Featured strip */}
-              <div style={{padding:"0 20px"}}>
-                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"18px"}}>
-                  <Eyebrow col={C.charcoal}>Featured Picks</Eyebrow>
-                  <button onClick={()=>go("shop")} style={{fontFamily:BODY,background:"none",border:"none",color:C.gold,fontSize:"11px",letterSpacing:"1px",cursor:"pointer",textDecoration:"underline",fontWeight:"400"}}>View all →</button>
-                </div>
-                <div style={{display:"flex",gap:"12px",overflowX:"auto",paddingBottom:"8px"}}>
-                  {PRODUCTS.slice(0,6).map(p=>(
-                    <div key={p.id} style={{minWidth:"152px",background:C.white,border:`1px solid ${C.border}`,borderRadius:"3px",padding:"18px 14px",flexShrink:0}}>
-                      <Eyebrow col={C.gold}>{p.cat}</Eyebrow>
-                      <p style={{fontFamily:DISPLAY,color:C.charcoal,fontSize:"13px",fontWeight:"400",margin:"8px 0 5px",lineHeight:"1.3"}}>{p.name}</p>
-                      <p style={{fontFamily:DISPLAY,color:C.gold,fontSize:"14px",margin:"0 0 12px",fontWeight:"300"}}>{p.price}</p>
-                      <a href={p.link} target="_blank" rel="noopener noreferrer" style={{
-                        display:"block",textAlign:"center",fontFamily:BODY,
-                        background:C.gold,color:C.white,
-                        padding:"8px",fontSize:"10px",letterSpacing:"2px",
-                        textTransform:"uppercase",textDecoration:"none",
-                        borderRadius:"2px",fontWeight:"500",
-                      }}>Shop</a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Testimonials */}
-              <div style={{margin:"36px 0 0",background:C.creamDark,padding:"32px 20px",borderTop:`1px solid ${C.border}`,borderBottom:`1px solid ${C.border}`}}>
-                <div style={{textAlign:"center",marginBottom:"22px"}}>
-                  <Eyebrow>What Our Community Says</Eyebrow>
-                </div>
-                {[
-                  {q:"ELATEVE completely changed how I approach everyday purchases. Their wellness picks are spot-on — I discovered products I never knew I needed.",name:"Sarah M.",loc:"New York, NY"},
-                  {q:"The curation is impeccable. Every product bought through their links has been worth it. Real luxury at accessible prices.",name:"Marcus L.",loc:"Los Angeles, CA"},
-                ].map((t,i)=>(
-                  <div key={i} style={{background:C.white,borderRadius:"3px",padding:"22px",marginBottom:i===0?"12px":0,border:`1px solid ${C.border}`}}>
-                    <Stars/>
-                    <p style={{fontFamily:BODY,color:C.charcoal,fontSize:"13px",fontStyle:"italic",lineHeight:"1.75",margin:"10px 0 12px",fontWeight:"300"}}>"{t.q}"</p>
-                    <p style={{fontFamily:BODY,color:C.charcoal,fontSize:"12px",fontWeight:"500",margin:"0 0 2px"}}>{t.name}</p>
-                    <p style={{fontFamily:BODY,color:C.grey,fontSize:"11px",margin:0,fontWeight:"300"}}>{t.loc}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Newsletter */}
-              <div style={{padding:"40px 24px",textAlign:"center"}}>
-                <Eyebrow>Join the Elevation</Eyebrow>
-                <h3 style={{fontFamily:DISPLAY,color:C.charcoal,fontSize:"24px",fontWeight:"300",margin:"14px 0 10px",letterSpacing:"-0.01em"}}>Join the Elevation</h3>
-                <p style={{fontFamily:BODY,color:C.grey,fontSize:"13px",lineHeight:"1.7",margin:"0 0 24px",fontWeight:"300"}}>Curated finds, exclusive content, and rituals for elevated living. Delivered weekly.</p>
-                {subbed ? (
-                  <p style={{fontFamily:BODY,color:C.gold,fontSize:"12px",letterSpacing:"1.5px",textTransform:"uppercase"}}>✦ You're in. Welcome to the edit.</p>
-                ) : (
-                  <div style={{display:"flex",flexDirection:"column",gap:"10px"}}>
-                    <input value={email} onChange={e=>setEmail(e.target.value)}
-                      placeholder="Your email"
-                      style={{
-                        fontFamily:BODY,border:`1px solid ${C.border}`,background:C.white,
-                        padding:"13px 16px",fontSize:"13px",borderRadius:"2px",
-                        color:C.charcoal,fontWeight:"300",
-                      }}
-                    />
-                    <GoldBtn onClick={()=>{if(email){setSubbed(true);fire("Welcome to Elateve  ✦");}}}>Subscribe</GoldBtn>
-                  </div>
-                )}
-              </div>
-
-              {/* Footer */}
-              <div style={{background:C.charcoal,padding:"36px 24px",textAlign:"center"}}>
-                <p style={{fontFamily:DISPLAY,fontSize:"14px",fontWeight:"600",letterSpacing:"0.35em",textTransform:"uppercase",margin:"0 0 6px",backgroundImage:"linear-gradient(135deg, #8B6914, #C5973E, #E8C872)",WebkitBackgroundClip:"text",backgroundClip:"text",WebkitTextFillColor:"transparent",color:"transparent",display:"inline-block"}}>ELATEVE</p>
-                <p style={{fontFamily:BODY,color:C.grey,fontSize:"12px",margin:"0 0 4px",fontWeight:"300"}}>Elevate Your Everyday</p>
-                <p style={{fontFamily:BODY,color:C.gold,fontSize:"10px",letterSpacing:"2.5px",margin:"0 0 24px",textTransform:"uppercase"}}>A European Company</p>
-                <div style={{display:"flex",justifyContent:"center",gap:"20px",flexWrap:"wrap"}}>
-                  {["Wellness","Experience","Home","Wealth"].map(c=>(
-                    <button key={c} onClick={()=>go("shop",c)} style={{
-                      fontFamily:BODY,background:"none",border:"none",
-                      color:C.grey,fontSize:"11px",letterSpacing:"1.5px",
-                      cursor:"pointer",textTransform:"uppercase",fontWeight:"300",
-                    }}>{c}</button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* ════════ SHOP ════════ */}
-          {tab==="shop" && (
-            <div style={{paddingBottom:"16px"}}>
-              <div style={{padding:"40px 24px 24px",textAlign:"center",borderBottom:`1px solid ${C.border}`}}>
-                <Eyebrow>The Edit</Eyebrow>
-                <h2 style={{fontFamily:DISPLAY,fontSize:"30px",fontWeight:"300",color:C.charcoal,margin:"14px 0 10px",letterSpacing:"-0.01em"}}>Shop the Elevation</h2>
-                <p style={{fontFamily:BODY,color:C.grey,fontSize:"13px",lineHeight:"1.65",margin:0,fontWeight:"300"}}>European bestsellers, intentionally chosen to upgrade your everyday.</p>
-              </div>
-
-              {/* Category tabs */}
-              <div style={{overflowX:"auto"}}>
-                <div style={{display:"flex",padding:"0 20px",width:"max-content",borderBottom:`1px solid ${C.border}`}}>
-                  {CATS.map(c=>(
-                    <button key={c} onClick={()=>setCat(c)} style={{
-                      fontFamily:BODY,background:"none",border:"none",
-                      borderBottom:cat===c?`2px solid ${C.gold}`:"2px solid transparent",
-                      padding:"12px 16px",marginBottom:"-1px",
-                      fontSize:"11px",letterSpacing:"2.5px",textTransform:"uppercase",
-                      color:cat===c?C.gold:C.grey,
-                      cursor:"pointer",whiteSpace:"nowrap",fontWeight:"400",
-                    }}>{c}</button>
-                  ))}
-                </div>
-              </div>
-
-              <div style={{padding:"20px",display:"grid",gridTemplateColumns:"1fr 1fr",gap:"14px"}}>
-                {filtered.map(p=>(
-                  <ProductCard key={p.id} p={p} saved={saved.includes(p.id)} onSave={toggleSave}/>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* ════════ JOURNAL ════════ */}
-          {tab==="journal" && (
-            <div style={{paddingBottom:"16px"}}>
-              <div style={{padding:"40px 24px 24px",textAlign:"center",borderBottom:`1px solid ${C.border}`}}>
-                <Eyebrow>The Elateve Journal</Eyebrow>
-                <h2 style={{fontFamily:DISPLAY,fontSize:"30px",fontWeight:"300",color:C.charcoal,margin:"14px 0 10px",letterSpacing:"-0.01em"}}>Wellness & Wealth Articles</h2>
-                <p style={{fontFamily:BODY,color:C.grey,fontSize:"13px",lineHeight:"1.65",margin:0,fontWeight:"300"}}>Insights, rituals, and guidance for the elevated life.</p>
-              </div>
-
-              <div style={{padding:"20px"}}>
-                {JOURNAL.map((a,i)=>(
-                  <div key={a.id} onClick={()=>setJOpen(jOpen===i?null:i)}
-                    style={{background:C.white,border:`1px solid ${C.border}`,borderRadius:"3px",padding:"22px",marginBottom:"12px",cursor:"pointer"}}>
-                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
-                      <div style={{flex:1,paddingRight:"12px"}}>
-                        <div style={{display:"flex",alignItems:"center",gap:"10px",marginBottom:"10px"}}>
-                          <span style={{fontFamily:BODY,background:C.creamDark,border:`1px solid ${C.border}`,padding:"2px 8px",borderRadius:"1px",fontSize:"9px",letterSpacing:"2px",color:C.gold,textTransform:"uppercase"}}>{a.tag}</span>
-                          <span style={{fontFamily:BODY,color:C.greyLight,fontSize:"11px",fontWeight:"300"}}>{a.read}</span>
-                        </div>
-                        <h3 style={{fontFamily:DISPLAY,color:C.charcoal,fontSize:"15px",fontWeight:"400",margin:"0 0 8px",lineHeight:"1.4"}}>{a.title}</h3>
-                        <p style={{fontFamily:BODY,color:C.grey,fontSize:"12px",margin:0,lineHeight:"1.65",fontWeight:"300"}}>{jOpen===i?a.body:`${a.body.slice(0,85)}…`}</p>
-                        {jOpen===i&&(
-                          <button onClick={e=>{e.stopPropagation();go("shop");}} style={{
-                            fontFamily:BODY,background:"none",border:"none",color:C.gold,
-                            fontSize:"11px",letterSpacing:"1px",cursor:"pointer",
-                            textDecoration:"underline",padding:"12px 0 0",display:"block",fontWeight:"400",
-                          }}>Shop related products →</button>
-                        )}
-                      </div>
-                      <span style={{fontFamily:BODY,color:C.greyLight,fontSize:"18px",flexShrink:0,fontWeight:"300"}}>{jOpen===i?"−":"+"}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div style={{margin:"0 20px",background:C.charcoal,borderRadius:"3px",padding:"30px 22px"}}>
-                <Eyebrow col={C.gold}>Wealth & Abundance</Eyebrow>
-                <h3 style={{fontFamily:DISPLAY,color:C.white,fontSize:"22px",fontWeight:"300",margin:"12px 0 10px",letterSpacing:"-0.01em"}}>The Elateve Wealth Edit</h3>
-                <p style={{fontFamily:BODY,color:C.greyLight,fontSize:"13px",lineHeight:"1.65",margin:"0 0 22px",fontWeight:"300"}}>Feng shui principles, prosperity crystals, and abundance rituals curated for the modern life.</p>
-                <GoldBtn onClick={()=>go("shop","Wealth")} sm>Explore Wealth Picks</GoldBtn>
-              </div>
-            </div>
-          )}
-
-          {/* ════════ ABOUT ════════ */}
-          {tab==="about" && (
-            <div style={{paddingBottom:"16px"}}>
-              <div style={{padding:"40px 24px 28px",textAlign:"center",borderBottom:`1px solid ${C.border}`}}>
-                <Eyebrow>Our Story</Eyebrow>
-                <h2 style={{fontFamily:DISPLAY,fontSize:"30px",fontWeight:"300",color:C.charcoal,margin:"14px 0 0",letterSpacing:"-0.01em"}}>About ELATEVE</h2>
-              </div>
-
-              <div style={{padding:"28px 24px"}}>
-                <h3 style={{fontFamily:DISPLAY,color:C.charcoal,fontSize:"20px",fontWeight:"400",margin:"0 0 16px",letterSpacing:"-0.01em"}}>The ELATEVE Story</h3>
-                {[
-                  "Born in Europe, ELATEVE was founded on a simple belief: you do not need a massive budget to live beautifully. You just need better taste and the right guidance.",
-                  "As a European company, we bring a distinctly continental perspective to curation, blending timeless European taste with globally sourced products that resonate with modern life. We curate across four pillars of elevated living: Wellness, Experience, Home, and Wealth.",
-                  "Our community spans the globe. Every product we recommend has been chosen with the same discerning eye that defines European craftsmanship and design sensibility.",
-                ].map((para,i)=>(
-                  <p key={i} style={{fontFamily:BODY,color:C.grey,fontSize:"14px",lineHeight:"1.8",margin:"0 0 18px",fontWeight:"300"}}>{para}</p>
-                ))}
-
-                <Hr/>
-
-                {[
-                  {t:"Wellness",   d:"Body and mind rituals. Supplements, skincare, and tools for cellular health and daily restoration."},
-                  {t:"Experience", d:"Sensory elevation. Candles, lamps, and luxuries that transform how your space feels."},
-                  {t:"Home",       d:"Beautiful, functional spaces. Leather desk mats, ceramic cookware, and curated essentials."},
-                  {t:"Wealth",     d:"Abundance and prosperity. Feng shui tools, crystals, and intention-setting products."},
-                ].map((p,i,arr)=>(
-                  <div key={i} style={{borderBottom:i<arr.length-1?`1px solid ${C.border}`:"none",paddingBottom:"20px",marginBottom:"20px"}}>
-                    <p style={{fontFamily:BODY,color:C.gold,fontSize:"10px",letterSpacing:"2.5px",textTransform:"uppercase",margin:"0 0 7px",fontWeight:"500"}}>{p.t}</p>
-                    <p style={{fontFamily:BODY,color:C.grey,fontSize:"13px",lineHeight:"1.7",margin:0,fontWeight:"300"}}>{p.d}</p>
-                  </div>
-                ))}
-
-                <div style={{textAlign:"center",marginTop:"16px"}}>
-                  <p style={{fontFamily:BODY,color:C.greyLight,fontSize:"10px",letterSpacing:"2.5px",textTransform:"uppercase",marginBottom:"18px",fontWeight:"300"}}>A European Company</p>
-                  <GoldBtn onClick={()=>go("shop")} out>Shop the Edit</GoldBtn>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* ════════ SAVED ════════ */}
-          {tab==="saved" && (
-            <div style={{paddingBottom:"16px"}}>
-              <div style={{padding:"40px 24px 24px",textAlign:"center",borderBottom:`1px solid ${C.border}`}}>
-                <Eyebrow>Your Collection</Eyebrow>
-                <h2 style={{fontFamily:DISPLAY,fontSize:"28px",fontWeight:"300",color:C.charcoal,margin:"14px 0 0",letterSpacing:"-0.01em"}}>Saved Items</h2>
-              </div>
-
-              <div style={{padding:"20px"}}>
-                {saved.length===0 ? (
-                  <div style={{textAlign:"center",padding:"56px 20px"}}>
-                    <div style={{fontSize:"28px",color:C.border,marginBottom:"18px",fontFamily:BODY}}>♡</div>
-                    <h3 style={{fontFamily:DISPLAY,color:C.charcoal,fontSize:"18px",fontWeight:"300",marginBottom:"10px"}}>Your edit is empty</h3>
-                    <p style={{fontFamily:BODY,color:C.grey,fontSize:"13px",marginBottom:"28px",fontWeight:"300"}}>Tap the heart on any product to save it here</p>
-                    <GoldBtn onClick={()=>go("shop")} sm>Browse the Edit</GoldBtn>
-                  </div>
-                ) : (
-                  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"14px"}}>
-                    {PRODUCTS.filter(p=>saved.includes(p.id)).map(p=>(
-                      <div key={p.id} style={{background:C.white,border:`1px solid ${C.border}`,borderRadius:"3px",padding:"18px 14px",position:"relative"}}>
-                        <button onClick={()=>toggleSave(p.id)} style={{position:"absolute",top:"8px",right:"8px",background:"none",border:"none",cursor:"pointer",color:"#c0392b",fontSize:"14px",fontFamily:BODY}}>♥</button>
-                        <Eyebrow col={C.gold}>{p.cat}</Eyebrow>
-                        <p style={{fontFamily:DISPLAY,color:C.charcoal,fontSize:"13px",fontWeight:"400",margin:"7px 0 5px",lineHeight:"1.3"}}>{p.name}</p>
-                        <p style={{fontFamily:DISPLAY,color:C.gold,fontSize:"14px",margin:"0 0 14px",fontWeight:"300"}}>{p.price}</p>
-                        <a href={p.link} target="_blank" rel="noopener noreferrer" style={{
-                          display:"block",textAlign:"center",fontFamily:BODY,
-                          background:C.charcoal,color:C.white,
-                          padding:"9px",fontSize:"10px",letterSpacing:"2px",
-                          textTransform:"uppercase",textDecoration:"none",
-                          borderRadius:"2px",fontWeight:"500",
-                        }}>Shop on Amazon</a>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
-        </div>{/* end scroll */}
-
-        {/* ── BOTTOM NAV ── */}
-        <div style={{
-          background:C.cream,
-          borderTop:`1px solid ${C.border}`,
-          display:"flex",
-          flexShrink:0,
-        }}>
-          {NAV.map(n=>(
-            <button key={n.id} onClick={()=>go(n.id)} style={{
-              flex:1,background:"none",border:"none",
-              padding:"11px 0 9px",cursor:"pointer",
-              display:"flex",flexDirection:"column",
-              alignItems:"center",gap:"3px",
-            }}>
-              <span style={{fontSize:"16px",color:tab===n.id?C.gold:C.greyLight}}>{n.icon}</span>
-              <span style={{
-                fontFamily:BODY,fontSize:"8px",letterSpacing:"1.5px",
-                textTransform:"uppercase",color:tab===n.id?C.gold:C.greyLight,
-                fontWeight:tab===n.id?"500":"300",
-              }}>{n.label}</span>
-              {tab===n.id && <div style={{width:"14px",height:"1px",background:C.gold,marginTop:"1px"}}/>}
-            </button>
-          ))}
-        </div>
-
-      </div>
-    </>
+      <View style={s.nav}>
+        {NAV.map(n => (
+          <TouchableOpacity key={n.id} onPress={() => go(n.id)} style={s.navItem}>
+            <Text style={[s.navIcon, tab===n.id && { color:C.gold }]}>{n.icon}</Text>
+            <Text style={[s.navLabel, tab===n.id && { color:C.gold }]}>{n.label.toUpperCase()}</Text>
+            {tab===n.id && <View style={s.navLine}/>}
+          </TouchableOpacity>
+        ))}
+      </View>
+    </View>
   );
 }
+
+const s = StyleSheet.create({
+  root:{ flex:1, backgroundColor:C.cream },
+  header:{ paddingTop:56, paddingBottom:18, alignItems:"center", borderBottomWidth:1, borderBottomColor:C.border, backgroundColor:C.cream },
+  logo:{ fontSize:13, fontWeight:"800", letterSpacing:10, color:C.charcoal },
+  toast:{ position:"absolute", top:24, alignSelf:"center", backgroundColor:C.charcoal, paddingHorizontal:24, paddingVertical:10, borderRadius:2, zIndex:999 },
+  toastTxt:{ color:C.white, fontSize:11, letterSpacing:2 },
+  notif:{ position:"absolute", bottom:90, left:16, right:16, backgroundColor:C.charcoal, borderRadius:4, padding:24, zIndex:500, flexDirection:"row", alignItems:"flex-start", gap:16 },
+  notifEyebrow:{ color:C.gold, fontSize:9, letterSpacing:3, marginBottom:6 },
+  notifTitle:{ color:C.white, fontSize:17, fontWeight:"300", marginBottom:4 },
+  notifBody:{ color:C.light, fontSize:12, lineHeight:18, fontWeight:"300" },
+  notifActions:{ alignItems:"flex-end", justifyContent:"space-between", gap:12 },
+  notifYes:{ backgroundColor:C.gold, paddingHorizontal:16, paddingVertical:8, borderRadius:2 },
+  notifYesTxt:{ color:C.white, fontSize:11, letterSpacing:1.5, fontWeight:"600" },
+  notifNo:{ color:C.grey, fontSize:11, letterSpacing:1 },
+  label:{ fontSize:9, letterSpacing:4, textTransform:"uppercase", color:C.grey, fontWeight:"500" },
+  btn:{ backgroundColor:C.gold, paddingVertical:14, paddingHorizontal:32, borderRadius:2, alignSelf:"flex-start", borderWidth:1, borderColor:C.gold },
+  btnOut:{ backgroundColor:"transparent" },
+  btnTxt:{ color:C.white, fontSize:10, letterSpacing:3, textTransform:"uppercase", fontWeight:"700" },
+  hero:{ paddingHorizontal:32, paddingTop:64, paddingBottom:64, borderBottomWidth:1, borderBottomColor:C.border },
+  heroTitle:{ fontSize:52, fontWeight:"200", color:C.charcoal, marginTop:20, marginBottom:24, lineHeight:58, letterSpacing:-1 },
+  heroSub:{ color:C.grey, fontSize:15, lineHeight:24, marginBottom:40, fontWeight:"300" },
+  pillarsWrap:{ padding:32, paddingTop:40, paddingBottom:40 },
+  pillars:{ flexDirection:"row", flexWrap:"wrap", marginTop:24 },
+  pillarTile:{ width:"48%", aspectRatio:1, backgroundColor:C.dark, borderWidth:1, borderColor:C.border, justifyContent:"flex-end", padding:20, marginBottom:8 },
+  pillarNum:{ color:C.gold, fontSize:11, letterSpacing:2, marginBottom:8 },
+  pillarName:{ color:C.charcoal, fontSize:16, fontWeight:"300", letterSpacing:1 },
+  featuredWrap:{ paddingHorizontal:32, paddingBottom:40 },
+  rowBetween:{ flexDirection:"row", justifyContent:"space-between", alignItems:"center", marginBottom:20 },
+  seeAll:{ color:C.gold, fontSize:11, letterSpacing:1 },
+  featScroll:{ gap:12, paddingRight:32 },
+  featCard:{ width:200, backgroundColor:C.white, borderWidth:1, borderColor:C.border, padding:24 },
+  featCat:{ color:C.gold, fontSize:8, letterSpacing:3, marginBottom:12 },
+  featName:{ color:C.charcoal, fontSize:14, fontWeight:"300", lineHeight:20, marginBottom:16 },
+  featPrice:{ color:C.charcoal, fontSize:18, fontWeight:"200" },
+  quoteBlock:{ backgroundColor:C.charcoal, padding:48 },
+  quoteMark:{ color:C.gold, fontSize:48, lineHeight:48, marginBottom:8 },
+  quoteText:{ color:C.white, fontSize:18, fontWeight:"200", lineHeight:28, marginBottom:20 },
+  quoteSource:{ color:C.grey, fontSize:11, letterSpacing:2 },
+  nlWrap:{ padding:48, borderTopWidth:1, borderTopColor:C.border },
+  nlTitle:{ fontSize:32, fontWeight:"200", color:C.charcoal, marginTop:16, marginBottom:32, lineHeight:40, letterSpacing:-0.5 },
+  nlForm:{ flexDirection:"row", borderWidth:1, borderColor:C.border, backgroundColor:C.white },
+  nlInput:{ flex:1, padding:16, fontSize:14, color:C.charcoal },
+  nlBtn:{ backgroundColor:C.gold, paddingHorizontal:20, alignItems:"center", justifyContent:"center" },
+  nlBtnTxt:{ color:C.white, fontSize:18 },
+  nlConfirm:{ color:C.gold, fontSize:13, letterSpacing:2 },
+  footer:{ padding:48, alignItems:"center", borderTopWidth:1, borderTopColor:C.border },
+  footerLogo:{ fontSize:12, fontWeight:"800", letterSpacing:10, color:C.charcoal, marginBottom:8 },
+  footerSub:{ color:C.grey, fontSize:10, letterSpacing:3 },
+  pageTop:{ paddingHorizontal:32, paddingTop:48, paddingBottom:40 },
+  pageTitle:{ fontSize:44, fontWeight:"200", color:C.charcoal, marginTop:16, letterSpacing:-1 },
+  catScroll:{ paddingHorizontal:32, paddingBottom:24, gap:8 },
+  catPill:{ paddingHorizontal:16, paddingVertical:8, borderWidth:1, borderColor:C.border, borderRadius:100 },
+  catPillActive:{ borderColor:C.gold, backgroundColor:C.gold },
+  catPillTxt:{ color:C.grey, fontSize:9, letterSpacing:2.5 },
+  catPillTxtActive:{ color:C.white },
+  productRow:{ flexDirection:"row", justifyContent:"space-between", alignItems:"center", paddingHorizontal:32, paddingVertical:24, borderBottomWidth:1, borderBottomColor:C.border },
+  productLeft:{ flex:1, paddingRight:16 },
+  productCat:{ color:C.gold, fontSize:8, letterSpacing:3, marginBottom:6 },
+  productName:{ color:C.charcoal, fontSize:15, fontWeight:"300", lineHeight:21, marginBottom:6 },
+  productPrice:{ color:C.charcoal, fontSize:18, fontWeight:"200" },
+  productRight:{ alignItems:"center", gap:12 },
+  productHeart:{ padding:4 },
+  productShop:{ backgroundColor:C.charcoal, paddingHorizontal:14, paddingVertical:8, borderRadius:2 },
+  productShopTxt:{ color:C.white, fontSize:9, letterSpacing:2, fontWeight:"600" },
+  articleRow:{ paddingHorizontal:32, paddingVertical:32, borderBottomWidth:1, borderBottomColor:C.border },
+  articleMeta:{ flexDirection:"row", justifyContent:"space-between", marginBottom:14 },
+  articleTag:{ color:C.gold, fontSize:8, letterSpacing:3 },
+  articleRead:{ color:C.light, fontSize:11 },
+  articleTitle:{ color:C.charcoal, fontSize:20, fontWeight:"200", lineHeight:28, marginBottom:8, letterSpacing:-0.3 },
+  articleBody:{ color:C.grey, fontSize:14, lineHeight:22, fontWeight:"300", marginTop:12, marginBottom:8 },
+  articleToggle:{ color:C.gold, fontSize:20, marginTop:10, fontWeight:"200" },
+  journalCta:{ margin:32, backgroundColor:C.charcoal, padding:40, gap:16 },
+  journalCtaTitle:{ color:C.white, fontSize:28, fontWeight:"200", lineHeight:36, letterSpacing:-0.5 },
+  aboutBlock:{ padding:32, paddingTop:0, gap:20 },
+  aboutBig:{ fontSize:36, fontWeight:"200", color:C.charcoal, letterSpacing:-0.5, lineHeight:44 },
+  aboutBody:{ color:C.grey, fontSize:15, lineHeight:24, fontWeight:"300" },
+  aboutPillarRow:{ flexDirection:"row", justifyContent:"space-between", alignItems:"center", paddingHorizontal:32, paddingVertical:24 },
+  aboutPillarName:{ color:C.charcoal, fontSize:13, letterSpacing:2, fontWeight:"500", marginBottom:4 },
+  aboutPillarDesc:{ color:C.grey, fontSize:12, fontWeight:"300" },
+  europeanBadge:{ color:C.light, fontSize:9, letterSpacing:4 },
+  emptyState:{ alignItems:"center", paddingVertical:80, paddingHorizontal:40, gap:12 },
+  emptyIcon:{ fontSize:40, color:C.border, marginBottom:8 },
+  emptyTitle:{ fontSize:22, fontWeight:"200", color:C.charcoal },
+  emptySub:{ color:C.grey, fontSize:14, textAlign:"center", fontWeight:"300", marginBottom:12, lineHeight:22 },
+  nav:{ backgroundColor:C.cream, borderTopWidth:1, borderTopColor:C.border, flexDirection:"row", paddingBottom:28, paddingTop:12 },
+  navItem:{ flex:1, alignItems:"center", gap:4 },
+  navIcon:{ fontSize:18, color:C.light },
+  navLabel:{ fontSize:7, letterSpacing:1.5, color:C.light, fontWeight:"400" },
+  navLine:{ width:16, height:1, backgroundColor:C.gold, marginTop:2 },
+});
