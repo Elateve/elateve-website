@@ -69,28 +69,95 @@ function updateNavActive(page) {
   });
 }
 
+// ==================== COMING SOON MODAL ====================
+function initComingSoonModal() {
+  if (document.getElementById('comingSoonOverlay')) return;
+  const overlay = document.createElement('div');
+  overlay.id = 'comingSoonOverlay';
+  overlay.className = 'popup-overlay';
+  overlay.innerHTML = `
+    <div class="popup">
+      <button class="popup-close" id="comingSoonClose">&times;</button>
+      <span class="popup-eyebrow">ELATEVE</span>
+      <h2 class="popup-title" style="font-size:clamp(1.4rem,3vw,2rem)">Coming Soon</h2>
+      <p class="popup-text">We're still curating the best way to bring you this find.<br>Check back soon — it's worth the wait.</p>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) overlay.classList.remove('active');
+  });
+  document.getElementById('comingSoonClose')?.addEventListener('click', () => {
+    overlay.classList.remove('active');
+  });
+}
+
+function showComingSoon() {
+  initComingSoonModal();
+  document.getElementById('comingSoonOverlay')?.classList.add('active');
+}
+
 // ==================== PRODUCT RENDERING ====================
 function createProductCard(product) {
-  const card = document.createElement('a');
-  card.href = product.link;
-  card.target = '_blank';
-  card.rel = 'noopener noreferrer';
+  const card = document.createElement('div');
   card.className = 'product-card';
   card.dataset.category = product.category;
+
+  const tierBadge = product.badge
+    ? `<span class="product-tier-badge product-tier-badge--${product.badge.toLowerCase()}">${product.badge}</span>`
+    : '';
+
+  const elateveLoves = product.whyElateveLoves
+    ? `<div class="product-card-loves">
+        <button class="loves-toggle" aria-expanded="false">
+          <span class="loves-heart">♥</span> Why ELATEVE loves this
+          <span class="loves-arrow">›</span>
+        </button>
+        <p class="loves-text">${product.whyElateveLoves}</p>
+       </div>`
+    : '';
 
   card.innerHTML = `
     <div class="product-card-img">
       <img src="${product.image}" alt="${product.name}" loading="lazy">
       <span class="product-card-badge">${product.category}</span>
+      ${tierBadge}
     </div>
     <div class="product-card-body">
       <h3 class="product-card-name">${product.name}</h3>
+      ${product.description ? `<p class="product-card-desc">${product.description}</p>` : ''}
+      ${elateveLoves}
       <div class="product-card-bottom">
         <span class="product-card-price">${product.price}</span>
-        <span class="product-card-link">Shop Now</span>
+        <span class="product-card-link">${product.link ? 'Shop Now' : 'Coming Soon'}</span>
       </div>
     </div>
   `;
+
+  // Handle click — open link or show coming soon modal
+  card.addEventListener('click', (e) => {
+    // Don't navigate if clicking the loves toggle
+    if (e.target.closest('.loves-toggle')) return;
+
+    if (product.link) {
+      window.open(product.link, '_blank', 'noopener,noreferrer');
+    } else {
+      showComingSoon();
+    }
+  });
+
+  // Toggle "Why ELATEVE loves this" accordion
+  const toggle = card.querySelector('.loves-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isOpen);
+      toggle.classList.toggle('open', !isOpen);
+    });
+  }
+
   return card;
 }
 
