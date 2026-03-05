@@ -116,8 +116,14 @@ export default function App() {
   const [subbed, setSubbed] = useState(false);
   const [toast, setToast] = useState("");
   const [showNotif, setShowNotif] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const toastOp = useRef(new Animated.Value(0)).current;
   const scrollRef = useRef(null);
+
+  const bg   = isDark ? "#0E0E0E" : C.cream;
+  const card = isDark ? "#181818" : C.white;
+  const text = isDark ? "#F0EDE8" : C.charcoal;
+  const sub  = isDark ? "#BEBAB4" : C.grey;
 
   useEffect(() => {
     const t = setTimeout(() => setShowNotif(true), 3500);
@@ -156,8 +162,8 @@ export default function App() {
   ];
 
   return (
-    <View style={s.root}>
-      <StatusBar barStyle="dark-content" backgroundColor={C.cream}/>
+    <View style={[s.root, { backgroundColor: bg }]}>
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={bg}/>
 
       {toast ? (
         <Animated.View style={[s.toast, { opacity: toastOp }]}>
@@ -183,8 +189,11 @@ export default function App() {
         </View>
       ) : null}
 
-      <View style={s.header}>
-        <Text style={s.logo}>ELATEVE</Text>
+      <View style={[s.header, { backgroundColor: bg, borderBottomColor: isDark ? "#2a2a2a" : C.border }]}>
+        <Text style={[s.logo, { color: text }]}>ELATEVE</Text>
+        <TouchableOpacity onPress={() => setIsDark(d => !d)} style={[s.themeBtn, { borderColor: isDark ? "#3a3a3a" : C.greyLight }]}>
+          <Text style={{ fontSize:14, color: isDark ? C.gold : text }}>{isDark ? "☀" : "☾"}</Text>
+        </TouchableOpacity>
       </View>
 
       <ScrollView ref={scrollRef} style={{ flex:1 }} showsVerticalScrollIndicator={false}>
@@ -196,6 +205,23 @@ export default function App() {
               <Text style={s.heroH1}>{"Elevate Your\nEveryday"}</Text>
               <Text style={s.heroSub}>{"European-curated essentials for a life well-lived.\nAffordable luxury, intentionally chosen."}</Text>
               <GoldBtn onPress={() => go("shop")}>EXPLORE THE EDIT</GoldBtn>
+            </View>
+
+            {/* ── PRODUCT OF THE MONTH ── */}
+            <View style={s.potm}>
+              <Text style={s.potmBadge}>✦  PRODUCT OF THE MONTH  ·  MARCH 2026</Text>
+              <Text style={s.potmCat}>WEALTH  ✦  ABUNDANCE</Text>
+              <Text style={s.potmTitle}>The Red Wallet{"\n"}That Changes{"\n"}Everything</Text>
+              <Text style={s.potmDesc}>In feng shui, Vedic tradition, and Latin American prosperity rituals, red is the colour of financial flow. Carry one intentionally.</Text>
+              <View style={{ flexDirection:"row", gap:10, marginTop:16 }}>
+                <TouchableOpacity onPress={() => Linking.openURL("https://amzn.to/3OMEKQw")} style={s.potmShopBtn}>
+                  <Text style={s.potmShopTxt}>SHOP WALLET</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => { setTab("journal"); setJOpen({ id:9, tag:"Wealth", read:"6 min", title:"Why Your Wallet Colour Is Sabotaging Your Wealth", body:"In feng shui, across Vedic tradition and Latin American prosperity rituals, red is the colour of financial flow and activated abundance. The Fossil Women's Logan Leather RFID Wallet in garnet red is our Product of the Month — because it doesn't just look beautiful, it carries intention. Fill it with a coin from a meaningful moment, a folded note with your financial intention, and carry it as a daily ritual object that says: I am open to abundance. I am elevated." }); }} style={s.potmStoryBtn}>
+                  <Text style={s.potmStoryTxt}>READ STORY →</Text>
+                </TouchableOpacity>
+              </View>
+              <Text style={s.potmProduct}>Fossil Logan Leather RFID Wallet — Garnet Red · $100</Text>
             </View>
 
             <View style={s.section}>
@@ -425,8 +451,19 @@ export default function App() {
 
 const s = StyleSheet.create({
   root:{ flex:1, backgroundColor:C.cream },
-  header:{ backgroundColor:C.cream, borderBottomWidth:1, borderBottomColor:C.border, paddingVertical:16, paddingTop:50, alignItems:"center" },
-  logo:{ fontSize:15, fontWeight:"700", letterSpacing:8, color:C.gold },
+  header:{ backgroundColor:C.cream, borderBottomWidth:1, borderBottomColor:C.border, paddingVertical:16, paddingTop:50, alignItems:"center", flexDirection:"row", justifyContent:"center", paddingHorizontal:20 },
+  logo:{ fontSize:15, fontWeight:"700", letterSpacing:8, color:C.gold, flex:1, textAlign:"center" },
+  themeBtn:{ width:32, height:32, borderRadius:16, borderWidth:1, alignItems:"center", justifyContent:"center" },
+  potm:{ backgroundColor:C.charcoal, padding:28, paddingTop:32 },
+  potmBadge:{ fontSize:8, letterSpacing:3, color:C.gold, textTransform:"uppercase", marginBottom:14 },
+  potmCat:{ fontSize:8, letterSpacing:3, color:"#c0392b", textTransform:"uppercase", marginBottom:12, fontWeight:"500" },
+  potmTitle:{ fontSize:32, fontWeight:"300", color:C.cream, lineHeight:38, marginBottom:14 },
+  potmDesc:{ fontSize:13, color:"rgba(247,245,240,0.6)", lineHeight:21, fontWeight:"300", marginBottom:4 },
+  potmShopBtn:{ flex:1, backgroundColor:C.gold, paddingVertical:12, alignItems:"center", borderRadius:1 },
+  potmShopTxt:{ color:C.charcoal, fontSize:10, letterSpacing:2, fontWeight:"700" },
+  potmStoryBtn:{ flex:1, borderWidth:1, borderColor:"rgba(247,245,240,0.25)", paddingVertical:12, alignItems:"center", borderRadius:1 },
+  potmStoryTxt:{ color:"rgba(247,245,240,0.75)", fontSize:10, letterSpacing:2 },
+  potmProduct:{ fontSize:10, color:"rgba(247,245,240,0.35)", marginTop:14, lineHeight:16 },
   eyebrow:{ fontSize:10, letterSpacing:3, textTransform:"uppercase", color:C.grey, fontWeight:"400" },
   goldBtn:{ backgroundColor:C.gold, paddingVertical:13, paddingHorizontal:28, borderRadius:2, borderWidth:1, borderColor:C.gold, alignItems:"center" },
   goldBtnOut:{ backgroundColor:"transparent" },

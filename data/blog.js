@@ -128,6 +128,23 @@ const blogPosts = [
       "The fourth principle is timing. The most memorable gifts are often the unexpected ones. Not birthday gifts or holiday presents, but the random Tuesday gift. The just-because gift. The I-saw-this-and-thought-of-you gift. These carry disproportionate emotional weight because they were not obligatory.",
       "Intentional gifting is not about spending more. It is about choosing better. A fifteen-euro item selected with precision and care will always outperform a one-hundred-euro item chosen in haste. The language of gifts is not spoken in currency — it is spoken in attention."
     ]
+  },
+  {
+    id: 9,
+    tag: "Wealth",
+    title: "Why Your Wallet Colour Is Sabotaging Your Wealth",
+    excerpt: "Ancient feng shui wisdom meets modern psychology. The science and spirituality behind choosing a red wallet — and why it could change your financial energy forever.",
+    date: "Mar 2026",
+    readTime: "6 min read",
+    content: [
+      "There is a practice that spans centuries, cultures, and continents — from the markets of Hong Kong to the spiritual traditions of South America, from Vedic numerology to modern financial psychology: the deliberate choice of a red wallet to attract wealth. This is not folklore. This is a sophisticated understanding of how colour, intention, and energy interact with your relationship to money.",
+      "In feng shui, the ancient Chinese practice of harmonising individuals with their environment, red is the most powerful colour in the wealth spectrum. It carries the energy of fire — activation, ambition, forward momentum. Red is the colour of good fortune in Chinese culture. It is worn at weddings to invite prosperity, gifted at Lunar New Year to set financial intentions, and hung at doorways to welcome abundance. The colour does not just symbolise wealth — it is believed to actively draw it.",
+      "But the wisdom is not confined to Chinese tradition. In Vedic numerology and Hindu philosophy, red is associated with the root chakra — the energetic foundation of security, stability, and material wellbeing. A red wallet, placed close to the body and in constant contact with your financial instruments, becomes a talisman. Not a passive one. An active, intentional declaration that you are open to receiving.",
+      "Latin American wealth traditions echo this understanding. The practice of gifting a red wallet at New Year — filled with coins and given to someone you wish prosperity upon — is widespread across South America. The red wallet is not just a gift. It is a ritual object carrying the energy of abundance from one person to another. In many households, a red wallet is replaced every year, the old one burned to release stagnant energy and the new one activated with intention.",
+      "Modern psychology lends its own support. Colour psychology research consistently shows that red activates the brain's reward system, increasing alertness, energy, and motivation. When your eye catches the red of your wallet as you reach for it, a subtle neurological signal fires. Attention. Intention. Worthiness. These micro-activations, repeated hundreds of times over weeks and months, quietly reshape your subconscious relationship with money and abundance.",
+      "The Fossil Women's Logan Leather RFID Wallet in garnet red is our Product of the Month for a reason. It is not simply beautiful — though it is, with its rich leather, precise stitching, and the deep garnet hue that feng shui masters describe as the optimal wealth frequency. It is also RFID-protected, which speaks to a deeper principle: the guarding of what you have built, the protection of your financial energy against modern threats. There is a quiet poetry in carrying both ancient wisdom and modern technology in a single object.",
+      "Carry a red wallet. Fill it intentionally — a coin from a meaningful moment, a small folded note with your financial intention written on it, a photograph of something you are actively working toward. Treat it not as a container for cards and cash, but as a daily ritual object that says, quietly and firmly: I am building something. I am open to abundance. I am elevated."
+    ]
   }
 ];
 

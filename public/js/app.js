@@ -8,6 +8,28 @@ let currentPage = 'home';
 let currentFilter = 'all';
 let productsCache = null;
 
+// ==================== DARK MODE ====================
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const icon = document.getElementById('themeIcon');
+  if (icon) icon.textContent = theme === 'dark' ? '☀' : '☾';
+}
+
+function initTheme() {
+  const saved = localStorage.getItem('elateve_theme') || 'light';
+  applyTheme(saved);
+
+  const btn = document.getElementById('themeToggle');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('elateve_theme', next);
+    });
+  }
+}
+
 // ==================== API ====================
 async function fetchProducts(category = 'all') {
   const url = category === 'all' ? '/api/products' : `/api/products?category=${category}`;
@@ -404,6 +426,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   initNavigation();
   initScrollEffects();
+  initTheme();
+
+  // ==================== POTM STORY BUTTON ====================
+  const potmBtn = document.getElementById('potmReadStory');
+  if (potmBtn) {
+    potmBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigateTo('blog');
+      setTimeout(() => openArticle(9), 350);
+    });
+  }
 
   // Push initial state
   history.replaceState({ page: initialPage, category: params.get('category') }, '', window.location.href);
