@@ -11,22 +11,36 @@ const C = {
 };
 
 const PRODUCTS = [
-  { id:1,  cat:"Wellness",   name:"Majestic Pure Lavender Oil",       price:"$15",  tag:"Bestseller",   link:"https://www.amazon.com/s?k=Majestic+Pure+Lavender+Essential+Oil" },
-  { id:2,  cat:"Wellness",   name:"Vital Proteins Collagen Peptides", price:"$43",  tag:"Top Rated",    link:"https://www.amazon.com/s?k=Vital+Proteins+Collagen+Peptides" },
-  { id:3,  cat:"Wellness",   name:"Tru Niagen NAD+ Supplement",       price:"$49",  tag:"Biohack",      link:"https://www.amazon.com/s?k=Tru+Niagen+NAD+Cell+Regeneration" },
-  { id:4,  cat:"Wellness",   name:"Rose Quartz Gua Sha Set",          price:"$34",  tag:"Self-Care",    link:"https://www.amazon.com/s?k=rose+quartz+gua+sha+jade+roller+set" },
-  { id:5,  cat:"Experience", name:"Playlearn 6ft Bubble Lamp",        price:"$189", tag:"Statement",    link:"https://www.amazon.com/dp/B00J24THFY" },
-  { id:6,  cat:"Experience", name:"NEST New York Bamboo Candle",       price:"$52",  tag:"Luxury",       link:"https://www.amazon.com/s?k=NEST+New+York+Bamboo+candle" },
-  { id:7,  cat:"Experience", name:"Voluspa Japonica Glass Candle",     price:"$38",  tag:"Gift Pick",    link:"https://www.amazon.com/s?k=Voluspa+Japonica+candle" },
-  { id:8,  cat:"Experience", name:"Mulberry Silk Pillowcase",          price:"$55",  tag:"Sleep",        link:"https://www.amazon.com/s?k=mulberry+silk+pillowcase+22+momme" },
-  { id:9,  cat:"Home",       name:"ELIZO Leather Desk Mat Set",        price:"$79",  tag:"Editors Pick", link:"https://www.amazon.com/dp/B09HRCCNCD" },
-  { id:10, cat:"Home",       name:"Gallaway Leather Desk Pad",         price:"$45",  tag:"Office",       link:"https://www.amazon.com/dp/B083JP5QY4" },
-  { id:11, cat:"Home",       name:"Caraway Ceramic Cookware Set",      price:"$395", tag:"Premium",      link:"https://www.amazon.com/s?k=Caraway+Cookware+Set" },
-  { id:12, cat:"Home",       name:"GreenPan Ceramic Fry Pan Set",      price:"$89",  tag:"Clean Living", link:"https://www.amazon.com/s?k=GreenPan+ceramic+frying+pan+set" },
-  { id:13, cat:"Wealth",     name:"Red Phoenix Feng Shui Wallet",      price:"$28",  tag:"Trending",     link:"https://www.amazon.com/dp/B0CP8WMDZP" },
-  { id:14, cat:"Wealth",     name:"Money Magnet Feng Shui Wallet",     price:"$35",  tag:"Manifest",     link:"https://www.amazon.com/dp/B07CJYG3RD" },
-  { id:15, cat:"Wealth",     name:"Citrine Crystal Cluster",           price:"$22",  tag:"Crystal",      link:"https://www.amazon.com/s?k=citrine+crystal+cluster+large+abundance" },
-  { id:16, cat:"Wealth",     name:"Golden Dragon Wealth Bracelet",     price:"$29",  tag:"Protection",   link:"https://www.amazon.com/s?k=Buddha+Karma+Golden+Dragon+Bracelet" },
+  // HOME
+  { id:1,  cat:"Home",       name:"Parachute Cloud Cotton Robe",                  desc:"Hotel-grade softness. European flax, Portuguese craft.",          price:"$129",    tag:null,      link:null,                                    loves:"Makes hotel-grade bathrobes, bedding and mattresses. Very popular gift item. Made in LA with European flax and Portuguese craftsmanship." },
+  { id:2,  cat:"Home",       name:"Parachute REST / RISE Candle",                 desc:"Morning energy or evening calm — perfectly balanced.",            price:"$54",     tag:null,      link:null,                                    loves:"Awakens your senses in the morning or calms you at the end of the day. Perfect for working with your rhythm. And a great gift." },
+  { id:3,  cat:"Home",       name:"Unisex Hooded Waffle Robe — Turkish Cotton",   desc:"Finest cotton from Turkey. Spa at home every day.",               price:"$89",     tag:null,      link:"https://amzn.to/3NdT1VR",              loves:"Finest cotton from Turkey. Spa at home every day." },
+  { id:4,  cat:"Home",       name:"Rain Shower Head — Filters Metals & Chlorine", desc:"Glow up your skin and hair. Filter the impurities.",              price:"$165",    tag:null,      link:"https://amzn.to/3MY2Vuw",              loves:"Glow up your skin and hair and filter those impurities. Technology at its finest." },
+  { id:5,  cat:"Home",       name:"Anti-Breakage Shampoo for Hard Water",         desc:"Hard water ruins hair. Science finally fixes it.",                price:"$28",     tag:null,      link:"https://amzn.to/4b8KjQS",              loves:"Hard water ruins hair. Science finally fixes it." },
+  { id:6,  cat:"Home",       name:"Break Down Anti-Flake Scalp Soak",             desc:"Healthy hair starts at the root.",                                price:"$38",     tag:null,      link:"https://amzn.to/3MEJgjr",              loves:"Healthy hair starts at the root. Apple cider vinegar does the work." },
+  { id:7,  cat:"Home",       name:"Chesapeake Bay Candle — Stillness + Purity",   desc:"One light. Instant stillness.",                                   price:"$20.45",  tag:"Splurge", link:"https://amzn.to/4boc09j",              loves:"One light. Instant stillness." },
+  { id:8,  cat:"Home",       name:"Caraway Ceramic Frying Pan 10.5\" — Cream",    desc:"Cook beautifully. No toxins, no compromise.",                     price:"$125",    tag:"Splurge", link:"https://amzn.to/3Pc98DR",              loves:"Cook beautifully. No toxins, no compromise." },
+  { id:9,  cat:"Home",       name:"Caraway Cookware Set 12 Piece — Cream",        desc:"The full kitchen upgrade. PFAS-free, ceramic, timeless.",         price:"$445",    tag:"Splurge", link:"https://amzn.to/4aNLS7S",              loves:"Cook beautifully. No toxins, no compromise." },
+  { id:10, cat:"Home",       name:"Caraway Cookware Set 12 Piece — eBay Deal",    desc:"Same elevated cookware, smarter price on eBay.",                  price:"$379.95", tag:"Save",    link:"https://www.ebay.com/itm/146938993023",loves:"Your kitchen, elevated. Clean cooking made permanent." },
+  { id:11, cat:"Home",       name:"CAROTE 14-Piece Ceramic Cookware Set",         desc:"Chef-quality cooking. Ceramic clean conscience.",                 price:"$72.99",  tag:"Save",    link:"https://amzn.to/4b23Faf",              loves:"Chef-quality cooking. Ceramic clean conscience." },
+  { id:12, cat:"Home",       name:"GreenPan 12-Piece Nonstick Ceramic Set",       desc:"European double ceramic. Dishwasher safe. Built to last.",        price:"$199",    tag:null,      link:"https://amzn.to/4r9u37Y",              loves:"European quality. Many items dishwasher safe, which Caraway is not. Double ceramic coating. Longer lasting, less warping." },
+  // WELLNESS
+  { id:13, cat:"Wellness",   name:"Manucurist System Green\u2122 Gift Set",        desc:"The natural nail revolution. Made in France.",                    price:"$49",     tag:null,      link:"https://amzn.to/4b5Y7eN",              loves:"Join the new natural nail revolution! Made in France, this system is green baby!" },
+  { id:14, cat:"Wellness",   name:"Caudalie Beauty Elixir Face Mist",             desc:"Parisian pharmacy secret. Now yours.",                            price:"$49",     tag:null,      link:"https://amzn.to/4ssSONv",              loves:"Parisian pharmacy secret. Now yours." },
+  { id:15, cat:"Wellness",   name:"Dr. Barbara Sturm Glow Cream 1.7oz",           desc:"Luxury dermatology, bottled. Skin that speaks for itself.",       price:"$240",    tag:null,      link:"https://amzn.to/47cpoLk",              loves:"Luxury dermatology, bottled. Skin that speaks for itself. Save $60 with your Amazon Prime card." },
+  { id:16, cat:"Wellness",   name:"Kiehl's Ultra Facial Cream",                   desc:"52 years of cult status. Your moisture barrier, fortified.",      price:"$39",     tag:null,      link:"https://amzn.to/4slWLU3",              loves:"52 years of cult status. Your moisture barrier, fortified." },
+  { id:17, cat:"Wellness",   name:"BIODANCE Bio-Collagen Real Deep Mask",         desc:"Korean skincare precision. Wake up to different skin.",           price:"$62",     tag:null,      link:"https://amzn.to/4rM64Nj",              loves:"Korean skincare precision. Wake up to different skin." },
+  { id:18, cat:"Wellness",   name:"Shark CryoGlow LED Face Mask",                 desc:"Clinic-grade light therapy. At home, every night.",               price:"$349",    tag:null,      link:"https://amzn.to/4uaHTtn",              loves:"Clinic-grade light therapy. At home, every night. Save $60 with your Amazon Prime card." },
+  { id:19, cat:"Wellness",   name:"Oura Ring 4 Sizing Kit",                       desc:"Know before you invest. Precision starts here.",                  price:"$10",     tag:null,      link:"https://amzn.to/3NgSpPi",              loves:"Know before you invest. Precision starts here." },
+  { id:20, cat:"Wellness",   name:"Oura Ring 4 — Ceramic Cloud",                  desc:"Wear your wellness data. Invisibly.",                             price:"$499",    tag:"Splurge", link:"https://amzn.to/4rROFCX",              loves:"Wear your wellness data. Invisibly." },
+  { id:21, cat:"Wellness",   name:"RingConn Gen 2 Smart Ring",                    desc:"Full health tracking. Zero subscriptions, ever.",                 price:"$299",    tag:"Save",    link:"https://amzn.to/4aS8yDZ",              loves:"Full health tracking. Zero subscriptions, ever." },
+  { id:22, cat:"Wellness",   name:"Beast Mighty 850 Plus Personal Blender",       desc:"Smoothies in seconds. Power that fits your counter.",             price:"$149",    tag:null,      link:"https://amzn.to/4l7tdHs",              loves:"Smoothies in seconds. Power that fits your counter." },
+  // EXPERIENCE
+  { id:23, cat:"Experience", name:"Luxury Hotel Gift Experience for Two",          desc:"The gift that lets them choose their dream stay.",                price:"Varies",  tag:"Splurge", link:null,                                    loves:"The premium hotel gift experience. Over 750,000 hotels in 170+ countries. Let them choose their destination and dates." },
+  { id:24, cat:"Experience", name:"WONDERBOX — Getaway Gift for 2",                desc:"Give memories, not things. 52,000 hotels await.",                price:"$199",    tag:"Save",    link:"https://amzn.to/4aRfLnJ",              loves:"No hassle. The recipient chooses their own dates and destination. Perfect for graduations, birthdays, weddings, anniversaries!" },
+  // WEALTH
+  { id:25, cat:"Wealth",     name:"Fossil Logan Leather RFID Wallet",              desc:"RFID protection meets timeless leather. Smart & stylish.",        price:"$100",    tag:null,      link:"https://amzn.to/3OMEKQw",              loves:"RFID protection meets timeless leather. Smart and stylish. Garnet red for attracting wealth :)" },
+  { id:26, cat:"Wealth",     name:"Michael Kors Jet Set Travel Continental",       desc:"Signature luxury, everyday carry. Travel like you mean it.",      price:"$119.63", tag:null,      link:"https://amzn.to/3OHTJLB",              loves:"Signature luxury, everyday carry. Travel like you mean it." },
 ];
 
 const JOURNAL = [
@@ -60,6 +74,7 @@ export default function App() {
   const [cat, setCat]           = useState("All");
   const [saved, setSaved]       = useState([]);
   const [jOpen, setJOpen]       = useState(null);
+  const [lovesOpenId, setLovesOpenId] = useState(null);
   const [email, setEmail]       = useState("");
   const [subbed, setSubbed]     = useState(false);
   const [showNotif, setShowNotif] = useState(false);
@@ -159,7 +174,7 @@ export default function App() {
               </View>
               <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={s.featScroll}>
                 {PRODUCTS.slice(0,5).map(p => (
-                  <TouchableOpacity key={p.id} onPress={() => Linking.openURL(p.link)} style={s.featCard}>
+                  <TouchableOpacity key={p.id} onPress={() => p.link ? Linking.openURL(p.link) : fire("Coming soon  ✦")} style={s.featCard}>
                     <Text style={s.featCat}>{p.cat.toUpperCase()}</Text>
                     <Text style={s.featName}>{p.name}</Text>
                     <Text style={s.featPrice}>{p.price}</Text>
@@ -212,9 +227,16 @@ export default function App() {
             {filtered.map((p, i) => (
               <View key={p.id} style={[s.productRow, i===0 && { borderTopWidth:1, borderTopColor:C.border }]}>
                 <View style={s.productLeft}>
-                  <Text style={s.productCat}>{p.cat.toUpperCase()}</Text>
+                  <Text style={s.productCat}>{p.cat.toUpperCase()}{p.tag ? `  ·  ${p.tag.toUpperCase()}` : ""}</Text>
                   <Text style={s.productName}>{p.name}</Text>
+                  {p.desc ? <Text style={s.productDesc}>{p.desc}</Text> : null}
                   <Text style={s.productPrice}>{p.price}</Text>
+                  {p.loves ? (
+                    <TouchableOpacity onPress={() => setLovesOpenId(lovesOpenId === p.id ? null : p.id)}>
+                      <Text style={s.productLovesToggle}>♥  Why ELATEVE loves this  {lovesOpenId === p.id ? "−" : "+"}</Text>
+                    </TouchableOpacity>
+                  ) : null}
+                  {lovesOpenId === p.id ? <Text style={s.productLovesText}>{p.loves}</Text> : null}
                 </View>
                 <View style={s.productRight}>
                   <TouchableOpacity onPress={() => toggleSave(p.id)} style={s.productHeart}>
@@ -222,8 +244,8 @@ export default function App() {
                       {saved.includes(p.id) ? "♥" : "♡"}
                     </Text>
                   </TouchableOpacity>
-                  <TouchableOpacity onPress={() => Linking.openURL(p.link)} style={s.productShop}>
-                    <Text style={s.productShopTxt}>SHOP</Text>
+                  <TouchableOpacity onPress={() => p.link ? Linking.openURL(p.link) : fire("Coming soon — check back  ✦")} style={[s.productShop, !p.link && s.productShopSoon]}>
+                    <Text style={[s.productShopTxt, !p.link && { color: C.grey }]}>{p.link ? "SHOP" : "SOON"}</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -312,8 +334,8 @@ export default function App() {
                     <TouchableOpacity onPress={() => toggleSave(p.id)} style={s.productHeart}>
                       <Text style={{ color:"#c0392b", fontSize:18 }}>♥</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => Linking.openURL(p.link)} style={s.productShop}>
-                      <Text style={s.productShopTxt}>SHOP</Text>
+                    <TouchableOpacity onPress={() => p.link ? Linking.openURL(p.link) : fire("Coming soon — check back  ✦")} style={[s.productShop, !p.link && s.productShopSoon]}>
+                      <Text style={[s.productShopTxt, !p.link && { color: C.grey }]}>{p.link ? "SHOP" : "SOON"}</Text>
                     </TouchableOpacity>
                   </View>
                 </View>
@@ -399,7 +421,11 @@ const s = StyleSheet.create({
   productPrice:{ color:C.charcoal, fontSize:18, fontWeight:"200" },
   productRight:{ alignItems:"center", gap:12 },
   productHeart:{ padding:4 },
+  productDesc:{ color:C.grey, fontSize:12, lineHeight:18, fontWeight:"300", marginBottom:4 },
+  productLovesToggle:{ color:C.gold, fontSize:9, letterSpacing:1.5, fontWeight:"500", marginTop:8 },
+  productLovesText:{ color:C.grey, fontSize:12, lineHeight:18, fontWeight:"300", marginTop:6, fontStyle:"italic" },
   productShop:{ backgroundColor:C.charcoal, paddingHorizontal:14, paddingVertical:8, borderRadius:2 },
+  productShopSoon:{ backgroundColor:"transparent", borderWidth:1, borderColor:C.border },
   productShopTxt:{ color:C.white, fontSize:9, letterSpacing:2, fontWeight:"600" },
   articleRow:{ paddingHorizontal:32, paddingVertical:32, borderBottomWidth:1, borderBottomColor:C.border },
   articleMeta:{ flexDirection:"row", justifyContent:"space-between", marginBottom:14 },
