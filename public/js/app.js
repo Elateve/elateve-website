@@ -189,12 +189,7 @@ async function loadProducts(filter = 'all') {
   if (!grid) return;
   grid.innerHTML = '';
 
-  let products;
-  if (filter === 'spring') {
-    products = await fetchSpring();
-  } else {
-    products = await fetchProducts(filter);
-  }
+  const products = await fetchProducts(filter);
   products.forEach((product, i) => {
     const card = createProductCard(product);
     card.style.animationDelay = `${i * 0.05}s`;
@@ -209,12 +204,64 @@ async function loadProducts(filter = 'all') {
   }, 50);
 }
 
+// Subcategory definitions per category
+const categorySubcategories = {
+  home: [
+    { label: 'All Home', tag: null },
+    { label: 'Spring Refresh', tag: 'refresh' },
+    { label: 'Spring Table', tag: 'table' }
+  ],
+  wellness: [
+    { label: 'All Wellness', tag: null },
+    { label: 'Spring Glow Up', tag: 'glow-up' }
+  ]
+};
+
 function setFilter(category) {
   currentFilter = category;
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.filter === category);
   });
+  renderSubcategories(category);
   loadProducts(category);
+}
+
+function renderSubcategories(category) {
+  const container = document.getElementById('shopSubcategories');
+  if (!container) return;
+
+  const subs = categorySubcategories[category];
+  if (!subs) {
+    container.innerHTML = '';
+    return;
+  }
+
+  container.innerHTML = subs.map((sub, i) =>
+    `<button class="sub-tab${i === 0 ? ' active' : ''}" data-category="${category}" data-tag="${sub.tag || ''}">${sub.label}</button>`
+  ).join('');
+}
+
+async function loadFilteredProducts(category, springTag) {
+  const grid = document.getElementById('productsGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  let products = await fetchProducts(category);
+  if (springTag) {
+    products = products.filter(p => p.springTag === springTag);
+  }
+
+  products.forEach((product, i) => {
+    const card = createProductCard(product);
+    card.style.animationDelay = `${i * 0.05}s`;
+    grid.appendChild(card);
+  });
+
+  setTimeout(() => {
+    document.querySelectorAll('#productsGrid .product-card').forEach((card, i) => {
+      setTimeout(() => card.classList.add('visible'), i * 40);
+    });
+  }, 50);
 }
 
 // ==================== SPRING COLLECTION ====================
@@ -336,6 +383,13 @@ function initNavigation() {
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('filter-btn')) {
       setFilter(e.target.dataset.filter);
+    }
+    if (e.target.classList.contains('sub-tab')) {
+      document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+      e.target.classList.add('active');
+      const tag = e.target.dataset.tag || null;
+      const cat = e.target.dataset.category;
+      loadFilteredProducts(cat, tag);
     }
   });
 
