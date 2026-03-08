@@ -10,7 +10,9 @@ const products = [
     image: "https://parachutehome.com/cdn/shop/files/cloud-cotton-robe_moss_main_01-min.jpg?v=1762839107",
     link: null,
     whyElateveLoves: "Makes hotel-grade bathrobes, bedding and mattresses. Very popular gift item. Made in LA with European flax and Portuguese craftsmanship.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
     id: 2,
@@ -21,7 +23,9 @@ const products = [
     image: "https://parachutehome.com/cdn/shop/files/the-parachute-candle-_rise_rest__01-min.jpg?v=1762839112",
     link: null,
     whyElateveLoves: "Awakens your senses in the morning or calms you at the end of the day. Perfect for working with your rhythm. And a great gift.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
     id: 3,
@@ -32,7 +36,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/814fP1aVB+L._AC_SX522_.jpg",
     link: "https://amzn.to/3NdT1VR",
     whyElateveLoves: "Finest cotton from Turkey. Spa at home every day.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
     id: 4,
@@ -43,7 +49,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61VaOp-znvL._AC_SX425_.jpg",
     link: "https://amzn.to/3MY2Vuw",
     whyElateveLoves: "Glow up your skin and hair and filter those impurities. Technology at its finest.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
     id: 5,
@@ -54,7 +62,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61uNs+3faUL._SY355_.jpg",
     link: "https://amzn.to/4b8KjQS",
     whyElateveLoves: "Hard water ruins hair. Science finally fixes it.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
     id: 6,
@@ -65,7 +75,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/519-frEZnNL._SY450_.jpg",
     link: "https://amzn.to/3MEJgjr",
     whyElateveLoves: "Healthy hair starts at the root. Apple cider vinegar does the work.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
     id: 7,
@@ -76,7 +88,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/51boT6TVQrL._AC_SX342_SY445_.jpg",
     link: "https://amzn.to/4boc09j",
     whyElateveLoves: "One light. Instant stillness.",
-    badge: "Splurge"
+    badge: "Splurge",
+    spring: false,
+    springTag: null
   },
   {
     id: 8,
@@ -87,7 +101,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61Pq9puQ+IL._AC_SY450_.jpg",
     link: "https://amzn.to/3Pc98DR",
     whyElateveLoves: "Cook beautifully. No toxins, no compromise.",
-    badge: "Splurge"
+    badge: "Splurge",
+    spring: false,
+    springTag: null
   },
   {
     id: 9,
@@ -98,7 +114,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/71+tC3QLigL._AC_SY450_.jpg",
     link: "https://amzn.to/4aNLS7S",
     whyElateveLoves: "Cook beautifully. No toxins, no compromise.",
-    badge: "Splurge"
+    badge: "Splurge",
+    spring: false,
+    springTag: null
   },
   {
     id: 10,
@@ -109,7 +127,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/71+tC3QLigL._AC_SY450_.jpg",
     link: "https://www.ebay.com/itm/146938993023",
     whyElateveLoves: "Your kitchen, elevated. Clean cooking made permanent.",
-    badge: "Save"
+    badge: "Save",
+    spring: false,
+    springTag: null
   },
   {
     id: 11,
@@ -120,7 +140,9 @@ const products = [
     image: "https://m.media-amazon.com/images/I/71E9N30pgZL._AC_SY450_.jpg",
     link: "https://amzn.to/4b23Faf",
     whyElateveLoves: "Chef-quality cooking. Ceramic clean conscience.",
-    badge: "Save"
+    badge: "Save",
+    spring: false,
+    springTag: null
   },
   {
     id: 12,
@@ -131,23 +153,252 @@ const products = [
     image: "https://m.media-amazon.com/images/I/716McT6cy6L._AC_SY450_.jpg",
     link: "https://amzn.to/4r9u37Y",
     whyElateveLoves: "European quality. Many items dishwasher safe, which Caraway is not. Double ceramic coating. Longer lasting, less warping.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+
+  // ─── HOME · SPRING REFRESH ───
+  {
+    id: 13,
+    category: "home",
+    name: "LA JOLIE MUSE Eucalyptus & Sage Candle",
+    description: "Hand-poured soy wax. Clean burn, real botanicals.",
+    price: "$21.99",
+    image: "https://m.media-amazon.com/images/I/81uVMfbUOVL._AC_SY450_.jpg",
+    link: "https://amzn.to/4leuZGK",
+    whyElateveLoves: "Hand-poured soy wax with real eucalyptus and sage. Clean burn, beautiful jar. Affordable luxury at its finest.",
+    badge: null,
+    spring: true,
+    springTag: "refresh"
+  },
+  {
+    id: 14,
+    category: "home",
+    name: "LA JOLIE MUSE Citrine & Pink Peony Candle",
+    description: "Floral meets crystal energy. A candle that aligns.",
+    price: "$21.99",
+    image: "https://m.media-amazon.com/images/I/71yXqlAF5aL._AC_SL1500_.jpg",
+    link: "https://amzn.to/4rYr9UT",
+    whyElateveLoves: "Citrine crystal for abundance. Pink peony for romance. A candle that does more than smell beautiful.",
+    badge: null,
+    spring: true,
+    springTag: "refresh"
+  },
+  {
+    id: 15,
+    category: "home",
+    name: "Diptyque Baies (Berries) Candle 6.5oz",
+    description: "Iconic French candle. Roses & blackcurrant.",
+    price: "$78",
+    image: "https://m.media-amazon.com/images/I/51uoxOYphiL._AC_SL1000_.jpg",
+    link: "https://amzn.to/46NP3de",
+    whyElateveLoves: "The world's most iconic luxury candle. Roses and blackcurrant from the house of Diptyque, Paris. Worth every cent.",
+    badge: "Splurge",
+    spring: true,
+    springTag: "refresh"
+  },
+  {
+    id: 16,
+    category: "home",
+    name: "MIULEE Corduroy Throw Pillow Covers — Set of 2",
+    description: "Refresh your sofa instantly. Corduroy soft.",
+    price: "$15.99",
+    image: "https://m.media-amazon.com/images/I/81CQXMI-J2L._AC_SL1500_.jpg",
+    link: "https://amzn.to/4ufgIO6",
+    whyElateveLoves: "Instant refresh under $16 for two. The ultimate affordable spring upgrade.",
+    badge: "Save",
+    spring: true,
+    springTag: "refresh"
+  },
+  {
+    id: 17,
+    category: "home",
+    name: "LL LEATHER LOVERS Faux Leather Lumbar Pillow Cover",
+    description: "Italian leather texture. Modern warmth.",
+    price: "$35.99",
+    image: "https://m.media-amazon.com/images/I/61mSgfqF9ML._AC_SL1500_.jpg",
+    link: "https://amzn.to/47rHjh5",
+    whyElateveLoves: "Leather texture, vegan conscience. Architectural warmth for any room.",
+    badge: null,
+    spring: true,
+    springTag: "refresh"
+  },
+  {
+    id: 18,
+    category: "home",
+    name: "Artificial Cherry Blossom Branches — 4 Pack",
+    description: "Bring spring indoors. Silk blossoms, real beauty.",
+    price: "$39.99",
+    image: "https://m.media-amazon.com/images/I/710CkqB9SNL._AC_SL1500_.jpg",
+    link: "https://amzn.to/4rij0t6",
+    whyElateveLoves: "No water, no maintenance. Eternal spring in every room.",
+    badge: null,
+    spring: true,
+    springTag: "refresh"
+  },
+  {
+    id: 19,
+    category: "home",
+    name: "Faux Olive Tree 7FT — Mediterranean Statement",
+    description: "Mediterranean elegance. Zero maintenance.",
+    price: "$59.99",
+    image: "https://m.media-amazon.com/images/I/81kMgcwJ6KL._AC_SL1500_.jpg",
+    link: "https://amzn.to/4riGy16",
+    whyElateveLoves: "The Mediterranean lifestyle, potted. Statement piece for any space.",
+    badge: null,
+    spring: true,
+    springTag: "refresh"
+  },
+
+  // ─── HOME · SPRING TABLE ───
+  {
+    id: 20,
+    category: "home",
+    name: "Villeroy & Boch New Cottage Dinnerware Set",
+    description: "German craftsmanship. Heirloom-quality dining.",
+    price: "$152",
+    image: "https://m.media-amazon.com/images/I/415uyZHwYhL._AC_SL1024_.jpg",
+    link: "https://amzn.to/3Neag9r",
+    whyElateveLoves: "European porcelain by Villeroy & Boch. The kind of dinnerware that gets passed down.",
+    badge: "Splurge",
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 21,
+    category: "home",
+    name: "vancasso SELENE 16-Piece Dinnerware Set",
+    description: "Designer look. Smart price. Stoneware beauty.",
+    price: "$74.99",
+    image: "https://m.media-amazon.com/images/I/81DKPQBsIKL._AC_SL1500_.jpg",
+    link: "https://amzn.to/4rZlpKE",
+    whyElateveLoves: "European-inspired stoneware at a fraction of the cost. Microwave and dishwasher safe.",
+    badge: "Save",
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 22,
+    category: "home",
+    name: "Solino Home Linen Napkins — Set of 4",
+    description: "European flax linen. Every meal, elevated.",
+    price: "$39.99",
+    image: "https://m.media-amazon.com/images/I/81n5AhSJHDL._AC_SL1500_.jpg",
+    link: "https://amzn.to/3OOnsm9",
+    whyElateveLoves: "Pure European flax linen. Gets softer with every wash. Restaurant-grade at home.",
+    badge: null,
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 23,
+    category: "home",
+    name: "Solino Home Linen Placemats — Set of 4",
+    description: "Set the table with intention. Pure linen.",
+    price: "$44.99",
+    image: "https://m.media-amazon.com/images/I/81KWPfWCjfL._AC_SL1500_.jpg",
+    link: "https://amzn.to/3OU1EFD",
+    whyElateveLoves: "The foundation of an elevated table. Pure linen, handcrafted quality.",
+    badge: null,
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 24,
+    category: "home",
+    name: "Gold Bar Cart — 2-Tier Rolling Cart",
+    description: "Entertain in style. Gold-finished elegance.",
+    price: "$84.99",
+    image: "https://m.media-amazon.com/images/I/71E+ZMcs96L._AC_SL1500_.jpg",
+    link: "https://amzn.to/3NnG5wI",
+    whyElateveLoves: "The centrepiece of every great hosting setup. Gold finish, marble shelf.",
+    badge: null,
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 25,
+    category: "home",
+    name: "Cork & Mill Marble Fruit Bowl",
+    description: "Natural marble. Art meets function.",
+    price: "$17.99",
+    image: "https://m.media-amazon.com/images/I/61PnQf5rWlL._AC_SL1500_.jpg",
+    link: "https://amzn.to/4aYOik7",
+    whyElateveLoves: "Each piece uniquely veined by nature. Art meets function at under $18.",
+    badge: "Save",
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 26,
+    category: "home",
+    name: "Amber Glass Soap Dispenser Set — Hand & Dish",
+    description: "Bathroom and kitchen, instantly upgraded.",
+    price: "$19.99",
+    image: "https://m.media-amazon.com/images/I/71QONCOK8EL._AC_SL1500_.jpg",
+    link: "https://amzn.to/4be5TDp",
+    whyElateveLoves: "Swap the plastic bottles for amber glass. Instant upgrade for under $20.",
+    badge: "Save",
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 27,
+    category: "home",
+    name: "Venetian-Style Goblet Glasses — Set of 6",
+    description: "Coloured glass goblets. European dinner party vibes.",
+    price: "$27.99",
+    image: "https://m.media-amazon.com/images/I/81tCIOGrg1L._AC_SL1500_.jpg",
+    link: "https://amzn.to/4b8rxJa",
+    whyElateveLoves: "Instant dinner party elevation. Coloured glass goblets that spark conversation.",
+    badge: null,
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 28,
+    category: "home",
+    name: "Tanqueray No. TEN Gin",
+    description: "Small-batch botanicals. The connoisseur's gin.",
+    price: "$36.99",
+    image: "",
+    link: null,
+    whyElateveLoves: "Fresh citrus, chamomile flowers. The bartender's choice for spring cocktails.",
+    badge: null,
+    spring: true,
+    springTag: "table"
+  },
+  {
+    id: 29,
+    category: "home",
+    name: "Lifewit Ice Bucket with Lid and Scoop",
+    description: "Host like you mean it. Insulated, elegant.",
+    price: "$12.99",
+    image: "https://m.media-amazon.com/images/I/71dnvX2xxTL._AC_SL1500_.jpg",
+    link: "https://amzn.to/3OTh9h6",
+    whyElateveLoves: "Double-wall insulated. Keeps ice for hours. Under $13 for proper hosting.",
+    badge: "Save",
+    spring: true,
+    springTag: "table"
   },
 
   // ─── WELLNESS ───
   {
-    id: 13,
+    id: 30,
     category: "wellness",
-    name: "Manucurist System Green™ — Professional Manicure Gift Set",
+    name: "Manucurist System Green\u2122 — Professional Manicure Gift Set",
     description: "The natural nail revolution. Made in France.",
     price: "$49",
     image: "https://m.media-amazon.com/images/I/61RFIOwMXYL._SY450_.jpg",
     link: "https://amzn.to/4b5Y7eN",
     whyElateveLoves: "Join the new natural nail revolution! Made in France, this system is green baby!",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
-    id: 14,
+    id: 31,
     category: "wellness",
     name: "Caudalie Beauty Elixir Face Mist",
     description: "Parisian pharmacy secret. Now yours.",
@@ -155,10 +406,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/31PoFlCOOxL._SX342_SY445_.jpg",
     link: "https://amzn.to/4ssSONv",
     whyElateveLoves: "Parisian pharmacy secret. Now yours.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
-    id: 15,
+    id: 32,
     category: "wellness",
     name: "Dr. Barbara Sturm Glow Cream 1.7 Fl Oz",
     description: "Luxury dermatology, bottled. Skin that speaks for itself.",
@@ -166,10 +419,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/516Yluiu0KL._AC_SX569_.jpg",
     link: "https://amzn.to/47cpoLk",
     whyElateveLoves: "Luxury dermatology, bottled. Skin that speaks for itself. Save $60 with your Amazon Prime card.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
-    id: 16,
+    id: 33,
     category: "wellness",
     name: "Kiehl's Ultra Facial Cream",
     description: "52 years of cult status. Your moisture barrier, fortified.",
@@ -177,10 +432,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/312mNYB1swL._SX342_SY445_.jpg",
     link: "https://amzn.to/4slWLU3",
     whyElateveLoves: "52 years of cult status. Your moisture barrier, fortified.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
-    id: 17,
+    id: 34,
     category: "wellness",
     name: "BIODANCE Bio-Collagen Real Deep Mask (16-pack)",
     description: "Korean skincare precision. Wake up to different skin.",
@@ -188,10 +445,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/417w02ffAmL._SY300_SX300_.jpg",
     link: "https://amzn.to/4rM64Nj",
     whyElateveLoves: "Korean skincare precision. Wake up to different skin.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
-    id: 18,
+    id: 35,
     category: "wellness",
     name: "Shark CryoGlow LED Face Mask with Under-Eye Cooling",
     description: "Clinic-grade light therapy. At home, every night.",
@@ -199,10 +458,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/41tC93P4YpL._SY300_SX300_.jpg",
     link: "https://amzn.to/4uaHTtn",
     whyElateveLoves: "Clinic-grade light therapy. At home, every night. Save $60 with your Amazon Prime card.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
-    id: 19,
+    id: 36,
     category: "wellness",
     name: "Oura Ring 4 Sizing Kit — Size Before You Buy",
     description: "Know before you invest. Precision starts here.",
@@ -210,10 +471,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/518Qh+G3I5L._AC_SY300_SX300_.jpg",
     link: "https://amzn.to/3NgSpPi",
     whyElateveLoves: "Know before you invest. Precision starts here.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
-    id: 20,
+    id: 37,
     category: "wellness",
     name: "Oura Ring 4 — Ceramic Cloud",
     description: "Wear your wellness data. Invisibly.",
@@ -221,10 +484,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/616DjZer3GL._AC_SY300_SX300_.jpg",
     link: "https://amzn.to/4rROFCX",
     whyElateveLoves: "Wear your wellness data. Invisibly.",
-    badge: "Splurge"
+    badge: "Splurge",
+    spring: false,
+    springTag: null
   },
   {
-    id: 21,
+    id: 38,
     category: "wellness",
     name: "RingConn Gen 2 Smart Ring — Sleep Apnea Monitoring",
     description: "Full health tracking. Zero subscriptions, ever.",
@@ -232,10 +497,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61uxIbcWPRL._AC_SY355_.jpg",
     link: "https://amzn.to/4aS8yDZ",
     whyElateveLoves: "Full health tracking. Zero subscriptions, ever.",
-    badge: "Save"
+    badge: "Save",
+    spring: false,
+    springTag: null
   },
   {
-    id: 22,
+    id: 39,
     category: "wellness",
     name: "Beast Mighty 850 Plus Personal Blender — Carbon Black",
     description: "Smoothies in seconds. Power that fits your counter.",
@@ -243,12 +510,68 @@ const products = [
     image: "https://m.media-amazon.com/images/I/71fGyjFnuUL._AC_SY300_SX300_.jpg",
     link: "https://amzn.to/4l7tdHs",
     whyElateveLoves: "Smoothies in seconds. Power that fits your counter.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+
+  // ─── WELLNESS · SPRING GLOW UP ───
+  {
+    id: 40,
+    category: "wellness",
+    name: "Lanc\u00f4me Lip Id\u00f4le Squalane Lip Gloss",
+    description: "French beauty, glossy finish. Hydrating luxury.",
+    price: "$27",
+    image: "https://m.media-amazon.com/images/I/61NJXppf3CL._SL1500_.jpg",
+    link: "https://amzn.to/4sSs09R",
+    whyElateveLoves: "Lanc\u00f4me's newest. Squalane hydrates while colour perfects. French beauty at its finest.",
+    badge: null,
+    spring: true,
+    springTag: "glow-up"
+  },
+  {
+    id: 41,
+    category: "wellness",
+    name: "goop Beauty Clean Lip Balm",
+    description: "Clean beauty. Gwyneth-approved glow.",
+    price: "$12",
+    image: "https://m.media-amazon.com/images/I/51azO1ORMIL._SL1500_.jpg",
+    link: "https://amzn.to/4rlCFIP",
+    whyElateveLoves: "Clean ingredients, beautiful results. The goop standard.",
+    badge: "Save",
+    spring: true,
+    springTag: "glow-up"
+  },
+  {
+    id: 42,
+    category: "wellness",
+    name: "lululemon Align High-Rise Pant 25\"",
+    description: "Buttery soft. The legging that changed everything.",
+    price: "$98",
+    image: "https://images.lululemon.com/is/image/lululemon/LW5CTAS_074027_1",
+    link: null,
+    whyElateveLoves: "The most comfortable legging ever made. Nulu fabric feels like nothing. Absolute cult classic.",
+    badge: null,
+    spring: true,
+    springTag: "glow-up"
+  },
+  {
+    id: 43,
+    category: "wellness",
+    name: "lululemon Flow Y Bra — Light Support",
+    description: "Seamless support. Yoga to errands.",
+    price: "$48",
+    image: "https://images.lululemon.com/is/image/lululemon/LW2CTKS_074115_1",
+    link: null,
+    whyElateveLoves: "Light support, zero distraction. From yoga to brunch without missing a beat.",
+    badge: null,
+    spring: true,
+    springTag: "glow-up"
   },
 
   // ─── EXPERIENCE ───
   {
-    id: 23,
+    id: 44,
     category: "experience",
     name: "Luxury Hotel Gift Experience for Two",
     description: "The gift that lets them choose their dream stay.",
@@ -256,23 +579,27 @@ const products = [
     image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80",
     link: null,
     whyElateveLoves: "The premium hotel gift experience. Over 750,000 hotels across 170+ countries. Let them choose their destination and dates.",
-    badge: "Splurge"
+    badge: "Splurge",
+    spring: false,
+    springTag: null
   },
   {
-    id: 24,
+    id: 45,
     category: "experience",
     name: "WONDERBOX — Getaway Experience Gift for 2",
     description: "Give memories, not things. 52,000 hotels await.",
     price: "$199",
     image: "https://m.media-amazon.com/images/I/61WQbae3dtL._SX342_.jpg",
     link: "https://amzn.to/4aRfLnJ",
-    whyElateveLoves: "Absolutely no hassle and truly appreciated — the recipient chooses their own dates and destination. Great gift for graduation, birthday, wedding, or anniversary!",
-    badge: "Save"
+    whyElateveLoves: "Absolutely no hassle and truly appreciated \u2014 the recipient chooses their own dates and destination. Great gift for graduation, birthday, wedding, or anniversary!",
+    badge: "Save",
+    spring: false,
+    springTag: null
   },
 
   // ─── WEALTH ───
   {
-    id: 25,
+    id: 46,
     category: "wealth",
     name: "Fossil Women's Logan Leather RFID-Blocking Wallet",
     description: "RFID protection meets timeless leather. Smart and stylish.",
@@ -280,10 +607,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/41I4t8xTPlL._AC_SY500_.jpg",
     link: "https://amzn.to/3OMEKQw",
     whyElateveLoves: "RFID protection meets timeless leather. Smart and stylish. Garnet red for attracting wealth :)",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
   },
   {
-    id: 26,
+    id: 47,
     category: "wealth",
     name: "Michael Kors Jet Set Travel Continental Wallet",
     description: "Signature luxury, everyday carry. Travel like you mean it.",
@@ -291,7 +620,50 @@ const products = [
     image: "https://m.media-amazon.com/images/I/71PfILqudtL._AC_SY450_.jpg",
     link: "https://amzn.to/3OHTJLB",
     whyElateveLoves: "Signature luxury, everyday carry. Travel like you mean it.",
-    badge: null
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+
+  // ─── WEALTH · SPRING GLOW UP ───
+  {
+    id: 48,
+    category: "wealth",
+    name: "COACH Bleecker Bucket Bag",
+    description: "American heritage. Modern edge.",
+    price: "$395",
+    image: "https://m.media-amazon.com/images/I/61Tu6qyWgBL._AC_SL1500_.jpg",
+    link: null,
+    whyElateveLoves: "COACH's new icon. Vintage-inspired, modern-crafted. The spring statement bag.",
+    badge: "Splurge",
+    spring: true,
+    springTag: "glow-up"
+  },
+  {
+    id: 49,
+    category: "wealth",
+    name: "COACH Tea Rose Square Sunglasses",
+    description: "Iconic hardware. UV protection with personality.",
+    price: "$168",
+    image: "https://m.media-amazon.com/images/I/514LJ452qDL._AC_SL1500_.jpg",
+    link: null,
+    whyElateveLoves: "Tea rose hardware meets UV protection. COACH's signature on your face.",
+    badge: null,
+    spring: true,
+    springTag: "glow-up"
+  },
+  {
+    id: 50,
+    category: "wealth",
+    name: "POLO RALPH LAUREN Classic Fit Oxford Shirt",
+    description: "The original. Preppy perfection, timeless fit.",
+    price: "$89.99",
+    image: "https://m.media-amazon.com/images/I/51-4b7dG0kL._AC_SL1500_.jpg",
+    link: "https://amzn.to/4buMb7I",
+    whyElateveLoves: "The most iconic shirt in American fashion. Spring's perfect layering piece.",
+    badge: null,
+    spring: true,
+    springTag: "glow-up"
   },
 
 ];

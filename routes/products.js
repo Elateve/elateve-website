@@ -38,6 +38,12 @@ router.get('/featured', (req, res) => {
   res.json(featured);
 });
 
+// GET /api/spring — all spring collection products
+router.get('/spring', (req, res) => {
+  const spring = products.filter(p => p.spring);
+  res.json({ count: spring.length, products: spring });
+});
+
 // GET /api/blog — all blog posts (without full content for list view)
 router.get('/blog', (req, res) => {
   const summaries = blogPosts.map(({ content, ...rest }) => rest);

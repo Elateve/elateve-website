@@ -49,6 +49,12 @@ async function fetchBlog() {
   return data.posts;
 }
 
+async function fetchSpring() {
+  const res = await fetch('/api/spring');
+  const data = await res.json();
+  return data.products;
+}
+
 // ==================== ROUTER ====================
 function navigateTo(page, category = null) {
   const activePage = document.querySelector('.page.active');
@@ -221,6 +227,45 @@ function setFilter(category) {
     btn.classList.toggle('active', btn.dataset.filter === category);
   });
   loadProducts(category);
+}
+
+// ==================== SPRING COLLECTION ====================
+let springCache = null;
+
+async function loadSpring(filter = 'all') {
+  const grid = document.getElementById('springGrid');
+  if (!grid) return;
+
+  if (!springCache) {
+    springCache = await fetchSpring();
+  }
+
+  const products = filter === 'all'
+    ? springCache
+    : springCache.filter(p => p.springTag === filter);
+
+  grid.innerHTML = '';
+  products.forEach((product, i) => {
+    const card = createProductCard(product);
+    card.style.animationDelay = `${i * 0.05}s`;
+    grid.appendChild(card);
+  });
+
+  setTimeout(() => {
+    document.querySelectorAll('#springGrid .product-card').forEach((card, i) => {
+      setTimeout(() => card.classList.add('visible'), i * 40);
+    });
+  }, 50);
+}
+
+function initSpringTabs() {
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('spring-tab')) {
+      document.querySelectorAll('.spring-tab').forEach(t => t.classList.remove('active'));
+      e.target.classList.add('active');
+      loadSpring(e.target.dataset.spring);
+    }
+  });
 }
 
 // ==================== BLOG RENDERING ====================
@@ -414,6 +459,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Load data
   loadFeatured();
+  loadSpring();
+  initSpringTabs();
 
   if (initialPage === 'shop') {
     const cat = params.get('category') || 'all';
