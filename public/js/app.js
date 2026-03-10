@@ -507,6 +507,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  // ==================== SPRING CHECKLIST BUTTON ====================
+  const springBtn = document.getElementById('springChecklist');
+  if (springBtn) {
+    springBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigateTo('blog');
+      setTimeout(() => openArticle(10), 350);
+    });
+  }
+
   // Push initial state
   history.replaceState({ page: initialPage, category: params.get('category') }, '', window.location.href);
 
