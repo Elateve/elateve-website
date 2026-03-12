@@ -251,7 +251,7 @@ const products = [
     springTag: "refresh"
   },
 
-  // ─── HOME · SPRING TABLE ───
+  // ─── HOME · SPRING REFRESH (moved from Spring Table) ───
   {
     id: 20,
     category: "home",
@@ -263,7 +263,7 @@ const products = [
     whyElateveLoves: "European porcelain by Villeroy & Boch. The kind of dinnerware that gets passed down.",
     badge: "Splurge",
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 21,
@@ -276,7 +276,7 @@ const products = [
     whyElateveLoves: "European-inspired stoneware at a fraction of the cost. Microwave and dishwasher safe.",
     badge: "Save",
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 22,
@@ -289,7 +289,7 @@ const products = [
     whyElateveLoves: "Pure European flax linen. Gets softer with every wash. Restaurant-grade at home.",
     badge: null,
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 23,
@@ -302,7 +302,7 @@ const products = [
     whyElateveLoves: "The foundation of an elevated table. Pure linen, handcrafted quality.",
     badge: null,
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 24,
@@ -315,7 +315,7 @@ const products = [
     whyElateveLoves: "The centrepiece of every great hosting setup. Gold finish, glass shelves.",
     badge: null,
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 25,
@@ -328,7 +328,7 @@ const products = [
     whyElateveLoves: "Each piece uniquely veined by nature. Handcrafted marble with acacia wood pedestal.",
     badge: null,
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 26,
@@ -341,7 +341,7 @@ const products = [
     whyElateveLoves: "Swap the plastic bottles for amber glass. Instant upgrade.",
     badge: "Save",
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 27,
@@ -354,7 +354,7 @@ const products = [
     whyElateveLoves: "Instant dinner party elevation. Coloured glass goblets that spark conversation.",
     badge: null,
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 28,
@@ -367,7 +367,7 @@ const products = [
     whyElateveLoves: "Vintage ribbed design that makes every drink feel like an occasion. Under $18 for the pair.",
     badge: "Save",
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 29,
@@ -380,7 +380,7 @@ const products = [
     whyElateveLoves: "Double-wall insulated. Keeps ice for hours. Proper hosting essentials.",
     badge: null,
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
 
   // ─── HOME · NEW SPRING ADDITIONS ───
@@ -395,7 +395,7 @@ const products = [
     whyElateveLoves: "Bring the pizzeria home. Ninja's wood-fired technology delivers crispy, smoky perfection every time.",
     badge: "Splurge",
     spring: true,
-    springTag: "table"
+    springTag: "refresh"
   },
   {
     id: 52,
@@ -458,6 +458,21 @@ const products = [
     image: "https://m.media-amazon.com/images/I/51XCDWrhNdL._AC_SX425_.jpg",
     link: "https://amzn.to/3OScGv9",
     whyElateveLoves: "YETI durability meets everyday style. Waterproof, puncture-resistant, and ready for anything from beach to market.",
+    badge: null,
+    spring: true,
+    springTag: "refresh"
+  },
+
+  // ─── HOME · NEW SPRING ADDITIONS (continued) ───
+  {
+    id: 73,
+    category: "home",
+    name: "Red Wine Glasses Set of 6 — Premium Crystal, Hand Blown, 15 oz",
+    description: "Hand-blown crystal. Thin rim, long stem. Pure elegance.",
+    price: "$39.99",
+    image: "https://m.media-amazon.com/images/I/61Ky+MK2JaL._AC_SL1500_.jpg",
+    link: "https://amzn.to/4bGq0eI",
+    whyElateveLoves: "Premium hand-blown crystal wine glasses with thin rim and long stem. Perfect for red or white. An elevated gift or everyday luxury.",
     badge: null,
     spring: true,
     springTag: "refresh"
@@ -828,6 +843,47 @@ const products = [
     image: "https://images.lululemon.com/is/image/lululemon/LW2CTKS_074115_1",
     link: null,
     whyElateveLoves: "Light support, zero distraction. From yoga to brunch without missing a beat.",
+    badge: null,
+    spring: true,
+    springTag: "glow-up"
+  },
+
+  // ─── WELLNESS · NEW SPRING GLOW UP ADDITIONS ───
+  {
+    id: 74,
+    category: "wellness",
+    name: "L'OCCITANE Shea Butter Hand Cream — 20% Organic",
+    description: "Nourishes dry hands fast. Non-greasy, vegan luxury.",
+    price: "$30",
+    image: "https://m.media-amazon.com/images/I/61pSzV7FpCL._SL1500_.jpg",
+    link: "https://amzn.to/3PvL3Ih",
+    whyElateveLoves: "The iconic French hand cream. 20% organic shea butter, fast-absorbing, and beautifully scented. A handbag essential.",
+    badge: null,
+    spring: true,
+    springTag: "glow-up"
+  },
+  {
+    id: 75,
+    category: "wellness",
+    name: "Caudalie Vinoperfect Brightening Dark Spot Serum",
+    description: "62x more effective than Vitamin C. Visibly brighter skin.",
+    price: "$79",
+    image: "https://m.media-amazon.com/images/I/51SJMp3xZ0L._SL1500_.jpg",
+    link: "https://amzn.to/4s4wH01",
+    whyElateveLoves: "French vineyard science at its finest. Viniferine is 62x more effective than Vitamin C for brightening dark spots. A cult favourite.",
+    badge: null,
+    spring: true,
+    springTag: "glow-up"
+  },
+  {
+    id: 76,
+    category: "wellness",
+    name: "L'OCCITANE Almond Shower Oil — Cleansing & Softening",
+    description: "Milky lather luxury. Nourishing body wash from Provence.",
+    price: "$25",
+    image: "https://m.media-amazon.com/images/I/51Kv4FaIA2L._SL1500_.jpg",
+    link: "https://amzn.to/4dmO0oq",
+    whyElateveLoves: "Transforms your shower into a spa. Almond oil cleanses and softens without drying. The signature L'Occitane scent is heaven.",
     badge: null,
     spring: true,
     springTag: "glow-up"

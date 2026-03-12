@@ -208,8 +208,7 @@ async function loadProducts(filter = 'all') {
 const categorySubcategories = {
   home: [
     { label: 'All Home', tag: null },
-    { label: 'Spring Refresh', tag: 'refresh' },
-    { label: 'Spring Table', tag: 'table' }
+    { label: 'Spring Refresh', tag: 'refresh' }
   ],
   wellness: [
     { label: 'All Wellness', tag: null },
@@ -497,16 +496,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   initScrollEffects();
   initTheme();
 
-  // ==================== POTM STORY BUTTON ====================
-  const potmBtn = document.getElementById('potmReadStory');
-  if (potmBtn) {
-    potmBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      navigateTo('blog');
-      setTimeout(() => openArticle(9), 350);
-    });
-  }
-
   // ==================== SPRING CHECKLIST BUTTON ====================
   const springBtn = document.getElementById('springChecklist');
   if (springBtn) {
@@ -572,9 +561,18 @@ function initPopup() {
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      closePopup();
-      showToast('You\u2019re in! Watch your inbox for curated picks.');
-      form.reset();
+      // Show thank you + download link inside the popup
+      const popupContent = overlay.querySelector('.popup-content');
+      if (popupContent) {
+        popupContent.innerHTML = `
+          <span class="popup-eyebrow">You're In!</span>
+          <h2 class="popup-title">Your Guide Is Ready</h2>
+          <p class="popup-text">Thank you for joining the ELATEVE community. Download your free Spring Refresh Guide below.</p>
+          <a href="/downloads/elateve-spring-refresh-guide.pdf" target="_blank" class="btn btn--gold" style="display:inline-block;text-align:center;margin-top:1rem;">Download Your Free Guide</a>
+          <p class="popup-note" style="margin-top:1rem;">Check your inbox for weekly curated picks.</p>
+        `;
+      }
+      localStorage.setItem('elateve_popup_dismissed', 'true');
     });
   }
 }

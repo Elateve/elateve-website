@@ -7,11 +7,17 @@
     "start": "node server.js",
     "dev": "node server.js"
   },
-  "keywords": ["elateve", "luxury", "affiliate", "lifestyle"],
+  "keywords": [
+    "elateve",
+    "luxury",
+    "affiliate",
+    "lifestyle"
+  ],
   "author": "ELATEVE",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pdfkit": "^0.17.2"
   }
 }
