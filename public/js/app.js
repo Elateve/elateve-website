@@ -411,8 +411,19 @@ function initNavigation() {
 
   const form = document.getElementById('newsletterForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const emailInput = form.querySelector('input[type="email"]');
+      const email = emailInput?.value;
+      if (email) {
+        try {
+          await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email })
+          });
+        } catch (err) { /* still show toast */ }
+      }
       showToast('Welcome to the elevation. Check your inbox.');
       form.reset();
     });
@@ -520,19 +531,14 @@ function initPopup() {
 
   if (!overlay) return;
 
-  // Check if user has already dismissed the popup
-  const dismissed = localStorage.getItem('elateve_popup_dismissed');
-  if (dismissed) return;
-
-  // Show popup after 3 seconds
+  // Always show popup after 3 seconds — every visit, every user
   setTimeout(() => {
     overlay.classList.add('active');
   }, 3000);
 
-  // Close popup
+  // Close popup (no localStorage — we want it every visit)
   function closePopup() {
     overlay.classList.remove('active');
-    localStorage.setItem('elateve_popup_dismissed', 'true');
   }
 
   if (closeBtn) {
@@ -557,10 +563,23 @@ function initPopup() {
     }
   });
 
-  // Handle popup form submit
+  // Handle popup form submit — send email to hello@elateve.com via API
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const emailInput = form.querySelector('input[type="email"]');
+      const email = emailInput?.value;
+      if (!email) return;
+
+      // Send to server
+      try {
+        await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+      } catch (err) { /* still show thank you */ }
+
       // Show thank you + download link inside the popup
       const popupContent = overlay.querySelector('.popup-content');
       if (popupContent) {
@@ -572,7 +591,6 @@ function initPopup() {
           <p class="popup-note" style="margin-top:1rem;">Check your inbox for weekly curated picks.</p>
         `;
       }
-      localStorage.setItem('elateve_popup_dismissed', 'true');
     });
   }
 }
