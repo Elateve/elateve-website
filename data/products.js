@@ -463,21 +463,6 @@ const products = [
     springTag: "refresh"
   },
 
-  // ─── HOME · NEW SPRING ADDITIONS (continued) ───
-  {
-    id: 73,
-    category: "home",
-    name: "Red Wine Glasses Set of 6 — Premium Crystal, Hand Blown, 15 oz",
-    description: "Hand-blown crystal. Thin rim, long stem. Pure elegance.",
-    price: "$39.99",
-    image: "https://m.media-amazon.com/images/I/61Ky+MK2JaL._AC_SL1500_.jpg",
-    link: "https://amzn.to/4bGq0eI",
-    whyElateveLoves: "Premium hand-blown crystal wine glasses with thin rim and long stem. Perfect for red or white. An elevated gift or everyday luxury.",
-    badge: null,
-    spring: true,
-    springTag: "refresh"
-  },
-
   // ─── WELLNESS ───
   {
     id: 30,
@@ -767,32 +752,6 @@ const products = [
     spring: false,
     springTag: null
   },
-  {
-    id: 69,
-    category: "wellness",
-    name: "ALO Airbrush Sparks Fly Corset Onesie",
-    description: "Studio to street. The corset onesie that turns heads.",
-    price: "$158",
-    image: "https://www.aloyoga.com/cdn/shop/files/W7434SR_GRAVEL_1.jpg",
-    link: null,
-    whyElateveLoves: "ALO's show-stopping corset onesie. Airbrush fabric sculpts and supports from studio to street.",
-    badge: null,
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 70,
-    category: "wellness",
-    name: "ALO Odyssey Full-Zip Jacket",
-    description: "Elevated athleisure. The jacket that goes everywhere.",
-    price: "$310",
-    image: "https://www.aloyoga.com/cdn/shop/files/W4459R_GRAVEL_1.jpg",
-    link: null,
-    whyElateveLoves: "Premium full-zip that transitions seamlessly from workout to weekend. ALO's signature luxury athleisure.",
-    badge: "Splurge",
-    spring: false,
-    springTag: null
-  },
 
   // ─── WELLNESS · SPRING GLOW UP ───
   {
@@ -855,7 +814,7 @@ const products = [
     name: "L'OCCITANE Shea Butter Hand Cream — 20% Organic",
     description: "Nourishes dry hands fast. Non-greasy, vegan luxury.",
     price: "$30",
-    image: "https://m.media-amazon.com/images/I/61pSzV7FpCL._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/51A5YYSXj0L._AC_SY450_.jpg",
     link: "https://amzn.to/3PvL3Ih",
     whyElateveLoves: "The iconic French hand cream. 20% organic shea butter, fast-absorbing, and beautifully scented. A handbag essential.",
     badge: null,
@@ -868,7 +827,7 @@ const products = [
     name: "Caudalie Vinoperfect Brightening Dark Spot Serum",
     description: "62x more effective than Vitamin C. Visibly brighter skin.",
     price: "$79",
-    image: "https://m.media-amazon.com/images/I/51SJMp3xZ0L._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/51e2Fo9KPrL._AC_SY450_.jpg",
     link: "https://amzn.to/4s4wH01",
     whyElateveLoves: "French vineyard science at its finest. Viniferine is 62x more effective than Vitamin C for brightening dark spots. A cult favourite.",
     badge: null,
@@ -881,7 +840,7 @@ const products = [
     name: "L'OCCITANE Almond Shower Oil — Cleansing & Softening",
     description: "Milky lather luxury. Nourishing body wash from Provence.",
     price: "$25",
-    image: "https://m.media-amazon.com/images/I/51Kv4FaIA2L._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/31EdBGxkYwL._AC_SY450_.jpg",
     link: "https://amzn.to/4dmO0oq",
     whyElateveLoves: "Transforms your shower into a spa. Almond oil cleanses and softens without drying. The signature L'Occitane scent is heaven.",
     badge: null,

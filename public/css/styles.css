@@ -452,6 +452,15 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   line-height: 1.5;
 }
 
+/* ── MEET THE DUO ── */
+.section--duo { max-width: 100%; padding: var(--space-xl) var(--space-md); background: var(--charcoal); text-align: center; }
+.duo-inner { max-width: 640px; margin: 0 auto; }
+.section--duo .section-eyebrow { color: var(--gold-light); }
+.section--duo .section-title { color: var(--cream); font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: var(--space-md); }
+.duo-text { font-size: 0.95rem; font-weight: 300; color: rgba(247,245,240,0.7); line-height: 1.8; margin-bottom: var(--space-lg); }
+.section--duo .btn--outline { border-color: var(--gold); color: var(--gold); }
+.section--duo .btn--outline:hover { background: var(--gold); color: var(--charcoal); }
+
 /* ── SPRING SECTION ── */
 .section--spring { padding-bottom: var(--space-lg); }
 .section--spring .section-sub {
