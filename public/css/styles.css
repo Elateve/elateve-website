@@ -196,16 +196,60 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .blog-article-body p:first-child::first-letter { font-family: var(--font-display); font-size: 3.5rem; font-weight: 600; float: left; line-height: 1; margin-right: 8px; margin-top: 4px; color: var(--gold); }
 
 /* ── ABOUT ── */
+.about-hero-sub { font-size: clamp(1rem, 2vw, 1.3rem); font-weight: 300; color: var(--gold); letter-spacing: 0.08em; margin-top: var(--space-sm); }
+.about-hero-tagline { font-size: 0.85rem; font-weight: 300; color: var(--grey); margin-top: var(--space-xs); font-style: italic; }
 .about-content { max-width: 800px; margin: 0 auto; padding: 0 var(--space-md) var(--space-xl); text-align: center; }
-.about-block { margin-bottom: var(--space-xl); }
+.about-block { margin-bottom: var(--space-lg); }
+.about-block--intro { margin-bottom: var(--space-lg); }
 .about-text h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: var(--space-sm); }
-.about-text p { font-size: 1rem; color: var(--charcoal-light); margin-bottom: var(--space-sm); }
-.about-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); padding: var(--space-lg) 0; border-top: 1px solid var(--cream-dark); border-bottom: 1px solid var(--cream-dark); }
-.about-value-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 200; color: var(--gold); display: block; margin-bottom: var(--space-sm); }
-.about-value h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-.about-value { text-align: center; }
-.about-value p { font-size: 0.85rem; color: var(--grey); line-height: 1.7; }
-.about-disclosure { padding: var(--space-md); background: var(--cream-dark); font-size: 0.8rem; color: var(--grey); line-height: 1.8; text-align: center; }
+.about-text p { font-size: 1rem; color: var(--charcoal-light); margin-bottom: var(--space-sm); line-height: 1.85; }
+.about-lead { font-size: 1.1rem !important; color: var(--charcoal) !important; font-weight: 400 !important; line-height: 1.8 !important; }
+.about-section-label { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 300; color: var(--charcoal); letter-spacing: -0.01em; margin-bottom: var(--space-md); }
+.about-section-sublabel { font-size: 0.95rem; font-weight: 400; color: var(--charcoal); margin-bottom: var(--space-md); }
+
+/* About Divider */
+.about-divider { text-align: center; padding: var(--space-md) 0; }
+.about-divider-icon { font-size: 0.9rem; color: var(--gold); letter-spacing: 0.3em; }
+
+/* About Profiles */
+.about-profile { margin-bottom: var(--space-lg); text-align: center; }
+.about-profile-header { margin-bottom: var(--space-md); }
+.about-profile-name { display: block; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 200; color: var(--charcoal); margin-bottom: 0.25rem; }
+.about-profile-role { display: block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.about-profile-body p { font-size: 1rem; font-weight: 300; color: var(--charcoal-light); line-height: 1.85; margin-bottom: var(--space-sm); text-align: center; }
+
+/* Sabrina's Story Lessons */
+.about-lessons { display: flex; flex-direction: column; gap: 0.75rem; margin: var(--space-md) 0; padding: var(--space-md) 0; border-top: 1px solid var(--cream-dark); border-bottom: 1px solid var(--cream-dark); }
+.about-lesson { font-size: 0.9rem; font-weight: 400; color: var(--charcoal); line-height: 1.6; padding-left: 1.5rem; text-align: left; position: relative; }
+.about-lesson::before { content: '\2014'; position: absolute; left: 0; color: var(--gold); }
+
+/* Kaz Wellness Pillars */
+.about-wellness-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin: var(--space-md) 0; padding: var(--space-md) 0; border-top: 1px solid var(--cream-dark); border-bottom: 1px solid var(--cream-dark); }
+.about-wellness-pillar { text-align: center; }
+.about-wellness-pillar h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.5rem; }
+.about-wellness-pillar p { font-size: 0.85rem; font-weight: 300; color: var(--grey); line-height: 1.7; }
+
+/* About Quotes */
+.about-quote { padding: var(--space-lg) var(--space-md); margin: var(--space-lg) 0; }
+.about-quote p { font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 300; font-style: italic; color: var(--charcoal); line-height: 1.7; }
+.about-quote--brand { background: var(--charcoal); padding: var(--space-xl) var(--space-lg); }
+.about-quote--brand p { color: var(--cream); }
+
+/* About Pillars */
+.about-pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-bottom: var(--space-lg); }
+.about-pillar { text-align: center; padding: var(--space-md); border: 1px solid var(--cream-dark); transition: all 0.4s var(--ease); }
+.about-pillar:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.04); }
+.about-pillar-num { font-family: var(--font-display); font-size: 1.4rem; font-weight: 200; color: var(--gold); display: block; margin-bottom: var(--space-xs); }
+.about-pillar h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.about-pillar p { font-size: 0.85rem; color: var(--grey); line-height: 1.7; }
+
+/* About CTA */
+.about-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: var(--space-lg); }
+
+/* About Closing */
+.about-block--closing { margin-top: var(--space-lg); }
+
+.about-disclosure { padding: var(--space-md); background: var(--cream-dark); font-size: 0.8rem; color: var(--grey); line-height: 1.8; text-align: center; margin-top: var(--space-lg); }
 
 /* ── FOOTER ── */
 .footer { background: var(--charcoal); color: var(--cream); padding: var(--space-xl) var(--space-md) var(--space-md); }
@@ -492,7 +536,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .categories-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-values { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .about-wellness-pillars { grid-template-columns: 1fr; gap: var(--space-sm); }
+  .about-pillars { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   .nav-toggle { display: flex; }
@@ -523,6 +568,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   .hero-scroll-line { height: 28px; }
   .popup { padding: var(--space-lg) var(--space-md); }
   .popup-free-badge { font-size: 0.7rem; padding: 0.35rem 1rem; }
+  .about-cta { flex-direction: column; align-items: center; }
+  .about-cta .btn { width: 100%; max-width: 280px; text-align: center; }
+  .about-lesson { font-size: 0.85rem; }
+  .about-quote { padding: var(--space-md); }
+  .about-quote--brand { padding: var(--space-lg) var(--space-md); }
 }
 @media (max-width: 480px) {
   .featured-grid, .products-grid, .spring-grid { grid-template-columns: 1fr; }
