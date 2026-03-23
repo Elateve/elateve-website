@@ -932,6 +932,209 @@ const products = [
     springTag: null
   },
 
+  // ─── HOME · NEW ADDITIONS ───
+  {
+    id: 77,
+    category: "home",
+    name: "Dreame HEPA Air Purifier — Self-Cleaning Pet Hair FP10",
+    description: "Self-cleaning pet hair purifier. Smart, quiet, powerful.",
+    price: "$349.99",
+    image: "https://m.media-amazon.com/images/I/61xb0cu8zxL._AC_SX679_.jpg",
+    link: "https://amzn.to/4sm7s9E",
+    whyElateveLoves: "The world's first roller self-cleaning air purifier. 4-filter system captures pet hair, dander, and odour. App and voice control for effortless clean air.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 78,
+    category: "home",
+    name: "Shark Navigator Lift-Away Deluxe Upright Vacuum — NV360",
+    description: "Lift-Away power. HEPA filtration. Swivel steering.",
+    price: "$129.99",
+    image: "https://m.media-amazon.com/images/I/61w1n9p2R0L._AC_SX679_.jpg",
+    link: "https://amzn.to/4lIrbxI",
+    whyElateveLoves: "Large dust cup, HEPA filter, and Lift-Away technology for stairs and upholstery. The vacuum that does it all.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 79,
+    category: "home",
+    name: "Regency Hill Jenson Pharmacy Floor Lamp — Aged Brass",
+    description: "Adjustable swing arm. Aged brass. Timeless reading light.",
+    price: "$149.99",
+    image: "https://m.media-amazon.com/images/I/71UsMyGhzZL._AC_SY741_.jpg",
+    link: "https://amzn.to/4c0k8gD",
+    whyElateveLoves: "Traditional farmhouse metal pharmacy lamp with adjustable swing arm. 54\" tall aged brass finish that elevates any reading nook.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 80,
+    category: "home",
+    name: "Call It Home: The Details That Matter — Amber Lewis",
+    description: "The design bible. Every detail, intentionally chosen.",
+    price: "$21.98",
+    image: "https://m.media-amazon.com/images/I/813-cazWwUL._SY385_.jpg",
+    link: "https://amzn.to/4bx6v76",
+    whyElateveLoves: "National bestseller by Amber Lewis. A detail-oriented guide to renovating, decorating, and building a beautiful home.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 81,
+    category: "home",
+    name: "Joie: A Parisian's Guide to Celebrating the Good Life",
+    description: "Live like a Parisian. Celebrate the everyday.",
+    price: "$20.05",
+    image: "https://m.media-amazon.com/images/I/41r6QQ9zmdL._SX342_SY445_FMwebp_.jpg",
+    link: "https://amzn.to/4bs0SIP",
+    whyElateveLoves: "Ajiri Aki's guide to finding joy in the everyday, Parisian style. The perfect coffee table book for the elevated life.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+
+  // ─── HOME · SPRING REFRESH — NEW PILLOWS ───
+  {
+    id: 82,
+    category: "home",
+    name: "Rudransha Hand Embroidered Wildflower Pillow Cover — 20x20",
+    description: "Hand embroidered wildflowers. Robin's egg cotton.",
+    price: "$27.99",
+    image: "https://m.media-amazon.com/images/I/714XWo6QxXL._AC_SX679_.jpg",
+    link: "https://amzn.to/4bIOEdN",
+    whyElateveLoves: "Hand embroidered wildflower design on robin's egg cotton. Each pillow is a work of art. The perfect spring accent.",
+    badge: "Save",
+    spring: true,
+    springTag: "refresh"
+  },
+  {
+    id: 83,
+    category: "home",
+    name: "Chandni Paisley Embroidered Pillow Cover — 18x18 Robin's Egg",
+    description: "Intricate paisley embroidery on robin's egg cotton.",
+    price: "$20.99",
+    image: "https://m.media-amazon.com/images/I/81xOtBsyZ0L._AC_SX679_.jpg",
+    link: "https://amzn.to/4uLm5Fd",
+    whyElateveLoves: "Pure cotton robin's egg fabric with intricate off-white paisley embroidery. Farmhouse elegance for any room.",
+    badge: "Save",
+    spring: true,
+    springTag: "refresh"
+  },
+
+  // ─── PETS ───
+  {
+    id: 84,
+    category: "pets",
+    name: "Fi Series 3+ Smart Dog Tracker Collar — 12 Month Membership",
+    description: "GPS tracking. Health monitoring. Escape alerts.",
+    price: "$299",
+    image: "https://m.media-amazon.com/images/I/71pnXb7zzCL._AC_SX679_.jpg",
+    link: "https://amzn.to/4rUX3Rj",
+    whyElateveLoves: "Real-time GPS tracking with no range limits. Health and behaviour monitoring, escape alerts, waterproof, and Apple Watch compatible. 12 months membership included.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 85,
+    category: "pets",
+    name: "Halo Collar 5 Wireless Dog Fence & GPS — Midnight",
+    description: "Wireless fence. Real-time tracking. App-controlled.",
+    price: "$524",
+    image: "https://m.media-amazon.com/images/I/81x5Zx4v2iL._AC_SX679_.jpg",
+    link: "https://amzn.to/4bINzTh",
+    whyElateveLoves: "Keep your dog safely contained outdoors with app-controlled boundaries and real-time GPS tracking. Up to 48 hours battery life.",
+    badge: "Splurge",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 86,
+    category: "pets",
+    name: "URPOWER Dog Car Seat Cover — 100% Waterproof Hammock",
+    description: "600D heavy duty. Scratch proof. Nonslip.",
+    price: "$29.98",
+    image: "https://m.media-amazon.com/images/I/71aO4wyv8SL._AC_SX679_.jpg",
+    link: "https://amzn.to/4cYOT6G",
+    whyElateveLoves: "100% waterproof hammock seat cover with 600D heavy duty fabric. Scratch proof, nonslip, and fits cars, trucks, and SUVs.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 87,
+    category: "pets",
+    name: "Memory Foam Dog Booster Car Seat — Up to 35 lbs",
+    description: "Memory foam comfort. Elevated view. Washable cover.",
+    price: "$49.99",
+    image: "https://m.media-amazon.com/images/I/71xKdZAiSrL._AC_SX679_.jpg",
+    link: "https://amzn.to/4t8junb",
+    whyElateveLoves: "Memory foam booster seat with elevated design for small and medium dogs. Removable washable cover and storage pockets. Travel in style.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+
+  // ─── WELLNESS · NEW ADDITIONS ───
+  {
+    id: 88,
+    category: "wellness",
+    name: "Oak Wood Pilates Reformer Machine — Studio Grade",
+    description: "Quick-assembly. Oak wood frame. Full accessories.",
+    price: "$599.99",
+    image: "https://m.media-amazon.com/images/I/71V83hioxiL._AC_SX679_.jpg",
+    link: "https://amzn.to/480vI92",
+    whyElateveLoves: "Studio-grade Pilates at home. Oak wood frame with mortise-and-tenon joints. 80% pre-assembled with full accessory kit.",
+    badge: "Splurge",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 89,
+    category: "wellness",
+    name: "JNH Lifestyles Joyous 2-Person FAR Infrared Sauna",
+    description: "Low EMF. Canadian hemlock. Chromotherapy light.",
+    price: "$1,899.99",
+    image: "https://m.media-amazon.com/images/I/710IZGIyCdL._AC_SX679_.jpg",
+    link: "https://amzn.to/4bGFlLj",
+    whyElateveLoves: "7 carbon fibre heaters, Canadian hemlock wood, chromotherapy lighting, and built-in Bluetooth. Your personal spa, at home.",
+    badge: "Splurge",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 90,
+    category: "wellness",
+    name: "medicube Pink Glass Glow Skin Trio — PDRN Skincare Set",
+    description: "Collagen mask, glow serum, and jelly cream trio.",
+    price: "$47.52",
+    image: "https://m.media-amazon.com/images/I/61pIhiMbZoL._SX679_.jpg",
+    link: "https://amzn.to/40Pq4mk",
+    whyElateveLoves: "Salmon DNA PDRN collagen mask, peptide glow serum, and collagen jelly cream. The Korean skincare trio for glass skin.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 91,
+    category: "wellness",
+    name: "medicube Booster Pro — 6-in-1 Beauty Massager Pink",
+    description: "Microcurrent. EMS. LED. Sonic vibration. All in one.",
+    price: "$220",
+    image: "https://m.media-amazon.com/images/I/61kpEoE3+bL._AC_SX679_.jpg",
+    link: "https://amzn.to/4t0YeQ3",
+    whyElateveLoves: "6-in-1 beauty massager with microcurrent, EMS, LED light therapy, and sonic vibration. Clear, radiant, firmer-looking skin. Korean skincare technology.",
+    badge: "Splurge",
+    spring: false,
+    springTag: null
+  },
+
   // ─── WEALTH · SPRING GLOW UP ───
   {
     id: 48,
