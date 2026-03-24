@@ -206,13 +206,10 @@ async function loadProducts(filter = 'all') {
 
 // Subcategory definitions per category
 const categorySubcategories = {
-  home: [
-    { label: 'All Home', tag: null },
-    { label: 'Spring Refresh', tag: 'refresh' }
-  ],
-  wellness: [
-    { label: 'All Wellness', tag: null },
-    { label: 'Spring Glow Up', tag: 'glow-up' }
+  all: [
+    { label: 'All Products', tag: null },
+    { label: 'Spring Refresh', tag: 'spring' },
+    { label: 'Easter Vibe', tag: 'easter' }
   ]
 };
 
@@ -246,7 +243,11 @@ async function loadFilteredProducts(category, springTag) {
   grid.innerHTML = '';
 
   let products = await fetchProducts(category);
-  if (springTag) {
+  if (springTag === 'spring') {
+    products = products.filter(p => p.spring && p.springTag !== 'easter');
+  } else if (springTag === 'easter') {
+    products = products.filter(p => p.springTag === 'easter');
+  } else if (springTag) {
     products = products.filter(p => p.springTag === springTag);
   }
 
@@ -263,12 +264,13 @@ async function loadFilteredProducts(category, springTag) {
   }, 50);
 }
 
-// ==================== SPRING COLLECTION ====================
+// ==================== EASTER / SPRING COLLECTION ====================
 async function loadSpring() {
   const grid = document.getElementById('springGrid');
   if (!grid) return;
 
-  const products = await fetchSpring();
+  const allProducts = await fetchProducts('all');
+  const products = allProducts.filter(p => p.springTag === 'easter');
 
   grid.innerHTML = '';
   products.slice(0, 4).forEach((product, i) => {
@@ -324,7 +326,9 @@ async function openArticle(postId) {
 
   const body = document.getElementById('articleBody');
   body.innerHTML = '';
-  if (post.content) {
+  if (post.htmlContent) {
+    body.innerHTML = post.htmlContent;
+  } else if (post.content) {
     post.content.forEach(paragraph => {
       const p = document.createElement('p');
       p.textContent = paragraph;
@@ -507,13 +511,29 @@ document.addEventListener('DOMContentLoaded', async () => {
   initScrollEffects();
   initTheme();
 
-  // ==================== SPRING CHECKLIST BUTTON ====================
-  const springBtn = document.getElementById('springChecklist');
-  if (springBtn) {
-    springBtn.addEventListener('click', (e) => {
+  // ==================== EASTER GUIDE BUTTON ====================
+  const easterBtn = document.getElementById('easterGuide');
+  if (easterBtn) {
+    easterBtn.addEventListener('click', (e) => {
       e.preventDefault();
       navigateTo('blog');
-      setTimeout(() => openArticle(10), 350);
+      setTimeout(() => openArticle(11), 350);
+    });
+  }
+
+  // ==================== SHOP EASTER LINK ====================
+  const shopEasterLink = document.getElementById('shopEasterLink');
+  if (shopEasterLink) {
+    shopEasterLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigateTo('shop');
+      setTimeout(() => {
+        setFilter('all');
+        setTimeout(() => {
+          const easterTab = document.querySelector('.sub-tab[data-tag="easter"]');
+          if (easterTab) easterTab.click();
+        }, 200);
+      }, 400);
     });
   }
 

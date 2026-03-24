@@ -166,6 +166,171 @@ const blogPosts = [
       "Finally, address the invisible. Change your air filters. Run your diffuser with lighter essential oils — peppermint, citrus, or a spring blend. Open windows for at least twenty minutes each day, even if it is still cool outside. The European tradition of daily airing — Stossluften in German, far in Scandinavian — exists because our ancestors understood what science now confirms: fresh air circulation improves mood, sleep quality, and cognitive function.",
       "The spring checklist is not a single weekend project. It is a gradual unfurling that mirrors the season itself. A little each day — one drawer reorganised, one heavy blanket stored, one window cleaned — and within a week your home will feel like a different place. Lighter. Brighter. Ready for the months of long evenings, open windows, and outdoor living that make European spring one of the finest experiences on Earth."
     ]
+  },
+  {
+    id: 11,
+    tag: "Seasonal",
+    title: "Reimagining Easter: A Curated European Spring Awakening",
+    excerpt: "From Scandinavian candlelit warmth to Mediterranean open-table feasts, here is how to weave Sanctuary, Ritual, Foundation, and Adventure into your Easter holiday.",
+    date: "Mar 2026",
+    readTime: "18 min read",
+    htmlContent: `
+      <p>For many of us, Easter heralds the arrival of spring and a quiet invitation to reset. Drawing inspiration from timeless European traditions -- from the candlelit warmth of Scandinavian Pask to the vibrant, open-table feasts of the Mediterranean -- this Easter is about more than just chocolate. It is about renewal.</p>
+      <p>Whether you are hosting a bustling family brunch or savouring a quiet, restorative long weekend, here is how to weave Sanctuary, Ritual, Foundation, and Adventure into your holiday.</p>
+
+      <img class="blog-section-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80" alt="Spring table setting with flowers" loading="lazy">
+
+      <h2>Welcome: The Art of the Arrival</h2>
+      <p>Long before the feast is served, the celebration begins at the front door. Drawing inspiration from the effortless warmth of Mediterranean hospitality, welcoming your guests is all about sensory delight and immediate comfort.</p>
+
+      <h4>The Front Porch and Foyer</h4>
+      <p>Set the tone before guests even step inside. Spruce up your porch seating with fresh outdoor cushions and a vibrant spring wreath. Inside the entryway, ensure there is an elegant, dedicated space for coats and bags so guests can immediately unburden themselves.</p>
+
+      <h4>A Sensory Greeting</h4>
+      <p>Infuse your foyer with beautiful Mediterranean scents -- think notes of wild fig, sea salt, rosemary, and bitter orange. A luxury diffuser near the door creates an instant getaway vibe.</p>
+
+      <h4>Effortless Appetisers and Sips</h4>
+      <p>Skip the formal sit-down greeting. Instead, have a sun-drenched console table or kitchen island laden with condensation-beaded pitchers of fresh mint lemonade, zesty mojitos, and beautifully arranged bowls of Castelvetrano olives, marcona almonds, and warm focaccia. It encourages guests to mingle, graze, and exhale the moment they arrive.</p>
+
+      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
+
+      <h2>Sanctuary: The Art of the Elevated Easter Host</h2>
+      <p>In Europe, creating a sanctuary is not about scrubbing floors; it is about <em>hygge</em> and <em>gemutlichkeit</em> -- crafting warm, sensory-rich spaces where time slows down and laughter flows.</p>
+      <p>Whether you are hosting family for the week or friends for a Sunday feast, prepping your sanctuary should feel like a creative project, not a chore. Here is how to curate your space for a luxurious, stress-free holiday.</p>
+
+      <img class="blog-section-img" src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80" alt="Elegant bedroom with linen bedding" loading="lazy">
+
+      <h3>The 5-Star Guest Suite</h3>
+      <p>Transform your guest room into a boutique hotel experience.</p>
+      <ul>
+        <li><strong>The Layered Bed:</strong> Swap out heavy winter duvets for crisp, high-thread-count European linens and plush waffle-weave throws.</li>
+        <li><strong>The Welcome Tray:</strong> Leave a carafe of infused water, a high-end French hand cream, and a silk sleep mask on the nightstand.</li>
+        <li><strong>Pet Hospitality:</strong> If guests are bringing furry companions, curate a chic corner with an orthopedic pet bed and a basket of organic treats.</li>
+      </ul>
+
+      <h3>The Springtime Bar Cart and Aperitivo Hour</h3>
+      <p>Take inspiration from the Italian piazza and set up a self-serve botanical bar cart.</p>
+      <ul>
+        <li><strong>The Setup:</strong> Stock your cart with beautiful crystal glassware, artisanal tonic waters, and premium non-alcoholic botanicals alongside top-tier gins.</li>
+        <li><strong>The Garnishes:</strong> Use bowls of fresh rosemary, dehydrated citrus wheels, and lavender sprigs. Let guests play mixologist while you finish up in the kitchen.</li>
+      </ul>
+
+      <h3>The Scent of Celebration</h3>
+      <p>The kitchen is the heart of the sanctuary. Focus on sensory cooking rather than stress.</p>
+      <ul>
+        <li><strong>Copper and Cast Iron:</strong> Bring out heirloom-quality cookware that looks as beautiful on the stove as it does serving on the table.</li>
+        <li><strong>Gourmet Shortcuts:</strong> Curate high-end charcuterie boards with truffle cheeses, Spanish iberico ham, and artisanal jams so you can mingle instead of being stuck over the stove.</li>
+      </ul>
+
+      <img class="blog-section-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Outdoor dining setup with lanterns" loading="lazy">
+
+      <h3>Taking the Sanctuary Outdoors</h3>
+      <p>If the weather permits, extend your indoor sanctuary to the terrace or garden.</p>
+      <ul>
+        <li><strong>Al Fresco Comfort:</strong> Drape outdoor dining chairs with soft merino wool blankets for when the sun goes down.</li>
+        <li><strong>Atmosphere:</strong> Line your garden paths or patio with luxury solar lanterns and set up a high-end smokeless fire pit for post-dinner drinks.</li>
+      </ul>
+
+      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
+
+      <h2>Rituals: Self-Care Amidst the Celebrations</h2>
+      <p>In many European cultures, holiday preparation is balanced with thermal bath visits or slow, intentional grooming rituals. Hosting can be exhausting. To pour from a full cup, you must carve out non-negotiable pockets of time for your own beauty and wellness.</p>
+      <ul>
+        <li><strong>The Morning Soak:</strong> Before the house wakes up, indulge in a mineral-rich bath soak using European sea salts and a luxurious hydrating face mask.</li>
+        <li><strong>Effortless Holiday Glam:</strong> When time is short, lean on high-performance skincare-infused makeup. Think tinted serums and cream blushes for a fresh, lit-from-within spring glow.</li>
+        <li><strong>The Gift of Rest:</strong> Set up a luxury silk pillowcase and a weighted sleep mask. High-quality sleep is the ultimate wellness ritual.</li>
+      </ul>
+
+      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
+
+      <h2>Celebrations and Cooking: The European Table</h2>
+      <p>Traditional European Easter foods celebrate the end of winter with fresh, bright ingredients.</p>
+
+      <table>
+        <thead>
+          <tr><th>Tradition</th><th>The Vibe</th><th>The Menu Concept</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Spanish Pascua</strong></td><td>Artistic and Festive</td><td>Roasted lamb or paella, escalivada, and the Mona de Pasqua -- sweet brioche topped with chocolate sculptures and feathers.</td></tr>
+          <tr><td><strong>Italian Pasqua</strong></td><td>Warm and Abundant</td><td>Savoury ricotta tarts, roasted lamb with spring peas, and rich, dove-shaped Colomba cake.</td></tr>
+          <tr><td><strong>Nordic Pask</strong></td><td>Sleek and Fresh</td><td>Smoked salmon grazing boards, pickled herring, dill potatoes, and crispbreads.</td></tr>
+          <tr><td><strong>Greek Pascha</strong></td><td>Rustic and Joyful</td><td>Spit-roasted lemon-herb lamb, Tsoureki braided sweet bread with red-dyed eggs, spanakopita, and honey-drenched baklava.</td></tr>
+          <tr><td><strong>French Paques</strong></td><td>Elegant and Decadent</td><td>Grand chocolate displays, slow-cooked leg of lamb, and perfectly paired wines.</td></tr>
+        </tbody>
+      </table>
+
+      <img class="blog-section-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Mediterranean feast table" loading="lazy">
+
+      <h3>The Greek Easter Vibe</h3>
+      <ul>
+        <li><strong>The Signature Centrepiece:</strong> Instead of standard pastel eggs, dye your hard-boiled eggs a deep, rich crimson red (symbolising life and renewal) and nestle them into a braided Tsoureki loaf at the centre of the table.</li>
+        <li><strong>The Crack-the-Egg Game (Tsougrisma):</strong> Turn dining into a fun experience. Guests tap their red eggs against each other; the person whose egg does not crack is said to have good luck for the year.</li>
+        <li><strong>Family-Style Meze:</strong> Lean into stress-free hosting by setting out large ceramic platters of Greek olives, warm pita, feta drizzled with honey and sesame, and tzatziki.</li>
+      </ul>
+
+      <h3>The Spanish Mona de Pasqua Vibe</h3>
+      <p>The Mona de Pasqua is a beloved tradition in Catalonia and Valencia. Historically a sweet, circular brioche crowned with hard-boiled eggs, it has evolved into massive, jaw-dropping chocolate sculptures of castles, animals, and fairytale characters.</p>
+      <ul>
+        <li><strong>The Easter Monday Tradition:</strong> In Spain, the Monday after Easter is when families head into the countryside, the beach, or the backyard garden to enjoy the Mona outdoors. It is the ultimate, relaxed outdoor Adventure picnic.</li>
+        <li><strong>The Playful Ritual:</strong> In Valencia, tradition dictates you must crack your hard-boiled Easter egg on the forehead of an unsuspecting family member or friend. It is a moment of pure laughter and fun for all ages.</li>
+        <li><strong>Style Your Own:</strong> If you are baking a cake at home, top it with high-end chocolate eggs, colourful feathers, and spun sugar to mimic the artistic bakeries of Barcelona.</li>
+      </ul>
+
+      <div class="blog-quote">Elevate Your Cookware: Invest in a beautiful enamelled cast-iron Dutch oven. It transitions beautifully from the stovetop to the centre of your holiday table.</div>
+
+      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
+
+      <h2>Adventure: Active Wellness and Culinary Experiences</h2>
+      <p>In the world of active wellness and self-improvement, adventure is not just about scaling mountains -- it is about expanding your palate, exploring rich traditions, and treating yourself to world-class hospitality.</p>
+      <ul>
+        <li><strong>The Traditional Easter Hike:</strong> Gather the family (and the dogs) for a scenic spring hike. Invest in high-quality, stylish trail footwear and ergonomic daypacks.</li>
+        <li><strong>Mental Adventures:</strong> Gift yourself a masterclass subscription or a high-end language-learning app to prepare for your summer European getaway.</li>
+        <li><strong>Wellness Retreat Planning:</strong> Use this weekend to research and book a summer yoga retreat or a hiking tour in the Alps.</li>
+      </ul>
+
+      <img class="blog-section-img" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="Elegant restaurant dining" loading="lazy">
+
+      <h3>The Grand European Tradition: Palace Hotel Brunches</h3>
+      <p>Across Europe, Easter Sunday is the pinnacle of springtime gastronomy. Historic hotels open their gilded doors for legendary, multi-hour feasts that marry live classical music, exquisite design, and world-class pastry.</p>
+      <ul>
+        <li><strong>Four Seasons Hotel George V (Paris):</strong> Monumental chocolate sculptures by master pastry chefs, delicate seasonal pastries, and a courtyard bursting with fresh floral installations.</li>
+        <li><strong>Hotel de Crillon (Paris):</strong> Historic salons overlooking the Place de la Concorde with rich truffled eggs and legendary artisanal chocolate spreads.</li>
+        <li><strong>Four Seasons Hotel Prague:</strong> Traditional hand-painted Czech eggs and sweet breads on an outdoor terrace overlooking the Vltava River and Charles Bridge.</li>
+        <li><strong>The Hotel de Russie (Rome):</strong> Easter brunch in a famous secret tiered garden with roasted spring lamb and hand-cracked chocolate eggs.</li>
+      </ul>
+
+      <h3>The American Curated Edit: Elevated Easter Brunch</h3>
+      <p>You do not need a passport to experience the grandeur of a European-style holiday. Top-tier US hospitality chains take heavy inspiration from European techniques while celebrating fresh, local farm-to-table harvests.</p>
+
+      <table>
+        <thead>
+          <tr><th>Restaurant</th><th>Easter Highlights</th><th>The Atmosphere</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>The Ritz-Carlton</strong></td><td>Three-course prix fixe with farm-fresh spring vegetables and tableside pastry gifts.</td><td>Elegant urban dining rooms or coastal beachfront terraces.</td></tr>
+          <tr><td><strong>Waldorf Astoria</strong></td><td>Grand seafood towers, raw bars, bottomless mimosas, and signature pastries.</td><td>Timeless, old-world glamour meets modern American hospitality.</td></tr>
+          <tr><td><strong>The St. Regis</strong></td><td>Elevated brunch staples, heritage meats, and signature Bloody Mary varieties.</td><td>High-end, bespoke, and intimate service.</td></tr>
+          <tr><td><strong>Cooper's Hawk Winery</strong></td><td>Rich charcuterie boards, artisanal flatbreads, and house-crafted wine flights.</td><td>Modern winery aesthetic.</td></tr>
+          <tr><td><strong>Seasons 52</strong></td><td>Crab and cheddar quiches, French toast bakes, and apricot-glazed spiral ham.</td><td>Oak-fired and seasonal.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="blog-quote">Book a table at a luxury local property for your family. Dress up, let world-class chefs do the heavy lifting, and take a leisurely post-brunch walk to soak in the spring air.</div>
+
+      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
+
+      <h2>Foundation: Smart Planning for Peace of Mind</h2>
+      <p>Just as we balance our physical spaces, spring is the perfect time to audit and balance our financial houses. True peace of mind is knowing your future is secure. Use the quiet moments of the long weekend to check in on your financial health.</p>
+      <ul>
+        <li><strong>Spring Cleaning Your Subscriptions:</strong> Audit your bank statements. Cancel the unused gym memberships or streaming apps.</li>
+        <li><strong>The Family Binder:</strong> Ensure your estate planning, life insurance, and emergency funds are organised. Knowing your family is protected is the ultimate stress reliever.</li>
+        <li><strong>Wealth Wellness Trackers:</strong> Treat yourself to a beautiful digital planner or high-end financial app subscription to make tracking your goals aesthetic and satisfying.</li>
+      </ul>
+
+      <img class="blog-section-img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80" alt="Spring mountain landscape" loading="lazy">
+
+      <div class="blog-quote">This Easter, let renewal be the theme. Refresh your sanctuary, nourish your rituals, feed your sense of adventure, and fortify your foundation. The elevated life is built one intentional moment at a time.</div>
+    `
   }
 ];
 
