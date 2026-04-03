@@ -121,6 +121,73 @@ function showComingSoon() {
   document.getElementById('comingSoonOverlay')?.classList.add('active');
 }
 
+// ==================== SPANISH SUMMER EDIT POPUP ====================
+function initSummerPopup() {
+  if (sessionStorage.getItem('summerPopupDismissed')) return;
+  if (document.getElementById('summerPopupOverlay')) return;
+
+  const overlay = document.createElement('div');
+  overlay.id = 'summerPopupOverlay';
+  overlay.className = 'popup-overlay';
+  overlay.innerHTML = `
+    <div class="popup summer-popup">
+      <button class="popup-close" id="summerPopupClose">&times;</button>
+      <div class="summer-popup-video">
+        <video autoplay loop muted playsinline>
+          <source src="/videos/spanish-summer.mp4" type="video/mp4">
+        </video>
+      </div>
+      <span class="popup-eyebrow">THE SPANISH SUMMER EDIT</span>
+      <h2 class="popup-title" style="font-size:clamp(1.2rem,2.5vw,1.8rem)">Sign Up for Early Access</h2>
+      <p class="popup-text">Get first access to our curated Spanish Summer collection — handpicked for sun-soaked living.</p>
+      <form class="popup-form" id="summerSignupForm">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn">Get Early Access</button>
+      </form>
+      <p class="popup-note">No spam. Just sun, style, and early drops.</p>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  // Show after short delay
+  setTimeout(() => overlay.classList.add('active'), 2500);
+
+  // Close handlers
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeSummerPopup();
+  });
+  document.getElementById('summerPopupClose')?.addEventListener('click', closeSummerPopup);
+
+  // Form submit
+  document.getElementById('summerSignupForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = e.target.querySelector('input').value;
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      const data = await res.json();
+      if (data.success) {
+        e.target.innerHTML = '<p style="color:var(--gold);font-weight:500;padding:1rem 0;">You\'re in! We\'ll be in touch.</p>';
+        setTimeout(closeSummerPopup, 2500);
+      }
+    } catch (err) {
+      e.target.innerHTML = '<p style="color:var(--gold);font-weight:500;padding:1rem 0;">You\'re in! We\'ll be in touch.</p>';
+      setTimeout(closeSummerPopup, 2500);
+    }
+  });
+}
+
+function closeSummerPopup() {
+  const overlay = document.getElementById('summerPopupOverlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    sessionStorage.setItem('summerPopupDismissed', 'true');
+  }
+}
+
 // ==================== PRODUCT RENDERING ====================
 function createProductCard(product) {
   const card = document.createElement('div');
@@ -208,6 +275,7 @@ async function loadProducts(filter = 'all') {
 const categorySubcategories = {
   all: [
     { label: 'All Products', tag: null },
+    { label: 'Spanish Summer Edit', tag: 'spanish-summer' },
     { label: 'Spring Refresh', tag: 'spring' },
     { label: 'Easter Vibe', tag: 'easter' }
   ]
@@ -510,6 +578,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   initNavigation();
   initScrollEffects();
   initTheme();
+
+  // Show Spanish Summer Edit popup on homepage
+  if (initialPage === 'home') {
+    initSummerPopup();
+  }
 
   // ==================== EASTER GUIDE BUTTON ====================
   const easterBtn = document.getElementById('easterGuide');
