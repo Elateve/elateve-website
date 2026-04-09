@@ -332,13 +332,14 @@ async function loadFilteredProducts(category, springTag) {
   }, 50);
 }
 
-// ==================== EASTER / SPRING COLLECTION ====================
+// ==================== SPANISH GARDEN COLLECTION ====================
 async function loadSpring() {
   const grid = document.getElementById('springGrid');
   if (!grid) return;
 
   const allProducts = await fetchProducts('all');
-  const products = allProducts.filter(p => p.springTag === 'easter');
+  // Show outdoor/spanish-summer products from home category for the garden section
+  const products = allProducts.filter(p => p.springTag === 'spanish-summer' && p.category === 'home');
 
   grid.innerHTML = '';
   products.slice(0, 4).forEach((product, i) => {
@@ -582,32 +583,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Show Spanish Summer Edit popup on homepage
   if (initialPage === 'home') {
     initSummerPopup();
-  }
-
-  // ==================== EASTER GUIDE BUTTON ====================
-  const easterBtn = document.getElementById('easterGuide');
-  if (easterBtn) {
-    easterBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      navigateTo('blog');
-      setTimeout(() => openArticle(11), 350);
-    });
-  }
-
-  // ==================== SHOP EASTER LINK ====================
-  const shopEasterLink = document.getElementById('shopEasterLink');
-  if (shopEasterLink) {
-    shopEasterLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      navigateTo('shop');
-      setTimeout(() => {
-        setFilter('all');
-        setTimeout(() => {
-          const easterTab = document.querySelector('.sub-tab[data-tag="easter"]');
-          if (easterTab) easterTab.click();
-        }, 200);
-      }, 400);
-    });
   }
 
   // Push initial state

@@ -474,6 +474,27 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   line-height: 1.5;
 }
 
+/* ── EUROPEAN WELLNESS JOURNAL ── */
+.section--journal { max-width: 100%; padding: var(--space-xl) var(--space-md); background: var(--cream-dark); overflow: hidden; }
+.journal-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+.journal-content { text-align: left; }
+.journal-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-sm); }
+.journal-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 200; line-height: 1.1; color: var(--charcoal); margin-bottom: var(--space-md); }
+.journal-desc { font-size: 0.92rem; font-weight: 300; color: var(--grey); line-height: 1.8; margin-bottom: var(--space-md); }
+.journal-details { display: flex; align-items: center; gap: 0.6rem; margin-bottom: var(--space-lg); flex-wrap: wrap; }
+.journal-detail { font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal-light); }
+.journal-detail-sep { color: var(--gold); font-size: 0.8rem; }
+.journal-btn { opacity: 0.7; cursor: default; }
+.journal-btn:hover { transform: none; box-shadow: none; }
+.journal-visual { display: flex; justify-content: center; align-items: center; }
+.journal-mockup { perspective: 800px; }
+.journal-cover { width: 280px; height: 380px; background: linear-gradient(145deg, #1A1A1A 0%, #2A2A2A 100%); border: 1px solid rgba(197,151,62,0.3); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-lg); position: relative; transform: rotateY(-6deg) rotateX(2deg); transition: transform 0.6s var(--ease); box-shadow: 20px 20px 60px rgba(0,0,0,0.15), -5px -5px 20px rgba(255,255,255,0.05); }
+.journal-cover:hover { transform: rotateY(0deg) rotateX(0deg); }
+.journal-cover::before { content: ''; position: absolute; top: 12px; left: 12px; right: 12px; bottom: 12px; border: 1px solid rgba(197,151,62,0.2); pointer-events: none; }
+.journal-cover-eyebrow { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-md); }
+.journal-cover-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 200; color: var(--cream); line-height: 1.3; margin-bottom: var(--space-sm); }
+.journal-cover-sub { font-size: 0.65rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,245,240,0.5); }
+
 /* ── MEET THE DUO ── */
 .section--duo { max-width: 100%; padding: var(--space-xl) var(--space-md); background: var(--charcoal); text-align: center; }
 .duo-inner { max-width: 640px; margin: 0 auto; }
@@ -556,6 +577,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 [data-theme="dark"] .potm-story-btn { border-color: rgba(247,245,240,0.25); color: rgba(247,245,240,0.75); }
 [data-theme="dark"] .potm-product-name { color: rgba(247,245,240,0.45); }
 [data-theme="dark"] .potm-img-wrap { background: rgba(255,255,255,0.04); border-color: rgba(197,151,62,0.15); }
+[data-theme="dark"] .section--journal { background: #141414; }
+[data-theme="dark"] .journal-cover { background: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 100%); border-color: rgba(197,151,62,0.25); }
 [data-theme="dark"] .category-card { background: #181818; border-color: #2a2a2a; }
 [data-theme="dark"] .approach-card { background: #181818; border-color: #2a2a2a; }
 [data-theme="dark"] .about-team-photo { border-color: var(--gold-dark); }
@@ -598,6 +621,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   .nav-links { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: var(--space-md); opacity: 0; pointer-events: none; transition: opacity 0.22s ease-out; will-change: opacity; }
   .nav-links.open { opacity: 1; pointer-events: all; }
   .nav-links a { font-size: 1.2rem; letter-spacing: 0.2em; }
+  .journal-inner { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .journal-content { text-align: center; }
+  .journal-visual { order: -1; }
+  .journal-cover { width: 220px; height: 300px; transform: none; }
   .potm-content { grid-template-columns: 1fr; gap: var(--space-lg); }
   .potm-visual { order: -1; }
   .potm-img-wrap { max-width: 280px; }
