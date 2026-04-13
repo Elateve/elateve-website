@@ -479,19 +479,24 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   line-height: 1.5;
 }
 
-/* ── SPANISH SUMMER VIDEO ── */
-.section--summer-video { max-width: 100%; padding: 0; position: relative; }
-.summer-video-wrap { position: relative; width: 100%; aspect-ratio: 16/7; overflow: hidden; min-height: 400px; max-height: 600px; }
-.summer-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.summer-video-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 60%, transparent 100%); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: var(--space-xl) var(--space-lg); }
-.summer-video-overlay .section-eyebrow { color: var(--gold-light); }
-.summer-video-overlay .section-title { color: var(--white); font-size: clamp(2rem, 4.5vw, 3.5rem); margin-bottom: var(--space-md); text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-.summer-video-overlay .btn { margin-top: var(--space-sm); }
+/* ── SPANISH SUMMER VIDEO (side-by-side) ── */
+.section--summer-video { max-width: 100%; padding: var(--space-xl) var(--space-md); background: var(--charcoal); }
+.summer-video-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+.summer-video-player { border-radius: 2px; overflow: hidden; aspect-ratio: 9/12; max-height: 380px; }
+.summer-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.summer-video-text { }
+.summer-video-text .section-eyebrow { color: var(--gold-light); }
+.summer-video-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--cream); line-height: 1.15; margin-bottom: var(--space-md); }
+.summer-video-desc { font-size: 0.9rem; font-weight: 300; color: rgba(247,245,240,0.6); line-height: 1.8; margin-bottom: var(--space-lg); }
+.summer-video-text .btn { }
 
-/* ── SHOP FILTER GROUPS ── */
-.shop-filter-group { text-align: center; margin-bottom: var(--space-md); }
-.shop-filter-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-xs); }
-.season-btn { font-size: 0.7rem; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.6rem 1.5rem; color: var(--grey); border: 1px solid transparent; transition: all 0.3s var(--ease); background: none; cursor: pointer; font-family: var(--font-body); }
+/* ── SHOP FILTER BAR ── */
+.shop-filter-bar { max-width: 900px; margin: 0 auto var(--space-lg); padding: var(--space-md) var(--space-md); background: var(--white); border: 1px solid var(--cream-dark); }
+.shop-filter-row { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; justify-content: center; }
+.shop-filter-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); flex-shrink: 0; min-width: 55px; }
+.shop-filter-pills { display: flex; gap: 0.3rem; flex-wrap: wrap; justify-content: center; }
+.shop-filter-divider { height: 1px; background: var(--cream-dark); margin: var(--space-sm) 0; }
+.season-btn { font-size: 0.68rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.45rem 1rem; color: var(--grey); border: 1px solid transparent; transition: all 0.3s var(--ease); background: none; cursor: pointer; font-family: var(--font-body); }
 .season-btn:hover { color: var(--charcoal); }
 .season-btn.active { color: var(--gold); border-color: var(--gold); }
 
@@ -598,6 +603,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 [data-theme="dark"] .potm-story-btn { border-color: rgba(247,245,240,0.25); color: rgba(247,245,240,0.75); }
 [data-theme="dark"] .potm-product-name { color: rgba(247,245,240,0.45); }
 [data-theme="dark"] .potm-img-wrap { background: rgba(255,255,255,0.04); border-color: rgba(197,151,62,0.15); }
+[data-theme="dark"] .shop-filter-bar { background: #181818; border-color: #2a2a2a; }
+[data-theme="dark"] .shop-filter-divider { background: #2a2a2a; }
 [data-theme="dark"] .season-btn { color: #BEBAB4; }
 [data-theme="dark"] .season-btn.active,
 [data-theme="dark"] .season-btn:hover { color: var(--gold); border-color: var(--gold); }
@@ -649,8 +656,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   .journal-content { text-align: center; }
   .journal-visual { order: -1; }
   .journal-cover { width: 220px; height: 300px; transform: none; }
-  .summer-video-wrap { aspect-ratio: auto; min-height: 350px; }
-  .summer-video-overlay { padding: var(--space-lg) var(--space-md); align-items: center; text-align: center; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%); }
+  .summer-video-inner { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .summer-video-player { max-height: 280px; aspect-ratio: 16/9; }
+  .summer-video-text { text-align: center; }
+  .shop-filter-bar { padding: var(--space-sm); }
+  .shop-filter-row { gap: 0.4rem; }
+  .shop-filter-label { min-width: auto; width: 100%; text-align: center; margin-bottom: 0.3rem; }
   .potm-content { grid-template-columns: 1fr; gap: var(--space-lg); }
   .potm-visual { order: -1; }
   .potm-img-wrap { max-width: 280px; }

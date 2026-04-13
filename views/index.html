@@ -126,14 +126,17 @@
 
       <!-- ==================== SPANISH SUMMER VIDEO ==================== -->
       <div class="section section--summer-video">
-        <div class="summer-video-wrap">
-          <video autoplay loop muted playsinline class="summer-video">
-            <source src="/videos/spanish-summer.mp4" type="video/mp4">
-          </video>
-          <div class="summer-video-overlay">
+        <div class="summer-video-inner">
+          <div class="summer-video-player">
+            <video autoplay loop muted playsinline class="summer-video">
+              <source src="/videos/spanish-summer.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="summer-video-text">
             <p class="section-eyebrow">Seasonal Edit</p>
-            <h2 class="section-title">Shop the Spanish<br>Summer Edit</h2>
-            <a href="/shop" class="btn btn--gold" data-page="shop" id="shopSummerBtn">Shop the Style</a>
+            <h2 class="summer-video-title">Shop the Spanish<br>Summer Edit</h2>
+            <p class="summer-video-desc">Sun-soaked outdoor living, European style. Curated for your garden, terrace, and al fresco moments.</p>
+            <a href="/shop" class="btn btn--gold" data-page="shop" id="shopSummerBtn">Shop the Style &rarr;</a>
           </div>
         </div>
       </div>
@@ -193,23 +196,26 @@
         <h1 class="page-title">Our Picks</h1>
         <p class="page-sub">European bestsellers, intentionally chosen to upgrade your everyday.</p>
       </div>
-      <div class="shop-filter-group">
-        <p class="shop-filter-label">Categories</p>
-        <div class="shop-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="wellness">Wellness</button>
-          <button class="filter-btn" data-filter="home">Home</button>
-          <button class="filter-btn" data-filter="wealth">Wealth</button>
-          <button class="filter-btn" data-filter="experience">Experience</button>
-          <button class="filter-btn" data-filter="pets">Pets</button>
+      <div class="shop-filter-bar">
+        <div class="shop-filter-row">
+          <span class="shop-filter-label">Category</span>
+          <div class="shop-filter-pills">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wellness">Wellness</button>
+            <button class="filter-btn" data-filter="home">Home</button>
+            <button class="filter-btn" data-filter="wealth">Wealth</button>
+            <button class="filter-btn" data-filter="experience">Experience</button>
+            <button class="filter-btn" data-filter="pets">Pets</button>
+          </div>
         </div>
-      </div>
-      <div class="shop-filter-group">
-        <p class="shop-filter-label">Shop by Season</p>
-        <div class="shop-filters" id="seasonFilters">
-          <button class="season-btn" data-season="">All Seasons</button>
-          <button class="season-btn" data-season="spanish-summer">Spanish Summer</button>
-          <button class="season-btn" data-season="spring">Spring Refresh</button>
+        <div class="shop-filter-divider"></div>
+        <div class="shop-filter-row">
+          <span class="shop-filter-label">Season</span>
+          <div class="shop-filter-pills">
+            <button class="season-btn active" data-season="">All</button>
+            <button class="season-btn" data-season="spanish-summer">Spanish Summer</button>
+            <button class="season-btn" data-season="spring">Spring Refresh</button>
+          </div>
         </div>
       </div>
       <div class="products-grid" id="productsGrid"></div>
