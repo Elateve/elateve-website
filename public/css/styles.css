@@ -510,8 +510,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .journal-details { display: flex; align-items: center; gap: 0.6rem; margin-bottom: var(--space-lg); flex-wrap: wrap; }
 .journal-detail { font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal-light); }
 .journal-detail-sep { color: var(--gold); font-size: 0.8rem; }
-.journal-visual { display: flex; justify-content: center; align-items: center; }
-.journal-img { width: 100%; max-width: 420px; height: auto; border-radius: 4px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+.journal-visual { display: flex; flex-direction: column; gap: var(--space-sm); align-items: center; }
+.journal-img { width: 100%; max-width: 400px; height: auto; border-radius: 4px; box-shadow: 0 16px 50px rgba(0,0,0,0.1); }
+.journal-img--second { max-width: 380px; }
 
 /* ── MEET THE DUO ── */
 .section--duo { max-width: 100%; padding: var(--space-xl) var(--space-md); background: var(--charcoal); text-align: center; }
