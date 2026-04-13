@@ -622,6 +622,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .approach-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
 .approach-card p { font-size: 0.85rem; color: var(--grey); line-height: 1.7; }
 
+/* ── ABOUT LOGO ── */
+.about-logo-section { text-align: center; padding: var(--space-lg) var(--space-md) 0; max-width: 400px; margin: 0 auto; }
+.about-logo-img { width: 100%; max-width: 320px; height: auto; margin: 0 auto; display: block; }
+
 /* ── ABOUT TEAM ── */
 .about-team { text-align: center; padding: var(--space-xl) var(--space-lg) var(--space-lg); max-width: 900px; margin: 0 auto; }
 .about-team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-top: var(--space-lg); }
