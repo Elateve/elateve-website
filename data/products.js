@@ -1441,6 +1441,241 @@ const products = [
     springTag: null
   },
 
+  // ═══════════════════════════════════════════
+  // ─── WELLNESS · INVEST IN YOURSELF ─────────
+  // ═══════════════════════════════════════════
+
+  // Rituals — Tea & Mindfulness
+  {
+    id: 108,
+    category: "wellness",
+    name: "Yogi Organic Tea Energy Sampler Box — 32 Tea Bags",
+    description: "8 energizing black & green teas. Organic fuel for your morning ritual.",
+    price: "$16.99",
+    image: "https://m.media-amazon.com/images/I/81Vz4IUDWRL._SY450_.jpg",
+    link: "https://amzn.to/4vvMuaw",
+    whyElateveLoves: "Eight organic blends in one beautiful box. From matcha green to sweet tangerine — a different intention for each morning.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 109,
+    category: "wellness",
+    name: "Yogi Relaxation Sampler Box — 32 Tea Bags",
+    description: "8 herbal teas for stress relief & sleep. Caffeine free.",
+    price: "$16.99",
+    image: "https://m.media-amazon.com/images/I/81YzVhqDBpL._SY450_.jpg",
+    link: "https://amzn.to/4telA5s",
+    whyElateveLoves: "Wind down the European way. Eight caffeine-free blends for bedtime rituals, stress relief, and deep rest.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 110,
+    category: "wellness",
+    name: "TATSUMI Country Roses Bone China Tea Cup & Saucer Set",
+    description: "Vintage bone china. Dutch Blue. Set of 2.",
+    price: "$39.99",
+    image: "https://m.media-amazon.com/images/I/81k9rZxr5BL._AC_SY450_.jpg",
+    link: "https://amzn.to/3Ob1Jop",
+    whyElateveLoves: "Bone china tea cups that make every sip feel like an occasion. Dutch Blue floral pattern, vintage European elegance.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+
+  // Activity — Movement & Athleisure
+  {
+    id: 111,
+    category: "wellness",
+    name: "Skechers Go Walk Flex Hands Free Slip-ins — Grand Entry",
+    description: "Hands-free slip-in sneakers. Walk, don't tie.",
+    price: "$55 - $75",
+    image: "https://m.media-amazon.com/images/I/61q+axv7rUL._AC_SY395_.jpg",
+    link: "https://amzn.to/4vq5qr3",
+    whyElateveLoves: "The European walking shoe. Slip in hands-free, walk for hours. Cushioned comfort for those long city strolls.",
+    badge: null,
+    spring: false,
+    springTag: "spanish-summer"
+  },
+  {
+    id: 112,
+    category: "wellness",
+    name: "Raycon Fitness Bluetooth Headphones — White",
+    description: "Over-ear, noise cancelling. 45 hours battery.",
+    price: "$79.99",
+    image: "https://m.media-amazon.com/images/I/61gp+CKdkIL._AC_SY450_.jpg",
+    link: "https://amzn.to/4td5fxK",
+    whyElateveLoves: "Active noise cancelling meets 45-hour battery. Awareness mode for outdoor runs. Clean white aesthetic.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 113,
+    category: "wellness",
+    name: "Under Armour Women's Velocity Half Zip Twist",
+    description: "Lightweight half-zip. Breathable performance layer.",
+    price: "$35 - $55",
+    image: "https://m.media-amazon.com/images/I/71dRmwOXwVL._AC_SY450_.jpg",
+    link: "https://amzn.to/4eiJlED",
+    whyElateveLoves: "The perfect layer for a morning run or an evening walk along the coast. Lightweight, breathable, and moves with you.",
+    badge: null,
+    spring: false,
+    springTag: "spanish-summer"
+  },
+  {
+    id: 114,
+    category: "wellness",
+    name: "Under Armour Women's HeatGear Armour Capris",
+    description: "High-waisted, pocketed. Compression fit.",
+    price: "$25 - $40",
+    image: "https://m.media-amazon.com/images/I/61wKNmrFXvL._AC_SY450_.jpg",
+    link: "https://amzn.to/4mw5OjS",
+    whyElateveLoves: "HeatGear compression keeps you cool in the heat. High waist, deep pockets. From gym to terrace.",
+    badge: "Save",
+    spring: false,
+    springTag: "spanish-summer"
+  },
+  {
+    id: 115,
+    category: "wellness",
+    name: "Under Armour Undeniable 5.0 Duffle",
+    description: "Water-resistant duffle. Built for everything.",
+    price: "$35 - $55",
+    image: "https://m.media-amazon.com/images/I/71KGJN8vHBL._AC_SY450_.jpg",
+    link: "https://amzn.to/47RAplO",
+    whyElateveLoves: "From gym to weekend getaway. Water-resistant, abrasion-resistant bottom. The one bag that does it all.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 116,
+    category: "wellness",
+    name: "Trailoom Microfiber Workout Towels — Set of 5 Pastel",
+    description: "Quick dry, odor-free. Gym to yoga.",
+    price: "$14.99",
+    image: "https://m.media-amazon.com/images/I/71wJe0geFyL._AC_SY450_.jpg",
+    link: "https://amzn.to/3QBh6Hi",
+    whyElateveLoves: "Five pastel microfiber towels that dry fast and never smell. From hot yoga to hiking. Under $15 for the whole set.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+
+  // Rituals — Skincare & Fragrance
+  {
+    id: 117,
+    category: "wellness",
+    name: "CeraVe Daily Moisturizing Lotion — 12 oz",
+    description: "Hyaluronic acid & ceramides. Fragrance free.",
+    price: "$14.99",
+    image: "https://m.media-amazon.com/images/I/61S7BrCBj7L._SY450_.jpg",
+    link: "https://amzn.to/4tDtULG",
+    whyElateveLoves: "Dermatologist-developed daily moisture with ceramides and hyaluronic acid. No fragrance, no fuss. Just great skin.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 118,
+    category: "wellness",
+    name: "Vera Wang Eau de Parfum — 3.4 Fl Oz",
+    description: "Delicate floral. Iris, lilies & sandalwood.",
+    price: "$25 - $35",
+    image: "https://m.media-amazon.com/images/I/41Gi0CjaBkL._SY450_.jpg",
+    link: "https://amzn.to/4tOsz4V",
+    whyElateveLoves: "Feminine and subtle. Iris, lillies, and sandalwood — a fragrance that whispers luxury without the price tag.",
+    badge: "Save",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 119,
+    category: "wellness",
+    name: "Chloe Eau de Parfum Spray — 2.5 oz",
+    description: "The iconic rose. Timeless, feminine, unforgettable.",
+    price: "$105 - $130",
+    image: "https://m.media-amazon.com/images/I/51NMML85A3L._SY450_.jpg",
+    link: "https://amzn.to/4vs5u9w",
+    whyElateveLoves: "The scent that needs no introduction. Rose, freesia, and warm amber. The signature of European femininity.",
+    badge: "Splurge",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 120,
+    category: "wellness",
+    name: "CHLOE Body Lotion — 6.7 oz",
+    description: "The Chloe scent in a silky body lotion.",
+    price: "$52 - $58",
+    image: "https://m.media-amazon.com/images/I/31qJfb0rh7L._SY450_.jpg",
+    link: "https://amzn.to/4c82MPc",
+    whyElateveLoves: "Layer the iconic Chloe rose over your skin. A body lotion that makes you smell like a Parisian garden all day.",
+    badge: "Splurge",
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 121,
+    category: "wellness",
+    name: "Pixi On-the-Glow Blush Stick — Fleur",
+    description: "Hydrating tinted stick. Cheeks & lips.",
+    price: "$18.00",
+    image: "https://m.media-amazon.com/images/I/61O5LwHATBL._SY450_.jpg",
+    link: "https://amzn.to/4cFl6zd",
+    whyElateveLoves: "Twist up, apply, glow. Ginseng and aloe vera hydrate while the tint gives that effortless European flush.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+  {
+    id: 122,
+    category: "wellness",
+    name: "CeraVe Hydrating Mineral Sunscreen SPF 30 — Sheer Tint",
+    description: "Zinc oxide + titanium dioxide. Healthy glow.",
+    price: "$14.99",
+    image: "https://m.media-amazon.com/images/I/61YhMsG-8JL._SY450_.jpg",
+    link: "https://amzn.to/4mqWJbW",
+    whyElateveLoves: "Mineral sunscreen with a sheer tint that blends seamlessly. SPF 30 protection with a healthy, natural glow.",
+    badge: "Save",
+    spring: false,
+    springTag: "spanish-summer"
+  },
+
+  // Cooking & Entertaining
+  {
+    id: 123,
+    category: "home",
+    name: "Threpsi Organic Extra Virgin Olive Oil — Koroneiki",
+    description: "Cold extracted. 100% organic. Small family farm.",
+    price: "$34.99",
+    image: "https://m.media-amazon.com/images/I/61kqMNfGlNL._SY450_.jpg",
+    link: "https://amzn.to/48dlpP7",
+    whyElateveLoves: "Single-origin Koroneiki olives from a small Greek family farm near Kalamata. Cold extracted, organic, the real Mediterranean gold.",
+    badge: null,
+    spring: false,
+    springTag: "spanish-summer"
+  },
+
+  // ELATEVE Wellness Journal — Coming Soon
+  {
+    id: 124,
+    category: "wellness",
+    name: "ELATEVE Wellness Journal — The Joy of Living Well",
+    description: "234 pages. 12 European secrets. Your planner, your pace.",
+    price: "Coming Soon",
+    image: "https://m.media-amazon.com/images/I/41I4t8xTPlL._AC_SY500_.jpg",
+    link: null,
+    whyElateveLoves: "Our own wellness journal. 12 European wellness traditions, daily planner spreads, habit trackers, and monthly reflections. Beautifully designed for intentional living.",
+    badge: null,
+    spring: false,
+    springTag: null
+  },
+
 ];
 
 module.exports = products;

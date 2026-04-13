@@ -121,71 +121,41 @@ function showComingSoon() {
   document.getElementById('comingSoonOverlay')?.classList.add('active');
 }
 
-// ==================== SPANISH SUMMER EDIT POPUP ====================
-function initSummerPopup() {
-  if (sessionStorage.getItem('summerPopupDismissed')) return;
-  if (document.getElementById('summerPopupOverlay')) return;
+// ==================== JOURNAL PRE-ORDER POPUP ====================
+function initJournalPopup() {
+  const dismissed = localStorage.getItem('elateve_journal_popup_dismissed');
+  if (dismissed) return;
 
-  const overlay = document.createElement('div');
-  overlay.id = 'summerPopupOverlay';
-  overlay.className = 'popup-overlay';
-  overlay.innerHTML = `
-    <div class="popup summer-popup">
-      <button class="popup-close" id="summerPopupClose">&times;</button>
-      <div class="summer-popup-video">
-        <video autoplay loop muted playsinline>
-          <source src="/videos/spanish-summer.mp4" type="video/mp4">
-        </video>
-      </div>
-      <span class="popup-eyebrow">THE SPANISH SUMMER EDIT</span>
-      <h2 class="popup-title" style="font-size:clamp(1.2rem,2.5vw,1.8rem)">Sign Up for Early Access</h2>
-      <p class="popup-text">Get first access to our curated Spanish Summer collection — handpicked for sun-soaked living.</p>
-      <form class="popup-form" id="summerSignupForm">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit" class="btn">Get Early Access</button>
-      </form>
-      <p class="popup-note">No spam. Just sun, style, and early drops.</p>
-    </div>
-  `;
-  document.body.appendChild(overlay);
+  const overlay = document.getElementById('journalPopupOverlay');
+  if (!overlay) return;
 
-  // Show after short delay
-  setTimeout(() => overlay.classList.add('active'), 2500);
+  setTimeout(() => overlay.classList.add('active'), 3000);
 
-  // Close handlers
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeSummerPopup();
+  function closePopup() {
+    overlay.classList.remove('active');
+    localStorage.setItem('elateve_journal_popup_dismissed', 'true');
+  }
+
+  document.getElementById('journalPopupClose')?.addEventListener('click', closePopup);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closePopup(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) closePopup();
   });
-  document.getElementById('summerPopupClose')?.addEventListener('click', closeSummerPopup);
 
-  // Form submit
-  document.getElementById('summerSignupForm')?.addEventListener('submit', async (e) => {
+  document.getElementById('journalPopupForm')?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = e.target.querySelector('input').value;
     try {
-      const res = await fetch('/api/subscribe', {
+      await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       });
-      const data = await res.json();
-      if (data.success) {
-        e.target.innerHTML = '<p style="color:var(--gold);font-weight:500;padding:1rem 0;">You\'re in! We\'ll be in touch.</p>';
-        setTimeout(closeSummerPopup, 2500);
-      }
-    } catch (err) {
-      e.target.innerHTML = '<p style="color:var(--gold);font-weight:500;padding:1rem 0;">You\'re in! We\'ll be in touch.</p>';
-      setTimeout(closeSummerPopup, 2500);
-    }
+    } catch (err) { /* still show toast */ }
+    closePopup();
+    showToast('You\'re on the list! We\'ll let you know when the journal launches.');
+    e.target.reset();
   });
-}
-
-function closeSummerPopup() {
-  const overlay = document.getElementById('summerPopupOverlay');
-  if (overlay) {
-    overlay.classList.remove('active');
-    sessionStorage.setItem('summerPopupDismissed', 'true');
-  }
 }
 
 // ==================== PRODUCT RENDERING ====================
@@ -271,52 +241,40 @@ async function loadProducts(filter = 'all') {
   }, 50);
 }
 
-// Subcategory definitions per category
-const categorySubcategories = {
-  all: [
-    { label: 'All Products', tag: null },
-    { label: 'Spanish Summer Edit', tag: 'spanish-summer' },
-    { label: 'Spring Refresh', tag: 'spring' },
-    { label: 'Easter Vibe', tag: 'easter' }
-  ]
-};
+// ==================== SHOP FILTERS ====================
+let currentSeason = '';
 
 function setFilter(category) {
   currentFilter = category;
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.filter === category);
   });
-  renderSubcategories(category);
-  loadProducts(category);
+  loadFilteredProducts(category, currentSeason);
 }
 
-function renderSubcategories(category) {
-  const container = document.getElementById('shopSubcategories');
-  if (!container) return;
-
-  const subs = categorySubcategories[category];
-  if (!subs) {
-    container.innerHTML = '';
-    return;
-  }
-
-  container.innerHTML = subs.map((sub, i) =>
-    `<button class="sub-tab${i === 0 ? ' active' : ''}" data-category="${category}" data-tag="${sub.tag || ''}">${sub.label}</button>`
-  ).join('');
+function setSeason(season) {
+  currentSeason = season;
+  document.querySelectorAll('.season-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.season === season);
+  });
+  loadFilteredProducts(currentFilter, currentSeason);
 }
 
-async function loadFilteredProducts(category, springTag) {
+async function loadFilteredProducts(category, season) {
   const grid = document.getElementById('productsGrid');
   if (!grid) return;
   grid.innerHTML = '';
 
-  let products = await fetchProducts(category);
-  if (springTag === 'spring') {
-    products = products.filter(p => p.spring && p.springTag !== 'easter');
-  } else if (springTag === 'easter') {
-    products = products.filter(p => p.springTag === 'easter');
-  } else if (springTag) {
-    products = products.filter(p => p.springTag === springTag);
+  let products = await fetchProducts(category === 'all' ? 'all' : category);
+
+  // Apply season filter
+  if (season) {
+    products = products.filter(p => p.springTag === season);
+  }
+
+  if (products.length === 0) {
+    grid.innerHTML = '<p style="text-align:center;color:var(--grey);grid-column:1/-1;padding:3rem;">No products found for this filter. Try a different combination.</p>';
+    return;
   }
 
   products.forEach((product, i) => {
@@ -327,29 +285,6 @@ async function loadFilteredProducts(category, springTag) {
 
   setTimeout(() => {
     document.querySelectorAll('#productsGrid .product-card').forEach((card, i) => {
-      setTimeout(() => card.classList.add('visible'), i * 40);
-    });
-  }, 50);
-}
-
-// ==================== SPANISH GARDEN COLLECTION ====================
-async function loadSpring() {
-  const grid = document.getElementById('springGrid');
-  if (!grid) return;
-
-  const allProducts = await fetchProducts('all');
-  // Show outdoor/spanish-summer products from home category for the garden section
-  const products = allProducts.filter(p => p.springTag === 'spanish-summer' && p.category === 'home');
-
-  grid.innerHTML = '';
-  products.slice(0, 4).forEach((product, i) => {
-    const card = createProductCard(product);
-    card.style.animationDelay = `${i * 0.05}s`;
-    grid.appendChild(card);
-  });
-
-  setTimeout(() => {
-    document.querySelectorAll('#springGrid .product-card').forEach((card, i) => {
       setTimeout(() => card.classList.add('visible'), i * 40);
     });
   }, 50);
@@ -456,12 +391,8 @@ function initNavigation() {
     if (e.target.classList.contains('filter-btn')) {
       setFilter(e.target.dataset.filter);
     }
-    if (e.target.classList.contains('sub-tab')) {
-      document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
-      e.target.classList.add('active');
-      const tag = e.target.dataset.tag || null;
-      const cat = e.target.dataset.category;
-      loadFilteredProducts(cat, tag);
+    if (e.target.classList.contains('season-btn')) {
+      setSeason(e.target.dataset.season || '');
     }
   });
 
@@ -565,8 +496,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   updateNavActive(initialPage);
 
   // Load data
-  loadSpring();
-
   if (initialPage === 'shop') {
     const cat = params.get('category') || 'all';
     setFilter(cat);
@@ -580,10 +509,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   initScrollEffects();
   initTheme();
 
-  // Show Spanish Summer Edit popup on homepage
-  if (initialPage === 'home') {
-    initSummerPopup();
-  }
+  // Show journal pre-order popup
+  initJournalPopup();
 
   // Push initial state
   history.replaceState({ page: initialPage, category: params.get('category') }, '', window.location.href);
