@@ -42,7 +42,7 @@ const products = [
     whyElateveLoves: "Clinic-grade light therapy. At home, every night. Save $60 with your Amazon Prime card.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
   {
     id: 4,
@@ -148,7 +148,7 @@ const products = [
     whyElateveLoves: "Luxury dermatology, bottled. Skin that speaks for itself. Save $60 with your Amazon Prime card.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
   {
     id: 12,
@@ -161,7 +161,7 @@ const products = [
     whyElateveLoves: "Parisian pharmacy secret. Now yours.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
   {
     id: 13,
@@ -213,7 +213,7 @@ const products = [
     whyElateveLoves: "Korean skincare precision. Wake up to different skin.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
   {
     id: 17,
@@ -226,7 +226,7 @@ const products = [
     whyElateveLoves: "52 years of cult status. Your moisture barrier, fortified.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
 
   // ── Everyday Beauty ──
@@ -386,7 +386,7 @@ const products = [
     whyElateveLoves: "The weighted blanket for your eyes. Patented four-pod design applies gentle, calming pressure. No straps, no velcro. BPA-free and machine washable.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
 
   // ── Light Therapy & Air ──
@@ -842,7 +842,7 @@ const products = [
     whyElateveLoves: "The same luxury filtration shower head in a modern matte black finish. Improves skin and hair quality with every shower.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
   {
     id: 64,
@@ -1470,7 +1470,7 @@ const products = [
     whyElateveLoves: "Wind down the European way. Eight caffeine-free blends for bedtime rituals, stress relief, and deep rest.",
     badge: "Save",
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
   {
     id: 110,
@@ -1483,7 +1483,7 @@ const products = [
     whyElateveLoves: "Bone china tea cups that make every sip feel like an occasion. Dutch Blue floral pattern, vintage European elegance.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
   },
 
   // Activity — Movement & Athleisure
@@ -1661,19 +1661,49 @@ const products = [
     springTag: "spanish-summer"
   },
 
-  // ELATEVE Wellness Journal — Coming Soon
+  // ELATEVE Wellness Journal — Pre-Order
   {
     id: 124,
     category: "wellness",
     name: "ELATEVE Wellness Journal — The Joy of Living Well",
     description: "234 pages. 12 European secrets. Your planner, your pace.",
-    price: "Coming Soon",
+    price: "Pre-Order",
     image: "https://m.media-amazon.com/images/I/41I4t8xTPlL._AC_SY500_.jpg",
-    link: null,
+    link: "https://www.amazon.com/dp/B0GXB6NT44",
     whyElateveLoves: "Our own wellness journal. 12 European wellness traditions, daily planner spreads, habit trackers, and monthly reflections. Beautifully designed for intentional living.",
     badge: null,
     spring: false,
-    springTag: null
+    springTag: "mothers-day"
+  },
+
+  // ═══════════════════════════════════════════
+  // ─── MOTHER'S DAY EDIT — Additions ─────────
+  // ═══════════════════════════════════════════
+  {
+    id: 125,
+    category: "wellness",
+    name: "Mom's Life Story Journal — Hardcover Keepsake",
+    description: "250+ prompts. A keepsake for Mum to share her journey.",
+    price: "$24.99",
+    image: "https://m.media-amazon.com/images/I/71r3PCY8b3L._AC_SY450_.jpg",
+    link: "https://amzn.to/49or45r",
+    whyElateveLoves: "A meaningful keepsake for Mum to share her journey, memories, and stories. Over 250 thoughtful prompts — the kind of gift that becomes an heirloom.",
+    badge: null,
+    spring: false,
+    springTag: "mothers-day"
+  },
+  {
+    id: 126,
+    category: "home",
+    name: "Voluspa French Cade Lavender 3-Wick Tin Candle",
+    description: "Coconut wax. 40-hour burn. Handcrafted in the USA.",
+    price: "$36",
+    image: "https://m.media-amazon.com/images/I/71Yh89T5kML._AC_SY450_.jpg",
+    link: "https://amzn.to/4d1T0xh",
+    whyElateveLoves: "French cade and Bulgarian lavender — a clean-burning coconut wax candle that fills the room like a Provençal afternoon. 40 hours of slow ritual.",
+    badge: null,
+    spring: false,
+    springTag: "mothers-day"
   },
 
 ];

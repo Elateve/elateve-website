@@ -51,7 +51,7 @@ async function fetchSpring() {
 }
 
 // ==================== ROUTER ====================
-function navigateTo(page, category = null) {
+function navigateTo(page, category = null, season = null) {
   const activePage = document.querySelector('.page.active');
   if (activePage) {
     activePage.classList.remove('visible');
@@ -66,7 +66,16 @@ function navigateTo(page, category = null) {
 
       if (page === 'shop') {
         const filter = category || 'all';
-        setFilter(filter);
+        const seasonVal = season || '';
+        currentSeason = seasonVal;
+        currentFilter = filter;
+        document.querySelectorAll('.season-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.season === seasonVal);
+        });
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.filter === filter);
+        });
+        loadFilteredProducts(filter, seasonVal);
       }
 
       if (page === 'blog') {
@@ -80,8 +89,12 @@ function navigateTo(page, category = null) {
 
       // Update URL without reload
       const paths = { home: '/', shop: '/shop', blog: '/blog', about: '/about' };
-      const url = category ? `${paths[page]}?category=${category}` : paths[page];
-      history.pushState({ page, category }, '', url);
+      const params = new URLSearchParams();
+      if (category) params.set('category', category);
+      if (season) params.set('season', season);
+      const qs = params.toString();
+      const url = qs ? `${paths[page]}?${qs}` : paths[page];
+      history.pushState({ page, category, season }, '', url);
     }, 300);
   }
 }
@@ -380,7 +393,8 @@ function initNavigation() {
       e.preventDefault();
       const page = link.dataset.page;
       const category = link.dataset.category || null;
-      navigateTo(page, category);
+      const season = link.dataset.season || null;
+      navigateTo(page, category, season);
 
       document.getElementById('navLinks')?.classList.remove('open');
       document.getElementById('navToggle')?.classList.remove('active');
@@ -436,7 +450,7 @@ function initNavigation() {
   // Handle browser back/forward
   window.addEventListener('popstate', (e) => {
     if (e.state) {
-      navigateTo(e.state.page, e.state.category);
+      navigateTo(e.state.page, e.state.category, e.state.season);
     }
   });
 }
@@ -498,7 +512,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Load data
   if (initialPage === 'shop') {
     const cat = params.get('category') || 'all';
-    setFilter(cat);
+    const season = params.get('season') || '';
+    currentSeason = season;
+    currentFilter = cat;
+    document.querySelectorAll('.season-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.season === season);
+    });
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.filter === cat);
+    });
+    loadFilteredProducts(cat, season);
   }
 
   if (initialPage === 'blog') {
