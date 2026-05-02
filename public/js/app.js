@@ -134,43 +134,6 @@ function showComingSoon() {
   document.getElementById('comingSoonOverlay')?.classList.add('active');
 }
 
-// ==================== JOURNAL PRE-ORDER POPUP ====================
-function initJournalPopup() {
-  const dismissed = localStorage.getItem('elateve_journal_popup_dismissed');
-  if (dismissed) return;
-
-  const overlay = document.getElementById('journalPopupOverlay');
-  if (!overlay) return;
-
-  setTimeout(() => overlay.classList.add('active'), 3000);
-
-  function closePopup() {
-    overlay.classList.remove('active');
-    localStorage.setItem('elateve_journal_popup_dismissed', 'true');
-  }
-
-  document.getElementById('journalPopupClose')?.addEventListener('click', closePopup);
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) closePopup(); });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('active')) closePopup();
-  });
-
-  document.getElementById('journalPopupForm')?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = e.target.querySelector('input').value;
-    try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-    } catch (err) { /* still show toast */ }
-    closePopup();
-    showToast('You\'re on the list! We\'ll let you know when the journal launches.');
-    e.target.reset();
-  });
-}
-
 // ==================== PRODUCT RENDERING ====================
 function createProductCard(product) {
   const card = document.createElement('div');
@@ -531,9 +494,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   initNavigation();
   initScrollEffects();
   initTheme();
-
-  // Show journal pre-order popup
-  initJournalPopup();
 
   // Push initial state
   history.replaceState({ page: initialPage, category: params.get('category') }, '', window.location.href);

@@ -502,73 +502,40 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .season-btn--mothers { color: var(--gold); border-color: rgba(197,151,62,0.35); }
 .season-btn--mothers:hover { color: var(--gold-dark); border-color: var(--gold); }
 
-/* ── MOTHER'S DAY BANNER ── */
-.mothers-day-banner {
-  display: block;
-  position: relative;
-  max-width: 100%;
-  padding: var(--space-lg) var(--space-md);
-  background: linear-gradient(135deg, #1A1A1A 0%, #2a2218 50%, #1A1A1A 100%);
-  border-top: 1px solid rgba(197,151,62,0.35);
-  border-bottom: 1px solid rgba(197,151,62,0.35);
-  text-decoration: none;
-  overflow: hidden;
-  transition: background 0.4s var(--ease);
-}
-.mothers-day-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(232,200,114,0.12) 0%, transparent 60%);
-  pointer-events: none;
-}
-.mothers-day-banner:hover { background: linear-gradient(135deg, #1A1A1A 0%, #3a2e20 50%, #1A1A1A 100%); }
-.mothers-day-banner-inner {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
+/* ── MOTHER'S DAY EDIT SECTION ── */
+.section--mothers {
+  padding: var(--space-xl) var(--space-md);
+  background: var(--white);
   text-align: center;
+  border-bottom: 1px solid var(--cream-dark);
 }
-.mothers-day-eyebrow {
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: var(--space-sm);
+.mothers-inner {
+  max-width: 640px;
+  margin: 0 auto;
 }
-.mothers-day-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  font-weight: 200;
-  color: var(--cream);
-  line-height: 1.15;
-  margin-bottom: var(--space-sm);
-  letter-spacing: 0.01em;
-}
-.mothers-day-desc {
-  font-size: 0.92rem;
-  font-weight: 300;
-  color: rgba(247,245,240,0.7);
-  line-height: 1.7;
-  max-width: 560px;
-  margin: 0 auto var(--space-md);
-}
-.mothers-day-cta {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+.section--mothers .section-eyebrow {
   color: var(--gold);
-  padding: 0.7rem 1.6rem;
-  border: 1px solid var(--gold);
-  transition: all 0.3s var(--ease);
+  margin-bottom: var(--space-sm);
 }
-.mothers-day-banner:hover .mothers-day-cta {
-  background: var(--gold);
+.mothers-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 200;
   color: var(--charcoal);
+  line-height: 1.15;
+  margin-bottom: var(--space-md);
+  letter-spacing: 0.005em;
 }
+.mothers-desc {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.8;
+  margin-bottom: var(--space-lg);
+}
+[data-theme="dark"] .section--mothers { background: #0E0E0E; border-bottom-color: #2a2a2a; }
+[data-theme="dark"] .mothers-title { color: var(--charcoal); }
+[data-theme="dark"] .mothers-desc { color: rgba(247,245,240,0.7); }
 
 /* ── EUROPEAN WELLNESS JOURNAL ── */
 .section--journal { max-width: 100%; padding: var(--space-xl) var(--space-md); background: var(--cream-dark); overflow: hidden; }
