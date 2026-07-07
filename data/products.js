@@ -1,13 +1,13 @@
 const products = [
 
   // ═══════════════════════════════════════════
-  // ─── WELLNESS  (most compelling first) ─────
+  // ─── OUR FEEL GOOD PICKS ────────────────────
   // ═══════════════════════════════════════════
 
   // ── Tech & Devices ──
   {
     id: 1,
-    category: "wellness",
+    category: "feelgood",
     name: "Oura Ring 4 — Ceramic Cloud",
     description: "Wear your wellness data. Invisibly.",
     price: "$499",
@@ -20,7 +20,7 @@ const products = [
   },
   {
     id: 2,
-    category: "wellness",
+    category: "feelgood",
     name: "medicube Booster Pro — 6-in-1 Beauty Massager Pink",
     description: "Microcurrent. EMS. LED. Sonic vibration. All in one.",
     price: "$220",
@@ -33,7 +33,7 @@ const products = [
   },
   {
     id: 3,
-    category: "wellness",
+    category: "feelgood",
     name: "Shark CryoGlow LED Face Mask with Under-Eye Cooling",
     description: "Clinic-grade light therapy. At home, every night.",
     price: "$349",
@@ -42,11 +42,11 @@ const products = [
     whyElateveLoves: "Clinic-grade light therapy. At home, every night. Save $60 with your Amazon Prime card.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
   {
     id: 4,
-    category: "wellness",
+    category: "feelgood",
     name: "Pulsetto Vagus Nerve Stimulation Wearable",
     description: "Calm your nervous system. Science-backed stress relief.",
     price: "$278",
@@ -59,7 +59,7 @@ const products = [
   },
   {
     id: 5,
-    category: "wellness",
+    category: "homelongevity",
     name: "Oak Wood Pilates Reformer Machine — Studio Grade",
     description: "Quick-assembly. Oak wood frame. Full accessories.",
     price: "$599.99",
@@ -72,7 +72,7 @@ const products = [
   },
   {
     id: 6,
-    category: "wellness",
+    category: "homelongevity",
     name: "JNH Lifestyles Joyous 2-Person FAR Infrared Sauna",
     description: "Low EMF. Canadian hemlock. Chromotherapy light.",
     price: "$1,899.99",
@@ -85,7 +85,7 @@ const products = [
   },
   {
     id: 7,
-    category: "wellness",
+    category: "feelgood",
     name: "RingConn Gen 2 Smart Ring — Sleep Apnea Monitoring",
     description: "Full health tracking. Zero subscriptions, ever.",
     price: "$299",
@@ -98,7 +98,7 @@ const products = [
   },
   {
     id: 8,
-    category: "wellness",
+    category: "feelgood",
     name: "Oura Ring 4 Sizing Kit — Size Before You Buy",
     description: "Know before you invest. Precision starts here.",
     price: "$10",
@@ -111,7 +111,7 @@ const products = [
   },
   {
     id: 9,
-    category: "wellness",
+    category: "homelongevity",
     name: "Hatch Restore 3 — Smart Sleep Assistant",
     description: "Sunrise alarm meets sleep sounds. Wake up renewed.",
     price: "$144.99",
@@ -124,7 +124,7 @@ const products = [
   },
   {
     id: 10,
-    category: "wellness",
+    category: "feelgood",
     name: "REVO Genie 3-in-1 Massager — Pink Pearl",
     description: "Three massage modes in one. Relief meets luxury.",
     price: "$99",
@@ -139,7 +139,7 @@ const products = [
   // ── Premium Skincare ──
   {
     id: 11,
-    category: "wellness",
+    category: "feelgood",
     name: "Dr. Barbara Sturm Glow Cream 1.7 Fl Oz",
     description: "Luxury dermatology, bottled. Skin that speaks for itself.",
     price: "$240",
@@ -148,11 +148,11 @@ const products = [
     whyElateveLoves: "Luxury dermatology, bottled. Skin that speaks for itself. Save $60 with your Amazon Prime card.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
   {
     id: 12,
-    category: "wellness",
+    category: "feelgood",
     name: "Caudalie Beauty Elixir Face Mist",
     description: "Parisian pharmacy secret. Now yours.",
     price: "$49",
@@ -161,11 +161,11 @@ const products = [
     whyElateveLoves: "Parisian pharmacy secret. Now yours.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
   {
     id: 13,
-    category: "wellness",
+    category: "feelgood",
     name: "Caudalie Vinoperfect Brightening Dark Spot Serum",
     description: "62x more effective than Vitamin C. Visibly brighter skin.",
     price: "$79",
@@ -178,7 +178,7 @@ const products = [
   },
   {
     id: 14,
-    category: "wellness",
+    category: "feelgood",
     name: "Aesop Shampoo & Conditioner Set — 500mL",
     description: "Hydrates, softens, and adds shine. All hair types.",
     price: "$96",
@@ -191,7 +191,7 @@ const products = [
   },
   {
     id: 15,
-    category: "wellness",
+    category: "feelgood",
     name: "medicube Pink Glass Glow Skin Trio — PDRN Skincare Set",
     description: "Collagen mask, glow serum, and jelly cream trio.",
     price: "$47.52",
@@ -204,7 +204,7 @@ const products = [
   },
   {
     id: 16,
-    category: "wellness",
+    category: "feelgood",
     name: "BIODANCE Bio-Collagen Real Deep Mask (16-pack)",
     description: "Korean skincare precision. Wake up to different skin.",
     price: "$62",
@@ -213,11 +213,11 @@ const products = [
     whyElateveLoves: "Korean skincare precision. Wake up to different skin.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
   {
     id: 17,
-    category: "wellness",
+    category: "feelgood",
     name: "Kiehl's Ultra Facial Cream",
     description: "52 years of cult status. Your moisture barrier, fortified.",
     price: "$39",
@@ -226,65 +226,65 @@ const products = [
     whyElateveLoves: "52 years of cult status. Your moisture barrier, fortified.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
 
   // ── Everyday Beauty ──
   {
     id: 18,
-    category: "wellness",
+    category: "feelgood",
     name: "Lancôme Lip Idôle Squalane Lip Gloss",
-    description: "French beauty, glossy finish. Hydrating luxury.",
+    description: "Glossy finish. Hydrating luxury.",
     price: "$27.20",
     image: "https://m.media-amazon.com/images/I/61NJXppf3CL._SL1500_.jpg",
     link: "https://amzn.to/4sSs09R",
-    whyElateveLoves: "Lancôme's newest. Squalane hydrates while colour perfects. French beauty at its finest.",
+    whyElateveLoves: "Lancôme's newest. Squalane hydrates while colour perfects.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 19,
-    category: "wellness",
+    category: "feelgood",
     name: "NUXE Huile Prodigieuse Floral Multi-Purpose Dry Oil",
-    description: "French beauty secret. One oil for face, body, and hair.",
+    description: "One oil for face, body, and hair.",
     price: "$29.50",
     image: "https://m.media-amazon.com/images/I/71D30MsGU5L._SX466_.jpg",
     link: "https://amzn.to/3NpoPap",
-    whyElateveLoves: "The iconic French multi-purpose dry oil with a floral twist. Nourishes skin, hair, and body in one luxurious step.",
+    whyElateveLoves: "The iconic multi-purpose dry oil with a floral twist. Nourishes skin, hair, and body in one luxurious step.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 20,
-    category: "wellness",
+    category: "feelgood",
     name: "L'OCCITANE Almond Shower Oil — Cleansing & Softening",
-    description: "Milky lather luxury. Nourishing body wash from Provence.",
+    description: "Milky lather luxury. Nourishing body wash.",
     price: "$25",
     image: "https://m.media-amazon.com/images/I/31EdBGxkYwL._AC_SY450_.jpg",
     link: "https://amzn.to/4dmO0oq",
-    whyElateveLoves: "Transforms your shower into a spa. Almond oil cleanses and softens without drying. The signature L'Occitane scent is heaven.",
+    whyElateveLoves: "Transforms your shower into a spa. Almond oil cleanses and softens without drying.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 21,
-    category: "wellness",
+    category: "feelgood",
     name: "L'OCCITANE Shea Butter Hand Cream — 20% Organic",
     description: "Nourishes dry hands fast. Non-greasy, vegan luxury.",
     price: "$30",
     image: "https://m.media-amazon.com/images/I/51A5YYSXj0L._AC_SY450_.jpg",
     link: "https://amzn.to/3PvL3Ih",
-    whyElateveLoves: "The iconic French hand cream. 20% organic shea butter, fast-absorbing, and beautifully scented. A handbag essential.",
+    whyElateveLoves: "The iconic hand cream. 20% organic shea butter, fast-absorbing, and beautifully scented. A handbag essential.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 22,
-    category: "wellness",
+    category: "feelgood",
     name: "Fresh Sugar Lip Treatment — Plum",
     description: "Tinted lip balm meets skincare. Plum perfect.",
     price: "$23.61",
@@ -297,9 +297,9 @@ const products = [
   },
   {
     id: 23,
-    category: "wellness",
+    category: "feelgood",
     name: "goop Beauty Clean Lip Balm",
-    description: "Clean beauty. Gwyneth-approved glow.",
+    description: "Clean beauty. Effortless glow.",
     price: "$24",
     image: "https://m.media-amazon.com/images/I/51azO1ORMIL._SL1500_.jpg",
     link: "https://amzn.to/4rlCFIP",
@@ -310,7 +310,7 @@ const products = [
   },
   {
     id: 24,
-    category: "wellness",
+    category: "feelgood",
     name: "Mad Hippie Vitamin C Serum",
     description: "Clean beauty powerhouse. Brightens and protects.",
     price: "$27.99",
@@ -323,13 +323,13 @@ const products = [
   },
   {
     id: 25,
-    category: "wellness",
+    category: "feelgood",
     name: "Manucurist System Green™ — Professional Manicure Gift Set",
-    description: "The natural nail revolution. Made in France.",
+    description: "The natural nail revolution.",
     price: "$49",
     image: "https://m.media-amazon.com/images/I/61RFIOwMXYL._SY450_.jpg",
     link: "https://amzn.to/4b5Y7eN",
-    whyElateveLoves: "Join the new natural nail revolution! Made in France, this system is green baby!",
+    whyElateveLoves: "Join the new natural nail revolution! This system is green baby!",
     badge: null,
     spring: false,
     springTag: null
@@ -338,7 +338,7 @@ const products = [
   // ── Nutrition & Recovery ──
   {
     id: 26,
-    category: "wellness",
+    category: "homelongevity",
     name: "Seed DS-01 Daily Synbiotic",
     description: "Next-gen probiotics. Science-backed gut health.",
     price: "$59.99",
@@ -351,7 +351,7 @@ const products = [
   },
   {
     id: 27,
-    category: "wellness",
+    category: "homelongevity",
     name: "Beast Mighty 850 Plus Personal Blender — Carbon Black",
     description: "Smoothies in seconds. Power that fits your counter.",
     price: "$149",
@@ -364,7 +364,7 @@ const products = [
   },
   {
     id: 28,
-    category: "wellness",
+    category: "homelongevity",
     name: "Threpsi Organic Extra Virgin Olive Oil — Koroneiki",
     description: "Cold-extracted. Small family farms near Kalamata.",
     price: "$34.99",
@@ -377,7 +377,7 @@ const products = [
   },
   {
     id: 29,
-    category: "wellness",
+    category: "feelgood",
     name: "Nodpod Gentle Pressure Sleep Mask — Sage",
     description: "Weighted eye mask. Patented light-blocking design.",
     price: "$34",
@@ -386,26 +386,26 @@ const products = [
     whyElateveLoves: "The weighted blanket for your eyes. Patented four-pod design applies gentle, calming pressure. No straps, no velcro. BPA-free and machine washable.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
 
   // ── Light Therapy & Air ──
   {
     id: 30,
-    category: "wellness",
+    category: "homelongevity",
     name: "BLUEAIR Blue Pure 311i Max Air Purifier",
     description: "Breathe cleaner air. Whisper quiet. Scandi design.",
     price: "$169",
     image: "https://m.media-amazon.com/images/I/717L1lcSQCL._AC_SY450_.jpg",
     link: "https://amzn.to/4lnZElh",
-    whyElateveLoves: "Swedish engineering meets clean air. HEPASilent technology removes 99.97% of particles. Beautiful Scandinavian design.",
+    whyElateveLoves: "HEPASilent technology removes 99.97% of particles. Beautiful Scandinavian design.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 31,
-    category: "wellness",
+    category: "homelongevity",
     name: "Red Light Therapy Device for Face & Body",
     description: "Clinical-grade red light therapy. Skin rejuvenation at home.",
     price: "$67.99",
@@ -418,7 +418,7 @@ const products = [
   },
   {
     id: 32,
-    category: "wellness",
+    category: "homelongevity",
     name: "Sun Light Therapy Lamp 10000 Lux",
     description: "Beat the blues with bright light. Energy, naturally.",
     price: "$34.99",
@@ -431,13 +431,13 @@ const products = [
   },
 
   // ═══════════════════════════════════════════
-  // ─── THE HEALTHY HOME ───────────────────────
+  // ─── MUST-HAVE HOME LONGEVITY ESSENTIALS ───
   // ═══════════════════════════════════════════
 
   // ── Kitchen & Non-Toxic Cookware ──
   {
     id: 45,
-    category: "home",
+    category: "homelongevity",
     name: "Caraway Non-stick Ceramic Cookware Set 12 Piece — Cream",
     description: "The full kitchen upgrade. PFAS-free, ceramic, timeless.",
     price: "$595",
@@ -450,7 +450,7 @@ const products = [
   },
   {
     id: 46,
-    category: "home",
+    category: "homelongevity",
     name: "Caraway Cookware Set 12 Piece — eBay Deal",
     description: "Same elevated cookware, smarter price on eBay.",
     price: "$379.95",
@@ -463,20 +463,20 @@ const products = [
   },
   {
     id: 47,
-    category: "home",
+    category: "homelongevity",
     name: "GreenPan 12-Piece Nonstick Swift Ceramic Cookware Set — Cream",
-    description: "European double ceramic coating. Dishwasher safe. Built to last.",
+    description: "Double ceramic coating. Dishwasher safe. Built to last.",
     price: "$193.81",
     image: "https://m.media-amazon.com/images/I/716McT6cy6L._AC_SY450_.jpg",
     link: "https://amzn.to/4r9u37Y",
-    whyElateveLoves: "European quality. Many items dishwasher safe, which Caraway is not. Double ceramic coating. Longer lasting, less warping.",
+    whyElateveLoves: "Trusted quality. Many items dishwasher safe, which Caraway is not. Double ceramic coating. Longer lasting, less warping.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 48,
-    category: "home",
+    category: "homelongevity",
     name: "Caraway Nonstick Ceramic Frying Pan 10.5\" — Cream",
     description: "Cook beautifully. No toxins, no compromise.",
     price: "$135",
@@ -489,7 +489,7 @@ const products = [
   },
   {
     id: 49,
-    category: "home",
+    category: "homelongevity",
     name: "CAROTE 14-Piece Ceramic Non-Stick Cookware Set",
     description: "Chef-quality cooking. Ceramic clean conscience.",
     price: "$69.99",
@@ -502,7 +502,7 @@ const products = [
   },
   {
     id: 50,
-    category: "home",
+    category: "homelongevity",
     name: "LetPot Hydroponics Growing System",
     description: "Grow herbs and greens indoors. Smart garden technology.",
     price: "$119.97",
@@ -517,7 +517,7 @@ const products = [
   // ── Clean Air & Water ──
   {
     id: 51,
-    category: "home",
+    category: "homelongevity",
     name: "Dreame HEPA Air Purifier — Self-Cleaning Pet Hair FP10",
     description: "Self-cleaning pet hair purifier. Smart, quiet, powerful.",
     price: "$349.99",
@@ -530,7 +530,7 @@ const products = [
   },
   {
     id: 52,
-    category: "home",
+    category: "homelongevity",
     name: "Shark Navigator Lift-Away Deluxe Upright Vacuum — NV360",
     description: "Lift-Away power. HEPA filtration. Swivel steering.",
     price: "$129.99",
@@ -543,7 +543,7 @@ const products = [
   },
   {
     id: 53,
-    category: "home",
+    category: "feelgood",
     name: "Kindle Scribe Bundle 64GB",
     description: "Read and write naturally. The ultimate digital notebook.",
     price: "$489.99",
@@ -558,7 +558,7 @@ const products = [
   // ── Sleep Sanctuary — Bedroom & Bath ──
   {
     id: 55,
-    category: "home",
+    category: "homelongevity",
     name: "Blissy Silk Pillowcase — 22 Momme Mulberry Silk (Champagne)",
     description: "100% pure mulberry silk. Hair and skin luxury.",
     price: "$59.97",
@@ -571,33 +571,33 @@ const products = [
   },
   {
     id: 56,
-    category: "home",
+    category: "homelongevity",
     name: "Simple and Opulence 100% Linen Sheet Set — Queen",
     description: "French flax linen. Hotel-grade breathability.",
     price: "$129.99",
     image: "https://m.media-amazon.com/images/I/81-1JDG-cCL._AC_SX679_.jpg",
     link: "https://amzn.to/4t5UYmG",
-    whyElateveLoves: "100% natural French flax linen. Flat sheet, fitted sheet, and 2 pillowcases with embroidery detail. Temperature-regulating comfort for deeper sleep.",
+    whyElateveLoves: "100% natural flax linen. Flat sheet, fitted sheet, and 2 pillowcases with embroidery detail. Temperature-regulating comfort for deeper sleep.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 57,
-    category: "home",
+    category: "homelongevity",
     name: "Simple and Opulence French Flax Linen Duvet Cover — King",
     description: "Washed linen. Button closure. Farmhouse luxury.",
     price: "$119.99",
     image: "https://m.media-amazon.com/images/I/71+B-QgK4fL._AC_SX679_.jpg",
     link: "https://amzn.to/47orNmq",
-    whyElateveLoves: "Washed French flax linen duvet cover with embroidery and button closure. Soft, breathable, and perfectly regulating.",
+    whyElateveLoves: "Washed flax linen duvet cover with embroidery and button closure. Soft, breathable, and perfectly regulating.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 58,
-    category: "home",
+    category: "homelongevity",
     name: "Pure Bamboo King Sheet Set",
     description: "Silky soft bamboo sheets. Sleep in luxury every night.",
     price: "$109.99",
@@ -610,7 +610,7 @@ const products = [
   },
   {
     id: 59,
-    category: "home",
+    category: "homelongevity",
     name: "Feather and Stitch 500TC King Duvet Cover Set — Beige Damask",
     description: "500 thread count. Pure cotton. Damask stripe elegance.",
     price: "$79.99",
@@ -623,7 +623,7 @@ const products = [
   },
   {
     id: 60,
-    category: "home",
+    category: "homelongevity",
     name: "Feather and Stitch 500TC King Sheet Set — Beige Stripe",
     description: "Sateen weave. Deep pockets. Resort-grade cotton.",
     price: "$69.99",
@@ -636,7 +636,7 @@ const products = [
   },
   {
     id: 61,
-    category: "home",
+    category: "homelongevity",
     name: "Fabdreams Organic Cotton Towel Set",
     description: "GOTS certified organic. Spa-quality absorbency.",
     price: "$109.99",
@@ -649,7 +649,7 @@ const products = [
   },
   {
     id: 62,
-    category: "home",
+    category: "homelongevity",
     name: "Rain Shower Head — Filters Metals, Chlorine & Impurities",
     description: "Glow up your skin and hair. Filter the impurities.",
     price: "$165",
@@ -662,7 +662,7 @@ const products = [
   },
   {
     id: 63,
-    category: "home",
+    category: "homelongevity",
     name: "Rain Shower Head in Black — Filters Metals, Chlorine & Impurities",
     description: "Same filtration power. Sleek black finish.",
     price: "$165",
@@ -671,24 +671,24 @@ const products = [
     whyElateveLoves: "The same luxury filtration shower head in a modern matte black finish. Improves skin and hair quality with every shower.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
   {
     id: 64,
-    category: "home",
+    category: "feelgood",
     name: "Unisex Hooded Waffle Robe — 100% Turkish Cotton",
-    description: "Finest cotton from Turkey. Spa at home every day.",
+    description: "Finest cotton. Spa at home every day.",
     price: "$89",
     image: "https://m.media-amazon.com/images/I/814fP1aVB+L._AC_SX522_.jpg",
     link: "https://amzn.to/3NdT1VR",
-    whyElateveLoves: "Finest cotton from Turkey. Spa at home every day.",
+    whyElateveLoves: "Finest cotton. Spa at home every day.",
     badge: null,
     spring: false,
     springTag: null
   },
   {
     id: 65,
-    category: "home",
+    category: "feelgood",
     name: "Anti-Breakage Shampoo for Hard Water Damage",
     description: "Hard water ruins hair. Science finally fixes it.",
     price: "$28",
@@ -701,7 +701,7 @@ const products = [
   },
   {
     id: 66,
-    category: "home",
+    category: "feelgood",
     name: "Break Down Anti-Flake Scalp Soak",
     description: "Healthy hair starts at the root.",
     price: "$38",
@@ -716,7 +716,7 @@ const products = [
   // ── Rituals — Aromatherapy ──
   {
     id: 74,
-    category: "home",
+    category: "feelgood",
     name: "NEST New York Reed Diffuser — Wild Mint and Eucalyptus",
     description: "90 days of fragrance. Flame free.",
     price: "$58",
@@ -729,9 +729,9 @@ const products = [
   },
   {
     id: 79,
-    category: "home",
+    category: "feelgood",
     name: "Diptyque Baies (Berries) Candle 6.5oz",
-    description: "Iconic French candle. Roses & blackcurrant.",
+    description: "Iconic candle. Roses & blackcurrant.",
     price: "$76",
     image: "https://m.media-amazon.com/images/I/51uoxOYphiL._AC_SL1000_.jpg",
     link: "https://amzn.to/46NP3de",
@@ -742,7 +742,7 @@ const products = [
   },
   {
     id: 80,
-    category: "home",
+    category: "feelgood",
     name: "LA JOLIE MUSE Eucalyptus & Sage Candle",
     description: "Hand-poured soy wax. Clean burn, real botanicals.",
     price: "$38",
@@ -755,7 +755,7 @@ const products = [
   },
   {
     id: 81,
-    category: "home",
+    category: "feelgood",
     name: "LA JOLIE MUSE Citrine & Pink Peony Candle",
     description: "Floral meets crystal energy. A candle that aligns.",
     price: "$38",
@@ -768,7 +768,7 @@ const products = [
   },
   {
     id: 82,
-    category: "home",
+    category: "feelgood",
     name: "Chesapeake Bay Candle — Stillness + Purity (Rose Water)",
     description: "One light. Instant stillness.",
     price: "$20.40",
@@ -781,22 +781,22 @@ const products = [
   },
   {
     id: 126,
-    category: "home",
+    category: "feelgood",
     name: "Voluspa French Cade Lavender 3-Wick Tin Candle",
-    description: "Coconut wax. 40-hour burn. Handcrafted in the USA.",
+    description: "Coconut wax. 40-hour burn. Handcrafted.",
     price: "$36",
     image: "https://www.voluspa.com/cdn/shop/files/FrenchCadeLavender_3WickTin_7224_2006_01_B_WEB_21c9a743-116f-4faf-9495-3afd4e49cde1.jpg",
     link: "https://amzn.to/4d1T0xh",
     whyElateveLoves: "French cade and Bulgarian lavender — a clean-burning coconut wax candle that fills the room with slow, intentional ritual. 40 hours of calm.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
 
   // ── Longevity Nutrition Reading ──
   {
     id: 95,
-    category: "home",
+    category: "homelongevity",
     name: "Ottolenghi Simple: A Cookbook",
     description: "Yotam Ottolenghi's masterclass in Mediterranean flavour.",
     price: "$22.99",
@@ -809,54 +809,13 @@ const products = [
   },
 
   // ═══════════════════════════════════════════
-  // ─── WELLNESS · INVEST IN YOURSELF ─────────
+  // ─── FEEL GOOD PICKS · INVEST IN YOURSELF ──
   // ═══════════════════════════════════════════
-
-  // Rituals — Tea & Mindfulness
-  {
-    id: 108,
-    category: "wellness",
-    name: "Yogi Organic Tea Energy Sampler Box — 32 Tea Bags",
-    description: "8 energizing black & green teas. Organic fuel for your morning ritual.",
-    price: "$16.99",
-    image: "https://m.media-amazon.com/images/I/4136+ISVoRL._AC_SY450_.jpg",
-    link: "https://amzn.to/4vvMuaw",
-    whyElateveLoves: "Eight organic blends in one beautiful box. From matcha green to sweet tangerine — a different intention for each morning.",
-    badge: "Save",
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 109,
-    category: "wellness",
-    name: "Yogi Relaxation Sampler Box — 32 Tea Bags",
-    description: "8 herbal teas for stress relief & sleep. Caffeine free.",
-    price: "$16.99",
-    image: "https://m.media-amazon.com/images/I/41Q+VoAJ6TL._AC_SY450_.jpg",
-    link: "https://amzn.to/4telA5s",
-    whyElateveLoves: "Wind down with intention. Eight caffeine-free blends for bedtime rituals, stress relief, and deep rest.",
-    badge: "Save",
-    spring: false,
-    springTag: "mothers-day"
-  },
-  {
-    id: 110,
-    category: "wellness",
-    name: "TATSUMI Country Roses Bone China Tea Cup & Saucer Set",
-    description: "Vintage bone china. Dutch Blue. Set of 2.",
-    price: "$39.99",
-    image: "https://m.media-amazon.com/images/I/71YsZ-pdM+L._AC_SY450_.jpg",
-    link: "https://amzn.to/3Ob1Jop",
-    whyElateveLoves: "Bone china tea cups that make every sip feel like an occasion. Dutch Blue floral pattern, vintage elegance.",
-    badge: null,
-    spring: false,
-    springTag: "mothers-day"
-  },
 
   // Activity — Movement & Athleisure
   {
     id: 111,
-    category: "wellness",
+    category: "feelgood",
     name: "Skechers Go Walk Flex Hands Free Slip-ins — Grand Entry",
     description: "Hands-free slip-in sneakers. Walk, don't tie.",
     price: "$55 - $75",
@@ -869,7 +828,7 @@ const products = [
   },
   {
     id: 112,
-    category: "wellness",
+    category: "feelgood",
     name: "Raycon Fitness Bluetooth Headphones — White",
     description: "Over-ear, noise cancelling. 45 hours battery.",
     price: "$79.99",
@@ -882,7 +841,7 @@ const products = [
   },
   {
     id: 113,
-    category: "wellness",
+    category: "feelgood",
     name: "Under Armour Women's Velocity Half Zip Twist",
     description: "Lightweight half-zip. Breathable performance layer.",
     price: "$35 - $55",
@@ -895,7 +854,7 @@ const products = [
   },
   {
     id: 114,
-    category: "wellness",
+    category: "feelgood",
     name: "Under Armour Women's HeatGear Armour Capris",
     description: "High-waisted, pocketed. Compression fit.",
     price: "$25 - $40",
@@ -908,7 +867,7 @@ const products = [
   },
   {
     id: 115,
-    category: "wellness",
+    category: "feelgood",
     name: "Under Armour Undeniable 5.0 Duffle",
     description: "Water-resistant duffle. Built for everything.",
     price: "$35 - $55",
@@ -921,7 +880,7 @@ const products = [
   },
   {
     id: 116,
-    category: "wellness",
+    category: "feelgood",
     name: "Trailoom Microfiber Workout Towels — Set of 5 Pastel",
     description: "Quick dry, odor-free. Gym to yoga.",
     price: "$14.99",
@@ -936,7 +895,7 @@ const products = [
   // Rituals — Skincare & Fragrance
   {
     id: 117,
-    category: "wellness",
+    category: "feelgood",
     name: "CeraVe Daily Moisturizing Lotion — 12 oz",
     description: "Hyaluronic acid & ceramides. Fragrance free.",
     price: "$14.99",
@@ -949,7 +908,7 @@ const products = [
   },
   {
     id: 118,
-    category: "wellness",
+    category: "feelgood",
     name: "Vera Wang Eau de Parfum — 3.4 Fl Oz",
     description: "Delicate floral. Iris, lilies & sandalwood.",
     price: "$25 - $35",
@@ -962,7 +921,7 @@ const products = [
   },
   {
     id: 119,
-    category: "wellness",
+    category: "feelgood",
     name: "Chloe Eau de Parfum Spray — 2.5 oz",
     description: "The iconic rose. Timeless, feminine, unforgettable.",
     price: "$105 - $130",
@@ -975,7 +934,7 @@ const products = [
   },
   {
     id: 120,
-    category: "wellness",
+    category: "feelgood",
     name: "CHLOE Body Lotion — 6.7 oz",
     description: "The Chloe scent in a silky body lotion.",
     price: "$52 - $58",
@@ -988,7 +947,7 @@ const products = [
   },
   {
     id: 121,
-    category: "wellness",
+    category: "feelgood",
     name: "Pixi On-the-Glow Blush Stick — Fleur",
     description: "Hydrating tinted stick. Cheeks & lips.",
     price: "$18.00",
@@ -1001,7 +960,7 @@ const products = [
   },
   {
     id: 122,
-    category: "wellness",
+    category: "feelgood",
     name: "CeraVe Hydrating Mineral Sunscreen SPF 30 — Sheer Tint",
     description: "Zinc oxide + titanium dioxide. Healthy glow.",
     price: "$14.99",
@@ -1016,7 +975,7 @@ const products = [
   // ELATEVE Wellness Journal — Pre-Order
   {
     id: 124,
-    category: "wellness",
+    category: "feelgood",
     name: "ELATEVE Wellness Journal — The Joy of Living Well",
     description: "234 pages. 12 wellness secrets. Your planner, your pace.",
     price: "Pre-Order",
@@ -1025,24 +984,20 @@ const products = [
     whyElateveLoves: "Our own wellness journal. 12 longevity-minded traditions, daily planner spreads, habit trackers, and monthly reflections. Beautifully designed for intentional living.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
-
-  // ═══════════════════════════════════════════
-  // ─── MOTHER'S DAY EDIT — Additions ─────────
-  // ═══════════════════════════════════════════
   {
     id: 125,
-    category: "wellness",
+    category: "feelgood",
     name: "Mom's Life Story Journal — Hardcover Keepsake",
-    description: "250+ prompts. A keepsake for Mum to share her journey.",
+    description: "250+ prompts. A keepsake to share her journey.",
     price: "$24.99",
     image: "https://m.media-amazon.com/images/I/81pb+oAF8EL._AC_SY450_.jpg",
     link: "https://amzn.to/49or45r",
-    whyElateveLoves: "A meaningful keepsake for Mum to share her journey, memories, and stories. Over 250 thoughtful prompts — the kind of gift that becomes an heirloom.",
+    whyElateveLoves: "A meaningful keepsake to share your journey, memories, and stories. Over 250 thoughtful prompts — the kind of gift that becomes an heirloom.",
     badge: null,
     spring: false,
-    springTag: "mothers-day"
+    springTag: null
   },
 
 ];

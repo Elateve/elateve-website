@@ -61,15 +61,17 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .page.visible { opacity: 1; }
 
 /* ── HERO ── */
-.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-md); position: relative; background: radial-gradient(ellipse at 50% 30%, rgba(232,200,114,0.08) 0%, transparent 60%); }
+.hero { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-md); padding-top: 7rem; position: relative; background: radial-gradient(ellipse at 50% 30%, rgba(232,200,114,0.08) 0%, transparent 60%); }
 .hero-eyebrow { font-size: 0.7rem; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-sm); opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s var(--ease-out) 0.3s forwards; }
-.hero-title { font-size: clamp(3rem, 8vw, 7rem); line-height: 1.05; margin-bottom: var(--space-md); opacity: 0; transform: translateY(30px); animation: fadeUp 0.8s var(--ease-out) 0.5s forwards; }
+.hero-title { font-size: clamp(2.2rem, 5vw, 3.75rem); line-height: 1.15; margin-bottom: var(--space-md); opacity: 0; transform: translateY(30px); animation: fadeUp 0.8s var(--ease-out) 0.5s forwards; }
+.hero-title--sm { font-size: clamp(1.8rem, 4vw, 3rem); max-width: 640px; margin-left: auto; margin-right: auto; }
 .hero-sub { font-size: 1rem; font-weight: 300; color: var(--grey); max-width: 480px; text-align: center; margin-left: auto; margin-right: auto; margin-bottom: var(--space-lg); opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s var(--ease-out) 0.7s forwards; }
 .hero .btn { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s var(--ease-out) 0.9s forwards; }
 .hero-cta-row { display: flex; gap: var(--space-sm); flex-wrap: wrap; justify-content: center; }
 .hero-scroll-hint { position: absolute; bottom: var(--space-md); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; animation: fadeUp 0.8s var(--ease-out) 1.2s forwards; }
 .hero-scroll-hint span { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-light); }
 .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollLine 2s var(--ease) infinite; }
+@media (max-height: 700px) { .hero-scroll-hint { display: none; } }
 
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 @keyframes scrollLine { 0%, 100% { opacity: 0.3; transform: scaleY(0.5); } 50% { opacity: 1; transform: scaleY(1); } }

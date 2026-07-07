@@ -23,7 +23,7 @@ router.get('/products/:id', (req, res) => {
 
 // GET /api/categories — category summary
 router.get('/categories', (req, res) => {
-  const categories = ['wellness', 'home'].map(cat => ({
+  const categories = ['feelgood', 'homelongevity'].map(cat => ({
     name: cat,
     count: products.filter(p => p.category === cat).length
   }));
@@ -32,7 +32,7 @@ router.get('/categories', (req, res) => {
 
 // GET /api/featured — one random product per category
 router.get('/featured', (req, res) => {
-  const featured = ['wellness', 'home'].map(cat => {
+  const featured = ['feelgood', 'homelongevity'].map(cat => {
     const catProducts = products.filter(p => p.category === cat);
     return catProducts[Math.floor(Math.random() * catProducts.length)];
   });
