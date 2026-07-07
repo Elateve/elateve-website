@@ -170,7 +170,7 @@ function renderResult(resultKey) {
 }
 
 function initQuizTriggers() {
-  ['heroQuizBtn', 'navQuizBtn', 'footerQuizBtn'].forEach(id => {
+  ['heroQuizBtn', 'navQuizBtn', 'footerQuizBtn', 'quizTeaserBtn'].forEach(id => {
     document.getElementById(id)?.addEventListener('click', (e) => {
       e.preventDefault();
       openQuizPopup();

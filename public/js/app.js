@@ -138,6 +138,9 @@ function createProductCard(product) {
     ? `<span class="product-tier-badge product-tier-badge--${product.badge.toLowerCase()}">${product.badge}</span>`
     : '';
 
+  const categoryLabels = { feelgood: 'Feel Good', homelongevity: 'Home Longevity' };
+  const categoryLabel = categoryLabels[product.category] || product.category;
+
   const elateveLoves = product.whyElateveLoves
     ? `<div class="product-card-loves">
         <button class="loves-toggle" aria-expanded="false">
@@ -151,7 +154,7 @@ function createProductCard(product) {
   card.innerHTML = `
     <div class="product-card-img">
       <img src="${product.image}" alt="${product.name}" loading="lazy">
-      <span class="product-card-badge">${product.category}</span>
+      <span class="product-card-badge">${categoryLabel}</span>
       ${tierBadge}
     </div>
     <div class="product-card-body">
