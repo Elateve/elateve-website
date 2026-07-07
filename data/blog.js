@@ -33,7 +33,7 @@ const blogPosts = [
   },
   {
     id: 3,
-    tag: "Wealth",
+    tag: "Lifestyle",
     title: "The Five Dimensions of True Wealth",
     excerpt: "Why financial abundance is only one piece. Exploring time wealth, social wealth, physical wealth, and knowledge wealth.",
     date: "Feb 2026",
@@ -50,7 +50,7 @@ const blogPosts = [
   },
   {
     id: 4,
-    tag: "Experience",
+    tag: "Self-Care",
     title: "Tokens of Connection in a Digital Age",
     excerpt: "The return of tangible gifts and handwritten notes. Why physical tokens of love are more powerful than ever.",
     date: "Jan 2026",
@@ -98,24 +98,8 @@ const blogPosts = [
     ]
   },
   {
-    id: 7,
-    tag: "Wealth",
-    title: "Fractional Luxury: Investing in Beauty",
-    excerpt: "From blue-chip art to fine wine, fractional investing makes luxury assets accessible. Here's how to start with just €100.",
-    date: "Dec 2025",
-    readTime: "6 min read",
-    content: [
-      "The idea of investing in art, wine, or rare collectibles once belonged exclusively to the ultra-wealthy. A Basquiat painting, a case of first-growth Bordeaux, a rare timepiece — these were assets priced in the hundreds of thousands, accessible to a vanishingly small elite.",
-      "Fractional investing has changed the equation entirely. Platforms now allow you to purchase shares of luxury assets for as little as one hundred euros. You do not own the entire painting — you own a fraction of it. And when that asset appreciates, so does your share.",
-      "The appeal goes beyond financial returns. There is something deeply satisfying about owning a piece of a Banksy, a share in a vintage Rolex, or a fraction of a rare whisky cask. It connects you to a world of beauty and craftsmanship that financial barriers previously locked away.",
-      "Blue-chip art has outperformed the stock market over the past two decades. Fine wine has shown consistent appreciation. Rare collectibles — from vintage cars to limited-edition sneakers — have created new asset classes that traditional finance is only beginning to understand.",
-      "The practical entry point is smaller than you think. Many European platforms offer fractional shares starting at fifty to one hundred euros. The key is to start with categories you genuinely find interesting. If you love wine, invest in wine. If art moves you, start there. Passion and knowledge create better investment decisions than spreadsheets alone.",
-      "Fractional luxury investing is not about getting rich quickly. It is about participating in markets that were once closed to you, building a portfolio that reflects your taste, and letting beautiful things appreciate while you enjoy knowing they are partly yours."
-    ]
-  },
-  {
     id: 8,
-    tag: "Experience",
+    tag: "Lifestyle",
     title: "The Language of Intentional Gifting",
     excerpt: "A curated gift speaks louder than an expensive one. Mastering the art of choosing presents that truly resonate.",
     date: "Nov 2025",
@@ -127,23 +111,6 @@ const blogPosts = [
       "The third principle is presentation. The experience of receiving a gift begins before it is opened. A handwritten note, thoughtful wrapping, or a small additional touch — a ribbon in their favourite colour, a card with an inside joke — elevates even a simple present into an event.",
       "The fourth principle is timing. The most memorable gifts are often the unexpected ones. Not birthday gifts or holiday presents, but the random Tuesday gift. The just-because gift. The I-saw-this-and-thought-of-you gift. These carry disproportionate emotional weight because they were not obligatory.",
       "Intentional gifting is not about spending more. It is about choosing better. A fifteen-euro item selected with precision and care will always outperform a one-hundred-euro item chosen in haste. The language of gifts is not spoken in currency — it is spoken in attention."
-    ]
-  },
-  {
-    id: 9,
-    tag: "Wealth",
-    title: "Why Your Wallet Colour Is Sabotaging Your Wealth",
-    excerpt: "Ancient feng shui wisdom meets modern psychology. The science and spirituality behind choosing a red wallet — and why it could change your financial energy forever.",
-    date: "Mar 2026",
-    readTime: "6 min read",
-    content: [
-      "There is a practice that spans centuries, cultures, and continents — from the markets of Hong Kong to the spiritual traditions of South America, from Vedic numerology to modern financial psychology: the deliberate choice of a red wallet to attract wealth. This is not folklore. This is a sophisticated understanding of how colour, intention, and energy interact with your relationship to money.",
-      "In feng shui, the ancient Chinese practice of harmonising individuals with their environment, red is the most powerful colour in the wealth spectrum. It carries the energy of fire — activation, ambition, forward momentum. Red is the colour of good fortune in Chinese culture. It is worn at weddings to invite prosperity, gifted at Lunar New Year to set financial intentions, and hung at doorways to welcome abundance. The colour does not just symbolise wealth — it is believed to actively draw it.",
-      "But the wisdom is not confined to Chinese tradition. In Vedic numerology and Hindu philosophy, red is associated with the root chakra — the energetic foundation of security, stability, and material wellbeing. A red wallet, placed close to the body and in constant contact with your financial instruments, becomes a talisman. Not a passive one. An active, intentional declaration that you are open to receiving.",
-      "Latin American wealth traditions echo this understanding. The practice of gifting a red wallet at New Year — filled with coins and given to someone you wish prosperity upon — is widespread across South America. The red wallet is not just a gift. It is a ritual object carrying the energy of abundance from one person to another. In many households, a red wallet is replaced every year, the old one burned to release stagnant energy and the new one activated with intention.",
-      "Modern psychology lends its own support. Colour psychology research consistently shows that red activates the brain's reward system, increasing alertness, energy, and motivation. When your eye catches the red of your wallet as you reach for it, a subtle neurological signal fires. Attention. Intention. Worthiness. These micro-activations, repeated hundreds of times over weeks and months, quietly reshape your subconscious relationship with money and abundance.",
-      "The Fossil Women's Logan Leather RFID Wallet in garnet red is our Product of the Month for a reason. It is not simply beautiful — though it is, with its rich leather, precise stitching, and the deep garnet hue that feng shui masters describe as the optimal wealth frequency. It is also RFID-protected, which speaks to a deeper principle: the guarding of what you have built, the protection of your financial energy against modern threats. There is a quiet poetry in carrying both ancient wisdom and modern technology in a single object.",
-      "Carry a red wallet. Fill it intentionally — a coin from a meaningful moment, a small folded note with your financial intention written on it, a photograph of something you are actively working toward. Treat it not as a container for cards and cash, but as a daily ritual object that says, quietly and firmly: I am building something. I am open to abundance. I am elevated."
     ]
   },
   {
@@ -168,169 +135,36 @@ const blogPosts = [
     ]
   },
   {
-    id: 11,
-    tag: "Seasonal",
-    title: "Reimagining Easter: A Curated European Spring Awakening",
-    excerpt: "From Scandinavian candlelit warmth to Mediterranean open-table feasts, here is how to weave Sanctuary, Ritual, Foundation, and Adventure into your Easter holiday.",
-    date: "Mar 2026",
-    readTime: "18 min read",
-    htmlContent: `
-      <p>For many of us, Easter heralds the arrival of spring and a quiet invitation to reset. Drawing inspiration from timeless European traditions -- from the candlelit warmth of Scandinavian Pask to the vibrant, open-table feasts of the Mediterranean -- this Easter is about more than just chocolate. It is about renewal.</p>
-      <p>Whether you are hosting a bustling family brunch or savouring a quiet, restorative long weekend, here is how to weave Sanctuary, Ritual, Foundation, and Adventure into your holiday.</p>
-
-      <img class="blog-section-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80" alt="Spring table setting with flowers" loading="lazy">
-
-      <h2>Welcome: The Art of the Arrival</h2>
-      <p>Long before the feast is served, the celebration begins at the front door. Drawing inspiration from the effortless warmth of Mediterranean hospitality, welcoming your guests is all about sensory delight and immediate comfort.</p>
-
-      <h4>The Front Porch and Foyer</h4>
-      <p>Set the tone before guests even step inside. Spruce up your porch seating with fresh outdoor cushions and a vibrant spring wreath. Inside the entryway, ensure there is an elegant, dedicated space for coats and bags so guests can immediately unburden themselves.</p>
-
-      <h4>A Sensory Greeting</h4>
-      <p>Infuse your foyer with beautiful Mediterranean scents -- think notes of wild fig, sea salt, rosemary, and bitter orange. A luxury diffuser near the door creates an instant getaway vibe.</p>
-
-      <h4>Effortless Appetisers and Sips</h4>
-      <p>Skip the formal sit-down greeting. Instead, have a sun-drenched console table or kitchen island laden with condensation-beaded pitchers of fresh mint lemonade, zesty mojitos, and beautifully arranged bowls of Castelvetrano olives, marcona almonds, and warm focaccia. It encourages guests to mingle, graze, and exhale the moment they arrive.</p>
-
-      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
-
-      <h2>Sanctuary: The Art of the Elevated Easter Host</h2>
-      <p>In Europe, creating a sanctuary is not about scrubbing floors; it is about <em>hygge</em> and <em>gemutlichkeit</em> -- crafting warm, sensory-rich spaces where time slows down and laughter flows.</p>
-      <p>Whether you are hosting family for the week or friends for a Sunday feast, prepping your sanctuary should feel like a creative project, not a chore. Here is how to curate your space for a luxurious, stress-free holiday.</p>
-
-      <img class="blog-section-img" src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80" alt="Elegant bedroom with linen bedding" loading="lazy">
-
-      <h3>The 5-Star Guest Suite</h3>
-      <p>Transform your guest room into a boutique hotel experience.</p>
-      <ul>
-        <li><strong>The Layered Bed:</strong> Swap out heavy winter duvets for crisp, high-thread-count European linens and plush waffle-weave throws.</li>
-        <li><strong>The Welcome Tray:</strong> Leave a carafe of infused water, a high-end French hand cream, and a silk sleep mask on the nightstand.</li>
-        <li><strong>Pet Hospitality:</strong> If guests are bringing furry companions, curate a chic corner with an orthopedic pet bed and a basket of organic treats.</li>
-      </ul>
-
-      <h3>The Springtime Bar Cart and Aperitivo Hour</h3>
-      <p>Take inspiration from the Italian piazza and set up a self-serve botanical bar cart.</p>
-      <ul>
-        <li><strong>The Setup:</strong> Stock your cart with beautiful crystal glassware, artisanal tonic waters, and premium non-alcoholic botanicals alongside top-tier gins.</li>
-        <li><strong>The Garnishes:</strong> Use bowls of fresh rosemary, dehydrated citrus wheels, and lavender sprigs. Let guests play mixologist while you finish up in the kitchen.</li>
-      </ul>
-
-      <h3>The Scent of Celebration</h3>
-      <p>The kitchen is the heart of the sanctuary. Focus on sensory cooking rather than stress.</p>
-      <ul>
-        <li><strong>Copper and Cast Iron:</strong> Bring out heirloom-quality cookware that looks as beautiful on the stove as it does serving on the table.</li>
-        <li><strong>Gourmet Shortcuts:</strong> Curate high-end charcuterie boards with truffle cheeses, Spanish iberico ham, and artisanal jams so you can mingle instead of being stuck over the stove.</li>
-      </ul>
-
-      <img class="blog-section-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Outdoor dining setup with lanterns" loading="lazy">
-
-      <h3>Taking the Sanctuary Outdoors</h3>
-      <p>If the weather permits, extend your indoor sanctuary to the terrace or garden.</p>
-      <ul>
-        <li><strong>Al Fresco Comfort:</strong> Drape outdoor dining chairs with soft merino wool blankets for when the sun goes down.</li>
-        <li><strong>Atmosphere:</strong> Line your garden paths or patio with luxury solar lanterns and set up a high-end smokeless fire pit for post-dinner drinks.</li>
-      </ul>
-
-      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
-
-      <h2>Rituals: Self-Care Amidst the Celebrations</h2>
-      <p>In many European cultures, holiday preparation is balanced with thermal bath visits or slow, intentional grooming rituals. Hosting can be exhausting. To pour from a full cup, you must carve out non-negotiable pockets of time for your own beauty and wellness.</p>
-      <ul>
-        <li><strong>The Morning Soak:</strong> Before the house wakes up, indulge in a mineral-rich bath soak using European sea salts and a luxurious hydrating face mask.</li>
-        <li><strong>Effortless Holiday Glam:</strong> When time is short, lean on high-performance skincare-infused makeup. Think tinted serums and cream blushes for a fresh, lit-from-within spring glow.</li>
-        <li><strong>The Gift of Rest:</strong> Set up a luxury silk pillowcase and a weighted sleep mask. High-quality sleep is the ultimate wellness ritual.</li>
-      </ul>
-
-      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
-
-      <h2>Celebrations and Cooking: The European Table</h2>
-      <p>Traditional European Easter foods celebrate the end of winter with fresh, bright ingredients.</p>
-
-      <table>
-        <thead>
-          <tr><th>Tradition</th><th>The Vibe</th><th>The Menu Concept</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Spanish Pascua</strong></td><td>Artistic and Festive</td><td>Roasted lamb or paella, escalivada, and the Mona de Pasqua -- sweet brioche topped with chocolate sculptures and feathers.</td></tr>
-          <tr><td><strong>Italian Pasqua</strong></td><td>Warm and Abundant</td><td>Savoury ricotta tarts, roasted lamb with spring peas, and rich, dove-shaped Colomba cake.</td></tr>
-          <tr><td><strong>Nordic Pask</strong></td><td>Sleek and Fresh</td><td>Smoked salmon grazing boards, pickled herring, dill potatoes, and crispbreads.</td></tr>
-          <tr><td><strong>Greek Pascha</strong></td><td>Rustic and Joyful</td><td>Spit-roasted lemon-herb lamb, Tsoureki braided sweet bread with red-dyed eggs, spanakopita, and honey-drenched baklava.</td></tr>
-          <tr><td><strong>French Paques</strong></td><td>Elegant and Decadent</td><td>Grand chocolate displays, slow-cooked leg of lamb, and perfectly paired wines.</td></tr>
-        </tbody>
-      </table>
-
-      <img class="blog-section-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Mediterranean feast table" loading="lazy">
-
-      <h3>The Greek Easter Vibe</h3>
-      <ul>
-        <li><strong>The Signature Centrepiece:</strong> Instead of standard pastel eggs, dye your hard-boiled eggs a deep, rich crimson red (symbolising life and renewal) and nestle them into a braided Tsoureki loaf at the centre of the table.</li>
-        <li><strong>The Crack-the-Egg Game (Tsougrisma):</strong> Turn dining into a fun experience. Guests tap their red eggs against each other; the person whose egg does not crack is said to have good luck for the year.</li>
-        <li><strong>Family-Style Meze:</strong> Lean into stress-free hosting by setting out large ceramic platters of Greek olives, warm pita, feta drizzled with honey and sesame, and tzatziki.</li>
-      </ul>
-
-      <h3>The Spanish Mona de Pasqua Vibe</h3>
-      <p>The Mona de Pasqua is a beloved tradition in Catalonia and Valencia. Historically a sweet, circular brioche crowned with hard-boiled eggs, it has evolved into massive, jaw-dropping chocolate sculptures of castles, animals, and fairytale characters.</p>
-      <ul>
-        <li><strong>The Easter Monday Tradition:</strong> In Spain, the Monday after Easter is when families head into the countryside, the beach, or the backyard garden to enjoy the Mona outdoors. It is the ultimate, relaxed outdoor Adventure picnic.</li>
-        <li><strong>The Playful Ritual:</strong> In Valencia, tradition dictates you must crack your hard-boiled Easter egg on the forehead of an unsuspecting family member or friend. It is a moment of pure laughter and fun for all ages.</li>
-        <li><strong>Style Your Own:</strong> If you are baking a cake at home, top it with high-end chocolate eggs, colourful feathers, and spun sugar to mimic the artistic bakeries of Barcelona.</li>
-      </ul>
-
-      <div class="blog-quote">Elevate Your Cookware: Invest in a beautiful enamelled cast-iron Dutch oven. It transitions beautifully from the stovetop to the centre of your holiday table.</div>
-
-      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
-
-      <h2>Adventure: Active Wellness and Culinary Experiences</h2>
-      <p>In the world of active wellness and self-improvement, adventure is not just about scaling mountains -- it is about expanding your palate, exploring rich traditions, and treating yourself to world-class hospitality.</p>
-      <ul>
-        <li><strong>The Traditional Easter Hike:</strong> Gather the family (and the dogs) for a scenic spring hike. Invest in high-quality, stylish trail footwear and ergonomic daypacks.</li>
-        <li><strong>Mental Adventures:</strong> Gift yourself a masterclass subscription or a high-end language-learning app to prepare for your summer European getaway.</li>
-        <li><strong>Wellness Retreat Planning:</strong> Use this weekend to research and book a summer yoga retreat or a hiking tour in the Alps.</li>
-      </ul>
-
-      <img class="blog-section-img" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="Elegant restaurant dining" loading="lazy">
-
-      <h3>The Grand European Tradition: Palace Hotel Brunches</h3>
-      <p>Across Europe, Easter Sunday is the pinnacle of springtime gastronomy. Historic hotels open their gilded doors for legendary, multi-hour feasts that marry live classical music, exquisite design, and world-class pastry.</p>
-      <ul>
-        <li><strong>Four Seasons Hotel George V (Paris):</strong> Monumental chocolate sculptures by master pastry chefs, delicate seasonal pastries, and a courtyard bursting with fresh floral installations.</li>
-        <li><strong>Hotel de Crillon (Paris):</strong> Historic salons overlooking the Place de la Concorde with rich truffled eggs and legendary artisanal chocolate spreads.</li>
-        <li><strong>Four Seasons Hotel Prague:</strong> Traditional hand-painted Czech eggs and sweet breads on an outdoor terrace overlooking the Vltava River and Charles Bridge.</li>
-        <li><strong>The Hotel de Russie (Rome):</strong> Easter brunch in a famous secret tiered garden with roasted spring lamb and hand-cracked chocolate eggs.</li>
-      </ul>
-
-      <h3>The American Curated Edit: Elevated Easter Brunch</h3>
-      <p>You do not need a passport to experience the grandeur of a European-style holiday. Top-tier US hospitality chains take heavy inspiration from European techniques while celebrating fresh, local farm-to-table harvests.</p>
-
-      <table>
-        <thead>
-          <tr><th>Restaurant</th><th>Easter Highlights</th><th>The Atmosphere</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>The Ritz-Carlton</strong></td><td>Three-course prix fixe with farm-fresh spring vegetables and tableside pastry gifts.</td><td>Elegant urban dining rooms or coastal beachfront terraces.</td></tr>
-          <tr><td><strong>Waldorf Astoria</strong></td><td>Grand seafood towers, raw bars, bottomless mimosas, and signature pastries.</td><td>Timeless, old-world glamour meets modern American hospitality.</td></tr>
-          <tr><td><strong>The St. Regis</strong></td><td>Elevated brunch staples, heritage meats, and signature Bloody Mary varieties.</td><td>High-end, bespoke, and intimate service.</td></tr>
-          <tr><td><strong>Cooper's Hawk Winery</strong></td><td>Rich charcuterie boards, artisanal flatbreads, and house-crafted wine flights.</td><td>Modern winery aesthetic.</td></tr>
-          <tr><td><strong>Seasons 52</strong></td><td>Crab and cheddar quiches, French toast bakes, and apricot-glazed spiral ham.</td><td>Oak-fired and seasonal.</td></tr>
-        </tbody>
-      </table>
-
-      <div class="blog-quote">Book a table at a luxury local property for your family. Dress up, let world-class chefs do the heavy lifting, and take a leisurely post-brunch walk to soak in the spring air.</div>
-
-      <div class="blog-divider">&#10022; &#10022; &#10022;</div>
-
-      <h2>Foundation: Smart Planning for Peace of Mind</h2>
-      <p>Just as we balance our physical spaces, spring is the perfect time to audit and balance our financial houses. True peace of mind is knowing your future is secure. Use the quiet moments of the long weekend to check in on your financial health.</p>
-      <ul>
-        <li><strong>Spring Cleaning Your Subscriptions:</strong> Audit your bank statements. Cancel the unused gym memberships or streaming apps.</li>
-        <li><strong>The Family Binder:</strong> Ensure your estate planning, life insurance, and emergency funds are organised. Knowing your family is protected is the ultimate stress reliever.</li>
-        <li><strong>Wealth Wellness Trackers:</strong> Treat yourself to a beautiful digital planner or high-end financial app subscription to make tracking your goals aesthetic and satisfying.</li>
-      </ul>
-
-      <img class="blog-section-img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80" alt="Spring mountain landscape" loading="lazy">
-
-      <div class="blog-quote">This Easter, let renewal be the theme. Refresh your sanctuary, nourish your rituals, feed your sense of adventure, and fortify your foundation. The elevated life is built one intentional moment at a time.</div>
-    `
+    id: 12,
+    tag: "Lifestage",
+    title: "Navigating the First Storms, Together",
+    excerpt: "When your daughter hits her first hormonal shifts, it can feel like a guessing game. Bridging the gap between maternal instinct and clinical insight.",
+    date: "Apr 2026",
+    readTime: "6 min read",
+    content: [
+      "When your daughter hits her first hormonal fluctuations, it can feel like a guessing game. You want to protect her, educate her, and give her the best start possible — but the information out there is either overly clinical or not there at all.",
+      "This is the gap ELATEVE exists to close: the space between maternal instinct and clinical insight. We are, quite literally, the generation that has lived it. Some of us are raising daughters through their first cycles right now. That proximity changes what we recommend and how we talk about it.",
+      "Start with the environment. A teenager's bedroom is where mood, sleep, and skin all collide. Removing endocrine-disrupting synthetics from bedding and swapping harsh overhead lighting for something calmer does more for a stormy week than any single product could.",
+      "Then come the essentials that actually respect a developing body: fragrance-free, dermatologist-formulated skincare instead of trend-driven actives; a moisture barrier cream before a ten-step routine; gentle, cycle-supporting habits instead of quick fixes.",
+      "The goal is never to rush a girl into womanhood. It is to hand her — and the mother standing beside her — the tools to meet each shift with information instead of confusion. That is what an elevated first chapter looks like.",
+      "If this is the season your household is in, our Ripple Assessment (in the quiz on this site) is a good place to start — a few honest questions about sleep, mood, and home environment that point you toward what actually helps right now."
+    ]
+  },
+  {
+    id: 13,
+    tag: "Lifestage",
+    title: "Rewrite the Narrative of The Change",
+    excerpt: "Perimenopause and menopause shouldn't be survived — they should be optimized. If your body suddenly feels unfamiliar, you are not broken. You are transforming.",
+    date: "Apr 2026",
+    readTime: "7 min read",
+    content: [
+      "Perimenopause and menopause shouldn't be survived; they should be optimized. If you are experiencing brain fog, disrupted sleep, or a body that suddenly feels unfamiliar, you are not broken. You are transforming — and the transition deserves better language than 'the change' whispered like a diagnosis.",
+      "The hormonal shift that begins in perimenopause touches nearly every system: sleep architecture, temperature regulation, mood resilience, bone density, cognitive clarity. Treating it as one symptom to medicate rather than a full-body recalibration is why so many women feel dismissed by 'it's just aging.'",
+      "Optimizing this decade starts with the home. A cooler, temperature-regulated bedroom — breathable linen or bamboo bedding, a fan or cooling mattress topper — does more for 3am wake-ups than most people expect. Red light therapy and low-EMF saunas, once fringe biohacking tools, are now well within reach for supporting collagen production and recovery.",
+      "It continues with targeted, clean supplementation: magnesium glycinate for the cortisol spikes, adaptogens for stress resilience, and a genuine look at gut and skin barrier health rather than one-size-fits-all multivitamins.",
+      "And it means access to real support — not just a doctor who says 'that's normal at your age,' but a network that treats hormone health, cellular aging, and mental clarity as one connected system worth investing in.",
+      "This is a life stage we are living through ourselves, not observing from the outside. If you want a clearer read on where you are in the transition and what to prioritize first, take our Shift & Wisdom Assessment — it takes under three minutes and gives you a tailored starting point."
+    ]
   }
 ];
 

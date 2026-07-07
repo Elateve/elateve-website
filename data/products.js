@@ -173,8 +173,8 @@ const products = [
     link: "https://amzn.to/4s4wH01",
     whyElateveLoves: "French vineyard science at its finest. Viniferine is 62x more effective than Vitamin C for brightening dark spots. A cult favourite.",
     badge: null,
-    spring: true,
-    springTag: "glow-up"
+    spring: false,
+    springTag: null
   },
   {
     id: 14,
@@ -187,7 +187,7 @@ const products = [
     whyElateveLoves: "Australian luxury haircare at its finest. Bergamot rind, frankincense, and cedar atlas. The shower upgrade you deserve.",
     badge: null,
     spring: false,
-    springTag: "spanish-summer"
+    springTag: null
   },
   {
     id: 15,
@@ -240,8 +240,8 @@ const products = [
     link: "https://amzn.to/4sSs09R",
     whyElateveLoves: "Lancôme's newest. Squalane hydrates while colour perfects. French beauty at its finest.",
     badge: null,
-    spring: true,
-    springTag: "glow-up"
+    spring: false,
+    springTag: null
   },
   {
     id: 19,
@@ -254,7 +254,7 @@ const products = [
     whyElateveLoves: "The iconic French multi-purpose dry oil with a floral twist. Nourishes skin, hair, and body in one luxurious step.",
     badge: null,
     spring: false,
-    springTag: "spanish-summer"
+    springTag: null
   },
   {
     id: 20,
@@ -266,8 +266,8 @@ const products = [
     link: "https://amzn.to/4dmO0oq",
     whyElateveLoves: "Transforms your shower into a spa. Almond oil cleanses and softens without drying. The signature L'Occitane scent is heaven.",
     badge: null,
-    spring: true,
-    springTag: "spanish-summer"
+    spring: false,
+    springTag: null
   },
   {
     id: 21,
@@ -279,8 +279,8 @@ const products = [
     link: "https://amzn.to/3PvL3Ih",
     whyElateveLoves: "The iconic French hand cream. 20% organic shea butter, fast-absorbing, and beautifully scented. A handbag essential.",
     badge: null,
-    spring: true,
-    springTag: "glow-up"
+    spring: false,
+    springTag: null
   },
   {
     id: 22,
@@ -305,8 +305,8 @@ const products = [
     link: "https://amzn.to/4rlCFIP",
     whyElateveLoves: "Clean ingredients, beautiful results. The goop standard.",
     badge: null,
-    spring: true,
-    springTag: "glow-up"
+    spring: false,
+    springTag: null
   },
   {
     id: 24,
@@ -370,10 +370,10 @@ const products = [
     price: "$34.99",
     image: "https://m.media-amazon.com/images/I/71h0v01hsLL._AC_SY450_.jpg",
     link: "https://amzn.to/48dlpP7",
-    whyElateveLoves: "100% Koroneiki olives grown by small family farmers near Kalamata, Greece. Cold-extracted for maximum nutrition. Mediterranean luxury in a bottle.",
+    whyElateveLoves: "100% Koroneiki olives grown by small family farmers near Kalamata, Greece. Cold-extracted for maximum nutrition. Mediterranean longevity in a bottle.",
     badge: null,
     spring: false,
-    springTag: "spanish-summer"
+    springTag: null
   },
   {
     id: 29,
@@ -431,168 +431,10 @@ const products = [
   },
 
   // ═══════════════════════════════════════════
-  // ─── HOME  (most compelling first) ─────────
+  // ─── THE HEALTHY HOME ───────────────────────
   // ═══════════════════════════════════════════
 
-  // ── Outdoor Living & Entertaining ──
-  {
-    id: 33,
-    category: "home",
-    name: "PURPLE LEAF 7-Piece Patio Dining Set — Round Wicker Teak",
-    description: "Wicker elegance. Teak-finish aluminium. Cushions included.",
-    price: "$1,859",
-    image: "https://m.media-amazon.com/images/I/81psTDEI36L._AC_SY450_.jpg",
-    link: "https://amzn.to/4dnyDMN",
-    whyElateveLoves: "Premium teak-finish aluminium frame with all-weather wicker. Each chair holds 350 lbs. Cushions and pillows included. The outdoor dining upgrade.",
-    badge: "Splurge",
-    spring: false,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 34,
-    category: "home",
-    name: "MIXPATIO 7-Piece Round Outdoor Dining Set — 54\" Table",
-    description: "Wicker rattan chairs. Umbrella hole. Soft cushions.",
-    price: "$799.99",
-    image: "https://m.media-amazon.com/images/I/91eMxjrFgGL._AC_SY450_.jpg",
-    link: "https://amzn.to/41IAW5R",
-    whyElateveLoves: "54-inch round table with umbrella hole and 6 wicker rattan chairs with soft cushions. Al fresco dining for less.",
-    badge: "Save",
-    spring: false,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 35,
-    category: "home",
-    name: "Aoxun 7-Piece Patio Furniture Set — Wicker Sectional",
-    description: "Thick cushions. Wicker elegance. Outdoor living, elevated.",
-    price: "$599.99",
-    image: "https://m.media-amazon.com/images/I/811T94FJK4L._AC_SX679_.jpg",
-    link: "https://amzn.to/4rXtbnn",
-    whyElateveLoves: "7-piece wicker sectional with thick cushions for backyard, poolside, or garden. The outdoor living room you deserve.",
-    badge: "Splurge",
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 36,
-    category: "home",
-    name: "42\" Rectangular Propane Fire Pit Table — Sand Beige",
-    description: "50,000 BTU propane fire pit. Hidden tank. Glass wind guard.",
-    price: "$499.99",
-    image: "https://m.media-amazon.com/images/I/71Wbig8TYML._AC_SX679_.jpg",
-    link: "https://amzn.to/40MRt8y",
-    whyElateveLoves: "2-piece set with hidden propane tank table. Glass wind guard, lid, glass rocks, and cover included. Al fresco elegance.",
-    badge: "Splurge",
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 37,
-    category: "home",
-    name: "Solo Stove Bonfire 19.5\" Smokeless Fire Pit",
-    description: "Smokeless. Portable. Stainless steel perfection.",
-    price: "$299.99",
-    image: "https://m.media-amazon.com/images/I/61PLwr1joEL._AC_SX679_.jpg",
-    link: "https://amzn.to/4bOGIYr",
-    whyElateveLoves: "The iconic smokeless fire pit. Portable stainless steel design, ideal for 4-6 people. Post-dinner drinks around the fire, without the smoke.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 38,
-    category: "home",
-    name: "42\" Fire Pit with 2 Grills — 3-in-1 BBQ and Table",
-    description: "Fire pit, BBQ, and table in one. Heavy duty outdoor living.",
-    price: "$139.99",
-    image: "https://m.media-amazon.com/images/I/818F1PzNENL._AC_SY300_SX300_QL70_FMwebp_.jpg",
-    link: "https://amzn.to/4d32UAl",
-    whyElateveLoves: "Extra large fire pit with two grills, lid, and poker. Heavy duty 3-in-1 design for patio entertaining.",
-    badge: "Save",
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 39,
-    category: "home",
-    name: "AreShark 9 FT Patio Umbrella — Beige",
-    description: "Push button tilt. 8 sturdy ribs. Classic shade.",
-    price: "$39.99",
-    image: "https://m.media-amazon.com/images/I/61oEbE3DiUL._AC_SY450_.jpg",
-    link: "https://amzn.to/4toQgAr",
-    whyElateveLoves: "9-foot patio umbrella with push button tilt and crank. 8 sturdy ribs for wind resistance. The affordable shade solution for any outdoor space.",
-    badge: "Save",
-    spring: false,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 40,
-    category: "home",
-    name: "CAMILSON Easy Jute Rug 9x12 — Natural Sisal Boho",
-    description: "Indoor/outdoor. Washable. Boho woven design.",
-    price: "$169.99",
-    image: "https://m.media-amazon.com/images/I/81+Fz2GiOWL._AC_SY450_.jpg",
-    link: "https://amzn.to/41wpzy5",
-    whyElateveLoves: "Natural jute-look area rug that's actually easy-cleaning polypropylene. Indoor or outdoor use. Boho woven design that anchors any space.",
-    badge: null,
-    spring: false,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 41,
-    category: "home",
-    name: "22\" & 19\" Large Lanterns Decorative — Set of 2 Black Metal",
-    description: "Modern farmhouse floor lanterns. Indoor or outdoor.",
-    price: "$49.99",
-    image: "https://m.media-amazon.com/images/I/71SQjqod54L._AC_SY450_.jpg",
-    link: "https://amzn.to/41c1RXG",
-    whyElateveLoves: "Set of 2 large black metal lanterns with LED candles. Perfect for mantle, fireplace, patio, or garden. Modern farmhouse elegance.",
-    badge: "Save",
-    spring: false,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 42,
-    category: "home",
-    name: "WdtPro Solar Lanterns Outdoor — 2 Pack Warm Light",
-    description: "Solar powered. Waterproof. Garden path elegance.",
-    price: "$29.99",
-    image: "https://m.media-amazon.com/images/I/71LdO6qugWL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg",
-    link: "https://amzn.to/40Qygmo",
-    whyElateveLoves: "Upgraded bright solar lanterns for garden paths and patios. Warm light, waterproof, and zero running costs. Atmosphere on autopilot.",
-    badge: "Save",
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 43,
-    category: "home",
-    name: "Veradek Block Series Long Box Planter",
-    description: "Modern rectangular planter. Indoor or outdoor. All-weather.",
-    price: "$89.99",
-    image: "https://m.media-amazon.com/images/I/614dVOvltJL._AC_SX679_.jpg",
-    link: "https://amzn.to/41oIrP8",
-    whyElateveLoves: "Large rectangular planter with drainage holes. Durable all-weather construction for tall plants, flowers, or shrubs.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-
-  // ── Kitchen & Cooking ──
-  {
-    id: 44,
-    category: "home",
-    name: "Ninja Woodfire 8-in-1 Outdoor Smoker Pizza Oven — Green",
-    description: "8-in-1 outdoor oven. Smoke, pizza, roast, and more.",
-    price: "$399.99",
-    image: "https://m.media-amazon.com/images/I/61nO+58EvrL._AC_SX679_.jpg",
-    link: "https://amzn.to/40nJTks",
-    whyElateveLoves: "The ultimate outdoor entertainer. 8 functions including 5 pizza settings. Wood-fired flavour meets Ninja technology.",
-    badge: "Splurge",
-    spring: true,
-    springTag: "spanish-summer"
-  },
+  // ── Kitchen & Non-Toxic Cookware ──
   {
     id: 45,
     category: "home",
@@ -668,11 +510,11 @@ const products = [
     link: "https://amzn.to/4bwbXZf",
     whyElateveLoves: "Fresh herbs year-round with zero effort. Smart LED lighting and automatic watering. The future of home gardening.",
     badge: null,
-    spring: true,
-    springTag: "refresh"
+    spring: false,
+    springTag: null
   },
 
-  // ── Tech & Appliances ──
+  // ── Clean Air & Water ──
   {
     id: 51,
     category: "home",
@@ -709,24 +551,11 @@ const products = [
     link: "https://amzn.to/4uiYL18",
     whyElateveLoves: "The perfect blend of e-reader and notebook. Write naturally on paper-like display. 64GB for your entire library.",
     badge: "Splurge",
-    spring: true,
-    springTag: "refresh"
-  },
-  {
-    id: 54,
-    category: "home",
-    name: "Regency Hill Jenson Pharmacy Floor Lamp — Aged Brass",
-    description: "Adjustable swing arm. Aged brass. Timeless reading light.",
-    price: "$149.99",
-    image: "https://m.media-amazon.com/images/I/71UsMyGhzZL._AC_SY741_.jpg",
-    link: "https://amzn.to/4c0k8gD",
-    whyElateveLoves: "Traditional farmhouse metal pharmacy lamp with adjustable swing arm. 54\" tall aged brass finish that elevates any reading nook.",
-    badge: null,
     spring: false,
     springTag: null
   },
 
-  // ── Bedroom & Bath ──
+  // ── Sleep Sanctuary — Bedroom & Bath ──
   {
     id: 55,
     category: "home",
@@ -748,10 +577,10 @@ const products = [
     price: "$129.99",
     image: "https://m.media-amazon.com/images/I/81-1JDG-cCL._AC_SX679_.jpg",
     link: "https://amzn.to/4t5UYmG",
-    whyElateveLoves: "100% natural French flax linen. Flat sheet, fitted sheet, and 2 pillowcases with embroidery detail. The 5-star guest suite starts here.",
+    whyElateveLoves: "100% natural French flax linen. Flat sheet, fitted sheet, and 2 pillowcases with embroidery detail. Temperature-regulating comfort for deeper sleep.",
     badge: null,
-    spring: true,
-    springTag: "easter"
+    spring: false,
+    springTag: null
   },
   {
     id: 57,
@@ -761,10 +590,10 @@ const products = [
     price: "$119.99",
     image: "https://m.media-amazon.com/images/I/71+B-QgK4fL._AC_SX679_.jpg",
     link: "https://amzn.to/47orNmq",
-    whyElateveLoves: "Washed French flax linen duvet cover with embroidery and button closure. Soft, breathable, and perfectly European.",
+    whyElateveLoves: "Washed French flax linen duvet cover with embroidery and button closure. Soft, breathable, and perfectly regulating.",
     badge: null,
-    spring: true,
-    springTag: "easter"
+    spring: false,
+    springTag: null
   },
   {
     id: 58,
@@ -776,8 +605,8 @@ const products = [
     link: "https://amzn.to/4b0t59n",
     whyElateveLoves: "100% bamboo viscose for temperature regulation and silky softness. Hotel-quality sleep, every night.",
     badge: null,
-    spring: true,
-    springTag: "refresh"
+    spring: false,
+    springTag: null
   },
   {
     id: 59,
@@ -787,10 +616,10 @@ const products = [
     price: "$79.99",
     image: "https://m.media-amazon.com/images/I/61Ng4iDNrpL._AC_SX679_.jpg",
     link: "https://amzn.to/47mMK13",
-    whyElateveLoves: "500 thread count pure cotton with damask stripe. Zipper closure for a clean finish. Hotel luxury at a smart price.",
+    whyElateveLoves: "500 thread count pure cotton with damask stripe. Zipper closure for a clean finish. Hotel-quality sleep at a smart price.",
     badge: "Save",
-    spring: true,
-    springTag: "easter"
+    spring: false,
+    springTag: null
   },
   {
     id: 60,
@@ -800,10 +629,10 @@ const products = [
     price: "$69.99",
     image: "https://m.media-amazon.com/images/I/61LU-FyFyhL._AC_SX679_.jpg",
     link: "https://amzn.to/3PrHKlE",
-    whyElateveLoves: "500 thread count sateen weave with 18-inch deep pockets. Resort hotel luxury for every night.",
+    whyElateveLoves: "500 thread count sateen weave with 18-inch deep pockets. Resort-quality sleep for every night.",
     badge: "Save",
-    spring: true,
-    springTag: "easter"
+    spring: false,
+    springTag: null
   },
   {
     id: 61,
@@ -815,8 +644,8 @@ const products = [
     link: "https://amzn.to/3Nu2oAQ",
     whyElateveLoves: "Certified organic cotton towels that feel like a five-star spa. Sustainable luxury for your bathroom.",
     badge: null,
-    spring: true,
-    springTag: "refresh"
+    spring: false,
+    springTag: null
   },
   {
     id: 62,
@@ -883,168 +712,21 @@ const products = [
     spring: false,
     springTag: null
   },
-  {
-    id: 67,
-    category: "home",
-    name: "Amber Glass Soap Dispenser Set — Hand & Dish",
-    description: "Bathroom and kitchen, instantly upgraded.",
-    price: "$28.97",
-    image: "https://m.media-amazon.com/images/I/71QONCOK8EL._AC_SL1500_.jpg",
-    link: "https://amzn.to/4be5TDp",
-    whyElateveLoves: "Swap the plastic bottles for amber glass. Instant upgrade.",
-    badge: "Save",
-    spring: true,
-    springTag: "refresh"
-  },
 
-  // ── Decor & Plants ──
-  {
-    id: 68,
-    category: "home",
-    name: "Large Decorative Bowl — Modern Resin Beige",
-    description: "Ruffle decor. Key bowl for entry table or fruit bowl.",
-    price: "$29.99",
-    image: "https://m.media-amazon.com/images/I/81AuXGZ5WjL._AC_SY450_.jpg",
-    link: "https://amzn.to/4sanxhK",
-    whyElateveLoves: "Modern handicraft ruffle bowl in beige resin. Perfect as a fruit bowl, key bowl, or decorative accent. Affordable luxury for any surface.",
-    badge: "Save",
-    spring: false,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 69,
-    category: "home",
-    name: "Cork & Mill Marble Decorative Bowl",
-    description: "Natural marble with acacia wood pedestal. Art meets function.",
-    price: "$68.99",
-    image: "https://m.media-amazon.com/images/I/61PnQf5rWlL._AC_SL1500_.jpg",
-    link: "https://amzn.to/4aYOik7",
-    whyElateveLoves: "Each piece uniquely veined by nature. Handcrafted marble with acacia wood pedestal.",
-    badge: null,
-    spring: true,
-    springTag: "refresh"
-  },
-  {
-    id: 70,
-    category: "home",
-    name: "Faux Olive Tree 8FT — Mediterranean Statement",
-    description: "Mediterranean elegance. Zero maintenance.",
-    price: "$159.99",
-    image: "https://m.media-amazon.com/images/I/81kMgcwJ6KL._AC_SL1500_.jpg",
-    link: "https://amzn.to/4riGy16",
-    whyElateveLoves: "The Mediterranean lifestyle, potted. Statement piece for any space.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 71,
-    category: "home",
-    name: "Artificial Cherry Blossom Branches — 3 Pack",
-    description: "Bring spring indoors. Silk blossoms, real beauty.",
-    price: "$32.89",
-    image: "https://m.media-amazon.com/images/I/710CkqB9SNL._AC_SL1500_.jpg",
-    link: "https://amzn.to/4rij0t6",
-    whyElateveLoves: "No water, no maintenance. Eternal spring in every room.",
-    badge: null,
-    spring: true,
-    springTag: "refresh"
-  },
-  {
-    id: 72,
-    category: "home",
-    name: "J'FLORU Spring Wreath — 22\" Daisy and Lavender Wildflowers",
-    description: "Handcrafted wildflower wreath. Easter at the front door.",
-    price: "$32.99",
-    image: "https://m.media-amazon.com/images/I/811MK6vm5+L._AC_SX679_.jpg",
-    link: "https://amzn.to/4uMSVoX",
-    whyElateveLoves: "Handcrafted daisy and lavender wreath that sets the tone before guests even step inside. Perfect for spring through summer.",
-    badge: "Save",
-    spring: true,
-    springTag: "easter"
-  },
-  {
-    id: 73,
-    category: "home",
-    name: "Kazai. Wall-Mounted Coat Rack 'Toke' — Walnut",
-    description: "Hidden hooks. Solid walnut. Modern entryway design.",
-    price: "$89.99",
-    image: "https://m.media-amazon.com/images/I/81Cgoq1h-zL._AC_SX679_.jpg",
-    link: "https://amzn.to/4rVljCW",
-    whyElateveLoves: "Modern design coat rack with hidden wall hooks. Solid walnut veneer panel makes your entryway as elegant as a European hotel.",
-    badge: null,
-    spring: true,
-    springTag: "easter"
-  },
+  // ── Rituals — Aromatherapy ──
   {
     id: 74,
     category: "home",
     name: "NEST New York Reed Diffuser — Wild Mint and Eucalyptus",
-    description: "90 days of Mediterranean fragrance. Flame free.",
+    description: "90 days of fragrance. Flame free.",
     price: "$58",
     image: "https://m.media-amazon.com/images/I/71ghdBhQtBL._AC_SX679_.jpg",
     link: "https://amzn.to/4lL3pRH",
-    whyElateveLoves: "Up to 90 days of wild mint and eucalyptus fragrance. Reusable glass holder with 8 natural reed sticks. The sensory greeting your foyer deserves.",
+    whyElateveLoves: "Up to 90 days of wild mint and eucalyptus fragrance. Reusable glass holder with 8 natural reed sticks. The sensory greeting your home deserves.",
     badge: null,
-    spring: true,
-    springTag: "spanish-summer"
+    spring: false,
+    springTag: null
   },
-
-  // ── Pillows & Soft Furnishings ──
-  {
-    id: 75,
-    category: "home",
-    name: "Rudransha Hand Embroidered Wildflower Pillow Cover — 20x20",
-    description: "Hand embroidered wildflowers. Robin's egg cotton.",
-    price: "$27.99",
-    image: "https://m.media-amazon.com/images/I/714XWo6QxXL._AC_SX679_.jpg",
-    link: "https://amzn.to/4bIOEdN",
-    whyElateveLoves: "Hand embroidered wildflower design on robin's egg cotton. Each pillow is a work of art. The perfect spring accent.",
-    badge: "Save",
-    spring: true,
-    springTag: "refresh"
-  },
-  {
-    id: 76,
-    category: "home",
-    name: "Chandni Paisley Embroidered Pillow Cover — 18x18 Robin's Egg",
-    description: "Intricate paisley embroidery on robin's egg cotton.",
-    price: "$20.99",
-    image: "https://m.media-amazon.com/images/I/81xOtBsyZ0L._AC_SX679_.jpg",
-    link: "https://amzn.to/4uLm5Fd",
-    whyElateveLoves: "Pure cotton robin's egg fabric with intricate off-white paisley embroidery. Farmhouse elegance for any room.",
-    badge: "Save",
-    spring: true,
-    springTag: "refresh"
-  },
-  {
-    id: 77,
-    category: "home",
-    name: "MIULEE Corduroy Throw Pillow Covers — Set of 2",
-    description: "Refresh your sofa instantly. Corduroy soft.",
-    price: "$44.99",
-    image: "https://m.media-amazon.com/images/I/81CQXMI-J2L._AC_SL1500_.jpg",
-    link: "https://amzn.to/4ufgIO6",
-    whyElateveLoves: "Instant refresh. The ultimate affordable spring upgrade.",
-    badge: "Save",
-    spring: true,
-    springTag: "refresh"
-  },
-  {
-    id: 78,
-    category: "home",
-    name: "LL LEATHER LOVERS Lambskin Leather Pillow Cover",
-    description: "Real lambskin leather texture. Modern warmth.",
-    price: "$119.99",
-    image: "https://m.media-amazon.com/images/I/61mSgfqF9ML._AC_SL1500_.jpg",
-    link: "https://amzn.to/47rHjh5",
-    whyElateveLoves: "Real leather texture, architectural warmth for any room.",
-    badge: null,
-    spring: true,
-    springTag: "refresh"
-  },
-
-  // ── Candles & Fragrance ──
   {
     id: 79,
     category: "home",
@@ -1055,8 +737,8 @@ const products = [
     link: "https://amzn.to/46NP3de",
     whyElateveLoves: "The world's most iconic luxury candle. Roses and blackcurrant from the house of Diptyque, Paris. Worth every cent.",
     badge: "Splurge",
-    spring: true,
-    springTag: "refresh"
+    spring: false,
+    springTag: null
   },
   {
     id: 80,
@@ -1066,10 +748,10 @@ const products = [
     price: "$38",
     image: "https://m.media-amazon.com/images/I/81uVMfbUOVL._AC_SY450_.jpg",
     link: "https://amzn.to/4leuZGK",
-    whyElateveLoves: "Hand-poured soy wax with real eucalyptus and sage. Clean burn, beautiful jar. Affordable luxury at its finest.",
+    whyElateveLoves: "Hand-poured soy wax with real eucalyptus and sage. Clean burn, beautiful jar. A ritual in a jar.",
     badge: null,
-    spring: true,
-    springTag: "refresh"
+    spring: false,
+    springTag: null
   },
   {
     id: 81,
@@ -1081,8 +763,8 @@ const products = [
     link: "https://amzn.to/4rYr9UT",
     whyElateveLoves: "Citrine crystal for abundance. Pink peony for romance. A candle that does more than smell beautiful.",
     badge: null,
-    spring: true,
-    springTag: "refresh"
+    spring: false,
+    springTag: null
   },
   {
     id: 82,
@@ -1097,345 +779,30 @@ const products = [
     spring: false,
     springTag: null
   },
-
-  // ── Entertaining & Tableware ──
   {
-    id: 83,
+    id: 126,
     category: "home",
-    name: "Schott Zwiesel Forte Crystal Wine Glasses — Set of 6",
-    description: "Tritan crystal. German engineering. Dishwasher safe.",
-    price: "$69.99",
-    image: "https://m.media-amazon.com/images/I/61Fbn1CL--L._AC_SX679_.jpg",
-    link: "https://amzn.to/3NCxqXu",
-    whyElateveLoves: "German Tritan crystal that is virtually unbreakable and dishwasher safe. The stemware that elevates every pour.",
+    name: "Voluspa French Cade Lavender 3-Wick Tin Candle",
+    description: "Coconut wax. 40-hour burn. Handcrafted in the USA.",
+    price: "$36",
+    image: "https://www.voluspa.com/cdn/shop/files/FrenchCadeLavender_3WickTin_7224_2006_01_B_WEB_21c9a743-116f-4faf-9495-3afd4e49cde1.jpg",
+    link: "https://amzn.to/4d1T0xh",
+    whyElateveLoves: "French cade and Bulgarian lavender — a clean-burning coconut wax candle that fills the room with slow, intentional ritual. 40 hours of calm.",
     badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 84,
-    category: "home",
-    name: "Venice Goblet Cocktail Glasses — Set of 4",
-    description: "Coloured glass goblets. European dinner party vibes.",
-    price: "$42.99",
-    image: "https://m.media-amazon.com/images/I/81tCIOGrg1L._AC_SL1500_.jpg",
-    link: "https://amzn.to/4b8rxJa",
-    whyElateveLoves: "Instant dinner party elevation. Coloured glass goblets that spark conversation.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 85,
-    category: "home",
-    name: "JoyJolt Elle Fluted Highball Glasses — Set of 2",
-    description: "Ribbed vintage tumblers. Cocktail hour, elevated.",
-    price: "$17.53",
-    image: "https://m.media-amazon.com/images/I/91GGBX2xZmL._AC_SL1500_.jpg",
-    link: "https://amzn.to/4lkpvun",
-    whyElateveLoves: "Vintage ribbed design that makes every drink feel like an occasion. Under $18 for the pair.",
-    badge: "Save",
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 86,
-    category: "home",
-    name: "Gold Bar Cart — 3-Tier Rolling Cart",
-    description: "Entertain in style. Gold-finished elegance.",
-    price: "$145.99",
-    image: "https://m.media-amazon.com/images/I/71E+ZMcs96L._AC_SL1500_.jpg",
-    link: "https://amzn.to/3NnG5wI",
-    whyElateveLoves: "The centrepiece of every great hosting setup. Gold finish, glass shelves.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 87,
-    category: "home",
-    name: "Lifewit Ice Bucket for Parties — 2 Pack",
-    description: "Host like you mean it. Insulated, elegant.",
-    price: "$39.99",
-    image: "https://m.media-amazon.com/images/I/71dnvX2xxTL._AC_SL1500_.jpg",
-    link: "https://amzn.to/3OTh9h6",
-    whyElateveLoves: "Double-wall insulated. Keeps ice for hours. Proper hosting essentials.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 88,
-    category: "home",
-    name: "24\" Acacia Wood Charcuterie Board with Handles",
-    description: "Extra long serving board. Acacia wood. The centrepiece.",
-    price: "$29.99",
-    image: "https://m.media-amazon.com/images/I/81G-gCP2J-L._AC_SX679_.jpg",
-    link: "https://amzn.to/41pvfcU",
-    whyElateveLoves: "24-inch acacia wood serving platter for charcuterie, appetisers, and fruit displays. The gourmet shortcut to stress-free hosting.",
-    badge: "Save",
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 89,
-    category: "home",
-    name: "Villeroy & Boch New Cottage Dinnerware Set",
-    description: "German craftsmanship. Heirloom-quality dining.",
-    price: "$149.99",
-    image: "https://m.media-amazon.com/images/I/415uyZHwYhL._AC_SL1024_.jpg",
-    link: "https://amzn.to/3Neag9r",
-    whyElateveLoves: "European porcelain by Villeroy & Boch. The kind of dinnerware that gets passed down.",
-    badge: "Splurge",
-    spring: true,
-    springTag: "refresh"
-  },
-  {
-    id: 90,
-    category: "home",
-    name: "vancasso SELENE 24-Piece Dinnerware Set",
-    description: "Designer look. Smart price. Stoneware beauty.",
-    price: "$119.99",
-    image: "https://m.media-amazon.com/images/I/81DKPQBsIKL._AC_SL1500_.jpg",
-    link: "https://amzn.to/4rZlpKE",
-    whyElateveLoves: "European-inspired stoneware at a fraction of the cost. Microwave and dishwasher safe.",
-    badge: "Save",
-    spring: true,
-    springTag: "refresh"
-  },
-  {
-    id: 91,
-    category: "home",
-    name: "Solino Home Linen Napkins — Set of 4",
-    description: "European flax linen. Every meal, elevated.",
-    price: "$69.99",
-    image: "https://m.media-amazon.com/images/I/81n5AhSJHDL._AC_SL1500_.jpg",
-    link: "https://amzn.to/3OOnsm9",
-    whyElateveLoves: "Pure European flax linen. Gets softer with every wash. Restaurant-grade at home.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 92,
-    category: "home",
-    name: "Solino Home Linen Placemats — Set of 4",
-    description: "Set the table with intention. Pure linen.",
-    price: "$64.99",
-    image: "https://m.media-amazon.com/images/I/81KWPfWCjfL._AC_SL1500_.jpg",
-    link: "https://amzn.to/3OU1EFD",
-    whyElateveLoves: "The foundation of an elevated table. Pure linen, handcrafted quality.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
+    spring: false,
+    springTag: "mothers-day"
   },
 
-  // ── Books ──
-  {
-    id: 93,
-    category: "home",
-    name: "Call It Home: The Details That Matter — Amber Lewis",
-    description: "The design bible. Every detail, intentionally chosen.",
-    price: "$21.98",
-    image: "https://m.media-amazon.com/images/I/813-cazWwUL._SY385_.jpg",
-    link: "https://amzn.to/4bx6v76",
-    whyElateveLoves: "National bestseller by Amber Lewis. A detail-oriented guide to renovating, decorating, and building a beautiful home.",
-    badge: "Save",
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 94,
-    category: "home",
-    name: "Joie: A Parisian's Guide to Celebrating the Good Life",
-    description: "Live like a Parisian. Celebrate the everyday.",
-    price: "$20.05",
-    image: "https://m.media-amazon.com/images/I/41r6QQ9zmdL._SX342_SY445_FMwebp_.jpg",
-    link: "https://amzn.to/4bs0SIP",
-    whyElateveLoves: "Ajiri Aki's guide to finding joy in the everyday, Parisian style. The perfect coffee table book for the elevated life.",
-    badge: "Save",
-    spring: false,
-    springTag: null
-  },
+  // ── Longevity Nutrition Reading ──
   {
     id: 95,
     category: "home",
     name: "Ottolenghi Simple: A Cookbook",
-    description: "Yotam Ottolenghi's masterclass in flavourful simplicity.",
+    description: "Yotam Ottolenghi's masterclass in Mediterranean flavour.",
     price: "$22.99",
     image: "https://m.media-amazon.com/images/I/413bHNjgAcL._SY445_SX342_FMwebp_.jpg",
     link: "https://amzn.to/3NqmsUW",
-    whyElateveLoves: "The definitive cookbook for elevated, simple cooking. Mediterranean flavours made accessible. Every page is an invitation to cook with joy.",
-    badge: "Save",
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 96,
-    category: "home",
-    name: "Inspired Grazing: Cheeseboards for All Seasons",
-    description: "The art of the sharing plate. Every season, beautifully.",
-    price: "$19.99",
-    image: "https://m.media-amazon.com/images/I/71P+1hxqxgL._SY385_.jpg",
-    link: "https://amzn.to/4lKVKmq",
-    whyElateveLoves: "Laura Billington's guide to cheeseboards and sharing plates. The perfect companion for effortless entertaining.",
-    badge: "Save",
-    spring: true,
-    springTag: "spanish-summer"
-  },
-
-  // ── Travel & Lifestyle ──
-  {
-    id: 97,
-    category: "home",
-    name: "YETI Camino 35 Carryall Tote",
-    description: "Built tough. Waterproof. Adventure-ready.",
-    price: "$150",
-    image: "https://m.media-amazon.com/images/I/51XCDWrhNdL._AC_SX425_.jpg",
-    link: "https://amzn.to/3OScGv9",
-    whyElateveLoves: "YETI durability meets everyday style. Waterproof, puncture-resistant, and ready for anything from beach to market.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-
-  // ═══════════════════════════════════════════
-  // ─── PETS ──────────────────────────────────
-  // ═══════════════════════════════════════════
-  {
-    id: 98,
-    category: "pets",
-    name: "Fi Series 3+ Smart Dog Tracker Collar — 12 Month Membership",
-    description: "GPS tracking. Health monitoring. Escape alerts.",
-    price: "$299",
-    image: "https://m.media-amazon.com/images/I/71pnXb7zzCL._AC_SX679_.jpg",
-    link: "https://amzn.to/4rUX3Rj",
-    whyElateveLoves: "Real-time GPS tracking with no range limits. Health and behaviour monitoring, escape alerts, waterproof, and Apple Watch compatible. 12 months membership included.",
-    badge: null,
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 99,
-    category: "pets",
-    name: "Halo Collar 5 Wireless Dog Fence & GPS — Midnight",
-    description: "Wireless fence. Real-time tracking. App-controlled.",
-    price: "$524",
-    image: "https://m.media-amazon.com/images/I/81x5Zx4v2iL._AC_SX679_.jpg",
-    link: "https://amzn.to/4bINzTh",
-    whyElateveLoves: "Keep your dog safely contained outdoors with app-controlled boundaries and real-time GPS tracking. Up to 48 hours battery life.",
-    badge: "Splurge",
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 100,
-    category: "pets",
-    name: "URPOWER Dog Car Seat Cover — 100% Waterproof Hammock",
-    description: "600D heavy duty. Scratch proof. Nonslip.",
-    price: "$29.98",
-    image: "https://m.media-amazon.com/images/I/71aO4wyv8SL._AC_SX679_.jpg",
-    link: "https://amzn.to/4cYOT6G",
-    whyElateveLoves: "100% waterproof hammock seat cover with 600D heavy duty fabric. Scratch proof, nonslip, and fits cars, trucks, and SUVs.",
-    badge: "Save",
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 101,
-    category: "pets",
-    name: "Memory Foam Dog Booster Car Seat — Up to 35 lbs",
-    description: "Memory foam comfort. Elevated view. Washable cover.",
-    price: "$49.99",
-    image: "https://m.media-amazon.com/images/I/71xKdZAiSrL._AC_SX679_.jpg",
-    link: "https://amzn.to/4t8junb",
-    whyElateveLoves: "Memory foam booster seat with elevated design for small and medium dogs. Removable washable cover and storage pockets. Travel in style.",
-    badge: null,
-    spring: false,
-    springTag: null
-  },
-
-  // ═══════════════════════════════════════════
-  // ─── EXPERIENCE ────────────────────────────
-  // ═══════════════════════════════════════════
-  {
-    id: 102,
-    category: "experience",
-    name: "WONDERBOX — Getaway Experience Gift for 2",
-    description: "Give memories, not things. 52,000 hotels await.",
-    price: "$199",
-    image: "https://m.media-amazon.com/images/I/61WQbae3dtL._SX342_.jpg",
-    link: "https://amzn.to/4aRfLnJ",
-    whyElateveLoves: "Absolutely no hassle and truly appreciated — the recipient chooses their own dates and destination. Great gift for graduation, birthday, wedding, or anniversary!",
-    badge: "Save",
-    spring: false,
-    springTag: null
-  },
-
-  // ═══════════════════════════════════════════
-  // ─── WEALTH ────────────────────────────────
-  // ═══════════════════════════════════════════
-  {
-    id: 103,
-    category: "wealth",
-    name: "POLO RALPH LAUREN Classic Fit Oxford Shirt",
-    description: "The original. Preppy perfection, timeless fit.",
-    price: "$149.99",
-    image: "https://m.media-amazon.com/images/I/51-4b7dG0kL._AC_SL1500_.jpg",
-    link: "https://amzn.to/4buMb7I",
-    whyElateveLoves: "The most iconic shirt in American fashion. Spring's perfect layering piece.",
-    badge: null,
-    spring: true,
-    springTag: "spanish-summer"
-  },
-  {
-    id: 104,
-    category: "wealth",
-    name: "Michael Kors Jet Set Travel Continental Wallet",
-    description: "Signature luxury, everyday carry. Travel like you mean it.",
-    price: "$119.63",
-    image: "https://m.media-amazon.com/images/I/71PfILqudtL._AC_SY450_.jpg",
-    link: "https://amzn.to/3OHTJLB",
-    whyElateveLoves: "Signature luxury, everyday carry. Travel like you mean it.",
-    badge: null,
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 105,
-    category: "wealth",
-    name: "Fossil Women's Logan Leather RFID-Blocking Wallet",
-    description: "RFID protection meets timeless leather. Smart and stylish.",
-    price: "$100",
-    image: "https://m.media-amazon.com/images/I/41I4t8xTPlL._AC_SY500_.jpg",
-    link: "https://amzn.to/3OMEKQw",
-    whyElateveLoves: "RFID protection meets timeless leather. Smart and stylish. Garnet red for attracting wealth :)",
-    badge: null,
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 106,
-    category: "wealth",
-    name: "Anima Healing Crystals Set",
-    description: "Abundance energy. Seven powerful crystals for manifestation.",
-    price: "$24.99",
-    image: "https://m.media-amazon.com/images/I/81gVslJwJEL._AC_SY450_.jpg",
-    link: "https://amzn.to/4uDIEf5",
-    whyElateveLoves: "Seven hand-selected crystals for abundance and manifestation. Beautiful display set that brings positive energy to any space.",
-    badge: "Save",
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 107,
-    category: "wealth",
-    name: "Feng Shui Money Frog",
-    description: "Traditional wealth attractor. Invite prosperity in.",
-    price: "$8.99",
-    image: "https://m.media-amazon.com/images/I/714fwh8ccML._AC_SY450_.jpg",
-    link: "https://amzn.to/40VLLkE",
-    whyElateveLoves: "The classic Feng Shui money frog for attracting wealth and prosperity. Place it facing inward to invite abundance.",
+    whyElateveLoves: "The definitive cookbook for elevated, simple cooking. Mediterranean flavours — the blueprint of the world's longest-lived populations — made accessible.",
     badge: "Save",
     spring: false,
     springTag: null
@@ -1467,7 +834,7 @@ const products = [
     price: "$16.99",
     image: "https://m.media-amazon.com/images/I/41Q+VoAJ6TL._AC_SY450_.jpg",
     link: "https://amzn.to/4telA5s",
-    whyElateveLoves: "Wind down the European way. Eight caffeine-free blends for bedtime rituals, stress relief, and deep rest.",
+    whyElateveLoves: "Wind down with intention. Eight caffeine-free blends for bedtime rituals, stress relief, and deep rest.",
     badge: "Save",
     spring: false,
     springTag: "mothers-day"
@@ -1480,7 +847,7 @@ const products = [
     price: "$39.99",
     image: "https://m.media-amazon.com/images/I/71YsZ-pdM+L._AC_SY450_.jpg",
     link: "https://amzn.to/3Ob1Jop",
-    whyElateveLoves: "Bone china tea cups that make every sip feel like an occasion. Dutch Blue floral pattern, vintage European elegance.",
+    whyElateveLoves: "Bone china tea cups that make every sip feel like an occasion. Dutch Blue floral pattern, vintage elegance.",
     badge: null,
     spring: false,
     springTag: "mothers-day"
@@ -1495,10 +862,10 @@ const products = [
     price: "$55 - $75",
     image: "https://m.media-amazon.com/images/I/71Npf3eq0ML._AC_SY450_.jpg",
     link: "https://amzn.to/4vq5qr3",
-    whyElateveLoves: "The European walking shoe. Slip in hands-free, walk for hours. Cushioned comfort for those long city strolls.",
+    whyElateveLoves: "Slip in hands-free, walk for hours. Cushioned comfort that keeps daily movement effortless at every stage of life.",
     badge: null,
     spring: false,
-    springTag: "spanish-summer"
+    springTag: null
   },
   {
     id: 112,
@@ -1521,10 +888,10 @@ const products = [
     price: "$35 - $55",
     image: "https://m.media-amazon.com/images/I/51WuwkSn32L._AC_SY450_.jpg",
     link: "https://amzn.to/4eiJlED",
-    whyElateveLoves: "The perfect layer for a morning run or an evening walk along the coast. Lightweight, breathable, and moves with you.",
+    whyElateveLoves: "The perfect layer for a morning walk or an evening stretch session. Lightweight, breathable, and moves with you.",
     badge: null,
     spring: false,
-    springTag: "spanish-summer"
+    springTag: null
   },
   {
     id: 114,
@@ -1534,10 +901,10 @@ const products = [
     price: "$25 - $40",
     image: "https://m.media-amazon.com/images/I/61cyfVjL-mL._AC_SY450_.jpg",
     link: "https://amzn.to/4mw5OjS",
-    whyElateveLoves: "HeatGear compression keeps you cool in the heat. High waist, deep pockets. From gym to terrace.",
+    whyElateveLoves: "HeatGear compression keeps you cool in the heat. High waist, deep pockets. From gym to daily errands.",
     badge: "Save",
     spring: false,
-    springTag: "spanish-summer"
+    springTag: null
   },
   {
     id: 115,
@@ -1601,7 +968,7 @@ const products = [
     price: "$105 - $130",
     image: "https://m.media-amazon.com/images/I/51z1tf-BbUL._AC_SY450_.jpg",
     link: "https://amzn.to/4vs5u9w",
-    whyElateveLoves: "The scent that needs no introduction. Rose, freesia, and warm amber. The signature of European femininity.",
+    whyElateveLoves: "The scent that needs no introduction. Rose, freesia, and warm amber. A signature of quiet femininity.",
     badge: "Splurge",
     spring: false,
     springTag: null
@@ -1614,7 +981,7 @@ const products = [
     price: "$52 - $58",
     image: "https://m.media-amazon.com/images/I/51fM3zzJTWL._AC_SY450_.jpg",
     link: "https://amzn.to/4c82MPc",
-    whyElateveLoves: "Layer the iconic Chloe rose over your skin. A body lotion that makes you smell like a Parisian garden all day.",
+    whyElateveLoves: "Layer the iconic Chloe rose over your skin. A body lotion that makes every day feel intentional.",
     badge: "Splurge",
     spring: false,
     springTag: null
@@ -1627,7 +994,7 @@ const products = [
     price: "$18.00",
     image: "https://m.media-amazon.com/images/I/61ci05obp7L._AC_SY450_.jpg",
     link: "https://amzn.to/4cFl6zd",
-    whyElateveLoves: "Twist up, apply, glow. Ginseng and aloe vera hydrate while the tint gives that effortless European flush.",
+    whyElateveLoves: "Twist up, apply, glow. Ginseng and aloe vera hydrate while the tint gives an effortless flush.",
     badge: null,
     spring: false,
     springTag: null
@@ -1640,25 +1007,10 @@ const products = [
     price: "$14.99",
     image: "https://m.media-amazon.com/images/I/71Wd8Hpbk4L._AC_SY450_.jpg",
     link: "https://amzn.to/4mqWJbW",
-    whyElateveLoves: "Mineral sunscreen with a sheer tint that blends seamlessly. SPF 30 protection with a healthy, natural glow.",
+    whyElateveLoves: "Mineral sunscreen with a sheer tint that blends seamlessly. SPF 30 protection with a healthy, natural glow — a longevity essential.",
     badge: "Save",
     spring: false,
-    springTag: "spanish-summer"
-  },
-
-  // Cooking & Entertaining
-  {
-    id: 123,
-    category: "home",
-    name: "Threpsi Organic Extra Virgin Olive Oil — Koroneiki",
-    description: "Cold extracted. 100% organic. Small family farm.",
-    price: "$34.99",
-    image: "https://m.media-amazon.com/images/I/71h0v01hsLL._AC_SY450_.jpg",
-    link: "https://amzn.to/48dlpP7",
-    whyElateveLoves: "Single-origin Koroneiki olives from a small Greek family farm near Kalamata. Cold extracted, organic, the real Mediterranean gold.",
-    badge: null,
-    spring: false,
-    springTag: "spanish-summer"
+    springTag: null
   },
 
   // ELATEVE Wellness Journal — Pre-Order
@@ -1666,11 +1018,11 @@ const products = [
     id: 124,
     category: "wellness",
     name: "ELATEVE Wellness Journal — The Joy of Living Well",
-    description: "234 pages. 12 European secrets. Your planner, your pace.",
+    description: "234 pages. 12 wellness secrets. Your planner, your pace.",
     price: "Pre-Order",
     image: "/images/journal-1.png",
     link: "https://www.amazon.com/dp/B0GXB6NT44",
-    whyElateveLoves: "Our own wellness journal. 12 European wellness traditions, daily planner spreads, habit trackers, and monthly reflections. Beautifully designed for intentional living.",
+    whyElateveLoves: "Our own wellness journal. 12 longevity-minded traditions, daily planner spreads, habit trackers, and monthly reflections. Beautifully designed for intentional living.",
     badge: null,
     spring: false,
     springTag: "mothers-day"
@@ -1688,19 +1040,6 @@ const products = [
     image: "https://m.media-amazon.com/images/I/81pb+oAF8EL._AC_SY450_.jpg",
     link: "https://amzn.to/49or45r",
     whyElateveLoves: "A meaningful keepsake for Mum to share her journey, memories, and stories. Over 250 thoughtful prompts — the kind of gift that becomes an heirloom.",
-    badge: null,
-    spring: false,
-    springTag: "mothers-day"
-  },
-  {
-    id: 126,
-    category: "home",
-    name: "Voluspa French Cade Lavender 3-Wick Tin Candle",
-    description: "Coconut wax. 40-hour burn. Handcrafted in the USA.",
-    price: "$36",
-    image: "https://www.voluspa.com/cdn/shop/files/FrenchCadeLavender_3WickTin_7224_2006_01_B_WEB_21c9a743-116f-4faf-9495-3afd4e49cde1.jpg",
-    link: "https://amzn.to/4d1T0xh",
-    whyElateveLoves: "French cade and Bulgarian lavender — a clean-burning coconut wax candle that fills the room like a Provençal afternoon. 40 hours of slow ritual.",
     badge: null,
     spring: false,
     springTag: "mothers-day"

@@ -4,3 +4,5 @@ node_modules/
 Thumbs.db
 *.log
 .claude/
+data/subscribers.json
+data/quiz-results.json

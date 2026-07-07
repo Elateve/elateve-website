@@ -44,12 +44,6 @@ async function fetchBlog() {
   return data.posts;
 }
 
-async function fetchSpring() {
-  const res = await fetch('/api/spring');
-  const data = await res.json();
-  return data.products;
-}
-
 // ==================== ROUTER ====================
 function navigateTo(page, category = null, season = null) {
   const activePage = document.querySelector('.page.active');

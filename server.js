@@ -18,6 +18,27 @@ app.use('/api', productsRouter);
 
 // Subscribe endpoint — stores emails and forwards to hello@elateve.com
 const SUBSCRIBERS_FILE = path.join(__dirname, 'data', 'subscribers.json');
+const QUIZ_RESULTS_FILE = path.join(__dirname, 'data', 'quiz-results.json');
+
+// Google Sheets webhook (Apps Script Web App /exec URL). Set once available —
+// entries still save locally either way, this is just a live-sheet mirror.
+const SHEETS_WEBHOOK_URL = process.env.SHEETS_WEBHOOK_URL || '';
+
+function forwardToSheet(payload) {
+  if (!SHEETS_WEBHOOK_URL) return;
+  fetch(SHEETS_WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).catch(err => console.error('Sheet webhook forward failed:', err.message));
+}
+
+function readJsonFile(file) {
+  try {
+    if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch (e) { /* start fresh */ }
+  return [];
+}
 
 app.post('/api/subscribe', (req, res) => {
   const { email } = req.body;
@@ -25,25 +46,47 @@ app.post('/api/subscribe', (req, res) => {
     return res.status(400).json({ error: 'Valid email required' });
   }
 
-  // Load existing subscribers
-  let subscribers = [];
-  try {
-    if (fs.existsSync(SUBSCRIBERS_FILE)) {
-      subscribers = JSON.parse(fs.readFileSync(SUBSCRIBERS_FILE, 'utf8'));
-    }
-  } catch (e) { /* start fresh */ }
+  const subscribers = readJsonFile(SUBSCRIBERS_FILE);
 
   // Check for duplicates
   if (subscribers.some(s => s.email === email)) {
     return res.json({ success: true, message: 'Already subscribed' });
   }
 
-  // Add new subscriber
-  subscribers.push({ email, date: new Date().toISOString() });
+  const entry = { email, date: new Date().toISOString() };
+  subscribers.push(entry);
   fs.writeFileSync(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2));
+  forwardToSheet({ type: 'newsletter', ...entry });
 
   console.log(`New subscriber: ${email} → forward to hello@elateve.com`);
   res.json({ success: true, message: 'Subscribed' });
+});
+
+// Quiz result endpoint — stores email + stage + result, mirrors to Google Sheet
+app.post('/api/quiz-result', (req, res) => {
+  const { email, stage, resultKey, resultTitle } = req.body;
+  if (!email || !email.includes('@')) {
+    return res.status(400).json({ error: 'Valid email required' });
+  }
+  if (!stage) {
+    return res.status(400).json({ error: 'Stage required' });
+  }
+
+  const results = readJsonFile(QUIZ_RESULTS_FILE);
+  const entry = { email, stage, resultKey: resultKey || null, resultTitle: resultTitle || null, date: new Date().toISOString() };
+  results.push(entry);
+  fs.writeFileSync(QUIZ_RESULTS_FILE, JSON.stringify(results, null, 2));
+  forwardToSheet({ type: 'quiz', ...entry });
+
+  // Also fold into the general subscriber list so quiz-takers get future emails
+  const subscribers = readJsonFile(SUBSCRIBERS_FILE);
+  if (!subscribers.some(s => s.email === email)) {
+    subscribers.push({ email, date: entry.date, source: 'quiz' });
+    fs.writeFileSync(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2));
+  }
+
+  console.log(`Quiz result: ${email} → ${stage} / ${resultTitle}`);
+  res.json({ success: true, message: 'Result saved' });
 });
 
 // Page routes

@@ -36,8 +36,8 @@
   <!-- End Meta Pixel Code -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ELATEVE — Elevate Your Everyday</title>
-  <meta name="description" content="ELATEVE curates affordable luxury products to upgrade and elevate your everyday life. Discover wellness, experience, home, and wealth essentials.">
+  <title>ELATEVE — Longevity &amp; Wellness, Curated</title>
+  <meta name="description" content="ELATEVE is your lifelong wellness companion — expert-backed supplements, healthy home essentials, and life-stage guidance from first cycles to post-menopause.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -61,6 +61,7 @@
         <a href="/shop" data-page="shop">Our Picks</a>
         <a href="/blog" data-page="blog">Journal</a>
         <a href="/about" data-page="about">About</a>
+        <a href="#" id="navQuizBtn">Take the Quiz</a>
       </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span id="themeIcon">☾</span>
@@ -75,10 +76,13 @@
     <section class="page page--home active" id="page-home">
       <div class="hero">
         <div class="hero-content">
-          <p class="hero-eyebrow">Curated for the Elevated Life</p>
-          <h1 class="hero-title">Elevate Your<br>Everyday</h1>
-          <p class="hero-sub">European-curated essentials for a life well-lived.<br>Affordable luxury, intentionally chosen.</p>
-          <a href="/shop" class="btn btn--gold" data-page="shop">Explore the Edit</a>
+          <p class="hero-eyebrow">Longevity &amp; Wellness, Curated</p>
+          <h1 class="hero-title">Your Body Changes.<br>Your Power Shouldn&rsquo;t.</h1>
+          <p class="hero-sub">From first cycles to post-menopause, ELATEVE is your lifelong companion &mdash; expert-backed supplements, healthy home essentials, and rituals for every stage.</p>
+          <div class="hero-cta-row">
+            <a href="/shop" class="btn btn--gold" data-page="shop">Explore Your Stage</a>
+            <a href="#" class="btn btn--outline" id="heroQuizBtn">Take the Quiz</a>
+          </div>
         </div>
         <div class="hero-scroll-hint">
           <span>Scroll</span>
@@ -125,26 +129,40 @@
       <div class="section section--duo">
         <div class="duo-inner">
           <p class="section-eyebrow">Who We Are</p>
-          <h2 class="section-title">Meet the Mother-Daughter<br>Duo Behind ELATEVE</h2>
-          <p class="duo-text">Born in London, shaped by 20 years across Europe &mdash; Kaz and Meli curate every product with the same discerning eye that defines European craftsmanship. Two generations, one philosophy: life is meant to be lived to the full.</p>
+          <h2 class="section-title">We Aren&rsquo;t Just Experts.<br>We Are You.</h2>
+          <p class="duo-text">ELATEVE is built by women in their 30s, 40s, 50s, and 60s &mdash; the same women navigating the postpartum fog, holding our daughters&rsquo; hands through their first hormonal storms, and sweating through perimenopause right alongside you. We curate only what we would trust for ourselves and our own families.</p>
           <a href="/about" class="btn btn--outline" data-page="about">Our Story &rarr;</a>
         </div>
       </div>
 
-      <!-- ==================== SPANISH SUMMER VIDEO ==================== -->
-      <div class="section section--summer-video">
-        <div class="summer-video-inner">
-          <div class="summer-video-player">
-            <video autoplay loop muted playsinline class="summer-video">
-              <source src="/videos/spanish-summer.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="summer-video-text">
-            <p class="section-eyebrow">Seasonal Edit</p>
-            <h2 class="summer-video-title">Shop the Spanish<br>Summer Edit</h2>
-            <p class="summer-video-desc">Sun-soaked outdoor living, European style. Curated for your garden, terrace, and al fresco moments.</p>
-            <a href="/shop" class="btn btn--gold" data-page="shop" id="shopSummerBtn">Shop the Style &rarr;</a>
-          </div>
+      <!-- ==================== TRANSFORMATION MATRIX ==================== -->
+      <div class="section section--matrix">
+        <div class="section-header">
+          <p class="section-eyebrow">Find Your Stage</p>
+          <h2 class="section-title">The ELATEVE Transformation Matrix</h2>
+          <p class="matrix-sub">Select where you are right now. We&rsquo;ll meet you there.</p>
+        </div>
+        <div class="matrix-grid" id="matrixGrid">
+          <button class="matrix-row" data-stage="ripple" type="button">
+            <span class="matrix-stage">The Ripple</span>
+            <span class="matrix-desc">Teen Hormones &mdash; mood swings, confusion, skin changes.</span>
+            <span class="matrix-arrow">&rarr;</span>
+          </button>
+          <button class="matrix-row" data-stage="creation" type="button">
+            <span class="matrix-stage">The Creation Era</span>
+            <span class="matrix-desc">Fertility &amp; Postpartum &mdash; depletion, identity shifts, recovery.</span>
+            <span class="matrix-arrow">&rarr;</span>
+          </button>
+          <button class="matrix-row" data-stage="shift" type="button">
+            <span class="matrix-stage">The Shift</span>
+            <span class="matrix-desc">Peri &amp; Menopause &mdash; brain fog, hot flashes, sleep disruption.</span>
+            <span class="matrix-arrow">&rarr;</span>
+          </button>
+          <button class="matrix-row" data-stage="wisdom" type="button">
+            <span class="matrix-stage">The Wisdom Years</span>
+            <span class="matrix-desc">Post-Menopause &amp; Beyond &mdash; bone density, cellular aging, vitality.</span>
+            <span class="matrix-arrow">&rarr;</span>
+          </button>
         </div>
       </div>
 
@@ -153,26 +171,21 @@
           <p class="section-eyebrow">Our Approach</p>
           <h2 class="section-title">The ELATEVE Pillars</h2>
         </div>
-        <div class="approach-grid">
+        <div class="approach-grid approach-grid--3">
           <div class="approach-card">
             <span class="approach-num">01</span>
-            <h3>The Sanctuary</h3>
-            <p>Home and interior finds that turn a house into an escape.</p>
+            <h3>Lifestage Support</h3>
+            <p>Supplements, products, and services matched to exactly where your body is right now.</p>
           </div>
           <div class="approach-card">
             <span class="approach-num">02</span>
-            <h3>The Ritual</h3>
-            <p>Beauty and wellness practices rooted in European holistic health.</p>
+            <h3>The Healthy Home</h3>
+            <p>Clean cookware, air purifiers, filtered water, and bamboo sheets &mdash; a home built for longevity.</p>
           </div>
           <div class="approach-card">
             <span class="approach-num">03</span>
-            <h3>The Adventure</h3>
-            <p>Travel and experiences that favor the authentic over the touristy.</p>
-          </div>
-          <div class="approach-card">
-            <span class="approach-num">04</span>
-            <h3>The Foundation</h3>
-            <p>Financial health and pet wellness &mdash; because peace of mind is the ultimate luxury.</p>
+            <h3>Intention &amp; Self-Care</h3>
+            <p>Movement, planners, rituals, and beauty rooted in how you actually want to feel.</p>
           </div>
         </div>
       </div>
@@ -210,9 +223,6 @@
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="wellness">Wellness</button>
             <button class="filter-btn" data-filter="home">Home</button>
-            <button class="filter-btn" data-filter="wealth">Wealth</button>
-            <button class="filter-btn" data-filter="experience">Experience</button>
-            <button class="filter-btn" data-filter="pets">Pets</button>
           </div>
         </div>
         <div class="shop-filter-divider"></div>
@@ -221,8 +231,6 @@
           <div class="shop-filter-pills">
             <button class="season-btn active" data-season="">All</button>
             <button class="season-btn season-btn--mothers" data-season="mothers-day">Mother&rsquo;s Day</button>
-            <button class="season-btn" data-season="spanish-summer">Spanish Summer</button>
-            <button class="season-btn" data-season="spring">Spring Refresh</button>
           </div>
         </div>
       </div>
@@ -407,26 +415,48 @@
             <p class="about-section-label">The ELATEVE Approach &mdash; Our Pillars</p>
           </div>
         </div>
-        <div class="about-pillars">
+        <div class="about-pillars about-pillars--3">
           <div class="about-pillar">
             <span class="about-pillar-num">01</span>
-            <h3>The Sanctuary</h3>
-            <p>Home and interior finds that turn a house into an escape.</p>
+            <h3>Lifestage Support</h3>
+            <p>Supplements, products, and services matched to exactly where your body is right now.</p>
           </div>
           <div class="about-pillar">
             <span class="about-pillar-num">02</span>
-            <h3>The Ritual</h3>
-            <p>Beauty and wellness practices rooted in European holistic health.</p>
+            <h3>The Healthy Home</h3>
+            <p>Clean cookware, air purifiers, filtered water, and bamboo sheets &mdash; a home built for longevity.</p>
           </div>
           <div class="about-pillar">
             <span class="about-pillar-num">03</span>
-            <h3>The Adventure</h3>
-            <p>Travel and experiences that favor the authentic over the touristy.</p>
+            <h3>Intention &amp; Self-Care</h3>
+            <p>Movement, planners, rituals, and beauty rooted in how you actually want to feel.</p>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="about-divider">
+          <span class="about-divider-icon">&#10022;</span>
+        </div>
+
+        <!-- TRUST — WHY US -->
+        <div class="about-block">
+          <div class="about-text">
+            <p class="about-section-label">The ELATEVE Trust &mdash; Why Us?</p>
+            <p class="about-lead">Tested by Us. Backed by Science. Curation with Conscience.</p>
+          </div>
+        </div>
+        <div class="about-pillars about-pillars--3">
+          <div class="about-pillar">
+            <h3>Vetted by Generations</h3>
+            <p>Every product, centre, or retreat we recommend has been reviewed by a woman on our team who has lived through that exact life stage.</p>
           </div>
           <div class="about-pillar">
-            <span class="about-pillar-num">04</span>
-            <h3>The Foundation</h3>
-            <p>Financial health and pet wellness &mdash; because peace of mind is the ultimate luxury.</p>
+            <h3>360&deg; Approach</h3>
+            <p>We don&rsquo;t believe a pill fixes everything. True transformation requires a supportive home environment, mental stillness, and advanced physical care.</p>
+          </div>
+          <div class="about-pillar">
+            <h3>No Taboos</h3>
+            <p>From postpartum pelvic floor health to post-menopausal libido, we speak openly, honestly, and without judgment.</p>
           </div>
         </div>
 
@@ -469,15 +499,13 @@
         <div class="footer-col">
           <h4>Our Picks</h4>
           <a href="/shop?category=wellness" data-page="shop" data-category="wellness">Wellness</a>
-          <a href="/shop?category=experience" data-page="shop" data-category="experience">Experience</a>
           <a href="/shop?category=home" data-page="shop" data-category="home">Home</a>
-          <a href="/shop?category=wealth" data-page="shop" data-category="wealth">Wealth</a>
-          <a href="/shop?category=pets" data-page="shop" data-category="pets">Pets</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <a href="/about" data-page="about">About Us</a>
           <a href="/blog" data-page="blog">Journal</a>
+          <a href="#" id="footerQuizBtn">Take the Quiz</a>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
@@ -492,5 +520,6 @@
   </footer>
 
   <script src="/js/app.js"></script>
+  <script src="/js/quiz.js"></script>
 </body>
 </html>
