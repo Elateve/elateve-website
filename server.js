@@ -1,3 +1,6 @@
+// Load .env if present (e.g. SHEETS_WEBHOOK_URL on the host) — no-op if missing
+try { process.loadEnvFile(); } catch (e) { /* no .env file, fine in local dev */ }
+
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
