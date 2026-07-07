@@ -20,8 +20,10 @@ app.use('/api', productsRouter);
 const SUBSCRIBERS_FILE = path.join(__dirname, 'data', 'subscribers.json');
 const QUIZ_RESULTS_FILE = path.join(__dirname, 'data', 'quiz-results.json');
 
-// Google Sheets webhook (Apps Script Web App /exec URL). Set once available —
-// entries still save locally either way, this is just a live-sheet mirror.
+// Google Sheets webhook (Apps Script Web App /exec URL). Entries still save
+// locally either way — this is just a live-sheet mirror. Set SHEETS_WEBHOOK_URL
+// as an environment variable on the host (not committed — it's a write-access
+// URL, anyone with it can append rows to the Sheet).
 const SHEETS_WEBHOOK_URL = process.env.SHEETS_WEBHOOK_URL || '';
 
 function forwardToSheet(payload) {
