@@ -199,69 +199,105 @@ function buildPdf(quiz, resultKey, result) {
   doc.pipe(stream);
 
   const contentW = W - 100; // 50pt margins each side
+  const colW = (contentW - 28) / 2;
+  const colLeftX = 50;
+  const colRightX = 50 + colW + 28;
+  const boxPad = 22;
+  const list = tips[quiz.key][resultKey] || [];
+  const mList = mantras[quiz.key][resultKey] || [];
+  const detail = details[quiz.key];
 
+  // ── Pass 1: measure each block's natural height (nothing drawn yet) ──
+  const stageLabelText = `${quiz.stageLabel.toUpperCase()} — ${quiz.stageName.toUpperCase()}`;
+  doc.font('Helvetica').fontSize(11);
+  const logoH = doc.heightOfString('ELATEVE', { width: contentW, align: 'center', characterSpacing: 5 });
+  doc.font('Helvetica').fontSize(9);
+  const stageLabelH = doc.heightOfString(stageLabelText, { width: contentW, align: 'center', characterSpacing: 1 });
+  doc.font('Helvetica-Bold').fontSize(25);
+  const titleH = doc.heightOfString(result.title, { width: contentW, align: 'center' });
+  doc.font('Helvetica-Oblique').fontSize(10.5);
+  const summaryH = doc.heightOfString(result.summary, { width: contentW, lineGap: 2 });
+  // Mirrors the exact gaps used in the real drawing pass below (18, 10, 8, 18)
+  const headerH = logoH + 18 + stageLabelH + 10 + titleH + 8 + 18 + summaryH;
+
+  doc.font('Helvetica').fontSize(9.5);
+  let tipsH = 32;
+  list.forEach(t => { tipsH += doc.heightOfString(t, { width: colW - 20, lineGap: 1.5 }) + 13; });
+  doc.font('Helvetica-Oblique').fontSize(9.5);
+  let mantrasH = 32;
+  mList.forEach(m => { mantrasH += doc.heightOfString('“' + m + '”', { width: colW, lineGap: 1.5 }) + 13; });
+  const columnsH = Math.max(tipsH, mantrasH);
+
+  doc.font('Helvetica-Bold').fontSize(10);
+  const labelH = doc.heightOfString(detail.label.toUpperCase(), { width: contentW - boxPad * 2, characterSpacing: 1 });
+  doc.font('Helvetica-Oblique').fontSize(10.5);
+  const bodyH = doc.heightOfString(detail[resultKey], { width: contentW - boxPad * 2, lineGap: 2 });
+  const boxH = boxPad + labelH + 10 + bodyH + boxPad;
+
+  const footerH = 20;
+
+  // ── Distribute leftover space evenly between the 4 blocks ──
+  const usableH = H - 40 - 24; // top/bottom margins
+  const fixedH = headerH + columnsH + boxH + footerH;
+  const gap = Math.max(28, (usableH - fixedH) / 3);
+
+  // ── Pass 2: draw ──
   doc.rect(0, 0, W, H).fill(CREAM);
   doc.rect(0, 0, W, 5).fill(GOLD);
 
-  // ── Header ──
   doc.font('Helvetica').fontSize(11).fillColor(GOLD);
-  doc.text('ELATEVE', 50, 34, { width: contentW, align: 'center', characterSpacing: 5 });
+  doc.text('ELATEVE', 50, 40, { width: contentW, align: 'center', characterSpacing: 5 });
 
   doc.font('Helvetica').fontSize(9).fillColor(GREY);
-  doc.text(`${quiz.stageLabel.toUpperCase()} — ${quiz.stageName.toUpperCase()}`, 50, 60, { width: contentW, align: 'center', characterSpacing: 1 });
+  doc.text(`${quiz.stageLabel.toUpperCase()} — ${quiz.stageName.toUpperCase()}`, 50, doc.y + 18, { width: contentW, align: 'center', characterSpacing: 1 });
 
-  doc.font('Helvetica-Bold').fontSize(24).fillColor(CHARCOAL);
-  doc.text(result.title, 50, 76, { width: contentW, align: 'center' });
+  doc.font('Helvetica-Bold').fontSize(25).fillColor(CHARCOAL);
+  doc.text(result.title, 50, doc.y + 10, { width: contentW, align: 'center' });
 
   goldRule(doc, (W - 70) / 2, doc.y + 8, 70);
 
-  doc.font('Helvetica-Oblique').fontSize(10).fillColor(CHARCOAL);
-  doc.text(result.summary, 50, doc.y + 16, { width: contentW, align: 'center', lineGap: 2 });
+  doc.font('Helvetica-Oblique').fontSize(10.5).fillColor(CHARCOAL);
+  doc.text(result.summary, 50, doc.y + 18, { width: contentW, align: 'center', lineGap: 2 });
 
   // ── Two columns: Tips & Tricks | Daily Mantras ──
-  const colTop = doc.y + 20;
-  const colW = (contentW - 24) / 2;
-  const colLeftX = 50;
-  const colRightX = 50 + colW + 24;
+  const colTop = doc.y + gap;
 
-  doc.font('Helvetica-Bold').fontSize(12).fillColor(GOLD);
+  doc.font('Helvetica-Bold').fontSize(11).fillColor(GOLD);
   doc.text('YOUR TIPS & TRICKS', colLeftX, colTop, { width: colW, characterSpacing: 0.5 });
-  doc.font('Helvetica-Bold').fontSize(12).fillColor(GOLD);
+  doc.font('Helvetica-Bold').fontSize(11).fillColor(GOLD);
   doc.text('YOUR DAILY MANTRAS', colRightX, colTop, { width: colW, characterSpacing: 0.5 });
 
-  goldRule(doc, colLeftX, colTop + 16, colW);
-  goldRule(doc, colRightX, colTop + 16, colW);
+  goldRule(doc, colLeftX, colTop + 18, colW);
+  goldRule(doc, colRightX, colTop + 18, colW);
 
-  const list = tips[quiz.key][resultKey] || [];
-  let y = colTop + 28;
+  let y = colTop + 32;
   list.forEach((tip, i) => {
-    doc.font('Helvetica-Bold').fontSize(9).fillColor(GOLD).text(String(i + 1).padStart(2, '0'), colLeftX, y, { continued: true, width: colW });
-    doc.font('Helvetica').fontSize(9).fillColor(CHARCOAL).text('  ' + tip, { width: colW, lineGap: 1 });
-    y = doc.y + 7;
+    doc.font('Helvetica-Bold').fontSize(9.5).fillColor(GOLD).text(String(i + 1).padStart(2, '0'), colLeftX, y, { continued: true, width: colW });
+    doc.font('Helvetica').fontSize(9.5).fillColor(CHARCOAL).text('  ' + tip, { width: colW, lineGap: 1.5 });
+    y = doc.y + 13;
   });
   const tipsEndY = y;
 
-  const mList = mantras[quiz.key][resultKey] || [];
-  y = colTop + 28;
+  y = colTop + 32;
   mList.forEach((m) => {
-    doc.font('Helvetica-Oblique').fontSize(9.5).fillColor(CHARCOAL).text('“' + m + '”', colRightX, y, { width: colW, align: 'left', lineGap: 1 });
-    y = doc.y + 8;
+    doc.font('Helvetica-Oblique').fontSize(9.5).fillColor(CHARCOAL).text('“' + m + '”', colRightX, y, { width: colW, align: 'left', lineGap: 1.5 });
+    y = doc.y + 13;
   });
   const mantrasEndY = y;
 
   // ── Detail box ──
-  const detail = details[quiz.key];
-  const boxY = Math.max(tipsEndY, mantrasEndY) + 14;
-  const boxH = 92;
+  const boxY = Math.max(tipsEndY, mantrasEndY) + gap;
+
   doc.rect(50, boxY, contentW, boxH).fill('#EFE9DF');
-  doc.font('Helvetica-Bold').fontSize(9.5).fillColor(GOLD);
-  doc.text(detail.label.toUpperCase(), 50 + 20, boxY + 16, { width: contentW - 40, characterSpacing: 1 });
-  doc.font('Helvetica-Oblique').fontSize(10).fillColor(CHARCOAL);
-  doc.text(detail[resultKey], 50 + 20, boxY + 34, { width: contentW - 40, lineGap: 2 });
+  doc.font('Helvetica-Bold').fontSize(10).fillColor(GOLD);
+  doc.text(detail.label.toUpperCase(), 50 + boxPad, boxY + boxPad, { width: contentW - boxPad * 2, characterSpacing: 1 });
+  doc.font('Helvetica-Oblique').fontSize(10.5).fillColor(CHARCOAL);
+  doc.text(detail[resultKey], 50 + boxPad, boxY + boxPad + labelH + 10, { width: contentW - boxPad * 2, lineGap: 2 });
 
   // ── Footer ──
+  const footerY = boxY + boxH + gap;
   doc.font('Helvetica').fontSize(9).fillColor(GOLD);
-  doc.text('www.elateve.com', 50, H - 38, { width: contentW, align: 'center', characterSpacing: 1.5, lineBreak: false });
+  doc.text('WWW.ELATEVE.COM', 50, footerY, { width: contentW, align: 'center', characterSpacing: 1.5, lineBreak: false });
   doc.rect(0, H - 5, W, 5).fill(GOLD);
 
   doc.end();
