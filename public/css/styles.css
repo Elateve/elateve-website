@@ -338,12 +338,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .quiz-email-form input { width: 100%; padding: 1rem 1.25rem; border: 1px solid var(--grey-light); background: var(--white); font-family: var(--font-body); font-size: 0.85rem; font-weight: 300; outline: none; text-align: center; transition: border-color 0.3s var(--ease); }
 .quiz-email-form input:focus { border-color: var(--gold); }
 .quiz-fineprint { font-size: 0.7rem; color: var(--grey-light); text-align: center; }
-.quiz-picks { background: var(--cream-dark); padding: var(--space-md); margin: var(--space-md) 0; }
-.quiz-picks-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: var(--space-sm); }
-.quiz-pick { padding: var(--space-xs) 0; border-top: 1px solid rgba(0,0,0,0.06); }
+.quiz-picks { background: var(--cream-dark); padding: var(--space-md); margin: var(--space-md) 0; text-align: center; }
+.quiz-picks-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: var(--space-sm); text-align: center; }
+.quiz-pick { padding: var(--space-xs) 0; border-top: 1px solid rgba(0,0,0,0.06); text-align: center; }
 .quiz-pick:first-of-type { border-top: none; }
-.quiz-pick-name { display: block; font-family: var(--font-display); font-size: 1rem; font-weight: 500; color: var(--charcoal); }
-.quiz-pick-note { display: block; font-size: 0.8rem; color: var(--grey); line-height: 1.5; }
+.quiz-pick-name { display: block; font-family: var(--font-display); font-size: 1rem; font-weight: 500; color: var(--charcoal); text-align: center; }
+.quiz-pick-note { display: block; font-size: 0.8rem; color: var(--grey); line-height: 1.5; text-align: center; }
 .popup--quiz #quizShopBtn, .popup--quiz #quizPdfBtn { width: 100%; text-align: center; display: block; margin-bottom: var(--space-sm); }
 [data-theme="dark"] .popup--quiz { background: #181818; }
 [data-theme="dark"] .quiz-stage-card, [data-theme="dark"] .quiz-option, [data-theme="dark"] .quiz-picks { background: #222; }

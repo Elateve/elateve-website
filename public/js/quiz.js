@@ -163,8 +163,8 @@ function renderResult(resultKey) {
         </div>
       `).join('')}
     </div>
-    <a href="${pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--outline" id="quizPdfBtn">Download Your Free Guide (PDF) &darr;</a>
-    <a href="/shop" class="btn btn--gold" data-page="shop" id="quizShopBtn">Shop Your Picks &rarr;</a>
+    <a href="${pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--gold" id="quizPdfBtn">Download Your Free Guide (PDF) &darr;</a>
+    <a href="/shop" class="btn btn--outline" data-page="shop" id="quizShopBtn">Shop Your Picks &rarr;</a>
   `;
   document.getElementById('quizShopBtn').addEventListener('click', () => {
     closeQuizPopup();
