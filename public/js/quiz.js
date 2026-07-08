@@ -148,6 +148,7 @@ function renderEmailGate() {
 function renderResult(resultKey) {
   const quiz = quizData[quizState.stage];
   const result = quiz.results[resultKey];
+  const pdfUrl = `/downloads/quiz-guides/${quizState.stage}-${resultKey.toLowerCase()}.pdf`;
   const body = document.getElementById('quizBody');
   body.innerHTML = `
     <span class="popup-eyebrow">${quiz.stageLabel} &mdash; Your Archetype</span>
@@ -162,6 +163,7 @@ function renderResult(resultKey) {
         </div>
       `).join('')}
     </div>
+    <a href="${pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--outline" id="quizPdfBtn">Download Your Free Guide (PDF) &darr;</a>
     <a href="/shop" class="btn btn--gold" data-page="shop" id="quizShopBtn">Shop Your Picks &rarr;</a>
   `;
   document.getElementById('quizShopBtn').addEventListener('click', () => {
@@ -175,10 +177,6 @@ function initQuizTriggers() {
       e.preventDefault();
       openQuizPopup();
     });
-  });
-
-  document.querySelectorAll('.matrix-row').forEach(btn => {
-    btn.addEventListener('click', () => openQuizPopup(btn.dataset.stage));
   });
 
   // Auto-open once per session

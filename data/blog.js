@@ -16,55 +16,6 @@ const blogPosts = [
     ]
   },
   {
-    id: 2,
-    tag: "Home",
-    title: "Tactile Minimalism: Designing by Feel",
-    excerpt: "The 2026 home trend isn't about how things look — it's about how they feel. Weighted silks, stone textures, and sensory living.",
-    date: "Feb 2026",
-    readTime: "6 min read",
-    content: [
-      "For decades, interior design was dominated by the visual. Instagram-worthy flat lays, colour palettes, and perfectly staged rooms optimised for the camera. But something has shifted. The most compelling spaces in 2026 are not the ones that photograph best — they are the ones that feel best.",
-      "Welcome to tactile minimalism: a design philosophy rooted in texture, weight, and sensory experience. It is minimalism that you feel with your hands, not just see with your eyes.",
-      "Consider your bedroom. The difference between ordinary sheets and a set of cooling bamboo bed sheets is not visible in a photograph. But the moment you slide into bed, the difference is everything. That subtle coolness against your skin, the weight of the fabric, the way it drapes — these are the details that transform a room from a space into a sanctuary.",
-      "The same principle applies throughout your home. A chenille bathroom rug that your feet sink into on a cold morning. Throw pillows with just the right amount of density. A weighted blanket that makes your sofa feel like a cocoon. These are not decorative choices — they are experiential ones.",
-      "Tactile minimalism also embraces natural materials: stone, wood, linen, ceramic. These textures connect us to something primal and grounding in a world that has become increasingly digital and disembodied. A handmade ceramic mug does not just hold coffee — it grounds you in the present moment.",
-      "The invitation is simple: the next time you consider a home upgrade, close your eyes and feel it first. The most elevated spaces are built not for the lens, but for the living."
-    ]
-  },
-  {
-    id: 3,
-    tag: "Lifestyle",
-    title: "The Five Dimensions of True Wealth",
-    excerpt: "Why financial abundance is only one piece. Exploring time wealth, social wealth, physical wealth, and knowledge wealth.",
-    date: "Feb 2026",
-    readTime: "7 min read",
-    content: [
-      "We have been conditioned to define wealth in a single dimension: money. How much is in the account, the portfolio, the property ledger. But the wealthiest people — the ones who actually feel rich — understand that financial capital is only one of five currencies that matter.",
-      "The first dimension is financial wealth. Yes, money matters. It provides security, options, and freedom from survival anxiety. But beyond a certain threshold, more money produces diminishing returns on happiness. The real question is not how much you have, but whether you have enough to fund the life you actually want.",
-      "The second dimension is time wealth. This is the feeling of having unhurried time — hours in the day that belong to you, not to obligations. Time wealth is arguably the scarcest resource of modern life, and the one most people sacrifice first in pursuit of financial wealth.",
-      "The third dimension is social wealth. Deep relationships, genuine community, and people who would show up for you in a crisis. No amount of money can replace the feeling of being truly known and loved. Social wealth compounds over decades and is nearly impossible to build quickly.",
-      "The fourth dimension is physical wealth. Your health, energy, vitality, and physical capacity. This is the foundation upon which all other wealth is built. Without it, every other form of abundance loses its meaning.",
-      "The fifth dimension is knowledge wealth. What you know, what you can learn, and your ability to adapt. In a rapidly changing world, the most valuable asset is not what you own — it is what you understand.",
-      "True wealth is the intersection of all five dimensions. The goal is not to maximise any single one at the expense of the others, but to cultivate a life where all five are in healthy balance. That is the real elevation."
-    ]
-  },
-  {
-    id: 4,
-    tag: "Self-Care",
-    title: "Tokens of Connection in a Digital Age",
-    excerpt: "The return of tangible gifts and handwritten notes. Why physical tokens of love are more powerful than ever.",
-    date: "Jan 2026",
-    readTime: "5 min read",
-    content: [
-      "In an era where affection is often reduced to a heart emoji or a double-tap, there is something quietly revolutionary about a physical gesture of love. A handwritten note. A carefully chosen object. A gift that says: I thought of you, specifically, and took the time to act on it.",
-      "The digital world has made communication effortless, which is both its gift and its curse. When sending a message costs nothing — no time, no thought, no effort — the message itself becomes weightless. We are drowning in easy connection and starving for meaningful ones.",
-      "This is why physical tokens of love have become more powerful, not less. A hand casting kit that captures a couple's intertwined hands. A pop-up card that unfolds into a three-dimensional expression of affection. A music box that plays a meaningful melody. These objects carry weight — literal and emotional.",
-      "The psychology behind this is well-documented. Physical objects activate different neural pathways than digital ones. When you hold a gift, you engage your tactile memory, your spatial awareness, your emotional centres. A physical gift occupies space in someone's home and, by extension, in their daily consciousness.",
-      "The art of intentional gifting is not about spending more. It is about choosing with precision. A ten-euro gift that perfectly captures an inside joke or a shared memory will always outweigh a hundred-euro gift chosen without thought.",
-      "In the digital age, the most elevated expression of love is the one that exists offline. Something you can hold, display, and return to on difficult days. That is the token of connection that truly endures."
-    ]
-  },
-  {
     id: 5,
     tag: "Wellness",
     title: "Precision Recovery: Beyond Self-Care",
@@ -73,65 +24,11 @@ const blogPosts = [
     readTime: "6 min read",
     content: [
       "The self-care era gave us face masks, bath bombs, and the permission to rest. That was important. But the next frontier of wellness is far more precise. Welcome to the age of precision recovery — where data meets ritual, and your body gets exactly what it needs.",
-      "Precision recovery starts with measurement. Smart scales that track not just weight but body composition, hydration levels, and metabolic trends. These devices are no longer reserved for athletes — they have become affordable tools for anyone who wants to understand their body beyond the surface.",
-      "Deep tissue recovery has also evolved. The massage gun — once a niche tool for physiotherapists — has become a household essential across Europe. Modern devices like the TOLOCO offer multiple intensity levels and attachments designed for specific muscle groups, turning post-workout recovery into a targeted science.",
+      "Precision recovery starts with measurement. Smart rings and scales that track not just weight but body composition, hydration levels, and metabolic trends. These devices are no longer reserved for athletes — they have become affordable tools for anyone who wants to understand their body beyond the surface.",
+      "Deep tissue recovery has also evolved. The massage gun — once a niche tool for physiotherapists — has become a household essential. Modern devices offer multiple intensity levels and attachments designed for specific muscle groups, turning post-workout recovery into a targeted science.",
       "Sleep, too, has entered the precision era. The old advice of getting eight hours is being replaced by a focus on sleep quality. Essential oil diffusers programmed with lavender or chamomile, weighted blankets calibrated to your body weight, and bedroom environments optimised for temperature and darkness — these are the new sleep protocols.",
       "Scalp health is another emerging frontier. Scalp massagers stimulate blood flow to hair follicles, combining relaxation with tangible results. It is a perfect example of the precision wellness principle: a small, targeted intervention that produces outsized benefits.",
       "The shift from generic self-care to precision recovery is not about making wellness more complicated. It is about making it more effective. Less guesswork, more intention. Less trend-following, more personalisation. That is the elevated approach to feeling your best."
-    ]
-  },
-  {
-    id: 6,
-    tag: "Home",
-    title: "The Elevated Basics Edit",
-    excerpt: "Your bedding, your water, your lighting — upgrading the mundane transforms your sanctuary. Our definitive guide to home essentials.",
-    date: "Dec 2025",
-    readTime: "7 min read",
-    content: [
-      "There is a common misconception that home elevation requires a grand renovation or a designer's eye. The truth is far simpler: the biggest transformations come from upgrading the basics. The things you touch every day, use without thinking, and have probably never questioned.",
-      "Start with your bedding. You spend a third of your life in bed, yet most people sleep on sheets they grabbed without thought. The difference between standard bedding and a quality cooling sheet set is felt within the first night. Add a bamboo mattress topper and hotel-quality pillows, and your bedroom becomes a destination rather than just a room.",
-      "Next, consider your water. Not the quality of your tap water (though that matters too), but the vessel you drink it from. An insulated water bottle that keeps your water cold for twenty-four hours transforms hydration from a chore into a pleasure. It sounds small. It is not.",
-      "Lighting is perhaps the most impactful and most overlooked basic. Harsh overhead lights create tension without your conscious awareness. A humidifier with a soft ambient glow, a few strategically placed warm-tone bulbs, or even a simple candle can shift the entire energy of a space.",
-      "Your bathroom deserves attention too. A plush chenille rug, a clear shower curtain that lets light through, and a waterproof mattress protector on your bed — these unsexy upgrades create a foundation of comfort that you feel every single day.",
-      "Finally, think about your kitchen basics. A precise digital food scale, quality storage containers, a good water filter. These are the invisible infrastructure of a well-run home.",
-      "The elevated basics edit is not glamorous. It will not trend on social media. But it will change how you feel in your own space — and that is the only metric that truly matters."
-    ]
-  },
-  {
-    id: 8,
-    tag: "Lifestyle",
-    title: "The Language of Intentional Gifting",
-    excerpt: "A curated gift speaks louder than an expensive one. Mastering the art of choosing presents that truly resonate.",
-    date: "Nov 2025",
-    readTime: "5 min read",
-    content: [
-      "We have all received an expensive gift that felt hollow, and a modest one that moved us to tears. The difference is never the price tag — it is the intention behind the choice. Intentional gifting is a skill, and like all skills, it can be cultivated.",
-      "The first principle is observation. The best gift-givers are the best listeners. They remember the throwaway comment about a favourite scent, the book mentioned in passing, the hobby that someone has been meaning to start. These fragments of conversation are the raw material of meaningful gifts.",
-      "The second principle is specificity. A generic scented candle says little. A specific candle in the exact fragrance that reminds someone of their grandmother's kitchen says everything. The more specific the gift, the more it communicates: I see you. I know you. I pay attention.",
-      "The third principle is presentation. The experience of receiving a gift begins before it is opened. A handwritten note, thoughtful wrapping, or a small additional touch — a ribbon in their favourite colour, a card with an inside joke — elevates even a simple present into an event.",
-      "The fourth principle is timing. The most memorable gifts are often the unexpected ones. Not birthday gifts or holiday presents, but the random Tuesday gift. The just-because gift. The I-saw-this-and-thought-of-you gift. These carry disproportionate emotional weight because they were not obligatory.",
-      "Intentional gifting is not about spending more. It is about choosing better. A fifteen-euro item selected with precision and care will always outperform a one-hundred-euro item chosen in haste. The language of gifts is not spoken in currency — it is spoken in attention."
-    ]
-  },
-  {
-    id: 10,
-    tag: "Home",
-    title: "The Seasonal Reset Checklist",
-    excerpt: "Your room-by-room guide to transitioning from winter cocoon to spring sanctuary — from swapping your duvet to letting the light back in.",
-    date: "Mar 2026",
-    readTime: "7 min read",
-    content: [
-      "There is a specific week each year — usually sometime in March — when the light changes. Not dramatically, but enough. The mornings arrive earlier, the air softens, and something in the body says: it is time. Time to open the windows, shed the layers, and let your home breathe again.",
-      "The winter-to-spring transition is one of the most satisfying rituals of a well-run home. It is not spring cleaning in the exhausting, guilt-driven sense. It is a deliberate, sensory reset — a way of telling your space, and yourself, that a new season has arrived and you intend to meet it well.",
-      "Start with the bedroom. Your heavy winter duvet has served you faithfully through the dark months, but it is time to rotate. A lighter-weight bamboo duvet or a breathable cotton coverlet will transform your sleep almost overnight. The goal is simple: you should wake up feeling refreshed, not overheated. If you have been sleeping on flannel sheets, swap them for cooling bamboo or crisp percale. The tactile difference alone signals the seasonal shift.",
-      "While you are at it, flip or rotate your mattress. Air out your pillows. If your mattress topper has been compressed under months of blankets and body weight, give it a day in fresh air by an open window. These invisible resets compound into noticeably better sleep within days.",
-      "Move to the living areas. Winter homes tend to accumulate — extra blankets draped over sofas, candles clustered on surfaces, layers of texture that felt cocooning in January but now feel heavy. Pare back. Fold the heavier throws and store them. Replace dark, heavy cushion covers with lighter tones — linen, soft cotton, anything that feels like it could exist in sunlight.",
-      "Windows deserve special attention. Heavy curtains that stayed drawn for months during winter should be pulled back. Clean the glass — you will be amazed at how much light you have been filtering out through a winter's worth of condensation residue. If your curtains are thick velvet or thermal-lined, consider switching to lighter sheers or linen panels that let the spring light diffuse softly through your rooms.",
-      "The kitchen is next. Spring means the return of fresh herbs, local greens, and the first strawberries of the season. Clear a windowsill for a small herb garden — basil, mint, and rosemary thrive indoors and will make your kitchen smell extraordinary. An indoor hydroponic garden takes this further, giving you fresh greens year-round with minimal effort.",
-      "Your bathroom benefits from the same lightening principle. Swap heavy, musky winter fragrances for something botanical — eucalyptus, lemongrass, or fresh linen. Replace dark towels with lighter ones. A simple vase of fresh flowers on the vanity costs almost nothing and changes the entire energy of the room.",
-      "Do not forget your wardrobe. The seasonal wardrobe transition is an art form. Pack away heavy knits and down jackets. Bring forward your lighter layers and transitional pieces. If you invest in one thing this spring, make it quality activewear that works for both outdoor walks and casual weekends — the goal is clothing that moves with you.",
-      "Finally, address the invisible. Change your air filters. Run your diffuser with lighter essential oils — peppermint, citrus, or a spring blend. Open windows for at least twenty minutes each day, even if it is still cool outside. Daily airing out of a home exists in traditions the world over because our ancestors understood what science now confirms: fresh air circulation improves mood, sleep quality, and cognitive function.",
-      "The spring checklist is not a single weekend project. It is a gradual unfurling that mirrors the season itself. A little each day — one drawer reorganised, one heavy blanket stored, one window cleaned — and within a week your home will feel like a different place. Lighter. Brighter. Ready for the months of long evenings and open windows ahead."
     ]
   },
   {
@@ -164,6 +61,86 @@ const blogPosts = [
       "It continues with targeted, clean supplementation: magnesium glycinate for the cortisol spikes, adaptogens for stress resilience, and a genuine look at gut and skin barrier health rather than one-size-fits-all multivitamins.",
       "And it means access to real support — not just a doctor who says 'that's normal at your age,' but a network that treats hormone health, cellular aging, and mental clarity as one connected system worth investing in.",
       "This is a life stage we are living through ourselves, not observing from the outside. If you want a clearer read on where you are in the transition and what to prioritize first, take our Shift & Wisdom Assessment — it takes under three minutes and gives you a tailored starting point."
+    ]
+  },
+  {
+    id: 14,
+    tag: "Longevity",
+    title: "Blue Zones, Decoded: What the World's Longest-Living People Actually Do",
+    excerpt: "Netflix made them famous. Decades of research back them up. Here's what the five Blue Zones can teach the rest of us about living past 100.",
+    date: "May 2026",
+    readTime: "6 min read",
+    content: [
+      "Okinawa, Sardinia, Nicoya, Ikaria, Loma Linda. Five places on Earth with an unusually high concentration of centenarians — people who live to 100 and beyond, often without the chronic disease that shortens life expectancy elsewhere. Researchers named them the Blue Zones, and for the past two decades they have quietly reshaped how we think about longevity.",
+      "The first thing to know: none of these populations are doing biohacking. There is no cold plunge, no supplement stack, no wearable tracking heart rate variability. What they share instead is almost boringly simple — and that is exactly the point.",
+      "Movement is built into daily life rather than scheduled as exercise. Gardening, walking to see neighbours, kneading dough by hand. The body moves constantly at low intensity, all day, without ever clocking a 'workout.'",
+      "Diet leans overwhelmingly plant-based, with meat as an occasional accent rather than a daily staple. In Okinawa, there is a practice called hara hachi bu — eating until you are 80 percent full, not 100. That 20 percent gap turns out to matter enormously over a lifetime of meals.",
+      "Perhaps the most underrated factor is social. Strong multigenerational households, a clear sense of purpose (the Okinawans call it ikigai — your reason for waking up), and rarely aging alone. Loneliness has a measurable physiological cost; belonging appears to be protective.",
+      "You do not need to relocate to Sardinia. The Blue Zones research is powerful precisely because it points to small, repeatable shifts — how you move through an ordinary Tuesday, not a single dramatic intervention. That is the version of longevity we actually believe in."
+    ]
+  },
+  {
+    id: 15,
+    tag: "Longevity",
+    title: "NAD+ and the Science of Cellular Aging: What's Hype, What's Real",
+    excerpt: "Every longevity account online is talking about NAD+ boosters. Here's what the research actually says before you spend a fortune on supplements.",
+    date: "May 2026",
+    readTime: "6 min read",
+    content: [
+      "If you have spent any time in longevity or wellness circles lately, you have heard the acronym: NAD+. Nicotinamide adenine dinucleotide is a molecule found in every cell in your body, essential for converting food into energy and repairing damaged DNA. The problem — and the reason it has become a supplement industry gold rush — is that NAD+ levels decline measurably as we age.",
+      "The theory is straightforward: if falling NAD+ contributes to cellular aging, then restoring it should slow that process. Supplement companies sell precursors like NMN and NR, promising to boost your levels and, by extension, your healthspan.",
+      "Here is the honest state of the science. Animal studies on NAD+ precursors are genuinely promising — improved metabolic markers, better mitochondrial function, longer lifespan in mice. Human research is much earlier stage. Small trials show these supplements do raise NAD+ levels in the blood. Whether that translates into meaningfully longer or healthier human lives is still an open question.",
+      "What is not in question: certain lifestyle factors reliably support your body's own NAD+ production. Regular exercise, particularly the kind that challenges your cardiovascular system. Time-restricted eating and occasional fasting. Adequate sleep. These are unglamorous, unpatentable, and backed by considerably more human evidence than any pill.",
+      "None of this means NAD+ supplements are worthless — early adopters in the longevity space have real anecdotal enthusiasm, and the mechanism is biologically plausible. It means treating them as one possible layer on top of the fundamentals, not a replacement for them, and talking to a doctor before adding anything new to your routine, especially alongside other medications.",
+      "The unsexy truth about most longevity science: the free interventions usually outperform the expensive ones. NAD+ boosters may well earn their place in the toolkit as research matures. For now, they are a bet, not a guarantee."
+    ]
+  },
+  {
+    id: 16,
+    tag: "Longevity",
+    title: "Zone 2 Cardio: The Unsexy Longevity Habit Everyone's Suddenly Talking About",
+    excerpt: "No sprinting, no soreness, no personal records. Just 30 to 45 minutes of exercise so easy you can hold a conversation — and it may be one of the best things you can do for your mitochondria.",
+    date: "May 2026",
+    readTime: "5 min read",
+    content: [
+      "For years, fitness culture rewarded intensity. Harder, faster, sweatier. So it is a little funny that one of the most talked-about trends in the longevity world right now is exercise so gentle you could hold a full conversation while doing it.",
+      "Zone 2 refers to a heart rate range — roughly 60 to 70 percent of your maximum — where your body relies primarily on fat oxidation and aerobic metabolism rather than the anaerobic systems that dominate high-intensity efforts. Physiologists have studied this zone in endurance athletes for decades. It has only recently crossed over into mainstream longevity conversation.",
+      "The appeal is mitochondrial. Training consistently in Zone 2 appears to increase the number and efficiency of your mitochondria — the cellular structures responsible for producing energy. More efficient mitochondria are associated with better metabolic health, more stable energy throughout the day, and markers that correlate with a longer healthspan.",
+      "Finding your Zone 2 does not require a lab test, though one can help. The simplest practical marker is the 'talk test': if you can speak in full sentences but would struggle to sing, you are likely in the right range. A brisk walk, an easy jog, or a relaxed cycle all qualify for most people.",
+      "The habit that actually moves the needle is consistency, not intensity. Three to four sessions of 30 to 45 minutes a week, sustained over months and years, is what the research points to — not one brutal weekly class that leaves you too sore to move for days.",
+      "It will not trend on social media the way a sprint interval or a marathon finish line does. But if the goal is genuinely a longer, more energetic life rather than a personal best, Zone 2 may be the least exciting, most effective habit you adopt this year."
+    ]
+  },
+  {
+    id: 17,
+    tag: "Longevity",
+    title: "Cold Plunges, Saunas, and the Rise of At-Home Biohacking",
+    excerpt: "Contrast therapy used to mean a fancy spa day. Now it's a home appliance. What the research actually says about heat, cold, and cellular resilience.",
+    date: "May 2026",
+    readTime: "6 min read",
+    content: [
+      "A decade ago, a home sauna was a luxury reserved for architect-designed houses. Today it is a category of its own — alongside cold plunge tubs, contrast showers, and red light panels — as more people bring what used to be spa-exclusive recovery tools into their own homes.",
+      "The underlying concept is called hormesis: small, controlled doses of stress that make the body more resilient over time. Heat and cold exposure are two of the best-studied forms.",
+      "The sauna research is genuinely compelling. Long-term Finnish population studies have linked frequent sauna use to meaningfully lower rates of cardiovascular disease and all-cause mortality. The proposed mechanisms include improved blood vessel function, heat shock proteins that help repair cellular damage, and a cardiovascular workout not unlike moderate exercise.",
+      "Cold exposure works through a different pathway. Brief, uncomfortable cold — a cold shower, a plunge, an ice bath — triggers a surge of norepinephrine, which is linked to improved mood, alertness, and some markers of metabolic health. The research here is younger and the effect sizes are more modest, but the interest is not unfounded.",
+      "The at-home version of all this does not need to be extreme. A few minutes of cold water at the end of a normal shower. Fifteen to twenty minutes in a home sauna a few times a week. Consistency matters more than intensity, and moderation matters more than either — this is not a tolerance competition.",
+      "As with most longevity tools, check with a doctor before starting either practice if you have a cardiovascular condition, are pregnant, or are otherwise medically cautious. Done sensibly, contrast therapy is one of the more evidence-backed additions to a home longevity routine — and increasingly, an accessible one."
+    ]
+  },
+  {
+    id: 18,
+    tag: "Longevity",
+    title: "The Menopause Longevity Gap: Why Hormone Health Is Finally Getting Serious Research",
+    excerpt: "Women spend more of their lives in a post-reproductive state than almost any other species on Earth. Science is only now catching up to what that actually means for long-term health.",
+    date: "May 2026",
+    readTime: "6 min read",
+    content: [
+      "Here is a fact that surprises most people: women can expect to live roughly a third of their lives after menopause. Biologically, that is unusual — very few species have a comparable post-reproductive lifespan. And yet, for decades, medical research treated menopause as an endpoint rather than the start of a distinct, decades-long life stage worth studying on its own terms.",
+      "That is changing, and not a moment too soon. Declining estrogen affects far more than reproductive function. It is directly linked to accelerated bone density loss, shifts in cardiovascular risk, changes in how the body stores fat, and measurable effects on sleep architecture and cognitive function.",
+      "For a long time, the standard response was minimal: a dismissive 'that's just aging,' occasionally a prescription, rarely a comprehensive plan. Women reported symptoms being underinvestigated, undertreated, and under-discussed relative to their actual impact on daily life.",
+      "The research landscape is finally shifting. Hormone therapy is being re-evaluated with more nuance than the blanket caution that followed early-2000s studies. Bone density and cardiovascular screening around the menopause transition is gaining ground as a preventive standard rather than an afterthought. Cognitive symptoms like brain fog are being taken seriously as a real, measurable phenomenon rather than dismissed as vague complaint.",
+      "This matters enormously for longevity, not just comfort. The menopause transition is a genuine inflection point for long-term health risk — which means it is also a genuine inflection point for intervention. The choices made in this decade, from strength training to sleep environment to targeted supplementation, compound for the following thirty-plus years.",
+      "If you are somewhere in this transition and want a clearer sense of where you stand, our Shift and Wisdom Assessments are built around exactly this — not to replace medical care, but to help you walk into that conversation with a clearer picture of what your body is telling you."
     ]
   }
 ];

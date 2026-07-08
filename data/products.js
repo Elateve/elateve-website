@@ -449,19 +449,6 @@ const products = [
     springTag: null
   },
   {
-    id: 46,
-    category: "homelongevity",
-    name: "Caraway Cookware Set 12 Piece — eBay Deal",
-    description: "Same elevated cookware, smarter price on eBay.",
-    price: "$379.95",
-    image: "https://m.media-amazon.com/images/I/71+tC3QLigL._AC_SY450_.jpg",
-    link: "https://www.ebay.com/itm/146938993023",
-    whyElateveLoves: "Your kitchen, elevated. Clean cooking made permanent.",
-    badge: "Save",
-    spring: false,
-    springTag: null
-  },
-  {
     id: 47,
     category: "homelongevity",
     name: "GreenPan 12-Piece Nonstick Swift Ceramic Cookware Set — Cream",
@@ -656,19 +643,6 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61VaOp-znvL._AC_SX425_.jpg",
     link: "https://amzn.to/3MY2Vuw",
     whyElateveLoves: "Glow up your skin and hair and filter those impurities. Technology at its finest.",
-    badge: null,
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 63,
-    category: "homelongevity",
-    name: "Rain Shower Head in Black — Filters Metals, Chlorine & Impurities",
-    description: "Same filtration power. Sleek black finish.",
-    price: "$165",
-    image: "https://m.media-amazon.com/images/I/61VaOp-znvL._AC_SX425_.jpg",
-    link: "https://amzn.to/3MY2Vuw",
-    whyElateveLoves: "The same luxury filtration shower head in a modern matte black finish. Improves skin and hair quality with every shower.",
     badge: null,
     spring: false,
     springTag: null
@@ -973,32 +947,6 @@ const products = [
   },
 
   // ELATEVE Wellness Journal — Pre-Order
-  {
-    id: 124,
-    category: "feelgood",
-    name: "ELATEVE Wellness Journal — The Joy of Living Well",
-    description: "234 pages. 12 wellness secrets. Your planner, your pace.",
-    price: "Pre-Order",
-    image: "/images/journal-1.png",
-    link: "https://www.amazon.com/dp/B0GXB6NT44",
-    whyElateveLoves: "Our own wellness journal. 12 longevity-minded traditions, daily planner spreads, habit trackers, and monthly reflections. Beautifully designed for intentional living.",
-    badge: null,
-    spring: false,
-    springTag: null
-  },
-  {
-    id: 125,
-    category: "feelgood",
-    name: "Mom's Life Story Journal — Hardcover Keepsake",
-    description: "250+ prompts. A keepsake to share her journey.",
-    price: "$24.99",
-    image: "https://m.media-amazon.com/images/I/81pb+oAF8EL._AC_SY450_.jpg",
-    link: "https://amzn.to/49or45r",
-    whyElateveLoves: "A meaningful keepsake to share your journey, memories, and stories. Over 250 thoughtful prompts — the kind of gift that becomes an heirloom.",
-    badge: null,
-    spring: false,
-    springTag: null
-  },
 
 ];
 

@@ -78,7 +78,10 @@ app.post('/api/quiz-result', (req, res) => {
   }
 
   const results = readJsonFile(QUIZ_RESULTS_FILE);
-  const entry = { email, stage, resultKey: resultKey || null, resultTitle: resultTitle || null, date: new Date().toISOString() };
+  const pdfUrl = resultKey
+    ? `https://www.elateve.com/downloads/quiz-guides/${stage}-${String(resultKey).toLowerCase()}.pdf`
+    : null;
+  const entry = { email, stage, resultKey: resultKey || null, resultTitle: resultTitle || null, pdfUrl, date: new Date().toISOString() };
   results.push(entry);
   fs.writeFileSync(QUIZ_RESULTS_FILE, JSON.stringify(results, null, 2));
   forwardToSheet({ type: 'quiz', ...entry });
