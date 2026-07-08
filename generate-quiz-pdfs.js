@@ -15,135 +15,177 @@ const H = 792; // letter height
 const OUT_DIR = path.join(__dirname, 'public', 'downloads', 'quiz-guides');
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
-// Extra "Tips & Tricks" content per stage + result, on top of what's already
-// in data/quizzes.js (title, summary, picks).
+// ── Tips & Tricks per stage + result ──
 const tips = {
   ripple: {
     A: [
-      "Keep a simple cycle calendar together — normalize tracking early without making it clinical.",
-      "Introduce fragrance-free, gentle skincare now, before breakouts start, not after.",
-      "Protect her sleep window — no screens 30 minutes before bed sets a foundation that pays off for years.",
-      "Normalize movement as fun, not fitness — dance, walking the dog, and bike rides all count.",
-      "Keep the conversation door open with low-pressure check-ins rather than one big \"talk.\"",
+      "Keep a simple cycle calendar together — normalize tracking early, without making it clinical.",
+      "Introduce fragrance-free, gentle skincare now, before breakouts start.",
+      "Protect her sleep window — no screens 30 minutes before bed.",
+      "Normalize movement as fun, not fitness — dance, walks, bike rides all count.",
+      "Keep the door open with low-pressure check-ins, not one big \"talk.\"",
       "Revisit this assessment every few months — bodies change fast at this age."
     ],
     B: [
-      "Swap to a breathable, cool pillowcase if night warmth or restlessness is new.",
-      "Introduce a wind-down tea ritual to signal bedtime to a system that's recalibrating.",
-      "Address breakouts with gentle, dermatologist-formulated products — not aggressive acne treatments.",
-      "Validate mood swings out loud: hormones can make even small things feel huge right now.",
-      "Add a diffuser with calming scents to her room for the harder weeks.",
-      "Book a check-in with a provider experienced with adolescent hormonal health if symptoms feel bigger than \"normal.\""
+      "Swap to a breathable, cool pillowcase if night warmth is new.",
+      "Introduce a wind-down tea ritual to signal bedtime.",
+      "Address breakouts with gentle, dermatologist-formulated products.",
+      "Validate mood swings out loud — hormones can make small things feel huge.",
+      "Add a calming diffuser to her room for the harder weeks.",
+      "Book a check-in with a provider if symptoms feel bigger than \"normal.\""
     ],
     C: [
-      "Prioritize her sleep environment first — cooling sheets, blackout curtains, a consistent bedtime.",
-      "Seek a provider experienced with adolescent hormonal health, not just a general check-up.",
-      "Introduce a shared journal so she can express what's hard to say out loud.",
-      "Keep skincare minimal and soothing until things stabilize — less is more right now.",
-      "Build in a weekly low-pressure ritual together (tea, a show, a walk) to keep connection strong.",
-      "Remember: intense doesn't mean permanent. Most turbulence here softens with time and support."
+      "Prioritize her sleep environment first — cooling sheets, blackout curtains, routine.",
+      "Seek a provider experienced with adolescent hormonal health.",
+      "Introduce a shared journal so she can express what's hard to say.",
+      "Keep skincare minimal and soothing until things stabilize.",
+      "Build a weekly low-pressure ritual together to keep connection strong.",
+      "Remember: intense doesn't mean permanent."
     ]
   },
   creation: {
     A: [
-      "Layer in a daily probiotic now — gut health compounds well before you need it to.",
+      "Layer in a daily probiotic now — gut health compounds early.",
       "Protect one non-negotiable stretch of sleep, even 20 minutes, daily.",
-      "Build a simple support list (people you can actually call) before you need it.",
+      "Build a simple support list before you need it.",
       "Keep movement gentle and consistent rather than ambitious.",
-      "Journal weekly — tracking how you feel early makes changes easier to spot later.",
-      "Revisit this assessment each trimester or postpartum month — this stage moves fast."
+      "Journal weekly — tracking early makes changes easier to spot.",
+      "Revisit this assessment each trimester or postpartum month."
     ],
     B: [
-      "Say the sentence out loud to someone: \"I need more help than I'm asking for.\"",
-      "Add a weighted or pressure-based sleep aid for whatever sleep window you get.",
-      "Simplify meals — nutrient-dense and easy beats elaborate and abandoned.",
-      "Let one thing go this week. Just one. Notice how it feels.",
-      "Use scent (a diffuser, a candle) as a fast nervous-system reset between tasks.",
-      "Book one appointment focused only on you, not the baby — a massage, a check-up, anything."
+      "Say it out loud: \"I need more help than I'm asking for.\"",
+      "Add a weighted or pressure-based sleep aid for whatever sleep you get.",
+      "Simplify meals — nutrient-dense and easy beats elaborate.",
+      "Let one thing go this week. Notice how it feels.",
+      "Use scent as a fast nervous-system reset between tasks.",
+      "Book one appointment focused only on you."
     ],
     C: [
-      "This week, ask for real help — meals, night shifts, anything you can hand off.",
-      "Talk to your provider about postpartum mood support; depletion this deep deserves attention.",
+      "This week, ask for real help — meals, night shifts, anything.",
+      "Talk to your provider about postpartum mood support.",
       "Protect sleep like it's medicine, because it is.",
-      "Lower the bar on everything non-essential for the next two weeks.",
-      "Keep gut and nutrient support simple and consistent (probiotic, easy protein, hydration).",
-      "Revisit this assessment in two weeks — deep depletion should trend upward with support, not stay flat."
+      "Lower the bar on everything non-essential for two weeks.",
+      "Keep gut and nutrient support simple and consistent.",
+      "Revisit this assessment in two weeks."
     ]
   },
   shift: {
     A: [
-      "Start strength training now if you haven't — bone density work compounds for decades.",
-      "Build a cooling sleep setup before you need it (breathable bedding, temperature regulation).",
-      "Get a baseline hormone panel with your doctor so you have something to compare against later.",
-      "Introduce adaptogens or magnesium now as a gentle foundation, not a fix.",
-      "Keep a symptom log monthly — subtle shifts are easiest to catch early.",
-      "Revisit this assessment every few months as your baseline shifts."
+      "Start strength training now — bone density work compounds for decades.",
+      "Build a cooling sleep setup before you need it.",
+      "Get a baseline hormone panel to compare against later.",
+      "Introduce adaptogens or magnesium as a gentle foundation.",
+      "Keep a monthly symptom log — subtle shifts are easiest to catch early.",
+      "Revisit this assessment every few months."
     ],
     B: [
-      "Swap to bamboo or linen bedding to soften night sweats and temperature swings.",
-      "Add magnesium glycinate in the evening to help with the 3am cortisol spike.",
-      "Bring in a red light or gentle movement routine to support mood and joints.",
+      "Swap to bamboo or linen bedding for night sweats and temperature swings.",
+      "Add magnesium glycinate in the evening for the 3am cortisol spike.",
+      "Bring in red light or gentle movement to support mood and joints.",
       "Track your cycle changes — irregularity is data, not something to ignore.",
-      "Talk to your doctor about symptoms now rather than waiting for them to worsen.",
-      "Build one weekly \"radical rest\" block — this stage asks for more recovery, not less."
+      "Talk to your doctor about symptoms now.",
+      "Build one weekly \"radical rest\" block."
     ],
     C: [
-      "Prioritize a full sleep environment overhaul — cooling sheets, a dark room, a consistent schedule.",
-      "Ask your doctor about a comprehensive hormone panel — you deserve real answers, not \"it's just aging.\"",
-      "Consider heat therapy (sauna) or red light therapy to support inflammation and recovery.",
-      "Build an anti-inflammatory nutrition foundation — whole foods, less processed sugar.",
-      "Find a provider who treats this stage as a full transition, not a single symptom to medicate.",
-      "Give yourself permission for radical rest — this is a season to receive support, not push through."
+      "Prioritize a full sleep environment overhaul.",
+      "Ask for a comprehensive hormone panel — demand real answers.",
+      "Consider heat therapy or red light therapy for recovery.",
+      "Build an anti-inflammatory nutrition foundation.",
+      "Find a provider who treats this as a full transition, not one symptom.",
+      "Give yourself permission for radical rest."
     ]
   },
   wisdom: {
     A: [
-      "Keep strength training central — it's the single best predictor of vitality in this decade.",
-      "Track sleep and recovery trends so you can catch small dips early.",
+      "Keep strength training central — the best predictor of vitality now.",
+      "Track sleep and recovery trends to catch small dips early.",
       "Stay socially engaged — community is as protective as any supplement.",
-      "Refine your nutrition toward Mediterranean-style eating if you haven't already.",
-      "Keep learning something new — cognitive engagement compounds like physical training does.",
-      "Revisit this assessment yearly to keep building on what's working."
+      "Lean into Mediterranean-style eating if you haven't already.",
+      "Keep learning something new — cognitive engagement compounds too.",
+      "Revisit this assessment yearly."
     ],
     B: [
-      "Add one structural home upgrade this month — an air purifier, a better sleep setup, or similar.",
-      "Build gut health support into your daily routine (probiotic, fibre-rich meals).",
-      "Bring consistency to movement — even modest, regular strength work beats occasional intense effort.",
-      "Reconnect with a sense of purpose — a project, a class, a commitment to look forward to.",
-      "Get a full check-up if it's been a while — bone density, cardiovascular, cognitive baseline.",
-      "Pick one thing from this list and commit to 30 days before adding the next."
+      "Add one structural home upgrade this month.",
+      "Build gut health support into your daily routine.",
+      "Bring consistency to movement over occasional intensity.",
+      "Reconnect with a sense of purpose — a project, a class, a goal.",
+      "Get a full check-up if it's been a while.",
+      "Pick one thing here and commit to 30 days before adding the next."
     ],
     C: [
-      "Start with recovery, not ambition — sleep, heat therapy, and gentle movement first.",
-      "Get a comprehensive health check — bone density, cardiovascular, and hormone-related markers.",
-      "Introduce red light or sauna therapy gradually to support cellular repair.",
-      "Rebuild strength slowly and consistently — this is a marathon, not a sprint back.",
-      "Seek support, not just supplements — a coach, a community, or a provider who takes this stage seriously.",
-      "Revisit this assessment in a month; deep rebuilds move in weeks, not days, but they do move."
+      "Start with recovery, not ambition — sleep and gentle movement first.",
+      "Get a comprehensive health check across key markers.",
+      "Introduce red light or sauna therapy gradually.",
+      "Rebuild strength slowly and consistently.",
+      "Seek support, not just supplements.",
+      "Revisit this assessment in a month — rebuilds move in weeks, not days."
     ]
   }
 };
 
-function goldRule(doc, y, width = 100) {
-  const x = (W - width) / 2;
+// ── Daily mantras per stage + result ──
+const mantras = {
+  ripple: {
+    A: ["My body is learning, not broken.", "I am allowed to feel and grow at the same time.", "Change is happening for me, not to me.", "I trust the process, even when I don't understand it.", "I am becoming exactly who I'm meant to be.", "My feelings are valid, even the big ones."],
+    B: ["This feeling is temporary, even when it feels huge.", "I don't have to have it all figured out today.", "It's okay to ask for help when things feel confusing.", "My body is not against me.", "I am growing into myself, one day at a time.", "I deserve patience — especially from myself."],
+    C: ["This storm will pass, even when it doesn't feel like it.", "Asking for help is strength, not weakness.", "I am not alone in this.", "My body is working hard right now — I can be gentle with it.", "This hard season does not define the rest of my life.", "I am worthy of support and softness."]
+  },
+  creation: {
+    A: ["I am building something extraordinary, one day at a time.", "My body did something miraculous — I honor that.", "I don't have to earn rest; I simply need it.", "Small, consistent care compounds into real strength.", "I am allowed to prioritize myself while caring for others.", "I trust my body's wisdom in this new chapter."],
+    B: ["Needing help does not make me any less capable.", "I am allowed to put myself on today's to-do list.", "Rest is productive, even when it doesn't feel like it.", "I am doing enough, even on the hard days.", "This depletion is a signal, not a life sentence.", "I deserve the care I give so freely to others."],
+    C: ["Asking for real help is strength, not surrender.", "I do not have to do this alone.", "My body has been through so much — it deserves patience.", "Rest is the foundation I'm rebuilding on.", "This season is hard, and I am still capable.", "I am allowed to receive care, not just give it."]
+  },
+  shift: {
+    A: ["I am building my foundation before I need it.", "My body is recalibrating, and I'm listening closely.", "Small changes now become big protection later.", "I am proactive about my vitality, not fearful of my age.", "This transition is mine to navigate on my terms.", "I trust the data my body gives me."],
+    B: ["This is a shift, not a decline.", "My body is recalibrating — I meet it with patience, not panic.", "I am allowed to rest more in this season.", "I am not \"too sensitive\" — my hormones are simply changing.", "I advocate for myself, especially in the doctor's office.", "This transition transforms me — it doesn't diminish me."],
+    C: ["I am not broken. I am transforming.", "My symptoms are real, and I deserve real answers.", "Radical rest is not weakness — it's wisdom.", "I am allowed to demand better care for my body.", "This crucible is forging a stronger version of me.", "I trust that this intensity will not last forever."]
+  },
+  wisdom: {
+    A: ["This is my launchpad, not my plateau.", "I get stronger and sharper the more I invest in myself.", "Curiosity keeps me young — I stay a lifelong learner.", "My vitality is a daily choice, and I choose it.", "I am proof this decade can be a peak, not a decline.", "I am building a life I want to keep living, fully."],
+    B: ["Small, consistent changes are rebuilding my vitality.", "I am not behind — I am recalibrating.", "My best years are being built now, not behind me.", "I choose progress over perfection, every day.", "I am investing in myself the way I'd invest in someone I love.", "This chapter is mine to write, starting today."],
+    C: ["Rebuilding takes time, and I am patient with myself.", "I am not starting over — I am starting stronger.", "Every small step counts, even when progress feels slow.", "I deserve real support, not just willpower.", "This body has carried me this far — I will care for it now.", "It is never too late to reclaim my vitality."]
+  }
+};
+
+// ── "In Good Company" / "Did You Know" detail per stage + result ──
+// For Ripple (teen), we use an educational fact instead of naming real people.
+// For the adult stages, these reference well-documented, public statements
+// public figures have made about their own experience with this life stage.
+const details = {
+  ripple: {
+    label: "Did You Know",
+    A: "The hormone surges of puberty are preparing your brain for one of its biggest growth spurts since infancy — this is a season of becoming, not just changing.",
+    B: "Mood swings during hormonal shifts are usually temporary spikes in emotional sensitivity, not a permanent change in who you are. Most girls feel steadier again within a year or so of their cycle settling.",
+    C: "A significant share of teens experience real, disruptive PMS or cycle-related symptoms — it is not \"just in your head,\" and it is worth real medical support."
+  },
+  creation: {
+    label: "In Good Company",
+    A: "Serena Williams has spoken openly about how seriously she treated postpartum recovery — physically and mentally — before returning to peak form.",
+    B: "Chrissy Teigen has been candid about how depleting early motherhood can be, and how normal it is to feel like you're barely keeping up.",
+    C: "Adele has spoken publicly about the toll early motherhood took on her, and how essential real support — not just willpower — was to her recovery."
+  },
+  shift: {
+    label: "In Good Company",
+    A: "Naomi Watts began paying close attention to her own hormonal shifts years before her diagnosis, later writing openly about the value of catching early signals.",
+    B: "Michelle Obama has spoken publicly about her own hot flashes and sleep disruption, pushing for perimenopause to be discussed far more openly.",
+    C: "Halle Berry has become a vocal advocate for menopause research and care, speaking about pushing past being dismissed until she got real answers."
+  },
+  wisdom: {
+    label: "In Good Company",
+    A: "Jane Fonda built an entire fitness movement starting in her 40s, and continues to champion strength training well into her eighties.",
+    B: "Christie Brinkley has spoken often about strength training and nutrition as the foundation of her vitality well past 60.",
+    C: "Helen Mirren has been outspoken about rejecting anti-aging pressure altogether, calling this stage of life liberating rather than diminishing."
+  }
+};
+
+function goldRule(doc, x, y, width) {
   doc.moveTo(x, y).lineTo(x + width, y).lineWidth(1).strokeColor(GOLD).stroke();
-}
-
-function centerText(doc, text, y, opts = {}) {
-  doc.font(opts.font || 'Helvetica').fontSize(opts.fontSize || 12).fillColor(opts.color || CHARCOAL);
-  doc.text(text, 72, y, { width: W - 144, align: 'center', ...opts.textOpts });
-}
-
-function pageHeader(doc, kicker) {
-  doc.font('Helvetica').fontSize(9).fillColor(GOLD);
-  doc.text(kicker, 72, 52, { width: W - 144, align: 'center', characterSpacing: 1 });
-  goldRule(doc, 68, 80);
 }
 
 function buildPdf(quiz, resultKey, result) {
   const doc = new PDFDocument({
     size: 'letter',
-    margins: { top: 72, bottom: 72, left: 72, right: 72 },
+    margins: { top: 40, bottom: 24, left: 50, right: 50 },
     info: {
       Title: `ELATEVE — ${result.title} Guide`,
       Author: 'ELATEVE',
@@ -156,74 +198,71 @@ function buildPdf(quiz, resultKey, result) {
   const stream = fs.createWriteStream(outPath);
   doc.pipe(stream);
 
-  // ============ PAGE 1: COVER ============
+  const contentW = W - 100; // 50pt margins each side
+
   doc.rect(0, 0, W, H).fill(CREAM);
-  doc.rect(0, 0, W, 6).fill(GOLD);
+  doc.rect(0, 0, W, 5).fill(GOLD);
 
-  doc.font('Helvetica').fontSize(13).fillColor(GOLD);
-  doc.text('ELATEVE', 72, 170, { width: W - 144, align: 'center', characterSpacing: 6 });
-  goldRule(doc, 198, 60);
+  // ── Header ──
+  doc.font('Helvetica').fontSize(11).fillColor(GOLD);
+  doc.text('ELATEVE', 50, 34, { width: contentW, align: 'center', characterSpacing: 5 });
 
-  doc.font('Helvetica').fontSize(11).fillColor(GREY);
-  doc.text(`${quiz.stageLabel.toUpperCase()} — ${quiz.stageName.toUpperCase()}`, 72, 232, { width: W - 144, align: 'center', characterSpacing: 1 });
+  doc.font('Helvetica').fontSize(9).fillColor(GREY);
+  doc.text(`${quiz.stageLabel.toUpperCase()} — ${quiz.stageName.toUpperCase()}`, 50, 60, { width: contentW, align: 'center', characterSpacing: 1 });
 
-  doc.moveDown(1.5);
-  doc.font('Helvetica-Bold').fontSize(32).fillColor(CHARCOAL);
-  doc.text(result.title, 72, doc.y + 10, { width: W - 144, align: 'center' });
+  doc.font('Helvetica-Bold').fontSize(24).fillColor(CHARCOAL);
+  doc.text(result.title, 50, 76, { width: contentW, align: 'center' });
 
-  goldRule(doc, doc.y + 18, 90);
+  goldRule(doc, (W - 70) / 2, doc.y + 8, 70);
 
-  doc.moveDown(2.2);
-  doc.font('Helvetica-Oblique').fontSize(12).fillColor(CHARCOAL);
-  doc.text(result.summary, 72, doc.y, { width: W - 144, align: 'center', lineGap: 4 });
+  doc.font('Helvetica-Oblique').fontSize(10).fillColor(CHARCOAL);
+  doc.text(result.summary, 50, doc.y + 16, { width: contentW, align: 'center', lineGap: 2 });
 
-  doc.font('Helvetica').fontSize(10).fillColor(GOLD);
-  doc.text('www.elateve.com', 72, H - 90, { width: W - 144, align: 'center', characterSpacing: 2 });
-  doc.rect(0, H - 6, W, 6).fill(GOLD);
+  // ── Two columns: Tips & Tricks | Daily Mantras ──
+  const colTop = doc.y + 20;
+  const colW = (contentW - 24) / 2;
+  const colLeftX = 50;
+  const colRightX = 50 + colW + 24;
 
-  // ============ PAGE 2: TIPS & TRICKS ============
-  doc.addPage();
-  doc.rect(0, 0, W, H).fill('#FFFFFF');
-  pageHeader(doc, `${quiz.stageLabel.toUpperCase()} — ${result.title.toUpperCase()}`);
+  doc.font('Helvetica-Bold').fontSize(12).fillColor(GOLD);
+  doc.text('YOUR TIPS & TRICKS', colLeftX, colTop, { width: colW, characterSpacing: 0.5 });
+  doc.font('Helvetica-Bold').fontSize(12).fillColor(GOLD);
+  doc.text('YOUR DAILY MANTRAS', colRightX, colTop, { width: colW, characterSpacing: 0.5 });
 
-  doc.font('Helvetica-Bold').fontSize(22).fillColor(CHARCOAL);
-  doc.text('Your Tips & Tricks', 72, 130, { width: W - 144, align: 'center' });
-  goldRule(doc, doc.y + 12, 60);
-  doc.moveDown(2);
+  goldRule(doc, colLeftX, colTop + 16, colW);
+  goldRule(doc, colRightX, colTop + 16, colW);
 
   const list = tips[quiz.key][resultKey] || [];
-  doc.x = 72;
+  let y = colTop + 28;
   list.forEach((tip, i) => {
-    const y = doc.y;
-    doc.font('Helvetica-Bold').fontSize(12).fillColor(GOLD).text(String(i + 1).padStart(2, '0'), 72, y, { continued: true });
-    doc.font('Helvetica').fontSize(11.5).fillColor(CHARCOAL).text('   ' + tip, { width: W - 144 - 30, lineGap: 3 });
-    doc.moveDown(0.9);
+    doc.font('Helvetica-Bold').fontSize(9).fillColor(GOLD).text(String(i + 1).padStart(2, '0'), colLeftX, y, { continued: true, width: colW });
+    doc.font('Helvetica').fontSize(9).fillColor(CHARCOAL).text('  ' + tip, { width: colW, lineGap: 1 });
+    y = doc.y + 7;
   });
+  const tipsEndY = y;
 
-  // ============ PAGE 3: PRODUCT PICKS ============
-  doc.addPage();
-  doc.rect(0, 0, W, H).fill(CREAM);
-  pageHeader(doc, `${quiz.stageLabel.toUpperCase()} — THE ELATEVE PATH FORWARD`);
-
-  doc.font('Helvetica-Bold').fontSize(22).fillColor(CHARCOAL);
-  doc.text('Curated For You', 72, 130, { width: W - 144, align: 'center' });
-  goldRule(doc, doc.y + 12, 60);
-  doc.moveDown(2.5);
-
-  doc.x = 72;
-  (result.picks || []).forEach((pick) => {
-    const y = doc.y;
-    doc.font('Helvetica-Bold').fontSize(13).fillColor(CHARCOAL).text(pick.name, 72, y, { width: W - 144 });
-    doc.font('Helvetica-Oblique').fontSize(10.5).fillColor(GREY).text(pick.note, 72, doc.y + 2, { width: W - 144, lineGap: 2 });
-    doc.moveDown(1.1);
+  const mList = mantras[quiz.key][resultKey] || [];
+  y = colTop + 28;
+  mList.forEach((m) => {
+    doc.font('Helvetica-Oblique').fontSize(9.5).fillColor(CHARCOAL).text('“' + m + '”', colRightX, y, { width: colW, align: 'left', lineGap: 1 });
+    y = doc.y + 8;
   });
+  const mantrasEndY = y;
 
-  doc.moveDown(2);
-  centerText(doc, 'Explore the full collection for your stage at', doc.y, { fontSize: 10.5, color: GREY });
-  doc.font('Helvetica-Bold').fontSize(11).fillColor(GOLD);
-  doc.text('www.elateve.com/shop', 72, doc.y + 4, { width: W - 144, align: 'center', characterSpacing: 1 });
+  // ── Detail box ──
+  const detail = details[quiz.key];
+  const boxY = Math.max(tipsEndY, mantrasEndY) + 14;
+  const boxH = 92;
+  doc.rect(50, boxY, contentW, boxH).fill('#EFE9DF');
+  doc.font('Helvetica-Bold').fontSize(9.5).fillColor(GOLD);
+  doc.text(detail.label.toUpperCase(), 50 + 20, boxY + 16, { width: contentW - 40, characterSpacing: 1 });
+  doc.font('Helvetica-Oblique').fontSize(10).fillColor(CHARCOAL);
+  doc.text(detail[resultKey], 50 + 20, boxY + 34, { width: contentW - 40, lineGap: 2 });
 
-  doc.rect(0, H - 6, W, 6).fill(GOLD);
+  // ── Footer ──
+  doc.font('Helvetica').fontSize(9).fillColor(GOLD);
+  doc.text('www.elateve.com', 50, H - 38, { width: contentW, align: 'center', characterSpacing: 1.5, lineBreak: false });
+  doc.rect(0, H - 5, W, 5).fill(GOLD);
 
   doc.end();
   return outPath;
@@ -237,4 +276,4 @@ Object.values(quizzes).forEach((quiz) => {
     count++;
   });
 });
-console.log(`\nDone. Generated ${count} PDFs in ${OUT_DIR}`);
+console.log(`\nDone. Generated ${count} single-page PDFs in ${OUT_DIR}`);
