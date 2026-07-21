@@ -164,15 +164,12 @@ function renderResult(resultKey) {
       `).join('')}
     </div>
     <a href="${pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--gold" id="quizPdfBtn">Download Your Free Guide (PDF) &darr;</a>
-    <a href="/shop" class="btn btn--outline" data-page="shop" id="quizShopBtn">Shop Your Picks &rarr;</a>
+    <!-- SHOP HIDDEN FOR NOW: <a href="/shop" class="btn btn--outline" data-page="shop" id="quizShopBtn">Shop Your Picks &rarr;</a> -->
   `;
-  document.getElementById('quizShopBtn').addEventListener('click', () => {
-    closeQuizPopup();
-  });
 }
 
 function initQuizTriggers() {
-  ['heroQuizBtn', 'navQuizBtn', 'footerQuizBtn', 'quizTeaserBtn'].forEach(id => {
+  ['heroQuizBtn', 'navQuizBtn', 'footerQuizBtn', 'quizTeaserBtn', 'aboutQuizBtn'].forEach(id => {
     document.getElementById(id)?.addEventListener('click', (e) => {
       e.preventDefault();
       openQuizPopup();

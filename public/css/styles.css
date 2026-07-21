@@ -241,7 +241,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .about-profile-role { display: block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
 .about-profile-body p { font-size: 1rem; font-weight: 300; color: var(--charcoal-light); line-height: 1.85; margin-bottom: var(--space-sm); text-align: center; }
 
-/* Sabrina's Story Lessons */
 .about-lessons { display: flex; flex-direction: column; gap: 0.75rem; margin: var(--space-md) 0; padding: var(--space-md) 0; border-top: 1px solid var(--cream-dark); border-bottom: 1px solid var(--cream-dark); }
 .about-lesson { font-size: 0.9rem; font-weight: 400; color: var(--charcoal); line-height: 1.6; padding-left: 1.5rem; text-align: left; position: relative; }
 .about-lesson::before { content: '\2014'; position: absolute; left: 0; color: var(--gold); }
@@ -741,7 +740,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 
 /* ── ABOUT TEAM ── */
 .about-team { text-align: center; padding: var(--space-xl) var(--space-lg) var(--space-lg); max-width: 900px; margin: 0 auto; }
-.about-team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-top: var(--space-lg); }
+.about-team-grid { display: grid; grid-template-columns: repeat(2, 1fr); max-width: 500px; margin: var(--space-lg) auto 0; gap: var(--space-lg); }
 .about-team-member { text-align: center; }
 .about-team-photo { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto var(--space-sm); border: 3px solid var(--gold); }
 .about-team-photo img { width: 100%; height: 100%; object-fit: cover; }
@@ -783,7 +782,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   .category-card-icon { width: 36px; height: 36px; margin-bottom: 0; }
   .category-card-arrow { margin-top: 0; margin-left: auto; opacity: 1; }
   .approach-grid { grid-template-columns: 1fr; gap: var(--space-sm); }
-  .about-team-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
+  .about-team-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
   .about-team-photo { width: 100px; height: 100px; }
   .about-team-name { font-size: 1.1rem; }
   .about-team-role { font-size: 0.65rem; }
