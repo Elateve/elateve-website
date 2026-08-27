@@ -16,7 +16,7 @@ function applyTheme(theme) {
 }
 
 function initTheme() {
-  const saved = localStorage.getItem('elateve_theme') || 'light';
+  const saved = localStorage.getItem('elateve_theme') || 'dark';
   applyTheme(saved);
 
   const btn = document.getElementById('themeToggle');
@@ -432,6 +432,9 @@ function initScrollEffects() {
     el.classList.add('reveal');
     observer.observe(el);
   });
+
+  // Partnership sections use their own .kx-reveal hook
+  document.querySelectorAll('.kx-reveal').forEach(el => observer.observe(el));
 }
 
 // ==================== TOAST ====================
@@ -453,8 +456,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Determine initial page from URL
   const path = window.location.pathname;
   const params = new URLSearchParams(window.location.search);
-  const pageMap = { '/': 'home', '/shop': 'shop', '/blog': 'blog', '/about': 'about' };
-  const initialPage = pageMap[path] || 'home';
+  const pageMap = { '/': 'home', '/blog': 'blog', '/about': 'about' };
+  let initialPage = pageMap[path] || 'home';
+  // Fall back to home if a retired page (e.g. /shop) is requested
+  if (!document.getElementById(`page-${initialPage}`)) initialPage = 'home';
 
   // Activate initial page
   document.querySelectorAll('.page').forEach(p => {

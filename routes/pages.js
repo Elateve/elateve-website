@@ -8,8 +8,9 @@ const sendIndex = (req, res) => {
 };
 
 router.get('/', sendIndex);
-router.get('/shop', sendIndex);
 router.get('/blog', sendIndex);
 router.get('/about', sendIndex);
+// /shop retired — redirect any old links home
+router.get('/shop', (req, res) => res.redirect(301, '/'));
 
 module.exports = router;
