@@ -30,6 +30,37 @@ function initTheme() {
   }
 }
 
+// ==================== CONTACT MODAL ====================
+function initContactModal() {
+  const overlay = document.getElementById('contactOverlay');
+  if (!overlay) return;
+
+  const open = (e) => {
+    if (e) e.preventDefault();
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.getElementById('contactClose')?.focus();
+  };
+  const close = () => {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+  };
+
+  // Any element marked data-contact opens the modal (mailto href is the no-JS fallback)
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-contact]');
+    if (trigger) open(e);
+  });
+
+  document.getElementById('contactClose')?.addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) close();
+  });
+  // Close after picking an option
+  overlay.querySelectorAll('.contact-opt').forEach((a) => a.addEventListener('click', () => setTimeout(close, 100)));
+}
+
 // ==================== API ====================
 async function fetchProducts(category = 'all') {
   const url = category === 'all' ? '/api/products' : `/api/products?category=${category}`;
@@ -496,6 +527,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initNavigation();
   initScrollEffects();
   initTheme();
+  initContactModal();
 
   // Push initial state
   history.replaceState({ page: initialPage, category: params.get('category') }, '', window.location.href);
