@@ -939,6 +939,39 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 [data-theme="dark"] .contact-opt-k { color: var(--gold-light); }
 [data-theme="dark"] .contact-opt:hover { background: rgba(232,200,114,0.08); }
 
+/* ── CENTERED LAYOUT PASS ── */
+.kx-section-head { margin-left: auto; margin-right: auto; text-align: center; }
+
+/* Who We Are — stack the lockup above centred copy */
+.kx-who { display: block; max-width: 760px; margin: 0 auto; text-align: center; }
+.kx-who-mark { flex-direction: row; justify-content: center; align-items: baseline; gap: 0.9rem; margin-bottom: var(--space-md); }
+.kx-who-a, .kx-who-b { font-size: clamp(1.35rem, 3vw, 2rem); }
+.kx-who-body { text-align: center; }
+.kx-who .kx-tags { justify-content: center; }
+
+/* The Opportunity */
+.kx-opp { text-align: center; }
+.kx-opp-tags { justify-content: center; }
+
+/* Featured elite-sport callout — top rule instead of side rule */
+.kx-featured { text-align: center; border-left: 1px solid var(--grey-line); border-top: 2px solid var(--gold); }
+
+/* Client list */
+.kx-clients { max-width: 920px; margin-left: auto; margin-right: auto; justify-items: center; }
+.kx-client-group { width: 100%; max-width: 340px; }
+.kx-client-cat { text-align: center; }
+.kx-client-group li { text-align: center; }
+
+/* Why / stages / steps / tech / team — centre the card copy */
+.kx-why-item,
+.kx-stage,
+.kx-step,
+.kx-team-block { text-align: center; }
+.kx-tech-stage { text-align: center; }
+.kx-tech-card { text-align: center; }
+.kx-tech-card::before { left: 0; right: 0; top: auto; bottom: 0; width: auto; height: 2px; transform: scaleX(0); transform-origin: center; }
+.kx-tech-card:hover::before { transform: scaleX(1); }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .categories-grid { grid-template-columns: repeat(2, 1fr); }
