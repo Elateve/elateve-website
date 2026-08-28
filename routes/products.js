@@ -39,9 +39,17 @@ router.get('/featured', (req, res) => {
   res.json(featured);
 });
 
-// GET /api/blog — all blog posts (without full content for list view)
+// Parse a "Mon YYYY" label (e.g. "Aug 2026") to a sortable timestamp
+function postTime(label) {
+  const t = Date.parse(String(label || '').replace(/^([A-Za-z]+)\s+(\d{4})$/, '$1 1, $2'));
+  return Number.isNaN(t) ? 0 : t;
+}
+
+// GET /api/blog — all blog posts (without full content for list view), newest first
 router.get('/blog', (req, res) => {
-  const summaries = blogPosts.map(({ content, ...rest }) => rest);
+  const summaries = blogPosts
+    .map(({ content, htmlContent, ...rest }) => rest)
+    .sort((a, b) => postTime(b.date) - postTime(a.date));
   res.json({ count: summaries.length, posts: summaries });
 });
 

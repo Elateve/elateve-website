@@ -295,17 +295,29 @@ async function loadFilteredProducts(category, season) {
 }
 
 // ==================== BLOG RENDERING ====================
+// Parse a "Mon YYYY" label (e.g. "Aug 2026") to a sortable timestamp
+function blogPostTime(label) {
+  const t = Date.parse(String(label || '').replace(/^([A-Za-z]+)\s+(\d{4})$/, '$1 1, $2'));
+  return Number.isNaN(t) ? 0 : t;
+}
+
 async function loadBlog() {
   const grid = document.getElementById('blogGrid');
   if (!grid || grid.children.length > 0) return;
 
   const posts = await fetchBlog();
+  // Newest first (the API already sorts, but keep the client honest if it didn't)
+  posts.sort((a, b) => blogPostTime(b.date) - blogPostTime(a.date));
   grid.innerHTML = '';
   posts.forEach(post => {
     const card = document.createElement('div');
     card.className = 'blog-card';
     card.dataset.postId = post.id;
+    const img = post.image
+      ? `<img class="blog-card-img" src="${post.image}" alt="" loading="lazy">`
+      : `<span class="blog-card-img" aria-hidden="true"></span>`;
     card.innerHTML = `
+      ${img}
       <span class="blog-card-date">${post.date}</span>
       <div class="blog-card-content">
         <span class="blog-card-tag">${post.tag}</span>

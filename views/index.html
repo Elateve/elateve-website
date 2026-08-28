@@ -37,11 +37,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ELATEVE powered by Kloodos — Longevity, Delivered End to End</title>
-  <meta name="description" content="ELATEVE powered by Kloodos — the exclusive longevity-technology partnership for Spain &amp; Europe. Clinically validated recovery technology, curated protocols and one partner from install to outcome.">
+  <meta name="description" content="ELATEVE powered by Kloodos — the exclusive longevity-technology partnership for Spain &amp; Europe. A turnkey longevity floor: concept, medical-grade technology, protocols, training and support from one partner.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=20260827-kx5">
+  <link rel="stylesheet" href="/css/styles.css?v=20260828-kx6">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -60,11 +60,12 @@
         <span></span><span></span>
       </button>
       <div class="nav-links" id="navLinks">
-        <a href="/" data-page="home">Home</a>
-        <a href="/blog" data-page="blog">Journal</a>
-        <a href="/about" data-page="about">About</a>
-        <a href="mailto:hello@elateve.com" class="nav-book" data-contact>Book 30 Minutes</a>
+        <a href="/" data-page="home" data-i18n="nav.home">Home</a>
+        <a href="/blog" data-page="blog" data-i18n="nav.journal">Journal</a>
+        <a href="/about" data-page="about" data-i18n="nav.about">About</a>
+        <a href="mailto:hello@elateve.com" class="nav-book" data-contact data-i18n="cta.book">Book 30 Minutes</a>
       </div>
+      <button class="lang-toggle" id="langToggle" aria-label="Cambiar a español" title="Español / English">ES</button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode" title="Toggle light / dark">
         <span id="themeIcon">☀</span>
       </button>
@@ -81,27 +82,69 @@
       <div class="kx-hero">
         <div class="kx-hero-aura" aria-hidden="true"></div>
         <div class="kx-hero-content">
-          <p class="kx-eyebrow">A Longevity Partnership &middot; Barcelona</p>
-          <h1 class="kx-hero-title">The longevity offer,<br>delivered end to end.</h1>
-          <p class="kx-hero-sub">ELATEVE curates the longevity experience. Kloodos supplies the clinically validated technology behind it. One partner, from the first walkthrough to the outcome your guests feel &mdash; exclusively for Spain &amp; Europe.</p>
+          <p class="kx-eyebrow" data-i18n="hero.eyebrow">A Longevity Partnership &middot; Barcelona</p>
+          <h1 class="kx-hero-title" data-i18n-html="hero.title">The longevity offer,<br>delivered end to end.</h1>
+          <p class="kx-hero-sub" data-i18n="hero.sub">ELATEVE curates the longevity experience. Kloodos supplies the clinically validated technology behind it. One partner, from the first walkthrough to the outcome your guests feel &mdash; exclusively for Spain &amp; Europe.</p>
           <div class="kx-hero-cta">
-            <a href="mailto:hello@elateve.com" class="btn btn--gold" data-contact>Book 30 Minutes</a>
-            <a href="#kx-record" class="btn btn--outline btn--ondark">See the Track Record</a>
+            <a href="mailto:hello@elateve.com" class="btn btn--gold" data-contact data-i18n="cta.book">Book 30 Minutes</a>
+            <a href="#kx-system" class="btn btn--outline btn--ondark" data-i18n="hero.cta2">See What We Deliver</a>
           </div>
           <div class="kx-hero-meta">
-            <div><span class="kx-hero-n">15+</span><span class="kx-hero-l">Wellness technologies</span></div>
-            <div><span class="kx-hero-n">70+</span><span class="kx-hero-l">Years of protocol design</span></div>
-            <div><span class="kx-hero-n">2014</span><span class="kx-hero-l">Curating advanced wellness since</span></div>
+            <div><span class="kx-hero-n">15+</span><span class="kx-hero-l" data-i18n="hero.m1">Medical-grade technologies</span></div>
+            <div><span class="kx-hero-n">70+</span><span class="kx-hero-l" data-i18n="hero.m2">Years of protocol design</span></div>
+            <div><span class="kx-hero-n">1</span><span class="kx-hero-l" data-i18n="hero.m3">Partner, install to outcome</span></div>
           </div>
         </div>
       </div>
 
-      <!-- TRACK RECORD (second on the page) -->
+      <!-- THE SYSTEM / WHAT WE DELIVER -->
+      <div class="section kx-section" id="kx-system">
+        <div class="kx-section-head center kx-reveal">
+          <p class="kx-eyebrow" data-i18n="sys.eyebrow">What We Deliver</p>
+          <h2 class="kx-h2" data-i18n-html="sys.title">A turnkey longevity floor.<br>One contract, one partner.</h2>
+          <p class="kx-lead" data-i18n="sys.lead">Not a catalogue of machines. A complete longevity offer &mdash; designed for your building, your guest and your rate, then installed, staffed and marketed. Here is what is in scope.</p>
+        </div>
+        <div class="kx-system-grid kx-reveal">
+          <div class="kx-svc">
+            <span class="kx-svc-n">01</span>
+            <h3 data-i18n="sys.s1t">Concept &amp; feasibility</h3>
+            <p data-i18n="sys.s1d">We walk the space, draw the floor plan and map the guest journey before anything is ordered &mdash; footprint, positioning and flow for every modality.</p>
+          </div>
+          <div class="kx-svc">
+            <span class="kx-svc-n">02</span>
+            <h3 data-i18n="sys.s2t">Technology supply &amp; install</h3>
+            <p data-i18n="sys.s2d">15+ medical-grade modalities from a single source: whole-body cryotherapy, HBOT, photobiomodulation, IV and NAD+, FDA-cleared compression, EMS, dry float and more.</p>
+          </div>
+          <div class="kx-svc">
+            <span class="kx-svc-n">03</span>
+            <h3 data-i18n="sys.s3t">Integrated protocols</h3>
+            <p data-i18n="sys.s3d">Treatments sequenced to work together and built to cross-sell and up-sell &mdash; so guests stay longer, spend more and rebook.</p>
+          </div>
+          <div class="kx-svc">
+            <span class="kx-svc-n">04</span>
+            <h3 data-i18n="sys.s4t">Team training &amp; certification</h3>
+            <p data-i18n="sys.s4d">Your staff trained across every modality &mdash; the what, the how, the when and the why &mdash; with ongoing education and protocol support.</p>
+          </div>
+          <div class="kx-svc">
+            <span class="kx-svc-n">05</span>
+            <h3 data-i18n="sys.s5t">Launch &amp; commercial support</h3>
+            <p data-i18n="sys.s5d">Positioning, naming, menu design and launch assets, plus pricing guidance &mdash; so the floor fills from opening week.</p>
+          </div>
+          <div class="kx-svc">
+            <span class="kx-svc-n">06</span>
+            <h3 data-i18n="sys.s6t">Service, maintenance &amp; one point of contact</h3>
+            <p data-i18n="sys.s6d">One number for technology, parts, servicing and support, for the life of the installation.</p>
+          </div>
+        </div>
+        <p class="kx-system-line kx-reveal" data-i18n="sys.line">From the first drawing to the outcome your guests feel &mdash; end to end, under one roof.</p>
+      </div>
+
+      <!-- TRACK RECORD -->
       <div class="section kx-section" id="kx-record">
         <div class="kx-section-head kx-reveal">
-          <p class="kx-eyebrow">Track Record</p>
-          <h2 class="kx-h2">Already trusted in the rooms<br>that accept nothing less.</h2>
-          <p class="kx-lead">The technology and protocols behind ELATEVE powered by Kloodos are installed and running across elite sport, luxury hospitality and private medical wellness &mdash; from Premier League recovery suites to five-star spas.</p>
+          <p class="kx-eyebrow" data-i18n="rec.eyebrow">Track Record</p>
+          <h2 class="kx-h2" data-i18n-html="rec.title">Already trusted in the rooms<br>that accept nothing less.</h2>
+          <p class="kx-lead" data-i18n="rec.lead">The technology and protocols behind ELATEVE powered by Kloodos are installed and running across elite sport, luxury hospitality and private medical wellness &mdash; from Premier League recovery suites to five-star spas.</p>
         </div>
 
         <div class="kx-record-media kx-reveal">
@@ -109,30 +152,89 @@
         </div>
 
         <div class="kx-roll kx-reveal">
-          <p class="kx-roll-label">A few of the rooms it already runs in</p>
+          <p class="kx-roll-label" data-i18n="rec.rolllabel">A few of the rooms it already runs in</p>
           <p class="kx-roll-names">Manchester United FC<span>&middot;</span>FC Porto<span>&middot;</span>Soho House International<span>&middot;</span>Gleneagles Townhouse<span>&middot;</span>ESPA International<span>&middot;</span>PGA Catalunya<span>&middot;</span>KX Life &amp; KXU<span>&middot;</span>Repose Space</p>
-          <p class="kx-roll-more">&amp; more &mdash; shared on request</p>
+          <p class="kx-roll-more" data-i18n="rec.rollmore">&amp; more &mdash; shared on request</p>
+        </div>
+      </div>
+
+      <!-- THE MARKET / WHY NOW -->
+      <div class="section kx-section kx-section--band" id="kx-market">
+        <div class="kx-section-head center kx-reveal">
+          <p class="kx-eyebrow" data-i18n="mkt.eyebrow">The Market</p>
+          <h2 class="kx-h2" data-i18n-html="mkt.title">The demand is already here.<br>The supply isn&rsquo;t.</h2>
+        </div>
+        <div class="kx-stats kx-reveal">
+          <div class="kx-stat">
+            <div class="kx-stat-n">+36%</div>
+            <div class="kx-stat-l" data-i18n="mkt.s1l">What an international wellness traveller spends per trip over the average tourist</div>
+          </div>
+          <div class="kx-stat">
+            <div class="kx-stat-n">7.8% &rarr; 18%</div>
+            <div class="kx-stat-l" data-i18n="mkt.s2l">Wellness trips are 7.8% of all travel &mdash; but nearly a fifth of what travellers spend</div>
+          </div>
+          <div class="kx-stat">
+            <div class="kx-stat-n">$1.4tn</div>
+            <div class="kx-stat-l" data-i18n="mkt.s3l">Forecast size of wellness tourism by 2027, up from $1tn in 2024</div>
+          </div>
+          <div class="kx-stat">
+            <div class="kx-stat-n">$9.8tn</div>
+            <div class="kx-stat-l" data-i18n="mkt.s4l">Forecast global wellness economy by 2029 &mdash; longevity is its fastest-moving part</div>
+          </div>
+        </div>
+        <div class="kx-fomo kx-reveal">
+          <p data-i18n-html="mkt.fomo1">The people driving that spend &mdash; high-net-worth guests, longevity-focused travellers, executive-health and elite-sport budgets &mdash; are <strong>actively looking for a credible place to put it</strong>, and most properties can&rsquo;t give them one.</p>
+          <p data-i18n-html="mkt.fomo2">There is room for roughly <strong>one serious longevity destination per city</strong>. The venue that installs first usually keeps that position; the rest end up referring their best clients down the road. Your competitors are already having this conversation with us &mdash; the space you don&rsquo;t fit out now is the booking you lose later.</p>
+          <p class="kx-roi-note" data-i18n="mkt.src">Sources: Global Wellness Institute, 2023&ndash;2024.</p>
         </div>
       </div>
 
       <!-- THE OPPORTUNITY -->
       <div class="section kx-section" id="kx-opportunity">
         <div class="kx-opp kx-reveal">
-          <p class="kx-eyebrow">The Opportunity</p>
-          <h2 class="kx-h2">Your wellness floor is the most<br>under-leveraged space in the building.</h2>
-          <p class="kx-opp-lead">The members who spend the most &mdash; and a fast-growing wave of longevity-focused travellers &mdash; are actively looking for somewhere to put that spend. A serious, science-backed longevity offer is increasingly the reason they choose one property, or one club, over another.</p>
-          <p>Most venues can&rsquo;t meet that demand, because the offer has to be assembled from parts that were never designed to work together &mdash; and someone has to carry the risk of getting it wrong. We don&rsquo;t just supply the technology; we walk the space, draw the floor plan, map the guest flow and advise on the logical positioning of every modality.</p>
-          <p class="kx-opp-sub">And it isn&rsquo;t only spas. We floor-plan, space-plan and advise across hospitality:</p>
+          <p class="kx-eyebrow" data-i18n="opp.eyebrow">The Opportunity</p>
+          <h2 class="kx-h2" data-i18n-html="opp.title">Your wellness floor is the most<br>under-leveraged space in the building.</h2>
+          <p class="kx-opp-lead" data-i18n="opp.lead">The clients who spend the most &mdash; and a fast-growing wave of longevity-focused travellers &mdash; are actively looking for somewhere to put that spend. A serious, science-backed longevity offer is increasingly the reason they choose one property, or one club, over another.</p>
+          <p data-i18n="opp.p2">Most venues can&rsquo;t meet that demand, because the offer has to be assembled from parts that were never designed to work together &mdash; and someone has to carry the risk of getting it wrong. We don&rsquo;t just supply the technology; we walk the space, draw the floor plan, map the guest flow and advise on the logical positioning of every modality.</p>
+          <p data-i18n="opp.p3">Your spa was designed for a previous client &mdash; a different guest, a different decade of demand. We assess what you already have and propose the changes that lift it to appeal to the client walking in now.</p>
+          <p class="kx-opp-sub" data-i18n="opp.sub">And it isn&rsquo;t only spas. We floor-plan, space-plan and advise across hospitality:</p>
           <div class="kx-opp-tags">
-            <span>Hotels &amp; Resorts</span>
-            <span>Private Members&rsquo; Clubs</span>
-            <span>Coworking Spaces</span>
-            <span>Gyms &amp; Fitness Clubs</span>
-            <span>Athletic &amp; Sports Clubs</span>
-            <span>Residences</span>
-            <span>Longevity Clinics</span>
+            <span data-i18n="opp.t1">Hotels &amp; Resorts</span>
+            <span data-i18n="opp.t2">Private Members&rsquo; Clubs</span>
+            <span data-i18n="opp.t3">Coworking Spaces</span>
+            <span data-i18n="opp.t4">Gyms &amp; Fitness Clubs</span>
+            <span data-i18n="opp.t5">Athletic &amp; Sports Clubs</span>
+            <span data-i18n="opp.t6">Residences</span>
+            <span data-i18n="opp.t7">Longevity Clinics</span>
           </div>
         </div>
+      </div>
+
+      <!-- THE RETURN / ROI -->
+      <div class="section kx-section" id="kx-roi">
+        <div class="kx-section-head center kx-reveal">
+          <p class="kx-eyebrow" data-i18n="roi.eyebrow">The Return</p>
+          <h2 class="kx-h2" data-i18n="roi.title">What the floor gives back.</h2>
+          <p class="kx-lead" data-i18n="roi.lead">Three illustrative examples. Real figures depend on your footprint, positioning and rate &mdash; we model them properly in the proposal.</p>
+        </div>
+        <div class="kx-roi-grid kx-reveal">
+          <div class="kx-roi-card">
+            <span class="kx-roi-k" data-i18n="roi.c1k">HBOT lounger</span>
+            <div class="kx-roi-fig" data-i18n="roi.c1fig">~ &euro;140k / year</div>
+            <p data-i18n="roi.c1d">Six sessions a day at &euro;90, six days a week, from roughly 4m&sup2; of floor. A reclining HBOT lounger is one of the highest revenue-per-square-metre assets on the floor.</p>
+          </div>
+          <div class="kx-roi-card">
+            <span class="kx-roi-k" data-i18n="roi.c2k">Spa reconfiguration</span>
+            <div class="kx-roi-fig" data-i18n="roi.c2fig">Higher-margin tier</div>
+            <p data-i18n="roi.c2d">Repositioning an underused treatment room as a cryotherapy and compression recovery suite typically lifts room utilisation and adds a premium service tier above standard treatments.</p>
+          </div>
+          <div class="kx-roi-card">
+            <span class="kx-roi-k" data-i18n="roi.c3k">Membership &amp; retention</span>
+            <div class="kx-roi-fig" data-i18n="roi.c3fig">Recurring revenue</div>
+            <p data-i18n="roi.c3d">Operators quote a credible longevity offer as a top-three reason clients join and stay &mdash; so it protects recurring revenue, not just treatment income.</p>
+          </div>
+        </div>
+        <p class="kx-roi-note kx-reveal" data-i18n="roi.note">Figures shown are illustrative, not quotes or guarantees.</p>
       </div>
 
       <!-- WHO WE ARE -->
@@ -144,15 +246,15 @@
             <span class="kx-who-b">KLOODOS</span>
           </div>
           <div class="kx-who-body">
-            <p class="kx-eyebrow">Who We Are</p>
-            <h2 class="kx-h2">Two specialists.<br>One longevity offer.</h2>
-            <p>ELATEVE is the longevity curator &mdash; the experience, the protocols and the guest-facing brand. Kloodos is the wellness-technology curator to elite sport, luxury hospitality and private medical health &mdash; a manufacturer and supplier of the world&rsquo;s leading wellness technologies since 2014.</p>
-            <p>Together we are the <strong>exclusive longevity-technology partnership for Spain &amp; Europe</strong>, based in Barcelona &mdash; so a property never has to assemble a wellness offer from parts that were never designed to work together, and carry the risk of getting it wrong.</p>
+            <p class="kx-eyebrow" data-i18n="who.eyebrow">Who We Are</p>
+            <h2 class="kx-h2" data-i18n-html="who.title">Two specialists.<br>One longevity offer.</h2>
+            <p data-i18n="who.p1">ELATEVE is the longevity curator &mdash; the experience, the protocols and the guest-facing brand. Kloodos is the wellness-technology curator to elite sport, luxury hospitality and private medical health &mdash; a manufacturer and supplier of the world&rsquo;s leading wellness technologies since 2014.</p>
+            <p data-i18n-html="who.p2">Together we are the <strong>exclusive longevity-technology partnership for Spain &amp; Europe</strong>, based in Barcelona &mdash; so a property never has to assemble a wellness offer from parts that were never designed to work together, and carry the risk of getting it wrong.</p>
             <div class="kx-tags">
-              <span>Exclusive &middot; Spain &amp; Europe</span>
-              <span>Based in Barcelona</span>
-              <span>Medical-grade only</span>
-              <span>One point of contact</span>
+              <span data-i18n="who.t1">Exclusive &middot; Spain &amp; Europe</span>
+              <span data-i18n="who.t2">Based in Barcelona</span>
+              <span data-i18n="who.t3">Medical-grade only</span>
+              <span data-i18n="who.t4">One point of contact</span>
             </div>
           </div>
         </div>
@@ -161,61 +263,61 @@
       <!-- WHY US -->
       <div class="section kx-section" id="kx-why">
         <div class="kx-section-head center kx-reveal">
-          <p class="kx-eyebrow">Why ELATEVE powered by Kloodos</p>
-          <h2 class="kx-h2">The only partner that owns<br>the whole thing, end to end.</h2>
-          <p class="kx-lead">Most wellness suppliers sell you a machine and walk away. We design the concept, supply every technology, build the protocols that make them work together, train your team, and stay for the life of the installation &mdash; one point of call for technology, service and support.</p>
+          <p class="kx-eyebrow" data-i18n="why.eyebrow">Why ELATEVE powered by Kloodos</p>
+          <h2 class="kx-h2" data-i18n-html="why.title">The only partner that owns<br>the whole thing, end to end.</h2>
+          <p class="kx-lead" data-i18n="why.lead">Most wellness suppliers sell you a machine and walk away. We design the concept, supply every technology, build the protocols that make them work together, train your team, and stay for the life of the installation &mdash; one point of call for technology, service and support.</p>
         </div>
         <div class="kx-why-grid kx-reveal">
-          <div class="kx-why-item"><h3>An address book you can&rsquo;t buy</h3><p>An unrivalled network of experts from elite professional sport and private medical health, available to call on for your project.</p></div>
-          <div class="kx-why-item"><h3>Turn-key, not trial-and-error</h3><p>Schematic drawings, guidance on the logical flow and positioning of each technology, and turn-key solutions for complete, real wellness.</p></div>
-          <div class="kx-why-item"><h3>Protocols, not just products</h3><p>Integrated protocols that sequence every technology together &mdash; designed to cross-sell and up-sell, so guests spend longer and return time after time.</p></div>
-          <div class="kx-why-item"><h3>Training that goes deep</h3><p>In-depth training across every technology &mdash; the what, the how, the when and the why &mdash; plus ongoing education and support for the protocols.</p></div>
-          <div class="kx-why-item"><h3>70+ years of protocol design</h3><p>A team with more than 70 years&rsquo; combined experience developing award-winning treatment protocols for premium spas worldwide.</p></div>
-          <div class="kx-why-item"><h3>Proven on the devices guests already wear</h3><p>Protocols shown to produce instant and accruing results on over-the-counter diagnostics &mdash; Whoop, Oura and the rest.</p></div>
+          <div class="kx-why-item"><h3 data-i18n="why.i1t">An address book you can&rsquo;t buy</h3><p data-i18n="why.i1d">An unrivalled network of experts from elite professional sport and private medical health, available to call on for your project.</p></div>
+          <div class="kx-why-item"><h3 data-i18n="why.i2t">Turn-key, not trial-and-error</h3><p data-i18n="why.i2d">Schematic drawings, guidance on the logical flow and positioning of each technology, and turn-key solutions for complete, real wellness.</p></div>
+          <div class="kx-why-item"><h3 data-i18n="why.i3t">Protocols, not just products</h3><p data-i18n="why.i3d">Integrated protocols that sequence every technology together &mdash; designed to cross-sell and up-sell, so guests spend longer and return time after time.</p></div>
+          <div class="kx-why-item"><h3 data-i18n="why.i4t">Training that goes deep</h3><p data-i18n="why.i4d">In-depth training across every technology &mdash; the what, the how, the when and the why &mdash; plus ongoing education and support for the protocols.</p></div>
+          <div class="kx-why-item"><h3 data-i18n="why.i5t">70+ years of protocol design</h3><p data-i18n="why.i5d">A team with more than 70 years&rsquo; combined experience developing award-winning treatment protocols for premium spas worldwide.</p></div>
+          <div class="kx-why-item"><h3 data-i18n="why.i6t">Proven on the devices guests already wear</h3><p data-i18n="why.i6d">Protocols shown to produce instant and accruing results on over-the-counter diagnostics &mdash; Whoop, Oura and the rest.</p></div>
         </div>
-        <p class="kx-why-motto kx-reveal">Relevant &middot; Cohesive &middot; Logical &middot; Reliable &middot; Engaging &middot; Integrated &middot; Complete</p>
+        <p class="kx-why-motto kx-reveal" data-i18n="why.motto">Relevant &middot; Cohesive &middot; Logical &middot; Reliable &middot; Engaging &middot; Integrated &middot; Complete</p>
       </div>
 
       <!-- 360 APPROACH -->
       <div class="section kx-section kx-section--band" id="kx-approach">
         <div class="kx-section-head center kx-reveal">
-          <p class="kx-eyebrow">Our 360&deg; Approach</p>
-          <h2 class="kx-h2">Regulate. Detoxify. Regenerate.</h2>
-          <p class="kx-lead">True health isn&rsquo;t treating symptoms one by one &mdash; it&rsquo;s restoring the body&rsquo;s own ability to regulate, adapt, repair and thrive. At the centre of everything we build is <strong>nervous-system regulation</strong>: the system that governs brain performance, emotional resilience, hormones, immunity, cardiovascular health, digestion, recovery and cellular repair.</p>
+          <p class="kx-eyebrow" data-i18n="app.eyebrow">Our 360&deg; Approach</p>
+          <h2 class="kx-h2" data-i18n="app.title">Regulate. Detoxify. Regenerate.</h2>
+          <p class="kx-lead" data-i18n-html="app.lead">True health isn&rsquo;t treating symptoms one by one &mdash; it&rsquo;s restoring the body&rsquo;s own ability to regulate, adapt, repair and thrive. At the centre of everything we build is <strong>nervous-system regulation</strong>: the system that governs brain performance, emotional resilience, hormones, immunity, cardiovascular health, digestion, recovery and cellular repair.</p>
         </div>
         <div class="kx-stages kx-reveal">
           <div class="kx-stage">
             <span class="kx-stage-n">01</span>
-            <h3>Regulate</h3>
-            <p>Shift the body out of chronic stress and sympathetic dominance into a balanced state where healing, recovery and adaptation can actually happen &mdash; the foundation that makes every therapy that follows work harder.</p>
+            <h3 data-i18n="app.s1t">Regulate</h3>
+            <p data-i18n="app.s1d">Shift the body out of chronic stress and sympathetic dominance into a balanced state where healing, recovery and adaptation can actually happen &mdash; the foundation that makes every therapy that follows work harder.</p>
           </div>
           <div class="kx-stage">
             <span class="kx-stage-n">02</span>
-            <h3>Detoxify</h3>
-            <p>Support the body&rsquo;s natural detoxification pathways, optimise circulation and oxygen delivery, enhance lymphatic function and improve mitochondrial performance &mdash; restoring physiological homeostasis across multiple systems.</p>
+            <h3 data-i18n="app.s2t">Detoxify</h3>
+            <p data-i18n="app.s2d">Support the body&rsquo;s natural detoxification pathways, optimise circulation and oxygen delivery, enhance lymphatic function and improve mitochondrial performance &mdash; restoring physiological homeostasis across multiple systems.</p>
           </div>
           <div class="kx-stage">
             <span class="kx-stage-n">03</span>
-            <h3>Regenerate</h3>
-            <p>Raise cellular energy production, improve tissue oxygenation, reduce inflammation and support the body&rsquo;s intrinsic repair &mdash; building long-term resilience, vitality and healthy ageing.</p>
+            <h3 data-i18n="app.s3t">Regenerate</h3>
+            <p data-i18n="app.s3d">Raise cellular energy production, improve tissue oxygenation, reduce inflammation and support the body&rsquo;s intrinsic repair &mdash; building long-term resilience, vitality and healthy ageing.</p>
           </div>
         </div>
-        <p class="kx-stages-note kx-reveal">Not isolated treatments &mdash; an integrated ecosystem of clinically proven technologies, intentionally sequenced so each modality prepares the body for the next. The outcome is greater than the sum of its parts.</p>
+        <p class="kx-stages-note kx-reveal" data-i18n="app.note">Not isolated treatments &mdash; an integrated ecosystem of clinically proven technologies, intentionally sequenced so each modality prepares the body for the next. The outcome is greater than the sum of its parts.</p>
       </div>
 
       <!-- WHAT WE INSTALL -->
       <div class="section kx-section kx-section--tech">
         <div class="kx-section-head center kx-reveal">
-          <p class="kx-eyebrow">What We Install</p>
-          <h2 class="kx-h2">The technology stack,<br>in full.</h2>
-          <p class="kx-lead">No other company carries this breadth. Every modality is clinically proven, medical-grade where it counts, and built to be sequenced &mdash; grouped here by the stage of the pathway it drives.</p>
+          <p class="kx-eyebrow" data-i18n="inst.eyebrow">What We Install</p>
+          <h2 class="kx-h2" data-i18n-html="inst.title">The technology stack,<br>in full.</h2>
+          <p class="kx-lead" data-i18n="inst.lead">No other company carries this breadth. Every modality is clinically proven, medical-grade where it counts, and built to be sequenced &mdash; grouped here by the stage of the pathway it drives.</p>
         </div>
         <div class="kx-tech-media kx-reveal">
           <img src="/images/partnership/sauna.jpg" alt="A contemporary backlit sauna suite" loading="lazy">
         </div>
 
         <div class="kx-tech-block kx-reveal">
-          <h3 class="kx-tech-stage">Regulate &mdash; the nervous system</h3>
+          <h3 class="kx-tech-stage" data-i18n="inst.stage1">Regulate &mdash; the nervous system</h3>
           <div class="kx-tech-grid">
             <article class="kx-tech-card"><h4>Kokoon</h4><p>A multisensory recovery pod built by Kloodos &mdash; light, visuals, sound and vibration in a private immersive space that shifts the body into a parasympathetic state.</p></article>
             <article class="kx-tech-card"><h4>Kokoon Mini</h4><p>Portable nervous-system regulation: brain entrainment and full-body vibroacoustic therapy in a fully mobile format for hotels, events and pop-ups.</p></article>
@@ -225,7 +327,7 @@
         </div>
 
         <div class="kx-tech-block kx-reveal">
-          <h3 class="kx-tech-stage">Detoxify &mdash; circulation, lymph, homeostasis</h3>
+          <h3 class="kx-tech-stage" data-i18n="inst.stage2">Detoxify &mdash; circulation, lymph, homeostasis</h3>
           <div class="kx-tech-grid">
             <article class="kx-tech-card"><h4>Whole Body Cryotherapy &minus;110&deg;C</h4><p>The world&rsquo;s most reliable and proven coldest chambers, paired with scientifically developed programs tailored to each client. Exclusive to us.</p></article>
             <article class="kx-tech-card"><h4>Local &minus;30&deg;C Cryotherapy</h4><p>The fastest-selling localised cryo device &mdash; targeted analgesia, reduced inflammation and swelling, collagen and elastin stimulation, cryo facials.</p></article>
@@ -236,7 +338,7 @@
         </div>
 
         <div class="kx-tech-block kx-reveal">
-          <h3 class="kx-tech-stage">Regenerate &mdash; cellular energy &amp; repair</h3>
+          <h3 class="kx-tech-stage" data-i18n="inst.stage3">Regenerate &mdash; cellular energy &amp; repair</h3>
           <div class="kx-tech-grid">
             <article class="kx-tech-card"><h4>Cell-Stack &middot; Whole Body PBM</h4><p>The only doctor-led, whole-body photobiomodulation bed &mdash; tailored red-light therapy with advanced results in minimal time, plus negative-ion delivery and a comfort silicone mattress.</p></article>
             <article class="kx-tech-card"><h4>Oxy-Stack &middot; Medical-Grade HBOT</h4><p>The only fully certified hyperbaric oxygen systems built specifically for wellness &mdash; hospital-grade engineering with bespoke finishes, automated protocols and an optional Sonic audio upgrade.</p></article>
@@ -248,25 +350,25 @@
           </div>
         </div>
 
-        <p class="kx-tech-more kx-reveal">And more &mdash; Deep Sea Sleep Rooms, clean-air and negative-ion systems, experience showers, Kneipp therapy and bespoke acoustic swimming pools. Diagnostics and circadian-rhythm technologies are in development.</p>
+        <p class="kx-tech-more kx-reveal" data-i18n="inst.more">And more &mdash; Deep Sea Sleep Rooms, clean-air and negative-ion systems, experience showers, Kneipp therapy and bespoke acoustic swimming pools. Diagnostics and circadian-rhythm technologies are in development.</p>
       </div>
 
       <!-- THE PEOPLE -->
       <div class="section kx-section" id="kx-team">
         <div class="kx-section-head center kx-reveal">
-          <p class="kx-eyebrow">The People</p>
-          <h2 class="kx-h2">Built by women who were done<br>being told to push through it.</h2>
+          <p class="kx-eyebrow" data-i18n="ppl.eyebrow">The People</p>
+          <h2 class="kx-h2" data-i18n-html="ppl.title">Built by women who were done<br>being told to push through it.</h2>
         </div>
         <div class="kx-team-grid">
           <div class="kx-team-block kx-reveal">
             <h3 class="kx-team-name">ELATEVE</h3>
-            <p>ELATEVE is a group of women in their 30s, 40s, 50s and 60s. Each of us hit the same wall &mdash; our own burnout, our own hormonal upheaval, recovery that standard procedures met with a shrug, and a curiosity that nobody around us would feed.</p>
-            <p>Our backgrounds are in the luxury and lifestyle world across Barcelona, Paris and London &mdash; and in building businesses. Between us we have lived postpartum recovery, perimenopause, menopause and the decades beyond. We test everything on ourselves before it ever reaches a guest.</p>
+            <p data-i18n="ppl.e1">ELATEVE is a group of women in their 30s, 40s, 50s and 60s. Each of us hit the same wall &mdash; our own burnout, our own hormonal upheaval, recovery that standard procedures met with a shrug, and a curiosity that nobody around us would feed.</p>
+            <p data-i18n="ppl.e2">Our backgrounds are in the luxury and lifestyle world across Barcelona, Paris and London &mdash; and in building businesses. Between us we have lived postpartum recovery, perimenopause, menopause and the decades beyond. We test everything on ourselves before it ever reaches a guest.</p>
           </div>
           <div class="kx-team-block kx-reveal">
             <h3 class="kx-team-name">KLOODOS</h3>
-            <p>Kloodos is a female-led family business that came to wellness technology with the same questions we did &mdash; and started answering them back in 2014, advising spas and gyms on advanced recovery long before it was a category.</p>
-            <p>Behind it: over 70 years&rsquo; combined experience designing award-winning treatment protocols for premium spas worldwide, hands-on work with Premier League sports-science and sports-medical departments, and manufacturing and distribution of the world&rsquo;s leading wellness technologies. Experts in medical, science, manufacturing and education &mdash; at the most premium level.</p>
+            <p data-i18n="ppl.k1">Kloodos is a female-led family business that came to wellness technology with the same questions we did &mdash; and started answering them back in 2014, advising spas and gyms on advanced recovery long before it was a category.</p>
+            <p data-i18n="ppl.k2">Behind it: over 70 years&rsquo; combined experience designing award-winning treatment protocols for premium spas worldwide, hands-on work with Premier League sports-science and sports-medical departments, and manufacturing and distribution of the world&rsquo;s leading wellness technologies. Experts in medical, science, manufacturing and education &mdash; at the most premium level.</p>
           </div>
         </div>
       </div>
@@ -275,25 +377,25 @@
       <div class="kx-place">
         <img src="/images/partnership/barcelona.jpg" alt="Casa Batlló, Barcelona, at dusk" loading="lazy">
         <div class="kx-place-caption">
-          <p class="kx-eyebrow">Home Base</p>
-          <p class="kx-place-line">Based in Barcelona.<br>Partnering across Spain &amp; Europe.</p>
+          <p class="kx-eyebrow" data-i18n="place.eyebrow">Home Base</p>
+          <p class="kx-place-line" data-i18n-html="place.line">Based in Barcelona.<br>Partnering across Spain &amp; Europe.</p>
         </div>
       </div>
 
       <!-- THE ASK -->
       <div class="section kx-section kx-section--band" id="kx-ask">
         <div class="kx-section-head center kx-reveal">
-          <p class="kx-eyebrow">The Ask</p>
-          <h2 class="kx-h2">Give us 30 minutes in your space.</h2>
-          <p class="kx-lead">Whatever the venue &mdash; hotel, resort, members&rsquo; club, gym or coworking floor &mdash; by the end of it you&rsquo;ll know the footprint, the technology stack and the protocols that fit.</p>
+          <p class="kx-eyebrow" data-i18n="ask.eyebrow">The Ask</p>
+          <h2 class="kx-h2" data-i18n="ask.title">Give us 30 minutes in your space.</h2>
+          <p class="kx-lead" data-i18n="ask.lead">Whatever the venue &mdash; hotel, resort, private club, gym or coworking floor &mdash; by the end of it you&rsquo;ll know the footprint, the technology stack and the protocols that fit.</p>
         </div>
         <div class="kx-steps kx-reveal">
-          <div class="kx-step"><span class="kx-step-n">01</span><h3>Discovery call</h3><p>Your property, your guest, your current space &mdash; 30 minutes.</p></div>
-          <div class="kx-step"><span class="kx-step-n">02</span><h3>On-site walkthrough</h3><p>We walk the space, measure the footprint and map the guest flow.</p></div>
-          <div class="kx-step"><span class="kx-step-n">03</span><h3>Tailored proposal</h3><p>Technology stack, protocols and staffing, shaped to your property.</p></div>
+          <div class="kx-step"><span class="kx-step-n">01</span><h3 data-i18n="ask.s1t">Discovery call</h3><p data-i18n="ask.s1d">Your property, your guest, your current space &mdash; 30 minutes.</p></div>
+          <div class="kx-step"><span class="kx-step-n">02</span><h3 data-i18n="ask.s2t">On-site walkthrough</h3><p data-i18n="ask.s2d">We walk the space, measure the footprint and map the guest flow.</p></div>
+          <div class="kx-step"><span class="kx-step-n">03</span><h3 data-i18n="ask.s3t">Tailored proposal</h3><p data-i18n="ask.s3d">Technology stack, protocols, staffing and modelled return, shaped to your property.</p></div>
         </div>
         <div class="kx-ask-cta kx-reveal">
-          <a href="mailto:hello@elateve.com" class="btn btn--gold" data-contact>Book 30 Minutes</a>
+          <a href="mailto:hello@elateve.com" class="btn btn--gold" data-contact data-i18n="cta.book">Book 30 Minutes</a>
         </div>
       </div>
 
@@ -301,7 +403,7 @@
       <div class="kx-closer">
         <img src="/images/partnership/coast.jpg" alt="A cliffside infinity pool looking out to sea" loading="lazy">
         <div class="kx-closer-inner">
-          <p class="kx-closer-quote">&ldquo;Longevity isn&rsquo;t about adding years.<br>It&rsquo;s about living them fully.&rdquo;</p>
+          <p class="kx-closer-quote" data-i18n-html="closer.quote">&ldquo;Longevity isn&rsquo;t about adding years.<br>It&rsquo;s about living them fully.&rdquo;</p>
           <span class="kx-closer-attr">ELATEVE powered by Kloodos</span>
         </div>
       </div>
@@ -309,11 +411,11 @@
       <!-- NEWSLETTER -->
       <div class="section section--newsletter">
         <div class="newsletter-inner">
-          <h2>Join the Elevation</h2>
-          <p>Longevity thinking, curated finds and notes from the partnership. Delivered occasionally, never noisy.</p>
+          <h2 data-i18n="news.title">Join the Elevation</h2>
+          <p data-i18n="news.p">Longevity thinking, curated finds and notes from the partnership. Delivered occasionally, never noisy.</p>
           <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="Your email" required>
-            <button type="submit" class="btn btn--gold">Subscribe</button>
+            <input type="email" placeholder="Your email" required data-i18n-placeholder="news.ph">
+            <button type="submit" class="btn btn--gold" data-i18n="news.btn">Subscribe</button>
           </form>
         </div>
       </div>
@@ -322,14 +424,14 @@
     <!-- ==================== BLOG PAGE ==================== -->
     <section class="page page--blog" id="page-blog">
       <div class="blog-hero">
-        <p class="section-eyebrow">The Journal</p>
-        <h1 class="page-title">Field Notes from the Team</h1>
-        <p class="page-sub">Our own notes on the longevity technology we test, run and get asked about &mdash; what&rsquo;s working, what&rsquo;s hype, and what&rsquo;s just landed on the market.</p>
+        <p class="section-eyebrow" data-i18n="blog.eyebrow">The Journal</p>
+        <h1 class="page-title" data-i18n="blog.title">Field Notes from the Team</h1>
+        <p class="page-sub" data-i18n="blog.sub">Our own notes on the longevity technology we test, run and get asked about &mdash; what&rsquo;s working, what&rsquo;s hype, and what&rsquo;s just landed on the market.</p>
       </div>
       <div class="blog-grid" id="blogGrid"></div>
       <div class="blog-article" id="blogArticle" style="display:none;">
         <div class="blog-article-inner">
-          <button class="blog-article-back" id="blogBack">&larr; Back to Journal</button>
+          <button class="blog-article-back" id="blogBack" data-i18n="blog.back">&larr; Back to Journal</button>
           <div class="blog-article-meta">
             <span class="blog-article-tag" id="articleTag"></span>
             <span class="blog-article-date" id="articleDate"></span>
@@ -345,18 +447,18 @@
     <section class="page page--about" id="page-about">
 
       <div class="about-hero">
-        <p class="section-eyebrow">Our Story</p>
-        <h1 class="page-title">Two Companies. One Refusal.</h1>
-        <p class="about-hero-sub">Longevity, Demystified by Women Who&rsquo;ve Lived It</p>
-        <p class="about-hero-tagline">ELATEVE powered by Kloodos &mdash;<br>the longevity-technology partnership for Spain &amp; Europe.</p>
+        <p class="section-eyebrow" data-i18n="about.eyebrow">Our Story</p>
+        <h1 class="page-title" data-i18n="about.title">Two Companies. One Refusal.</h1>
+        <p class="about-hero-sub" data-i18n="about.sub">Longevity, Demystified by Women Who&rsquo;ve Lived It</p>
+        <p class="about-hero-tagline" data-i18n-html="about.tagline">ELATEVE powered by Kloodos &mdash;<br>the longevity-technology partnership for Spain &amp; Europe.</p>
       </div>
 
       <div class="about-content">
 
         <div class="about-block about-block--intro">
           <div class="about-text">
-            <p class="about-lead">We believe longevity isn&rsquo;t about chasing more years &mdash; it&rsquo;s about feeling clear, capable, and like yourself at every one of them.</p>
-            <p>It&rsquo;s knowing which protocol is worth your time, which technology is worth the room it takes, and which changes actually move the needle on how you feel &mdash; instead of drowning in noise. We built ELATEVE, and partnered exclusively with Kloodos, because we were tired of guessing.</p>
+            <p class="about-lead" data-i18n="about.introlead">We believe longevity isn&rsquo;t about chasing more years &mdash; it&rsquo;s about feeling clear, capable, and like yourself at every one of them.</p>
+            <p data-i18n="about.introp">It&rsquo;s knowing which protocol is worth your time, which technology is worth the room it takes, and which changes actually move the needle on how you feel &mdash; instead of drowning in noise. We built ELATEVE, and partnered exclusively with Kloodos, because we were tired of guessing.</p>
           </div>
         </div>
 
@@ -364,10 +466,10 @@
 
         <div class="about-block">
           <div class="about-text">
-            <p class="about-section-label">The Women Behind ELATEVE</p>
-            <p>ELATEVE is a group of women in their 30s, 40s, 50s and 60s. Each of us hit the same wall &mdash; our own burnout, our own hormonal upheaval, recovery that standard procedures met with a shrug, and a curiosity that nobody around us would feed.</p>
-            <p>Our backgrounds are in the luxury and lifestyle world across Barcelona, Paris and London, and in building businesses over decades. Between us we have navigated postpartum recovery, perimenopause, menopause and the years beyond &mdash; and the quiet confusion of not knowing which protocol, product or professional to trust.</p>
-            <p>So we compare notes, we disagree about what actually works, and we test everything on ourselves before it ever reaches you. If we wouldn&rsquo;t put it in our own bodies, or recommend it to our own mothers, sisters and daughters, it doesn&rsquo;t make the cut.</p>
+            <p class="about-section-label" data-i18n="about.l1">The Women Behind ELATEVE</p>
+            <p data-i18n="about.w1">ELATEVE is a group of women in their 30s, 40s, 50s and 60s. Each of us hit the same wall &mdash; our own burnout, our own hormonal upheaval, recovery that standard procedures met with a shrug, and a curiosity that nobody around us would feed.</p>
+            <p data-i18n="about.w2">Our backgrounds are in the luxury and lifestyle world across Barcelona, Paris and London, and in building businesses over decades. Between us we have navigated postpartum recovery, perimenopause, menopause and the years beyond &mdash; and the quiet confusion of not knowing which protocol, product or professional to trust.</p>
+            <p data-i18n="about.w3">So we compare notes, we disagree about what actually works, and we test everything on ourselves before it ever reaches you. If we wouldn&rsquo;t put it in our own bodies, or recommend it to our own mothers, sisters and daughters, it doesn&rsquo;t make the cut.</p>
           </div>
         </div>
 
@@ -375,10 +477,10 @@
 
         <div class="about-block">
           <div class="about-text">
-            <p class="about-section-label">Kloodos &mdash; Our Technology Partner</p>
-            <p>Kloodos is a female-led family business that came to wellness technology with the same questions we did &mdash; and started answering them in 2014, advising spas and gyms on advanced recovery long before it was a category.</p>
-            <p>Behind it: over 70 years&rsquo; combined experience designing award-winning treatment protocols for premium spas worldwide, hands-on work with Premier League sports-science and sports-medical departments, and the manufacture and distribution of the world&rsquo;s leading wellness technologies. Whole Body Cryotherapy, doctor-led Photobiomodulation, medical-grade Hyperbaric Oxygen, NAD+ and needle-free vitamin Jetting, FDA-cleared compression, dry float, IHHT, multisensory recovery pods and more &mdash; clinically proven, and sequenced into protocols rather than sold as a room of machines.</p>
-            <p>No other company carries this breadth of technology alongside the in-depth knowledge, the expert contacts from elite sport and private medicine, and the training and ongoing support to make it all work together. One point of contact, from schematic drawings to the outcome your guests feel.</p>
+            <p class="about-section-label" data-i18n="about.l2">Kloodos &mdash; Our Technology Partner</p>
+            <p data-i18n="about.k1">Kloodos is a female-led family business that came to wellness technology with the same questions we did &mdash; and started answering them in 2014, advising spas and gyms on advanced recovery long before it was a category.</p>
+            <p data-i18n="about.k2">Behind it: over 70 years&rsquo; combined experience designing award-winning treatment protocols for premium spas worldwide, hands-on work with Premier League sports-science and sports-medical departments, and the manufacture and distribution of the world&rsquo;s leading wellness technologies. Whole Body Cryotherapy, doctor-led Photobiomodulation, medical-grade Hyperbaric Oxygen, NAD+ and needle-free vitamin Jetting, FDA-cleared compression, dry float, IHHT, multisensory recovery pods and more &mdash; clinically proven, and sequenced into protocols rather than sold as a room of machines.</p>
+            <p data-i18n="about.k3">No other company carries this breadth of technology alongside the in-depth knowledge, the expert contacts from elite sport and private medicine, and the training and ongoing support to make it all work together. One point of contact, from schematic drawings to the outcome your guests feel.</p>
           </div>
         </div>
 
@@ -386,37 +488,37 @@
 
         <div class="about-block">
           <div class="about-text">
-            <p class="about-section-label">The ELATEVE Trust &mdash; Why Us?</p>
-            <p class="about-lead">Tested by Us. Backed by Science. Curation with Conscience.</p>
+            <p class="about-section-label" data-i18n="about.l3">The ELATEVE Trust &mdash; Why Us?</p>
+            <p class="about-lead" data-i18n="about.l3lead">Tested by Us. Backed by Science. Curation with Conscience.</p>
           </div>
         </div>
         <div class="about-pillars about-pillars--3">
           <div class="about-pillar">
-            <h3>Vetted by Generations</h3>
-            <p>Every protocol or technology we recommend has been reviewed by a woman on our team who has lived through that exact stage of life.</p>
+            <h3 data-i18n="about.p1t">Vetted by Generations</h3>
+            <p data-i18n="about.p1d">Every protocol or technology we recommend has been reviewed by a woman on our team who has lived through that exact stage of life.</p>
           </div>
           <div class="about-pillar">
-            <h3>360&deg; Approach</h3>
-            <p>We don&rsquo;t believe a single machine fixes everything. Real change needs the right technology, mental stillness, and advanced physical care working together.</p>
+            <h3 data-i18n="about.p2t">360&deg; Approach</h3>
+            <p data-i18n="about.p2d">We don&rsquo;t believe a single machine fixes everything. Real change needs the right technology, mental stillness, and advanced physical care working together.</p>
           </div>
           <div class="about-pillar">
-            <h3>No Taboos</h3>
-            <p>From postpartum pelvic-floor health to post-menopausal libido, we speak openly, honestly, and without judgment.</p>
+            <h3 data-i18n="about.p3t">No Taboos</h3>
+            <p data-i18n="about.p3d">From postpartum pelvic-floor health to post-menopausal libido, we speak openly, honestly, and without judgment.</p>
           </div>
         </div>
 
         <div class="about-quote about-quote--brand">
-          <p>&ldquo;To us, longevity isn&rsquo;t just about living longer &mdash; it&rsquo;s a feeling. It&rsquo;s waking up clear-headed, strong enough to keep up with your life, and confident in every decision about your own body.&rdquo;</p>
+          <p data-i18n="about.quote">&ldquo;To us, longevity isn&rsquo;t just about living longer &mdash; it&rsquo;s a feeling. It&rsquo;s waking up clear-headed, strong enough to keep up with your life, and confident in every decision about your own body.&rdquo;</p>
         </div>
 
         <div class="about-block about-block--closing">
           <div class="about-text">
-            <p>We&rsquo;ve done the research, vetted the technology and tested the protocols &mdash; so you don&rsquo;t have to guess. We&rsquo;re here to help you bridge the gap between where you are and the ELATEVE life you deserve.</p>
-            <p class="about-lead">Authentic living is accessible. Transformation is just a choice away.<br>Let&rsquo;s elevate the everyday, together.</p>
+            <p data-i18n="about.close1">We&rsquo;ve done the research, vetted the technology and tested the protocols &mdash; so you don&rsquo;t have to guess. We&rsquo;re here to help you bridge the gap between where you are and the ELATEVE life you deserve.</p>
+            <p class="about-lead" data-i18n-html="about.closelead">Authentic living is accessible. Transformation is just a choice away.<br>Let&rsquo;s elevate the everyday, together.</p>
           </div>
           <div class="about-cta">
-            <a href="mailto:hello@elateve.com" class="btn btn--gold" data-contact>Book 30 Minutes</a>
-            <a href="/blog" class="btn btn--outline" data-page="blog">Read the Latest from the Journal</a>
+            <a href="mailto:hello@elateve.com" class="btn btn--gold" data-contact data-i18n="cta.book">Book 30 Minutes</a>
+            <a href="/blog" class="btn btn--outline" data-page="blog" data-i18n="about.ctajournal">Read the Latest from the Journal</a>
           </div>
         </div>
 
@@ -431,28 +533,28 @@
       <div class="footer-brand">
         <span class="footer-logo">ELATEVE</span>
         <span class="footer-origin">powered by Kloodos</span>
-        <p>Longevity, delivered end to end.</p>
+        <p data-i18n="foot.tagline">Longevity, delivered end to end.</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Company</h4>
-          <a href="/about" data-page="about">About Us</a>
-          <a href="/blog" data-page="blog">Journal</a>
+          <h4 data-i18n="foot.company">Company</h4>
+          <a href="/about" data-page="about" data-i18n="foot.about">About Us</a>
+          <a href="/blog" data-page="blog" data-i18n="nav.journal">Journal</a>
         </div>
         <div class="footer-col">
-          <h4>Partnership</h4>
-          <a href="/" data-page="home">Track Record</a>
-          <a href="mailto:hello@elateve.com" data-contact>Book 30 Minutes</a>
+          <h4 data-i18n="foot.partnership">Partnership</h4>
+          <a href="/" data-page="home" data-i18n="foot.track">Track Record</a>
+          <a href="mailto:hello@elateve.com" data-contact data-i18n="cta.book">Book 30 Minutes</a>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="foot.contact">Contact</h4>
           <a href="mailto:hello@elateve.com">hello@elateve.com</a>
           <a href="https://wa.me/34604866573" target="_blank" rel="noopener">WhatsApp &middot; +34 604 866 573</a>
           <a href="/" data-page="home">Barcelona &middot; Spain &amp; Europe</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 ELATEVE powered by Kloodos. All rights reserved.</p>
+        <p data-i18n="foot.rights">&copy; 2026 ELATEVE powered by Kloodos. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -462,21 +564,22 @@
     <div class="popup popup--contact" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
       <button class="popup-close" id="contactClose" aria-label="Close">&times;</button>
       <span class="popup-eyebrow">ELATEVE powered by Kloodos</span>
-      <h2 class="popup-title" id="contactTitle">Let&rsquo;s talk longevity.</h2>
-      <p class="popup-text">Skip the form. Reach a human directly and we&rsquo;ll set up your 30 minutes &mdash; a discovery call, an on-site walkthrough, then a proposal shaped to your property.</p>
+      <h2 class="popup-title" id="contactTitle" data-i18n="modal.title">Let&rsquo;s talk longevity.</h2>
+      <p class="popup-text" data-i18n="modal.text">Skip the form. Reach a human directly and we&rsquo;ll set up your 30 minutes &mdash; a discovery call, an on-site walkthrough, then a proposal shaped to your property.</p>
       <div class="contact-options">
         <a class="contact-opt" href="https://wa.me/34604866573?text=Hi%20ELATEVE%20powered%20by%20Kloodos%20%E2%80%94%20I%27d%20like%20to%20book%2030%20minutes." target="_blank" rel="noopener">
-          <span class="contact-opt-k">WhatsApp us</span>
+          <span class="contact-opt-k" data-i18n="modal.wa">WhatsApp us</span>
           <span class="contact-opt-v">+34 604 866 573</span>
         </a>
         <a class="contact-opt" href="mailto:hello@elateve.com?subject=Book%2030%20minutes%20%E2%80%94%20ELATEVE%20powered%20by%20Kloodos&amp;body=Tell%20us%20a%20little%20about%20your%20property%20and%20we%27ll%20be%20in%20touch.">
-          <span class="contact-opt-k">Email us</span>
+          <span class="contact-opt-k" data-i18n="modal.email">Email us</span>
           <span class="contact-opt-v">hello@elateve.com</span>
         </a>
       </div>
     </div>
   </div>
 
-  <script src="/js/app.js?v=20260827-kx5"></script>
+  <script src="/js/i18n.js?v=20260828-kx6"></script>
+  <script src="/js/app.js?v=20260828-kx6"></script>
 </body>
 </html>
