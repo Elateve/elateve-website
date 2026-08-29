@@ -19,8 +19,8 @@
 
     // hero
     'hero.eyebrow': 'Una alianza de longevidad · Barcelona',
-    'hero.title': 'La propuesta de longevidad,<br>de principio a fin.',
-    'hero.sub': 'ELATEVE cura la experiencia de longevidad. Kloodos aporta la tecnología clínicamente validada que la sustenta. Un solo socio, desde la primera visita hasta el resultado que sienten sus huéspedes — en exclusiva para España y Europa.',
+    'hero.title': 'La propuesta integral de bienestar y longevidad <br>para la hostelería, de principio a fin.',
+    'hero.sub': 'En la intersección entre la ciencia de la longevidad y la hostelería de lujo, ELATEVE powered by Kloodos convierte el espacio de bienestar infrautilizado en una propuesta medible de recuperación y rendimiento — para spas de hotel, clubes deportivos profesionales, espacios de coworking premium y centros de bienestar independientes. Los huéspedes, atletas y socios de hoy buscan renovación celular y cognitiva, no relajación pasiva, y se la ofrecemos como un blueprint llave en mano, sin operar el espacio: protocolos clínicos, tecnología biométrica y formación digital que permiten a su establecimiento captar el mercado de longevidad de alto valor y convertir una superficie infrautilizada en su activo más rentable. Un solo socio, en exclusiva para España y Europa.',
     'hero.cta2': 'Ver qué entregamos',
     'hero.m1': 'Tecnologías de grado médico',
     'hero.m2': 'Años de diseño de protocolos',
@@ -28,7 +28,7 @@
 
     // the system / what we deliver
     'sys.eyebrow': 'Qué entregamos',
-    'sys.title': 'Un espacio de longevidad llave en mano.<br>Un contrato, un socio.',
+    'sys.title': 'Un espacio de longevidad llave en mano. <br>Un contrato, un socio.',
     'sys.lead': 'No un catálogo de máquinas. Una propuesta de longevidad completa — diseñada para su edificio, su cliente y su tarifa, y luego instalada, dotada de personal y comercializada. Esto es lo que incluye.',
     'sys.s1t': 'Concepto y viabilidad',
     'sys.s1d': 'Recorremos el espacio, dibujamos el plano y trazamos el recorrido del huésped antes de encargar nada — superficie, ubicación y flujo de cada modalidad.',
@@ -46,14 +46,14 @@
 
     // track record
     'rec.eyebrow': 'Trayectoria',
-    'rec.title': 'Ya presente en los espacios<br>que no aceptan menos.',
+    'rec.title': 'Ya presente en los espacios <br>que no aceptan menos.',
     'rec.lead': 'La tecnología y los protocolos de ELATEVE powered by Kloodos están instalados y en funcionamiento en el deporte de élite, la hostelería de lujo y el bienestar médico privado — desde salas de recuperación de la Premier League hasta spas de cinco estrellas.',
     'rec.rolllabel': 'Algunos de los espacios donde ya funciona',
     'rec.rollmore': 'y más — bajo petición',
 
     // the market
     'mkt.eyebrow': 'El mercado',
-    'mkt.title': 'La demanda ya está aquí.<br>La oferta, no.',
+    'mkt.title': 'La demanda ya está aquí. <br>La oferta, no.',
     'mkt.s1l': 'Lo que gasta por viaje un turista de bienestar internacional frente al turista medio',
     'mkt.s2l': 'Los viajes de bienestar son el 7,8% de todos los viajes — pero casi una quinta parte de lo que gastan los viajeros',
     'mkt.s3l': 'Tamaño previsto del turismo de bienestar en 2027, desde 1 billón de dólares en 2024',
@@ -64,7 +64,7 @@
 
     // the opportunity
     'opp.eyebrow': 'La oportunidad',
-    'opp.title': 'Su planta de bienestar es el espacio<br>menos aprovechado del edificio.',
+    'opp.title': 'Su planta de bienestar es el espacio <br>menos aprovechado del edificio.',
     'opp.lead': 'Los clientes que más gastan — y una ola creciente de viajeros centrados en la longevidad — buscan activamente dónde destinar ese gasto. Una propuesta de longevidad seria y con respaldo científico es, cada vez más, la razón por la que eligen un establecimiento, o un club, frente a otro.',
     'opp.p2': 'La mayoría de los establecimientos no pueden atender esa demanda, porque la propuesta hay que ensamblarla con piezas que nunca se diseñaron para funcionar juntas — y alguien tiene que asumir el riesgo de equivocarse. No solo suministramos la tecnología; recorremos el espacio, dibujamos el plano, trazamos el flujo del huésped y asesoramos sobre la ubicación lógica de cada modalidad.',
     'opp.p3': 'Su spa se diseñó para un cliente anterior — otro huésped, otra década de demanda. Evaluamos lo que ya tiene y proponemos los cambios que lo elevan para atraer al cliente que entra hoy.',
@@ -94,7 +94,7 @@
 
     // who we are
     'who.eyebrow': 'Quiénes somos',
-    'who.title': 'Dos especialistas.<br>Una propuesta de longevidad.',
+    'who.title': 'Dos especialistas. <br>Una propuesta de longevidad.',
     'who.p1': 'ELATEVE es la curadora de longevidad — la experiencia, los protocolos y la marca de cara al huésped. Kloodos es la curadora de tecnología de bienestar para el deporte de élite, la hostelería de lujo y la salud médica privada — fabricante y distribuidora de las principales tecnologías de bienestar del mundo desde 2014.',
     'who.p2': 'Juntas somos la <strong>alianza exclusiva de tecnología de longevidad para España y Europa</strong>, con sede en Barcelona — para que un establecimiento nunca tenga que ensamblar una propuesta de bienestar con piezas que no se diseñaron para funcionar juntas, ni asumir el riesgo de equivocarse.',
     'who.t1': 'Exclusiva · España y Europa',
@@ -104,7 +104,7 @@
 
     // why us
     'why.eyebrow': 'Por qué ELATEVE powered by Kloodos',
-    'why.title': 'El único socio que asume<br>todo el proyecto, de principio a fin.',
+    'why.title': 'El único socio que asume <br>todo el proyecto, de principio a fin.',
     'why.lead': 'La mayoría de los proveedores de bienestar le venden una máquina y se marchan. Nosotras diseñamos el concepto, suministramos toda la tecnología, creamos los protocolos que la hacen funcionar en conjunto, formamos a su equipo y permanecemos durante toda la vida de la instalación — un único punto de contacto para tecnología, servicio y soporte.',
     'why.i1t': 'Una agenda de contactos que no se compra',
     'why.i1d': 'Una red sin igual de expertos del deporte profesional de élite y la salud médica privada, disponible para su proyecto.',
@@ -134,7 +134,7 @@
 
     // what we install (headings only; device cards stay English for now)
     'inst.eyebrow': 'Qué instalamos',
-    'inst.title': 'El stack tecnológico,<br>al completo.',
+    'inst.title': 'El stack tecnológico, <br>al completo.',
     'inst.lead': 'Ninguna otra empresa reúne esta amplitud. Cada modalidad está clínicamente probada, es de grado médico donde importa y está pensada para secuenciarse — agrupada aquí por la fase del recorrido que impulsa.',
     'inst.stage1': 'Regular — el sistema nervioso',
     'inst.stage2': 'Depurar — circulación, linfa, homeostasis',
@@ -143,7 +143,7 @@
 
     // the people
     'ppl.eyebrow': 'El equipo',
-    'ppl.title': 'Creado por mujeres cansadas<br>de que les dijeran que aguantaran.',
+    'ppl.title': 'Creado por mujeres cansadas <br>de que les dijeran que aguantaran.',
     'ppl.e1': 'ELATEVE es un grupo de mujeres de 30, 40, 50 y 60 años. Cada una chocó con el mismo muro — nuestro propio agotamiento, nuestra propia revolución hormonal, una recuperación que los procedimientos estándar recibieron con un encogimiento de hombros, y una curiosidad que nadie a nuestro alrededor alimentaba.',
     'ppl.e2': 'Venimos del mundo del lujo y el lifestyle en Barcelona, París y Londres — y de crear empresas. Entre todas hemos vivido la recuperación posparto, la perimenopausia, la menopausia y las décadas siguientes. Lo probamos todo en nosotras mismas antes de que llegue a un huésped.',
     'ppl.k1': 'Kloodos es una empresa familiar liderada por mujeres que llegó a la tecnología de bienestar con las mismas preguntas que nosotras — y empezó a responderlas en 2014, asesorando a spas y gimnasios sobre recuperación avanzada mucho antes de que fuera una categoría.',
@@ -151,7 +151,7 @@
 
     // barcelona
     'place.eyebrow': 'Nuestra base',
-    'place.line': 'Con sede en Barcelona.<br>Trabajando en toda España y Europa.',
+    'place.line': 'Con sede en Barcelona. <br>Trabajando en toda España y Europa.',
 
     // the ask
     'ask.eyebrow': 'La propuesta',
@@ -165,7 +165,7 @@
     'ask.s3d': 'Stack tecnológico, protocolos, personal y retorno modelado, adaptados a su establecimiento.',
 
     // closer + newsletter
-    'closer.quote': '«La longevidad no consiste en sumar años.<br>Consiste en vivirlos plenamente.»',
+    'closer.quote': '«La longevidad no consiste en sumar años. <br>Consiste en vivirlos plenamente.»',
     'news.title': 'Únase a la elevación',
     'news.p': 'Pensamiento sobre longevidad, hallazgos seleccionados y notas de la alianza. Ocasional, nunca ruidoso.',
     'news.ph': 'Su correo electrónico',
@@ -196,7 +196,7 @@
     'about.eyebrow': 'Nuestra historia',
     'about.title': 'Dos empresas. Una negativa.',
     'about.sub': 'Longevidad, desmitificada por mujeres que la han vivido',
-    'about.tagline': 'ELATEVE powered by Kloodos —<br>la alianza de tecnología de longevidad para España y Europa.',
+    'about.tagline': 'ELATEVE powered by Kloodos — <br>la alianza de tecnología de longevidad para España y Europa.',
     'about.introlead': 'Creemos que la longevidad no consiste en perseguir más años — sino en sentirse lúcida, capaz y una misma en cada uno de ellos.',
     'about.introp': 'Es saber qué protocolo merece su tiempo, qué tecnología merece el espacio que ocupa y qué cambios mueven de verdad la aguja en cómo se siente — en lugar de ahogarse en ruido. Creamos ELATEVE, y nos aliamos en exclusiva con Kloodos, porque estábamos cansadas de ir a ciegas.',
     'about.l1': 'Las mujeres detrás de ELATEVE',
@@ -217,7 +217,7 @@
     'about.p3d': 'Desde la salud del suelo pélvico posparto hasta la libido posmenopáusica, hablamos con apertura, honestidad y sin juzgar.',
     'about.quote': '«Para nosotras, la longevidad no es solo vivir más — es una sensación. Es despertar con la mente clara, con fuerza para seguir el ritmo de tu vida y con confianza en cada decisión sobre tu propio cuerpo.»',
     'about.close1': 'Hemos hecho la investigación, validado la tecnología y probado los protocolos — para que usted no tenga que ir a ciegas. Estamos aquí para ayudarle a salvar la distancia entre donde está y la vida ELATEVE que merece.',
-    'about.closelead': 'La vida auténtica es accesible. La transformación está a una sola decisión de distancia.<br>Elevemos lo cotidiano, juntas.',
+    'about.closelead': 'La vida auténtica es accesible. La transformación está a una sola decisión de distancia. <br>Elevemos lo cotidiano, juntas.',
     'about.ctajournal': 'Leer lo último del diario'
   };
 

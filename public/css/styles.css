@@ -886,9 +886,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 }
 @media (max-width: 560px) {
   .kx-tech-grid { grid-template-columns: 1fr; }
-  .kx-hero-meta { gap: var(--space-md); }
+  .kx-hero-meta { gap: var(--space-md); margin-top: var(--space-lg); }
   .kx-hero-title br, .kx-h2 br, .kx-place-line br { display: none; }
-  .kx-hero { padding-top: 7rem; min-height: 0; padding-bottom: var(--space-xl); }
+  .kx-hero { padding-top: 6.5rem; min-height: 0; padding-bottom: var(--space-xl); }
+  .kx-hero-title { font-size: 1.95rem; line-height: 1.18; margin-bottom: var(--space-sm); }
+  .kx-hero-sub { font-size: 0.9rem; line-height: 1.7; margin-bottom: var(--space-md); }
 }
 
 /* ── THE OPPORTUNITY ── */
