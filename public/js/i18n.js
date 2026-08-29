@@ -48,6 +48,7 @@
     'rec.eyebrow': 'Trayectoria',
     'rec.title': 'Ya presente en los espacios <br>que no aceptan menos.',
     'rec.lead': 'La tecnología y los protocolos de ELATEVE powered by Kloodos están instalados y en funcionamiento en el deporte de élite, la hostelería de lujo y el bienestar médico privado — desde salas de recuperación de la Premier League hasta spas de cinco estrellas.',
+    'rec.standard': 'Especificamos únicamente equipos de grado médico y clínicamente validados — nunca dispositivos de consumo, nunca materiales de segunda. Ese estándar es la razón por la que estos nombres lo dejan entrar en sus edificios.',
     'rec.rolllabel': 'Algunos de los espacios donde ya funciona',
     'rec.rollmore': 'y más — bajo petición',
 

@@ -797,7 +797,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 @keyframes kxDrift { 0% { transform: translate3d(-3%,0,0) scale(1); } 100% { transform: translate3d(4%,2%,0) scale(1.08); } }
 @media (prefers-reduced-motion: reduce) { .kx-hero-aura { animation: none; } }
 .kx-hero-content { position: relative; max-width: 880px; }
-.kx-hero-title { font-family: var(--font-display); font-size: clamp(2.3rem, 5.4vw, 4rem); font-weight: 200; line-height: 1.12; letter-spacing: -0.03em; color: var(--charcoal); margin: var(--space-md) 0 var(--space-sm); }
+.kx-hero-title { font-family: var(--font-display); font-size: clamp(1.85rem, 3.9vw, 2.8rem); font-weight: 200; line-height: 1.2; letter-spacing: -0.02em; color: var(--charcoal); margin: var(--space-md) 0 var(--space-sm); max-width: 720px; margin-left: auto; margin-right: auto; }
 .kx-hero-sub { font-size: 1.05rem; font-weight: 300; color: var(--grey); max-width: 580px; margin: 0 auto var(--space-lg); line-height: 1.8; }
 .kx-hero-cta { display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; }
 .kx-hero-meta { margin-top: var(--space-xl); display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap; }
@@ -809,6 +809,14 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .kx-section-head { max-width: 680px; margin-bottom: var(--space-lg); }
 .kx-section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
 .kx-section--band { max-width: 100%; background: #111111; padding: var(--space-2xl) var(--space-md); }
+
+/* Minimal gold connector between sections — a single fading hairline */
+.kx-rule { width: 1px; height: 54px; margin: 0 auto; background: linear-gradient(to bottom, transparent, var(--gold) 42%, var(--gold) 58%, transparent); opacity: 0.5; }
+.kx-rule--onband { background: linear-gradient(to bottom, transparent, var(--gold-light) 42%, var(--gold-light) 58%, transparent); opacity: 0.6; }
+
+/* Medical-grade standard line in Track Record */
+.kx-lead--standard { color: var(--charcoal); font-weight: 400; margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid rgba(197,151,62,0.35); }
+[data-theme="dark"] .kx-lead--standard { color: #F0EDE8; }
 .kx-section--band .kx-h2 { color: #F2EFE9; }
 .kx-section--band .kx-lead { color: rgba(242,239,233,0.62); }
 .kx-section--band .kx-eyebrow { color: var(--gold-light); }
@@ -889,8 +897,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   .kx-hero-meta { gap: var(--space-md); margin-top: var(--space-lg); }
   .kx-hero-title br, .kx-h2 br, .kx-place-line br { display: none; }
   .kx-hero { padding-top: 6.5rem; min-height: 0; padding-bottom: var(--space-xl); }
-  .kx-hero-title { font-size: 1.95rem; line-height: 1.18; margin-bottom: var(--space-sm); }
+  .kx-hero-title { font-size: 1.7rem; line-height: 1.22; margin-bottom: var(--space-sm); }
   .kx-hero-sub { font-size: 0.9rem; line-height: 1.7; margin-bottom: var(--space-md); }
+  .kx-rule { height: 38px; }
 }
 
 /* ── THE OPPORTUNITY ── */
