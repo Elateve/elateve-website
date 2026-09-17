@@ -85,15 +85,15 @@
     'roi.title': 'Lo que devuelve el espacio.',
     'roi.lead': 'Tres ejemplos ilustrativos. Las cifras reales dependen de su superficie, ubicación y tarifa — las modelamos con rigor en la propuesta.',
     'roi.c1k': 'Camilla HBOT',
-    'roi.c1fig': '~ 140.000 € / año',
-    'roi.c1d': 'Seis sesiones al día a 90 €, seis días por semana, desde unos 4 m² de superficie. Una camilla hiperbárica reclinable es uno de los activos con mayor ingreso por metro cuadrado del espacio.',
+    'roi.c1fig': 'El mayor ingreso por m²',
+    'roi.c1d': 'Con sesiones diarias desde una superficie compacta, una camilla hiperbárica reclinable es uno de los activos con mayor ingreso del espacio.',
     'roi.c2k': 'Reconfiguración del spa',
     'roi.c2fig': 'Categoría de mayor margen',
     'roi.c2d': 'Reconvertir una sala de tratamiento infrautilizada en una suite de recuperación con crioterapia y compresión suele elevar la ocupación de la sala y añade una categoría de servicio premium por encima de los tratamientos estándar.',
     'roi.c3k': 'Membresía y fidelización',
     'roi.c3fig': 'Ingresos recurrentes',
     'roi.c3d': 'Los operadores citan una propuesta de longevidad creíble entre las tres principales razones por las que los clientes se dan de alta y se quedan — así que protege los ingresos recurrentes, no solo los de tratamiento.',
-    'roi.note': 'Las cifras mostradas son ilustrativas, no presupuestos ni garantías.',
+    'roi.note': 'Los ejemplos mostrados son ilustrativos, no presupuestos ni garantías.',
 
     // who we are
     'who.eyebrow': 'Quiénes somos',

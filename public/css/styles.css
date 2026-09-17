@@ -826,8 +826,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 
 /* As Seen In */
 .kx-asseen { max-width: 640px; margin: 0 auto; text-align: center; }
-.kx-asseen .kx-h2 { margin: 0.6rem 0 var(--space-sm); }
-.kx-asseen p { font-size: 0.95rem; line-height: 1.8; }
+.kx-asseen .kx-h2 { margin: 0.6rem 0 var(--space-sm); color: #F2EFE9; }
+.kx-asseen p { font-size: 0.95rem; line-height: 1.8; color: rgba(242,239,233,0.72); }
 .kx-asseen-media { max-width: 900px; margin: var(--space-lg) auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .kx-asseen-media img { width: 100%; height: clamp(180px, 22vw, 280px); object-fit: cover; background: #000; }
 @media (max-width: 640px) { .kx-asseen-media { grid-template-columns: 1fr; } }
