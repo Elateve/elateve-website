@@ -8,6 +8,7 @@ const sendIndex = (req, res) => {
 };
 
 router.get('/', sendIndex);
+router.get('/machinery', sendIndex);
 router.get('/blog', sendIndex);
 router.get('/about', sendIndex);
 // /shop retired — redirect any old links home

@@ -13,6 +13,7 @@
   var ES = {
     // nav + shared CTA
     'nav.home': 'Inicio',
+    'nav.machinery': 'La maquinaria',
     'nav.journal': 'Diario',
     'nav.about': 'Nosotras',
     'cta.book': 'Reservar 30 minutos',
@@ -20,7 +21,7 @@
     // hero
     'hero.eyebrow': 'Una alianza de longevidad · Barcelona',
     'hero.title': 'La propuesta integral de bienestar y longevidad <br>para la hostelería, de principio a fin.',
-    'hero.sub': 'En la intersección entre la ciencia de la longevidad y la hostelería de lujo, ELATEVE powered by Kloodos convierte el espacio de bienestar infrautilizado en una propuesta medible de recuperación y rendimiento — para spas de hotel, clubes deportivos profesionales, espacios de coworking premium y centros de bienestar independientes. Los huéspedes, atletas y socios de hoy buscan renovación celular y cognitiva, no relajación pasiva, y se la ofrecemos como un blueprint llave en mano, sin operar el espacio: protocolos clínicos, tecnología biométrica y formación digital que permiten a su establecimiento captar el mercado de longevidad de alto valor y convertir una superficie infrautilizada en su activo más rentable. Un solo socio, en exclusiva para España y Europa.',
+    'hero.sub': 'ELATEVE powered by Kloodos convierte el espacio de bienestar infrautilizado en una propuesta de recuperación medible, para spas de hotel, clubes deportivos, espacios de coworking y centros de bienestar. Los huéspedes buscan renovación real, no relajación pasiva. Ofrecemos protocolos, tecnología y formación de un solo socio, en exclusiva para España y Europa.',
     'hero.cta2': 'Ver qué entregamos',
     'hero.m1': 'Tecnologías de grado médico',
     'hero.m2': 'Años de diseño de protocolos',
@@ -96,8 +97,8 @@
     // who we are
     'who.eyebrow': 'Quiénes somos',
     'who.title': 'Dos especialistas. <br>Una propuesta de longevidad.',
-    'who.p1': 'ELATEVE es la curadora de longevidad — la experiencia, los protocolos y la marca de cara al huésped. Kloodos es la curadora de tecnología de bienestar para el deporte de élite, la hostelería de lujo y la salud médica privada — fabricante y distribuidora de las principales tecnologías de bienestar del mundo desde 2014.',
-    'who.p2': 'Juntas somos la <strong>alianza exclusiva de tecnología de longevidad para España y Europa</strong>, con sede en Barcelona — para que un establecimiento nunca tenga que ensamblar una propuesta de bienestar con piezas que no se diseñaron para funcionar juntas, ni asumir el riesgo de equivocarse.',
+    'who.p1': 'ELATEVE es la curadora de longevidad: la experiencia, los protocolos y la marca de cara al huésped. Kloodos es la curadora de tecnología de bienestar para el deporte de élite, la hostelería de lujo y la salud médica privada, y fabricante de las principales tecnologías de bienestar del mundo desde 2014.',
+    'who.p2': 'Juntas somos la <strong>alianza exclusiva de tecnología de longevidad para España y Europa</strong>, con sede en Barcelona. Un establecimiento nunca tiene que ensamblar una propuesta de bienestar con piezas que no se diseñaron para funcionar juntas.',
     'who.t1': 'Exclusiva · España y Europa',
     'who.t2': 'Con sede en Barcelona',
     'who.t3': 'Solo grado médico',
@@ -133,14 +134,17 @@
     'app.s3d': 'Aumentar la producción de energía celular, mejorar la oxigenación de los tejidos, reducir la inflamación y apoyar la reparación intrínseca del cuerpo — construyendo resiliencia, vitalidad y envejecimiento saludable a largo plazo.',
     'app.note': 'No son tratamientos aislados — un ecosistema integrado de tecnologías clínicamente probadas, secuenciadas de forma intencionada para que cada modalidad prepare el cuerpo para la siguiente. El resultado es mayor que la suma de las partes.',
 
-    // what we install (headings only; device cards stay English for now)
+    // what we install (short teaser; full detail lives on /machinery, English for now)
     'inst.eyebrow': 'Qué instalamos',
-    'inst.title': 'El stack tecnológico, <br>al completo.',
-    'inst.lead': 'Ninguna otra empresa reúne esta amplitud. Cada modalidad está clínicamente probada, es de grado médico donde importa y está pensada para secuenciarse — agrupada aquí por la fase del recorrido que impulsa.',
-    'inst.stage1': 'Regular — el sistema nervioso',
-    'inst.stage2': 'Depurar — circulación, linfa, homeostasis',
-    'inst.stage3': 'Regenerar — energía y reparación celular',
-    'inst.more': 'Y más — salas Deep Sea Sleep, sistemas de aire limpio e iones negativos, duchas de experiencias, terapia Kneipp y piscinas acústicas a medida. Tecnologías de diagnóstico y de ritmo circadiano en desarrollo.',
+    'inst.title': 'Nueve tecnologías. <br>Un sistema secuenciado.',
+    'inst.lead': 'Crioterapia de cuerpo entero, cámara hiperbárica de grado médico, terapia de luz roja, IHHT, sauna infrarroja, compresión, flotación seca y cápsulas para el sistema nervioso. Máquinas reales, no renders.',
+    'inst.cta': 'Véalo usted misma',
+
+    // the machinery page (device cards stay English for now)
+    'mach.eyebrow': 'Véalo usted misma',
+    'mach.title': 'La maquinaria',
+    'mach.sub': 'Nueve tecnologías. Fotos reales, nombres claros, sin jerga.',
+    'mach.note': 'Además, terapia de NAD y vitaminas, electroestimulación y más, dentro de su protocolo. Todo lo mostrado aquí es de grado médico y clínicamente validado.',
 
     // the people
     'ppl.eyebrow': 'El equipo',
