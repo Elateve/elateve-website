@@ -100,6 +100,7 @@
     'who.title': 'Dos especialistas. <br>Una propuesta de longevidad.',
     'who.p1': 'ELATEVE es la curadora de longevidad: la experiencia, los protocolos y la marca de cara al huésped. Kloodos es la curadora de tecnología de bienestar para el deporte de élite, la hostelería de lujo y la salud médica privada, y fabricante de las principales tecnologías de bienestar del mundo desde 2014.',
     'who.p2': 'Juntas somos la <strong>alianza exclusiva de tecnología de longevidad para España y Europa</strong>, con sede en Barcelona. Un establecimiento nunca tiene que ensamblar una propuesta de bienestar con piezas que no se diseñaron para funcionar juntas.',
+    'who.p3': 'Solo especificamos equipos de grado médico, somos su único punto de contacto desde antes de la instalación hasta el servicio continuo, y mantenemos los protocolos y la formación siempre actualizados. Todo centralizado con un único socio.',
     'who.t1': 'Exclusiva · España y Europa',
     'who.t2': 'Con sede en Barcelona',
     'who.t3': 'Solo grado médico',

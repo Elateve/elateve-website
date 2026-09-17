@@ -814,8 +814,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .kx-section--band { max-width: 100%; background: #111111; padding: 4.5rem var(--space-md); }
 
 /* Neat thin gold rule between sections */
-.kx-rule { width: 64px; height: 1px; margin: 2.5rem auto; background: linear-gradient(to right, transparent, var(--gold) 20%, var(--gold) 80%, transparent); opacity: 0.7; }
-.kx-rule--onband { background: linear-gradient(to right, transparent, var(--gold-light) 20%, var(--gold-light) 80%, transparent); opacity: 0.75; }
+.kx-rule { width: 96px; height: 2px; margin: 2.5rem auto; background: linear-gradient(to right, transparent, var(--gold) 15%, var(--gold) 85%, transparent); opacity: 0.95; }
+.kx-rule--onband { background: linear-gradient(to right, transparent, var(--gold-light) 15%, var(--gold-light) 85%, transparent); opacity: 0.95; }
 
 /* Medical-grade standard line in Track Record */
 .kx-lead--standard { color: var(--charcoal); font-weight: 400; margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid rgba(197,151,62,0.35); }
@@ -887,7 +887,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .kx-step-n { font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); }
 .kx-step h3 { font-size: 1.2rem; font-weight: 300; color: #F2EFE9; margin-top: 0.5rem; }
 .kx-step p { font-size: 0.86rem; color: rgba(242,239,233,0.62); margin-top: 0.4rem; line-height: 1.7; }
-.kx-ask-cta { text-align: center; margin-top: var(--space-lg); }
+.kx-ask-cta { text-align: center; margin-top: 1.75rem; }
 
 /* ── CLOSER ── */
 .kx-closer img { width: 100%; height: clamp(420px, 62vw, 680px); object-fit: cover; object-position: center 40%; display: block; }
@@ -910,7 +910,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   .kx-hero { padding-top: 6.5rem; min-height: 0; padding-bottom: var(--space-xl); }
   .kx-hero-title { font-size: 1.7rem; line-height: 1.22; margin-bottom: var(--space-sm); }
   .kx-hero-sub { font-size: 0.9rem; line-height: 1.7; margin-bottom: var(--space-md); }
-  .kx-rule { width: 48px; margin: 1.75rem auto; }
+  .kx-rule { width: 64px; margin: 1.75rem auto; }
 }
 
 /* ── THE OPPORTUNITY ── */
