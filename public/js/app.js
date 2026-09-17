@@ -16,7 +16,7 @@ function applyTheme(theme) {
 }
 
 function initTheme() {
-  const saved = localStorage.getItem('elateve_theme') || 'dark';
+  const saved = localStorage.getItem('elateve_theme') || 'light';
   applyTheme(saved);
 
   const btn = document.getElementById('themeToggle');
@@ -113,7 +113,7 @@ function navigateTo(page, category = null, season = null) {
       updateNavActive(page);
 
       // Update URL without reload
-      const paths = { home: '/', shop: '/shop', blog: '/blog', about: '/about', machinery: '/machinery' };
+      const paths = { home: '/', shop: '/shop', blog: '/blog', about: '/about', machinery: '/machinery', whyus: '/why-us' };
       const params = new URLSearchParams();
       if (category) params.set('category', category);
       if (season) params.set('season', season);
@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Determine initial page from URL
   const path = window.location.pathname;
   const params = new URLSearchParams(window.location.search);
-  const pageMap = { '/': 'home', '/blog': 'blog', '/about': 'about', '/machinery': 'machinery' };
+  const pageMap = { '/': 'home', '/blog': 'blog', '/about': 'about', '/machinery': 'machinery', '/why-us': 'whyus' };
   let initialPage = pageMap[path] || 'home';
   // Fall back to home if a retired page (e.g. /shop) is requested
   if (!document.getElementById(`page-${initialPage}`)) initialPage = 'home';

@@ -80,7 +80,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 @keyframes scrollLine { 0%, 100% { opacity: 0.3; transform: scaleY(0.5); } 50% { opacity: 1; transform: scaleY(1); } }
 
 /* ── SECTIONS ── */
-.section { padding: var(--space-xl) var(--space-md); max-width: 1400px; margin: 0 auto; }
+.section { padding: 4rem var(--space-md); max-width: 1400px; margin: 0 auto; }
 .section-header { text-align: center; margin-bottom: var(--space-lg); }
 .section-eyebrow { font-size: 0.7rem; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-xs); }
 .section-title { font-size: clamp(2rem, 4vw, 3.5rem); }
@@ -808,11 +808,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .kx-section { max-width: 1200px; }
 .kx-section-head { max-width: 680px; margin-bottom: var(--space-lg); }
 .kx-section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
-.kx-section--band { max-width: 100%; background: #111111; padding: var(--space-2xl) var(--space-md); }
+.kx-section--band { max-width: 100%; background: #111111; padding: 4.5rem var(--space-md); }
 
-/* Minimal gold connector between sections — a single fading hairline */
-.kx-rule { width: 1px; height: 54px; margin: 0 auto; background: linear-gradient(to bottom, transparent, var(--gold) 42%, var(--gold) 58%, transparent); opacity: 0.5; }
-.kx-rule--onband { background: linear-gradient(to bottom, transparent, var(--gold-light) 42%, var(--gold-light) 58%, transparent); opacity: 0.6; }
+/* Neat thin gold rule between sections */
+.kx-rule { width: 64px; height: 1px; margin: 2.5rem auto; background: linear-gradient(to right, transparent, var(--gold) 20%, var(--gold) 80%, transparent); opacity: 0.7; }
+.kx-rule--onband { background: linear-gradient(to right, transparent, var(--gold-light) 20%, var(--gold-light) 80%, transparent); opacity: 0.75; }
 
 /* Medical-grade standard line in Track Record */
 .kx-lead--standard { color: var(--charcoal); font-weight: 400; margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid rgba(197,151,62,0.35); }
@@ -820,6 +820,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .kx-section--band .kx-h2 { color: #F2EFE9; }
 .kx-section--band .kx-lead { color: rgba(242,239,233,0.62); }
 .kx-section--band .kx-eyebrow { color: var(--gold-light); }
+
+/* As Seen In */
+.kx-asseen { max-width: 640px; margin: 0 auto; text-align: center; }
+.kx-asseen .kx-h2 { margin: 0.6rem 0 var(--space-sm); }
+.kx-asseen p { font-size: 0.95rem; line-height: 1.8; }
 [data-theme="dark"] .kx-section--band { background: #070707; }
 
 /* ── TRACK RECORD ── */
@@ -899,7 +904,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
   .kx-hero { padding-top: 6.5rem; min-height: 0; padding-bottom: var(--space-xl); }
   .kx-hero-title { font-size: 1.7rem; line-height: 1.22; margin-bottom: var(--space-sm); }
   .kx-hero-sub { font-size: 0.9rem; line-height: 1.7; margin-bottom: var(--space-md); }
-  .kx-rule { height: 38px; }
+  .kx-rule { width: 48px; margin: 1.75rem auto; }
 }
 
 /* ── THE OPPORTUNITY ── */

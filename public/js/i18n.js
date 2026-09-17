@@ -14,8 +14,9 @@
     // nav + shared CTA
     'nav.home': 'Inicio',
     'nav.machinery': 'La maquinaria',
+    'nav.whyus': 'Por qué nosotras',
     'nav.journal': 'Diario',
-    'nav.about': 'Nosotras',
+    'nav.about': 'Quiénes somos',
     'cta.book': 'Reservar 30 minutos',
 
     // hero
@@ -121,6 +122,15 @@
     'why.i6t': 'Probado en los dispositivos que ya llevan los huéspedes',
     'why.i6d': 'Protocolos que demuestran resultados inmediatos y acumulativos en la diagnóstica de consumo — Whoop, Oura y el resto.',
     'why.motto': 'Relevante · Coherente · Lógico · Fiable · Cautivador · Integrado · Completo',
+    'why.cta': 'Ver por qué nosotras y quién ya confía',
+
+    // why us page
+    'wu.eyebrow': 'Confianza',
+    'wu.title': 'Por qué nosotras y quién ya confía',
+    'wu.sub': 'El argumento de un solo socio, y los nombres que ya lo respaldan.',
+    'wu.asl': 'Visto en',
+    'wu.ast': 'Manchester United FC',
+    'wu.asd': 'El pod Kokoon para el sistema nervioso de nuestro stack es la misma tecnología creada para la suite de Recuperación y Rendimiento del primer equipo del Manchester United, el «K-Suite», que secuencia sonido, vibración y luz en la recuperación de sus jugadores.',
 
     // 360 approach
     'app.eyebrow': 'Nuestro enfoque 360°',
@@ -185,7 +195,7 @@
     // footer
     'foot.tagline': 'Longevidad, de principio a fin.',
     'foot.company': 'Empresa',
-    'foot.about': 'Nosotras',
+    'foot.about': 'Quiénes somos',
     'foot.partnership': 'Alianza',
     'foot.track': 'Trayectoria',
     'foot.contact': 'Contacto',
