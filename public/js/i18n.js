@@ -64,6 +64,8 @@
     'mkt.fomo1': 'Las personas que impulsan ese gasto — huéspedes de alto poder adquisitivo, viajeros centrados en la longevidad, presupuestos de salud ejecutiva y deporte de élite — <strong>buscan activamente un lugar creíble donde destinarlo</strong>, y la mayoría de los establecimientos no pueden ofrecérselo.',
     'mkt.fomo2': 'Hay espacio para aproximadamente <strong>un destino de longevidad serio por ciudad</strong>. El establecimiento que instala primero suele conservar esa posición; el resto acaba derivando a sus mejores clientes a la competencia. Sus competidores ya están teniendo esta conversación con nosotras — el espacio que no acondicione ahora es la reserva que perderá después.',
     'mkt.src': 'Fuentes: Global Wellness Institute, 2023–2024.',
+    'exp.eyebrow': 'Profundice',
+    'exp.title': 'Vea el caso, y vea las máquinas.',
 
     // the opportunity
     'opp.eyebrow': 'La oportunidad',
